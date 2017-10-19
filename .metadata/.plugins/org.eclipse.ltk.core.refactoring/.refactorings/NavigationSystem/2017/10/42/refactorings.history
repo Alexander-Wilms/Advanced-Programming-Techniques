@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;NavigationSystem/src/CWaypint.h&apos; to &apos;CWaypoint.h&apos;" description="Rename resource &apos;CWaypint.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/CWaypint.h" name="CWaypoint.h" stamp="1508420226752" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;NavigationSystem/src/CWaypint.cpp&apos; to &apos;CWaypoint.cpp&apos;" description="Rename resource &apos;CWaypint.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/CWaypint.cpp" name="CWaypoint.cpp" stamp="1508420234406" updateReferences="true"/>
+</session>

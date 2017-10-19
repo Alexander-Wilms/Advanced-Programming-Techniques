@@ -1,0 +1,9 @@
+#include <iostream>
+#include "CWaypoint.h"
+
+using namespace std;
+
+int main() {
+	cout << "Sie haben Ihr Ziel erreicht" << endl;
+	return 0;
+}

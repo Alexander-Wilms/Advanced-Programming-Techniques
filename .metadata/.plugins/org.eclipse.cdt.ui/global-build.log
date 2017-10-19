@@ -1,0 +1,15 @@
+18:03:18 **** Incremental Build of configuration Debug for project NavigationSystem ****
+make all 
+Building file: ../src/CWaypoint.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CWaypoint.d" -MT"src/CWaypoint.o" -o "src/CWaypoint.o" "../src/CWaypoint.cpp"
+Finished building: ../src/CWaypoint.cpp
+ 
+Building target: NavigationSystem
+Invoking: GCC C++ Linker
+g++  -o "NavigationSystem"  ./src/CWaypoint.o ./src/NavigationSystem.o   
+Finished building target: NavigationSystem
+ 
+18:03:20 **** Incremental Build of configuration Debug for project NavigationSystem ****
+make all 
+make: Für das Ziel „all“ ist nichts zu tun.

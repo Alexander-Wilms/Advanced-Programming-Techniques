@@ -1,0 +1,14 @@
+#include <iostream>
+#include "CWaypoint.h"
+
+using namespace std;
+
+int main() {
+	CWaypoint amsterdam("Amsterdam", 52.370197222222, 4.8904444444444);
+	CWaypoint darmstadt("Darmstadt", 52.370197222222, 4.8904444444444);
+	CWaypoint berlin("Berlin", 52.370197222222, 4.8904444444444);
+	CWaypoint tokio("Tokio", 52.370197222222, 4.8904444444444);
+
+	cout << "Sie haben Ihr Ziel erreicht" << endl;
+	return 0;
+}

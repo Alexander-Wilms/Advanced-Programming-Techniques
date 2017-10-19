@@ -1,0 +1,96 @@
+/*
+ * CWaypoint.cpp
+ *
+ *  Created on: 19.10.2017
+ *      Author: awilms
+ */
+
+#include "CWaypoint.h"
+#include <iostream>
+#include <cmath>
+
+#define SHOWADDRESS
+
+CWaypoint::CWaypoint(std::string name = "myWaypoint", double latitude = 37, double longitude = 42) {
+	set(name, latitude, longitude);
+
+	#ifdef SHOWADDRESS
+		std::cout << "The address of the object: " << this << std::endl;
+	#endif
+
+	std::cout << "m_name: " << m_name << std::endl;
+	std::cout << "size of name: " << sizeof(m_name) << std::endl;
+	std::cout << "m_latitude: " << m_latitude << std::endl;
+	std::cout << "size of latitude: " << sizeof(m_latitude) << std::endl;
+	std::cout << "m_longitude: " << m_longitude << std::endl;
+	std::cout << "size of longitude: " << sizeof(m_longitude) << std::endl;
+}
+
+CWaypoint::~CWaypoint() {
+	// TODO Auto-generated destructor stub
+}
+
+void CWaypoint::set(std::string name, double latitude, double longitude) {
+	m_name = name;
+
+	if(-90 <= latitude && latitude <= 90) {
+		m_latitude = latitude;
+	} else {
+		m_latitude = 0;
+	}
+
+	if(-180 <= longitude && longitude <= 180) {
+		m_longitude = longitude;
+	} else {
+		m_longitude = 0;
+	}
+}
+
+std::string CWaypoint::getName() const {
+	return m_name;
+}
+
+double CWaypoint::getLatitude() const {
+	return m_latitude;
+}
+
+double CWaypoint::getLongitude() const {
+	return m_longitude;
+}
+
+void CWaypoint::getAllDataByReference(std::string& name, double& latitude, double& longitude) {
+}
+
+double CWaypoint::calculateDistance(const CWaypoint& wp) const {
+	double R = 6378.17;
+	return R*std::acos(std::sin(m_latitude)*std::sin(wp.getLatitude())+std::cos(m_latitude)*std::cos(wp.getLatitude())*std::cos(wp.getLongitude()-m_longitude));
+}
+
+void CWaypoint::print(int format) {
+	if(format == DEGREE) {
+		std::cout << m_name << " on latitude = " << m_latitude << "deg and longitude " << m_longitude << std::endl;
+	} else if(format == MMSS) {
+		int deg, mm;
+		double ss;
+
+		transformLatitude2degmmss(deg, mm, ss);
+		std::cout << m_name << " on latitude = " << deg << "deg " << mm << "min " << ss << "s ";
+		transformLongitude2degmmss(deg, mm, ss);
+		std::cout << " and longitude = " << deg << "deg " << mm << "min " << ss << "s ";
+	}
+
+}
+
+void CWaypoint::transformLongitude2degmmss(int& deg, int& mm, double& ss) {
+	double longitude = m_longitude;
+
+	deg = (int) longitude;
+
+	longitude -= deg;
+
+
+
+}
+
+void CWaypoint::transformLatitude2degmmss(int& deg, int& mm, double& ss) {
+}

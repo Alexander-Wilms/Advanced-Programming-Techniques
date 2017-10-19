@@ -1,0 +1,37 @@
+/*
+ * CWaypint.h
+ *
+ *  Created on: 19.10.2017
+ *      Author: awilms
+ */
+
+#ifndef CWAYPOINT_H_
+#define CWAYPOINT_H_
+
+#include <string>
+
+using namespace std;
+
+class CWaypoint {
+public:
+	CWaypoint(string name, double latitude, double longitude);
+	void set(string name, double latitude, double longitude);
+	string getName();
+	double getLatitude();
+	double getLongitude();
+	void getAllDataByReference(string& name, double& latitude, double& longitude);
+	double calculateDistance(const CWaypoint& wp);
+	void print(int format);
+	virtual ~CWaypoint();
+
+protected:
+	string m_name;
+	double m_latitude;
+	double m_longitude;
+
+private:
+	void transformLongitude2degmmss(int& deg, int& mm, double& ss);
+	void transformLatitude2degmmss(int& deg, int& mm, double& ss);
+};
+
+#endif /* CWAYPOINT_H_ */

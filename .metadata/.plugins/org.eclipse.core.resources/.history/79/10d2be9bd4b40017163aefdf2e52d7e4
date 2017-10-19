@@ -1,0 +1,51 @@
+/*
+ * CWaypoint.cpp
+ *
+ *  Created on: 19.10.2017
+ *      Author: awilms
+ */
+
+#include "CWaypoint.h"
+
+CWaypoint::CWaypoint() {
+	// TODO Auto-generated constructor stub
+
+}
+
+CWaypoint::~CWaypoint() {
+	// TODO Auto-generated destructor stub
+}
+
+CWaypoint::CWaypoint(string name, double latitude, double longitude) {
+}
+
+void CWaypoint::set(string name, double latitude, double longitude) {
+}
+
+string CWaypoint::getName() {
+}
+
+double CWaypoint::getLatitude() {
+}
+
+double CWaypoint::getLongitude() {
+}
+
+void CWaypoint::getAllDataByReference(string& name, double& latitude,
+		double& longitude) {
+}
+
+double CWaypoint::calculateDistance(const CWaypoint& wp) {
+}
+
+void CWaypoint::print(int format) {
+}
+
+CWaypoint::~CWaypoint() {
+}
+
+void CWaypoint::transformLongitude2degmmss(int& deg, int& mm, double& ss) {
+}
+
+void CWaypoint::transformLatitude2degmmss(int& deg, int& mm, double& ss) {
+}
