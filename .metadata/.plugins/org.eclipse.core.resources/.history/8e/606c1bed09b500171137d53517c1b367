@@ -1,0 +1,16 @@
+/*
+ * CPOI.h
+ *
+ *  Created on: 19.10.2017
+ *      Author: awilms
+ */
+
+#ifndef CPOI_H_
+#define CPOI_H_
+
+class CPOI {
+public:
+	CPOI();
+};
+
+#endif /* CPOI_H_ */

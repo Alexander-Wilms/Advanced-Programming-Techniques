@@ -1,0 +1,14 @@
+/*
+ * CPOI.cpp
+ *
+ *  Created on: 19.10.2017
+ *      Author: awilms
+ */
+
+#include "CPOI.h"
+
+CPOI::CPOI() {
+	// TODO Auto-generated constructor stub
+
+}
+

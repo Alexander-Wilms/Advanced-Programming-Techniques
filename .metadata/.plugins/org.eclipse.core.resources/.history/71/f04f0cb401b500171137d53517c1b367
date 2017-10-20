@@ -1,0 +1,17 @@
+/*
+ * CGPSSensor.h
+ *
+ *  Created on: 19.10.2017
+ *      Author: awilms
+ */
+
+#ifndef CGPSSENSOR_H_
+#define CGPSSENSOR_H_
+
+class CGPSSensor {
+public:
+	CGPSSensor();
+	virtual ~CGPSSensor();
+};
+
+#endif /* CGPSSENSOR_H_ */

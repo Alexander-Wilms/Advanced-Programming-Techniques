@@ -1,3 +1,10 @@
+/*
+ * NavigationSystem.cpp
+ *
+ *  Created on: 19.10.2017
+ *      Author: awilms
+ */
+
 #include <iostream>
 #include "CWaypoint.h"
 
