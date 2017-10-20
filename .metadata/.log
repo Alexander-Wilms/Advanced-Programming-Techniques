@@ -454,3 +454,9 @@ java.net.UnknownHostException: tools.jboss.org: Name or service not known
 
 !ENTRY org.eclipse.jface.text 2 0 2017-10-20 17:05:40.745
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-10-20 17:15:18.649
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-10-20 17:15:18.650
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

@@ -1,0 +1,16 @@
+/*
+ * CPoiDatabase.h
+ *
+ *  Created on: 20.10.2017
+ *      Author: awilms
+ */
+
+#ifndef CPOIDATABASE_H_
+#define CPOIDATABASE_H_
+
+class CPoiDatabase {
+public:
+	CPoiDatabase();
+};
+
+#endif /* CPOIDATABASE_H_ */

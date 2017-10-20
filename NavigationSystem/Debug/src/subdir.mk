@@ -6,18 +6,21 @@
 CPP_SRCS += \
 ../src/CGPSSensor.cpp \
 ../src/CPOI.cpp \
+../src/CPoiDatabase.cpp \
 ../src/CWaypoint.cpp \
 ../src/NavigationSystem.cpp 
 
 OBJS += \
 ./src/CGPSSensor.o \
 ./src/CPOI.o \
+./src/CPoiDatabase.o \
 ./src/CWaypoint.o \
 ./src/NavigationSystem.o 
 
 CPP_DEPS += \
 ./src/CGPSSensor.d \
 ./src/CPOI.d \
+./src/CPoiDatabase.d \
 ./src/CWaypoint.d \
 ./src/NavigationSystem.d 
 

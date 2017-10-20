@@ -1,0 +1,21 @@
+/*
+ * CPoiDatabase.cpp
+ *
+ *  Created on: 20.10.2017
+ *      Author: awilms
+ */
+
+#include "CPoiDatabase.h"
+#include "CPOI.h"
+
+CPoiDatabase::CPoiDatabase() {
+	m_noPoi = 0;
+}
+
+void CPoiDatabase::addPoi(t_poi type, std::string name, std::string description,
+		double latitude, double longitude) {
+
+}
+
+CPOI* CPoiDatabase::getPointerToPoi(std::string name) {
+}

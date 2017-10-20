@@ -1,15 +1,16 @@
-17:12:48 **** Incremental Build of configuration Debug for project NavigationSystem ****
+17:31:01 **** Incremental Build of configuration Debug for project NavigationSystem ****
 make all 
-Building file: ../src/CPOI.cpp
+Building file: ../src/CPoiDatabase.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CPOI.d" -MT"src/CPOI.o" -o "src/CPOI.o" "../src/CPOI.cpp"
-Finished building: ../src/CPOI.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CPoiDatabase.d" -MT"src/CPoiDatabase.o" -o "src/CPoiDatabase.o" "../src/CPoiDatabase.cpp"
+../src/CPoiDatabase.cpp: In Elementfunktion »CPOI* CPoiDatabase::getPointerToPoi(std::__cxx11::string)«:
+../src/CPoiDatabase.cpp:28:1: Warnung: Kontrollfluss erreicht Ende von Nicht-void-Funktion [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/CPoiDatabase.cpp
  
 Building target: NavigationSystem
 Invoking: GCC C++ Linker
-g++  -o "NavigationSystem"  ./src/CGPSSensor.o ./src/CPOI.o ./src/CWaypoint.o ./src/NavigationSystem.o   
+g++  -o "NavigationSystem"  ./src/CGPSSensor.o ./src/CPOI.o ./src/CPoiDatabase.o ./src/CWaypoint.o ./src/NavigationSystem.o   
 Finished building target: NavigationSystem
  
-17:12:59 **** Incremental Build of configuration Debug for project NavigationSystem ****
-make all 
-make: Für das Ziel „all“ ist nichts zu tun.
