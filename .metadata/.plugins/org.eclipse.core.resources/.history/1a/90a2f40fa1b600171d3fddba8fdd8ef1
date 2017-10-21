@@ -28,8 +28,6 @@ CRoute::CRoute(const CRoute& origin) {
 	m_maxPoi = origin.m_maxPoi;
 
 	m_pPoiDatabase = origin.m_pPoiDatabase;
-
-	m_pWaypoint = origin.m_pWaypoint;
 	m_pPoi = origin.m_pPoi;
 
 	m_nextPoi = origin.m_nextPoi;

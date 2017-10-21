@@ -15,7 +15,6 @@
 class CRoute {
 public:
 	CRoute(unsigned int maxWp, unsigned int maxPoi);
-	// copy constructor
 	CRoute(const CRoute& origin);
 	~CRoute();
 	void connectToPoiDatabase(CPoiDatabase* pPoiDB);

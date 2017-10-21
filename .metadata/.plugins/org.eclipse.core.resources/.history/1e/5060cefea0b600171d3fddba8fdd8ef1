@@ -24,16 +24,6 @@ CRoute::CRoute(unsigned int maxWp, unsigned int maxPoi) {
 
 // copy constructor
 CRoute::CRoute(const CRoute& origin) {
-	m_maxWp = origin.m_maxWp;
-	m_maxPoi = origin.m_maxPoi;
-
-	m_pPoiDatabase = origin.m_pPoiDatabase;
-
-	m_pWaypoint = origin.m_pWaypoint;
-	m_pPoi = origin.m_pPoi;
-
-	m_nextPoi = origin.m_nextPoi;
-	m_nextWp = origin.m_nextWp;
 }
 
 CRoute::~CRoute() {
