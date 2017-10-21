@@ -14,7 +14,6 @@ class CGPSSensor {
 public:
 	CGPSSensor();
 	CWaypoint getCurrentPosition();
-	virtual ~CGPSSensor();
 };
 
 #endif /* CGPSSENSOR_H_ */

@@ -19,20 +19,14 @@ CWaypoint CGPSSensor::getCurrentPosition() {
 	std::string name;
 	double latitude, longitude;
 
-	std::cout << "Enter name: ";
-	std::cin >> name;
+	std::cout << "GPS Sensor" << std::endl;
 
-	std::cout << "Enter latitude: ";
+	std::cout << "\tEnter latitude: ";
 	std::cin >> latitude;
 
-	std::cout << "Enter longitude: ";
+	std::cout << "\tEnter longitude: ";
 	std::cin >> longitude;
 
-	CWaypoint returnValue(name, latitude, longitude);
+	CWaypoint returnValue("GPS coordinate", latitude, longitude);
 	return returnValue;
 }
-
-CGPSSensor::~CGPSSensor() {
-	// TODO Auto-generated destructor stub
-}
-

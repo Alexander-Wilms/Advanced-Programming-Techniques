@@ -1,0 +1,22 @@
+/*
+ * CNavigationSystem.h
+ *
+ *  Created on: 20.10.2017
+ *      Author: awilms
+ */
+
+#ifndef CNAVIGATIONSYSTEM_H_
+#define CNAVIGATIONSYSTEM_H_
+
+class CNavigationSystem {
+public:
+	CNavigationSystem();
+	void run();
+private:
+	void enterRoute();
+	void printRoute();
+	void printDistanceCurPosNextPoi();
+	m_
+};
+
+#endif /* CNAVIGATIONSYSTEM_H_ */

@@ -1,0 +1,16 @@
+/*
+ * CRoute.h
+ *
+ *  Created on: 20.10.2017
+ *      Author: awilms
+ */
+
+#ifndef CROUTE_H_
+#define CROUTE_H_
+
+class CRoute {
+public:
+	CRoute();
+};
+
+#endif /* CROUTE_H_ */

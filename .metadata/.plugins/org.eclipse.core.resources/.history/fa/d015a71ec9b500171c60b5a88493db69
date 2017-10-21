@@ -1,0 +1,14 @@
+/*
+ * CNavigationSystem.cpp
+ *
+ *  Created on: 20.10.2017
+ *      Author: awilms
+ */
+
+#include "CNavigationSystem.h"
+
+CNavigationSystem::CNavigationSystem() {
+	// TODO Auto-generated constructor stub
+
+}
+

@@ -1,0 +1,88 @@
+/*
+ * CRoute.cpp
+ *
+ *  Created on: 20.10.2017
+ *      Author: awilms
+ */
+
+#include "CRoute.h"
+#include "CPOI.h"
+#include <iostream>
+
+CRoute::CRoute(unsigned int maxWp, unsigned int maxPoi) {
+	m_maxWp = maxWp;
+	m_maxPoi = maxPoi;
+
+	m_pPoiDatabase = NULL;
+
+	m_pWaypoint = new CWaypoint[maxWp];
+	m_pPoi = new CPOI[maxPoi];
+
+	m_nextPoi = 0;
+	m_nextWp = 0;
+}
+
+CRoute::CRoute(const CRoute& origin) {
+}
+
+CRoute::~CRoute() {
+	delete [] m_pWaypoint;
+	delete [] m_pPoi;
+}
+
+void CRoute::connectToPoiDatabase(CPoiDatabase* pPoiDB = NULL) {
+	m_pPoiDatabase = pPoiDB;
+}
+
+void CRoute::addWaypoint(std::string namePoi) {
+	double latitude;
+	double longitude;
+
+	std::cout << "Enter latitude:" << std::endl;
+	std::cin >> latitude;
+	std::cout << "Enter longitude:" << std::endl;
+	std::cin >> longitude;
+
+	m_pWaypoint[m_nextWp] = CWaypoint(namePoi, latitude, longitude);
+	m_nextWp++;
+}
+
+void CRoute::addPoi(std::string namePoi) {
+	double latitude;
+	double longitude;
+	char type;
+	t_poi type_parsed;
+	std::string description;
+
+	std::cout << "Enter latitude:" << std::endl;
+	std::cin >> latitude;
+	std::cout << "Enter longitude:" << std::endl;
+	std::cin >> longitude;
+	std::cout << "Enter type (r/t/g/u):" << std::endl;
+	std::cin >> type;
+	switch(type) {
+	case 'r':
+		type_parsed = RESTAURANT;
+		break;
+	case 't':
+		type_parsed = TOURISTIC;
+		break;
+	case 'g':
+		type_parsed = GASSTATION;
+		break;
+	case 'u':
+		type_parsed = UNIVERSITY;
+	}
+	std::cout << "Enter description:" << std::endl;
+	std::cin >> description;
+
+	m_pPoi[m_nextPoi] = CPOI(type_parsed, namePoi, description, latitude, longitude);
+	m_nextPoi++;
+}
+
+double CRoute::getDistanceNextPoi(const CWaypoint& wp, CPOI& poi) {
+	return wp.calculateDistance(poi);
+}
+
+void CRoute::print() {
+}

@@ -1,0 +1,66 @@
+/*
+ * CNavigationSystem.cpp
+ *
+ *  Created on: 20.10.2017
+ *      Author: awilms
+ */
+
+#include "CNavigationSystem.h"
+#include "CRoute.h"
+#include <iostream>
+#include <string>
+
+CNavigationSystem::CNavigationSystem() : m_route(10,10) {
+	m_PoiDatabase = CPoiDatabase();
+}
+
+void CNavigationSystem::run() {
+	std::cout << "run()" << std::endl;
+	m_route.connectToPoiDatabase(&m_PoiDatabase);
+	addPOIsToDatabase();
+	enterRoute();
+	printRoute();
+	printDistanceCurPosNextPoi();
+}
+
+void CNavigationSystem::enterRoute() {
+	bool done = false;
+	char input;
+
+	std::string name;
+
+	while(!done) {
+		std::cout << "Add some POIs and waypoints, or save route (p/w/s)" << std::endl;
+		std::cin >> input;
+		switch(input) {
+		case 'p':
+			std::cout << "Enter name:" << std::endl;
+			std::getline(std::cin, name);
+			m_route.addPoi(name);
+			break;
+		case 'w':
+			std::cout << "Enter name:" << std::endl;
+			std::getline(std::cin, name);
+			m_route.addWaypoint(name);
+			break;
+		case 's':
+			done = true;
+			break;
+		default:
+			std::cout << "Error" << std::endl;
+		}
+	}
+}
+
+void CNavigationSystem::printRoute() {
+	m_route.print();
+}
+
+void CNavigationSystem::addPOIsToDatabase() {
+	m_PoiDatabase.addPoi(RESTAURANT, "Mensa HDA", "The best Mensa in the world", 10, 20);
+	m_PoiDatabase.addPoi(RESTAURANT, "Sitte", "More expensive but also good", 11, 22);
+}
+
+void CNavigationSystem::printDistanceCurPosNextPoi() {
+	CWaypoint currPos = m_GPSSensor.getCurrentPosition();
+}

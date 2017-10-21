@@ -5,24 +5,30 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/CGPSSensor.cpp \
+../src/CNavigationSystem.cpp \
 ../src/CPOI.cpp \
 ../src/CPoiDatabase.cpp \
+../src/CRoute.cpp \
 ../src/CWaypoint.cpp \
-../src/NavigationSystem.cpp 
+../src/main.cpp 
 
 OBJS += \
 ./src/CGPSSensor.o \
+./src/CNavigationSystem.o \
 ./src/CPOI.o \
 ./src/CPoiDatabase.o \
+./src/CRoute.o \
 ./src/CWaypoint.o \
-./src/NavigationSystem.o 
+./src/main.o 
 
 CPP_DEPS += \
 ./src/CGPSSensor.d \
+./src/CNavigationSystem.d \
 ./src/CPOI.d \
 ./src/CPoiDatabase.d \
+./src/CRoute.d \
 ./src/CWaypoint.d \
-./src/NavigationSystem.d 
+./src/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

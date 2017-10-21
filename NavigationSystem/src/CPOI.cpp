@@ -26,6 +26,7 @@ void CPOI::print() {
 		std::cout << "University: ";
 	}
 	std::cout << m_description << std::endl;
+	CWaypoint::print(MMSS);
 }
 
 CPOI::CPOI(t_poi type, std::string name, std::string description,

@@ -1,0 +1,14 @@
+/*
+ * CRoute.cpp
+ *
+ *  Created on: 20.10.2017
+ *      Author: awilms
+ */
+
+#include "CRoute.h"
+
+CRoute::CRoute() {
+	// TODO Auto-generated constructor stub
+
+}
+

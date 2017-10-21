@@ -16,7 +16,8 @@ typedef enum {RESTAURANT, TOURISTIC, GASSTATION, UNIVERSITY} t_poi;
 class CPOI : public CWaypoint {
 public:
 	void print();
-	CPOI(t_poi type, std::string name, std::string description, double latitude, double longitude);
+	CPOI(t_poi type = RESTAURANT, std::string name = "defaultname", std::string description = "defaultdescription",
+			double latitude = 37, double longitude = 42);
 	void getAllDataByReference(std::string& name, double& latitude, double& longitude, t_poi& type, std::string& description);
 private:
 	t_poi m_type;

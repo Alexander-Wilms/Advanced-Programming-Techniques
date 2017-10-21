@@ -1,0 +1,59 @@
+/*
+ * CRoute.cpp
+ *
+ *  Created on: 20.10.2017
+ *      Author: awilms
+ */
+
+#include "CRoute.h"
+#include "CPOI.h"
+#include <iostream>
+
+CRoute::CRoute(unsigned int maxWp, unsigned int maxPoi) {
+	m_maxWp = maxWp;
+	m_maxPoi = maxPoi;
+	m_pPoiDatabase = NULL;
+	m_nextPoi = NULL;
+	m_pPoi = NULL;
+	m_nextWp = NULL;
+	m_pWaypoint = NULL;
+}
+
+CRoute::CRoute(const CRoute& origin) {
+}
+
+CRoute::~CRoute() {
+}
+
+void CRoute::connectToPoiDatabase(CPoiDatabase* pPoiDB = NULL) {
+	m_pPoiDatabase = pPoiDB;
+}
+
+void CRoute::addWaypoint(std::string namePoi) {
+	;
+}
+
+void CRoute::addPoi(std::string namePoi) {
+	double latitude;
+	double longitude;
+	char type;
+	std::string description;
+
+	std::cout << "Enter latitude:" << std::endl;
+	std::cin >> latitude;
+	std::cout << "Enter longitude:" << std::endl;
+	std::cin >> longitude;
+	std::cout << "Enter type (r/t/g/u):" << std::endl;
+	std::cin >> type;
+	std::cout << "Enter name:" << std::endl;
+	std::cin >> description;
+
+	m_pPoiDatabase->addPoi(type, namePoi, description, latitude, longitude);
+}
+
+double CRoute::getDistanceNextPoi(const CWaypoint& wp, CPOI& poi) {
+	return wp.calculateDistance(poi);
+}
+
+void CRoute::print() {
+}

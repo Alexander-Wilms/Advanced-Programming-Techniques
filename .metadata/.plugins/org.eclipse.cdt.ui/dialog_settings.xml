@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
+		<item value="444" key="DIALOG_WIDTH"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="465" key="DIALOG_HEIGHT"/>
+		<item value="578" key="DIALOG_X_ORIGIN"/>
+		<item value="107" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="NewClassWizardPage">
+		<item value="false" key="stubSelected1"/>
+		<item value="true" key="stubVirtual1"/>
+		<item value="false" key="namespaceSelected"/>
+		<item value="false" key="stubInline0"/>
+		<item value="false" key="stubInline1"/>
+		<item value="" key="namespace"/>
+		<item value="false" key="testFileSelected"/>
+		<item value="true" key="stubSelected0"/>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.wizards.classwizard.NewBaseClassSelectionDialogSettings">
+		<item value="false" key="show_enums"/>
+		<item value="false" key="show_unions"/>
+		<item value="false" key="show_macros"/>
+		<item value="true" key="show_classes"/>
+		<item value="false" key="show_functions"/>
+		<item value="true" key="show_lowlevel"/>
+		<item value="false" key="show_namespaces"/>
+		<item value="false" key="show_enumerators"/>
+		<item value="true" key="show_structs"/>
+		<item value="592" key="x"/>
+		<item value="416" key="width"/>
+		<item value="0" key="y"/>
+		<item value="false" key="show_typedefs"/>
+		<item value="false" key="show_variables"/>
+		<item value="714" key="height"/>
+	</section>
+</section>

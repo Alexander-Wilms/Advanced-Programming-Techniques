@@ -1,0 +1,56 @@
+/*
+ * CNavigationSystem.cpp
+ *
+ *  Created on: 20.10.2017
+ *      Author: awilms
+ */
+
+#include "CNavigationSystem.h"
+#include "CRoute.h"
+#include <iostream>
+
+CNavigationSystem::CNavigationSystem() : m_route(10,10) {
+	m_PoiDatabase = CPoiDatabase();
+}
+
+void CNavigationSystem::run() {
+}
+
+void CNavigationSystem::enterRoute() {
+	bool done = false;
+	char input;
+
+	std::string name;
+	double latitude;
+	double longitude;
+	std::string description;
+
+	while(!done) {
+		std::cout << "Add some POIs and waypoints, or save route (p/w/s)" << std::endl;
+		std::cin >> input;
+		switch(input) {
+		case 'p':
+			std::cout << "Enter name:" << std::endl;
+			std::cin >> name;
+			m_route.addPoi(name);
+			break;
+		case 'w':
+			std::cout << "Enter name:" << std::endl;
+			std::cin >> name;
+			m_route.addWaypoint(name);
+			break;
+		case 's':
+			done = true;
+			break;
+		default:
+			std::cout << "Error" << std::endl;
+		}
+	}
+}
+
+void CNavigationSystem::printRoute() {
+}
+
+void CNavigationSystem::printDistanceCurPosNextPoi() {
+	CWaypoint currPos = m_GPSSensor.getCurrentPosition();
+}

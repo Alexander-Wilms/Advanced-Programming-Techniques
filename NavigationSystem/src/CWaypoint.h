@@ -15,7 +15,7 @@
 
 class CWaypoint {
 public:
-	CWaypoint(std::string name, double latitude, double longitude);
+	CWaypoint(std::string name = "myWaypoint", double latitude = 37, double longitude = 42);
 	void set(std::string name, double latitude, double longitude);
 	std::string getName() const;
 	double getLatitude() const;

@@ -9,22 +9,25 @@
 #include <iostream>
 #include <cmath>
 
-#define SHOWADDRESS
+//#define SHOWADDRESS
+//#define DEBUG
 #define DEG2RAD M_PI/180
 
-CWaypoint::CWaypoint(std::string name = "myWaypoint", double latitude = 37, double longitude = 42) {
+CWaypoint::CWaypoint(std::string name, double latitude, double longitude) {
 	set(name, latitude, longitude);
-
 	#ifdef SHOWADDRESS
 		std::cout << "The address of the object: " << this << std::endl;
 	#endif
 
-	std::cout << "m_name: " << m_name << std::endl;
-	std::cout << "size of name: " << sizeof(m_name) << std::endl;
-	std::cout << "m_latitude: " << m_latitude << std::endl;
-	std::cout << "size of latitude: " << sizeof(m_latitude) << std::endl;
-	std::cout << "m_longitude: " << m_longitude << std::endl;
-	std::cout << "size of longitude: " << sizeof(m_longitude) << std::endl;
+	#ifdef DEBUG
+		std::cout << "m_name: " << m_name << std::endl;
+		std::cout << "m_latitude: " << m_latitude << std::endl;
+		std::cout << "m_longitude: " << m_longitude << std::endl;
+
+		std::cout << "size of name: " << sizeof(m_name) << std::endl;
+		std::cout << "size of latitude: " << sizeof(m_latitude) << std::endl;
+		std::cout << "size of longitude: " << sizeof(m_longitude) << std::endl;
+	#endif
 }
 
 CWaypoint::~CWaypoint() {

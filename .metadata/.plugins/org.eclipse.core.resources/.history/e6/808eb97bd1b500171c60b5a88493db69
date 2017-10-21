@@ -1,0 +1,26 @@
+/*
+ * CNavigationSystem.cpp
+ *
+ *  Created on: 20.10.2017
+ *      Author: awilms
+ */
+
+#include "CNavigationSystem.h"
+
+CNavigationSystem::CNavigationSystem() {
+	m_PoiDatabase = new CPoiDatabase();
+}
+
+void CNavigationSystem::run() {
+}
+
+void CNavigationSystem::enterRoute() {
+	m_route.addPoi(namePoi);
+	m_route.addWaypoint(namePoi);
+}
+
+void CNavigationSystem::printRoute() {
+}
+
+void CNavigationSystem::printDistanceCurPosNextPoi() {
+}
