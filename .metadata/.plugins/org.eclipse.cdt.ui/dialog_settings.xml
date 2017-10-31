@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="Default C++ source template" key="LastUsedSourceTemplate"/>
 	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
 		<item value="444" key="DIALOG_WIDTH"/>
 		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
@@ -10,7 +11,7 @@
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
 	<section name="NewClassWizardPage">
-		<item value="false" key="stubSelected1"/>
+		<item value="true" key="stubSelected1"/>
 		<item value="true" key="stubVirtual1"/>
 		<item value="false" key="namespaceSelected"/>
 		<item value="false" key="stubInline0"/>
