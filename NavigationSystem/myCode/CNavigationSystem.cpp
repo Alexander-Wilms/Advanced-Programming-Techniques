@@ -14,11 +14,13 @@
 /**
  * Constructor of CNavigationSystem
  *
- * calls the constructor of the member m_route
+ * calls the constructor of the member m_route, otherwise
+ * a constructor CRoute::CRoute() without arguments is required
+ *
+ * m_PoiDatabase() is initialized like this, since cppcheck suggested it for performance reasons
  */
 CNavigationSystem::CNavigationSystem() :
-		m_route(10, 10) {
-	m_PoiDatabase = CPoiDatabase();
+		m_route(10, 10),  m_PoiDatabase() {
 }
 
 /**

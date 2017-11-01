@@ -5,21 +5,20 @@
  *      Author: Fabian Alexander Wilms
  */
 
-#include "CWaypoint.h"
-
-#include <iostream>
 #include <cmath>
+#include <iostream>
+#include "CWaypoint.h"
 
 //#define SHOWADDRESS
 //#define DEBUG
 #define DEG2RAD M_PI/180
 
 /**
- * Cwaypoint constructor
+ * CWaypoint constructor
  *
- * @param The waypoint's name
- * @param The waypoint's latitude
- * @param The waypoint's longitude
+ * @param name 			The waypoint's name
+ * @param latitude 		The waypoint's latitude
+ * @param longitude 	The waypoint's longitude
  */
 CWaypoint::CWaypoint(std::string name, double latitude, double longitude) {
 	set(name, latitude, longitude);
@@ -38,16 +37,12 @@ CWaypoint::CWaypoint(std::string name, double latitude, double longitude) {
 	#endif
 }
 
-CWaypoint::~CWaypoint() {
-	// TODO Auto-generated destructor stub
-}
-
 /**
  * Sets the waypoint's properties
  *
- * @param The waypoint's name
- * @param The waypoint's latitude
- * @param The waypoint's longitude
+ * @param name 			The waypoint's name
+ * @param latitude 		The waypoint's latitude
+ * @param longitude 	The waypoint's longitude
  */
 void CWaypoint::set(std::string name, double latitude, double longitude) {
 	m_name = name;
@@ -72,7 +67,7 @@ void CWaypoint::set(std::string name, double latitude, double longitude) {
  *
  * @return The name
  */
-std::string CWaypoint::getName() const {
+std::string CWaypoint::getName(){
 	return m_name;
 }
 
@@ -81,7 +76,7 @@ std::string CWaypoint::getName() const {
  *
  * @return The latitude
  */
-double CWaypoint::getLatitude() const {
+double CWaypoint::getLatitude() const{
 	return m_latitude;
 }
 
@@ -97,9 +92,9 @@ double CWaypoint::getLongitude() const {
 /**
  * Returns all properties of the waypoint by reference
  *
- * @param The variable where to store the name
- * @param The variable where to store the latitude
- * @param The variable where to store the longitude
+ * @param name 			The variable where to store the name
+ * @param latitude 		The variable where to store the latitude
+ * @param longitude 	The variable where to store the longitude
  */
 void CWaypoint::getAllDataByReference(std::string& name, double& latitude, double& longitude) {
 	name = m_name;
@@ -119,7 +114,7 @@ void CWaypoint::getAllDataByReference(std::string& name, double& latitude, doubl
  *
  * @param The other waypoint
  *
- * @return The distance between both waypoints
+ * @return wp 	The distance between both waypoints
  */
 double CWaypoint::calculateDistance(const CWaypoint& wp) const {
 	double R = 6378.17;
@@ -130,7 +125,7 @@ double CWaypoint::calculateDistance(const CWaypoint& wp) const {
 /**
  * Prints the waypoint
  *
- * @param The format used to print the coordinate (DEGREE or MMSS)
+ * @param format 	The format used to print the coordinate (DEGREE or MMSS)
  */
 void CWaypoint::print(int format) {
 	if(format == DEGREE) {
@@ -152,42 +147,35 @@ void CWaypoint::print(int format) {
 /**
  * Transforms longitude into degrees, minutes and seconds
  *
- * @param variable where to store the degrees
- * @param variable where to store the minutes
- * @param variable where to store the seconds
+ * @param deg 	variable where to store the degrees
+ * @param mm 	variable where to store the minutes
+ * @param ss 	variable where to store the seconds
  */
 void CWaypoint::transformLongitude2degmmss(int& deg, int& mm, double& ss) {
 	double longitude = m_longitude;
 
-	// throw away decimal digits
+	// ignore decimal digits
 	deg = (int) longitude;
-
 	longitude -= deg;
-
 	mm = (int) (longitude * 60);
-
 	longitude -= mm / 60;
-
 	ss = longitude * 3600;
 }
 
 /**
  * Transforms latitude into degrees, minutes and seconds
  *
- * @param variable where to store the degrees
- * @param variable where to store the minutes
- * @param variable where to store the seconds
+ * @param deg 	variable where to store the degrees
+ * @param mm 	variable where to store the minutes
+ * @param ss 	variable where to store the seconds
  */
 void CWaypoint::transformLatitude2degmmss(int& deg, int& mm, double& ss) {
 	double latitude = m_latitude;
 
+	// ignore decimal digits
 	deg = (int) latitude;
-
 	latitude -= deg;
-
 	mm = (int) (latitude * 60);
-
 	latitude -= mm / 60;
-
 	ss = latitude * 3600;
 }

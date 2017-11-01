@@ -1,6 +1,6 @@
-16:57:35 **** Incremental Build of configuration Debug for project NavigationSystem ****
+00:27:53 **** Incremental Build of configuration Debug for project NavigationSystem ****
 make all 
 make: Für das Ziel „all“ ist nichts zu tun.
 
-16:57:35 Build Finished (took 90ms)
+00:27:53 Build Finished (took 74ms)
 

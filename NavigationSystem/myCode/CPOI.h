@@ -27,7 +27,14 @@ public:
 			double latitude = 37, double longitude = 42);
 	void getAllDataByReference(std::string& name, double& latitude, double& longitude, t_poi& type, std::string& description);
 private:
+	/**
+	 * Describes the type of POI of this instance
+	 */
 	t_poi m_type;
+
+	/**
+	 * A description of the POI
+	 */
 	std::string m_description;
 };
 

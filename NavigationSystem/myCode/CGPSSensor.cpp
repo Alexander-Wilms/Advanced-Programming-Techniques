@@ -5,10 +5,9 @@
  *      Author: Fabian Alexander Wilms
  */
 
-#include "CGPSSensor.h"
-
 #include <iostream>
 #include <string>
+#include "CGPSSensor.h"
 #include "CWaypoint.h"
 
 CGPSSensor::CGPSSensor() {
@@ -22,7 +21,6 @@ CGPSSensor::CGPSSensor() {
  * @return The entered coordinate
  */
 CWaypoint CGPSSensor::getCurrentPosition() {
-	std::string name;
 	double latitude, longitude;
 
 	std::cout << "GPS Sensor" << std::endl;

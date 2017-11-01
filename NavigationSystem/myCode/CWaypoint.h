@@ -17,17 +17,27 @@ class CWaypoint {
 public:
 	CWaypoint(std::string name = "myWaypoint", double latitude = 37, double longitude = 42);
 	void set(std::string name, double latitude, double longitude);
-	std::string getName() const;
+	std::string getName();
 	double getLatitude() const;
 	double getLongitude() const;
 	void getAllDataByReference(std::string& name, double& latitude, double& longitude);
 	double calculateDistance(const CWaypoint& wp) const;
 	void print(int format);
-	virtual ~CWaypoint();
 
 protected:
+	/**
+	 * The name of this waypoint
+	 */
 	std::string m_name;
+
+	/**
+	 * The waypoint's latitude
+	 */
 	double m_latitude;
+
+	/**
+	 * The waypoint's longitude
+	 */
 	double m_longitude;
 
 private:

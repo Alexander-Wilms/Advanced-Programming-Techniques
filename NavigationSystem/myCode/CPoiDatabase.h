@@ -19,7 +19,14 @@ public:
 	void addPoi(t_poi type, std::string name, std::string description, double latitude, double longitude);
 	CPOI* getPointerToPoi(std::string name);
 private:
+	/**
+	 * A fixed-size array to store all known POIs
+	 */
 	CPOI m_POI[10];
+
+	/**
+	 * The number of POIs stored in this instance
+	 */
 	int m_noPoi;
 };
 

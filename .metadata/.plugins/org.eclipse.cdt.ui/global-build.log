@@ -1,13 +1,6 @@
-Finished building: ../myCode/main.cpp
- 
-Building target: NavigationSystem
-Invoking: GCC C++ Linker
-g++  -o "NavigationSystem"  ./myCode/CGPSSensor.o ./myCode/CNavigationSystem.o ./myCode/CPOI.o ./myCode/CPoiDatabase.o ./myCode/CRoute.o ./myCode/CWaypoint.o ./myCode/main.o   
-Finished building target: NavigationSystem
- 
-
-16:57:35 Build Finished (took 2s.567ms)
-
-16:57:35 **** Incremental Build of configuration Debug for project NavigationSystem ****
+00:27:51 **** Incremental Build of configuration Debug for project NavigationSystem ****
+make all 
+make: Für das Ziel „all“ ist nichts zu tun.
+00:27:53 **** Incremental Build of configuration Debug for project NavigationSystem ****
 make all 
 make: Für das Ziel „all“ ist nichts zu tun.

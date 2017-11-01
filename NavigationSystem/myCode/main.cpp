@@ -6,20 +6,18 @@
  */
 
 #include <iostream>
-
 #include "CNavigationSystem.h"
 #include "CWaypoint.h"
-
 
 int main() {
 	CWaypoint amsterdam("Amsterdam", 52.370197222222, 4.8904444444444);
 	CWaypoint darmstadt("Darmstadt", 49.872833, 8.651222);
-	std::cout << "Constructor" << std::endl << "==========" << std::endl;
+	std::cout << "Constructor" << std::endl << "===========" << std::endl;
 	CWaypoint berlin("Berlin", 52.518611, 13.408333);
 	CWaypoint tokio("Tokio", 35.683889, 139.774444);
 	CWaypoint newWaypoint();
 
-	std::cout << std::endl << "print method" << std::endl << "==========" << std::endl;
+	std::cout << std::endl << "print method" << std::endl << "============" << std::endl;
 	berlin.print(DEGREE);
 	berlin.print(MMSS);
 

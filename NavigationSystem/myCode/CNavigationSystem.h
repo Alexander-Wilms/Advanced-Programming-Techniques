@@ -21,8 +21,19 @@ public:
 	CNavigationSystem();
 	void run();
 private:
+	/**
+	 * The navigation system's GPS sensor
+	 */
 	CGPSSensor m_GPSSensor;
+
+	/**
+	 * A model of a route that should be traveled
+	 */
 	CRoute m_route;
+
+	/**
+	 * A database of all known POIs
+	 */
 	CPoiDatabase m_PoiDatabase;
 
 	// testcases
