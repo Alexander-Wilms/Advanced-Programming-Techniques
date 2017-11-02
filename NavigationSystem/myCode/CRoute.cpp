@@ -5,9 +5,10 @@
  *      Author: Fabian Alexander Wilms
  */
 
-#include <iostream>
-#include "CPOI.h"
 #include "CRoute.h"
+#include "CPOI.h"
+
+#include <iostream>
 
 /**
  * CRoute constructor
@@ -19,7 +20,7 @@ CRoute::CRoute(unsigned int maxWp, unsigned int maxPoi) {
 	m_maxWp = maxWp;
 	m_maxPoi = maxPoi;
 
-	m_pPoiDatabase = NULL;
+	m_pPoiDatabase = nullptr;
 
 	/**
 	 * allocate the dynamic arrays to store waypoints and POIs
@@ -75,7 +76,7 @@ CRoute::~CRoute() {
  */
 void CRoute::connectToPoiDatabase(CPoiDatabase* pPoiDB) {
 	// Don't connect to null pointers
-	if (pPoiDB != NULL) {
+	if (pPoiDB != nullptr) {
 		m_pPoiDatabase = pPoiDB;
 	} else {
 		std::cout
@@ -99,10 +100,11 @@ void CRoute::addWaypoint(std::string namePoi) {
 	while(true){
 		std::cout << "\tEnter latitude: ";
 		std::cin >> slatitude;
+		// try to parse string
 		try {
 			latitude = std::stod(slatitude);
 			break;
-		} catch(...) {
+		} catch(...) { // catch all exceptions
 			std::cin.clear();
 			std::cin.ignore();
 			std::cout << "ERROR in CRoute::addWaypoint(): Input could not be parsed" << std::endl;
@@ -112,10 +114,11 @@ void CRoute::addWaypoint(std::string namePoi) {
 	while(true){
 		std::cout << "\tEnter longitude: ";
 		std::cin >> slongitude;
+		// try to parse string
 		try {
 			longitude = std::stod(slongitude);
 			break;
-		} catch(...) {
+		} catch(...) { // catch all exceptions
 			std::cin.clear();
 			std::cin.ignore();
 			std::cout << "ERROR in CRoute::addWaypoint(): Input could not be parsed" << std::endl;
@@ -136,9 +139,9 @@ void CRoute::addPoi(std::string namePoi) {
 	// if one was found, add it to the route
 
 	// Only access POI database if it exists
-	if (m_pPoiDatabase != NULL) {
+	if (m_pPoiDatabase != nullptr) {
 		// Don't store null pointers
-		if (m_pPoiDatabase->getPointerToPoi(namePoi) != NULL) {
+		if (m_pPoiDatabase->getPointerToPoi(namePoi) != nullptr) {
 			m_pPoi[m_nextPoi] = m_pPoiDatabase->getPointerToPoi(namePoi);
 			m_nextPoi++;
 		} else {
@@ -167,7 +170,7 @@ double CRoute::getDistanceNextPoi(const CWaypoint& wp, CPOI& poi) {
 	// iterate over all POIs of the route
 	for (unsigned int j = 0; j < m_nextPoi; j++) {
 		// Don't dereference null pointers
-		if (m_pPoi[j] != NULL) {
+		if (m_pPoi[j] != nullptr) {
 			if (firstPOI == true) {
 				// the first POI
 				returnValue = wp.calculateDistance((CWaypoint) *m_pPoi[j]);
@@ -204,7 +207,7 @@ void CRoute::print() {
 	// Print all POIs of the route
 	for (unsigned int j = 0; j < m_nextPoi; j++) {
 		// Don't dereference null pointers
-		if (m_pPoi[j] != NULL) {
+		if (m_pPoi[j] != nullptr) {
 			m_pPoi[j]->print();
 		} else {
 			std::cout

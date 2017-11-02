@@ -5,9 +5,10 @@
  *      Author: Fabian Alexander Wilms
  */
 
+#include "CWaypoint.h"
+
 #include <cmath>
 #include <iostream>
-#include "CWaypoint.h"
 
 //#define SHOWADDRESS
 //#define DEBUG

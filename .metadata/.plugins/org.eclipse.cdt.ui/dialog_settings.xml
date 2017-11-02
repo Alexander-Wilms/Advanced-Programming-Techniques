@@ -20,6 +20,17 @@
 		<item value="false" key="testFileSelected"/>
 		<item value="true" key="stubSelected0"/>
 	</section>
+	<section name="PDOMSearchPage">
+		<item value="false" key="caseSensitive"/>
+		<item value="227191" key="searchFlags"/>
+		<list key="previousPatterns">
+			<item value="awilms"/>
+		</list>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item value="true" key="askReindex"/>
+		<item value="0" key="askReindex.detail"/>
+	</section>
 	<section name="completion_proposal_size">
 	</section>
 	<section name="org.eclipse.cdt.internal.ui.wizards.classwizard.NewBaseClassSelectionDialogSettings">

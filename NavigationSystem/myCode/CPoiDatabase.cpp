@@ -5,9 +5,10 @@
  *      Author: Fabian Alexander Wilms
  */
 
-#include <iostream>
-#include "CPOI.h"
 #include "CPoiDatabase.h"
+#include "CPOI.h"
+
+#include <iostream>
 
 /**
  * Constructor creates a new database
@@ -43,7 +44,7 @@ void CPoiDatabase::addPoi(t_poi type, std::string name, std::string description,
  * @return A pointer to the POI with the given name
  */
 CPOI* CPoiDatabase::getPointerToPoi(std::string name) {
-	CPOI* returnValue = NULL;
+	CPOI* returnValue = nullptr;
 
 	for(int i = 0; i < m_noPoi; i++) {
 		if(m_POI[i].getName() == name) {
@@ -51,7 +52,7 @@ CPOI* CPoiDatabase::getPointerToPoi(std::string name) {
 		}
 	}
 
-	if(returnValue == NULL) {
+	if(returnValue == nullptr) {
 		std::cout << "ERROR in CPoiDatabase::getPointerToPoi(): Could not find POI " << name << std::endl;
 	}
 

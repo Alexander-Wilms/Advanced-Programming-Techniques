@@ -5,9 +5,10 @@
  *      Author: Fabian Alexander Wilms
  */
 
-#include <iostream>
 #include "CPOI.h"
 #include "CWaypoint.h"
+
+#include <iostream>
 
 /**
  * Creates a new POI with the given properties
