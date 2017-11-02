@@ -69,10 +69,9 @@ void CNavigationSystem::addPOIsToDatabase() {
  */
 void CNavigationSystem::printDistanceCurPosNextPoi() {
 	CWaypoint currPos = m_GPSSensor.getCurrentPosition();
-	/**
-	 * create a variable to store the nearest POI
-	 */
+	// create a variable to store the nearest POI
 	CPOI nextPoi;
+
 	double distance = m_route.getDistanceNextPoi(currPos, nextPoi);
 	std::cout << "Distance to next POI = " << distance << std::endl;
 	nextPoi.print();

@@ -63,8 +63,6 @@ void CPOI::print() {
 		std::cout << "University: ";
 	}
 	std::cout << m_description << std::endl;
-	/**
-	 * call print() method of the superclass
-	 */
+	// call print() method of the superclass
 	CWaypoint::print(MMSS);
 }

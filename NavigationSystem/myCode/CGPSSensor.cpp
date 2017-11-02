@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <string>
+
 #include "CGPSSensor.h"
 #include "CWaypoint.h"
 
@@ -21,15 +22,36 @@ CGPSSensor::CGPSSensor() {
  * @return The entered coordinate
  */
 CWaypoint CGPSSensor::getCurrentPosition() {
+	std::string slatitude, slongitude;
 	double latitude, longitude;
 
 	std::cout << "GPS Sensor" << std::endl;
 
-	std::cout << "\tEnter latitude: ";
-	std::cin >> latitude;
+	while(true){
+		std::cout << "\tEnter latitude: ";
+		std::cin >> slatitude;
+		try {
+			latitude = std::stod(slatitude);
+			break;
+		} catch(...) {
+			std::cin.clear();
+			std::cin.ignore();
+			std::cout << "ERROR in CGPSSensor::getCurrentPosition(): Input could not be parsed" << std::endl;
+		}
+	}
 
-	std::cout << "\tEnter longitude: ";
-	std::cin >> longitude;
+	while(true){
+		std::cout << "\tEnter longitude: ";
+		std::cin >> slongitude;
+		try {
+			longitude = std::stod(slongitude);
+			break;
+		} catch(...) {
+			std::cin.clear();
+			std::cin.ignore();
+			std::cout << "ERROR in CGPSSensor::getCurrentPosition(): Input could not be parsed" << std::endl;
+		}
+	}
 
 	CWaypoint returnValue("GPS coordinate", latitude, longitude);
 	return returnValue;

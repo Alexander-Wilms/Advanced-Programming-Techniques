@@ -51,11 +51,11 @@ CRoute::CRoute(const CRoute& origin) {
 	m_pWaypoint = new CWaypoint[m_maxWp];
 	m_pPoi = new CPOI*[m_maxPoi];
 
-	for (int i = 0; i < m_maxWp; i++) {
+	for (unsigned int i = 0; i < m_maxWp; i++) {
 		m_pWaypoint[i] = origin.m_pWaypoint[i];
 	}
 
-	for (int j = 0; j < m_maxPoi; j++) {
+	for (unsigned int j = 0; j < m_maxPoi; j++) {
 		m_pPoi[j] = origin.m_pPoi[j];
 	}
 }
@@ -90,14 +90,37 @@ void CRoute::connectToPoiDatabase(CPoiDatabase* pPoiDB) {
  * @param namePoi 	The name of the wayoint to add
  */
 void CRoute::addWaypoint(std::string namePoi) {
-	double latitude;
-	double longitude;
+	std::string slatitude, slongitude;
+	double latitude, longitude;
 
 	std::cout << namePoi << ":" << std::endl;
-	std::cout << "Enter latitude:" << std::endl;
-	std::cin >> latitude;
-	std::cout << "Enter longitude:" << std::endl;
-	std::cin >> longitude;
+
+	// input validation
+	while(true){
+		std::cout << "\tEnter latitude: ";
+		std::cin >> slatitude;
+		try {
+			latitude = std::stod(slatitude);
+			break;
+		} catch(...) {
+			std::cin.clear();
+			std::cin.ignore();
+			std::cout << "ERROR in CRoute::addWaypoint(): Input could not be parsed" << std::endl;
+		}
+	}
+
+	while(true){
+		std::cout << "\tEnter longitude: ";
+		std::cin >> slongitude;
+		try {
+			longitude = std::stod(slongitude);
+			break;
+		} catch(...) {
+			std::cin.clear();
+			std::cin.ignore();
+			std::cout << "ERROR in CRoute::addWaypoint(): Input could not be parsed" << std::endl;
+		}
+	}
 
 	m_pWaypoint[m_nextWp] = CWaypoint(namePoi, latitude, longitude);
 	m_nextWp++;

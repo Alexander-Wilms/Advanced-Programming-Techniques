@@ -63,7 +63,7 @@ void CWaypoint::set(std::string name, double latitude, double longitude) {
 }
 
 /**
- * Returns the wapoint's name
+ * Returns the waypoint's name
  *
  * @return The name
  */
@@ -112,9 +112,9 @@ void CWaypoint::getAllDataByReference(std::string& name, double& latitude, doubl
 /**
  * Calculates the distance between this CWaypoint instance and another
  *
- * @param The other waypoint
+ * @param wp 	The other waypoint
  *
- * @return wp 	The distance between both waypoints
+ * @return	 	The distance between both waypoints
  */
 double CWaypoint::calculateDistance(const CWaypoint& wp) const {
 	double R = 6378.17;
@@ -141,7 +141,6 @@ void CWaypoint::print(int format) {
 		transformLongitude2degmmss(deg, mm, ss);
 		std::cout << " and longitude = " << deg << "deg " << mm << "min " << ss << "s " << std::endl;
 	}
-
 }
 
 /**

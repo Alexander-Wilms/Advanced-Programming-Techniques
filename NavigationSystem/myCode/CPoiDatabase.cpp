@@ -30,6 +30,8 @@ void CPoiDatabase::addPoi(t_poi type, std::string name, std::string description,
 	if(m_noPoi < 10) {
 		m_POI[m_noPoi] = CPOI(type, name, description, latitude, longitude);
 		m_noPoi++;
+	} else {
+		std::cout << "ERROR in CPoiDatabase::addPoi(): Tried to add more than 10 POIs" << std::endl;
 	}
 }
 
@@ -50,7 +52,7 @@ CPOI* CPoiDatabase::getPointerToPoi(std::string name) {
 	}
 
 	if(returnValue == NULL) {
-		std::cout << "ERROR in CPoiDatabase::getPointerToPoi(): Could not find POI by name" << name << std::endl;
+		std::cout << "ERROR in CPoiDatabase::getPointerToPoi(): Could not find POI " << name << std::endl;
 	}
 
 	return returnValue;
