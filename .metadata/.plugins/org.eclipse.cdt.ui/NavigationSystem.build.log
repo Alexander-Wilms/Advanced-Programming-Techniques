@@ -1,6 +1,6 @@
-06:36:48 **** Incremental Build of configuration Release for project NavigationSystem ****
+15:25:15 **** Incremental Build of configuration Release for project NavigationSystem ****
 make all 
 make: Für das Ziel „all“ ist nichts zu tun.
 
-06:36:48 Build Finished (took 69ms)
+15:25:15 Build Finished (took 72ms)
 

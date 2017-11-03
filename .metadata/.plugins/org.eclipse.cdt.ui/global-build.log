@@ -1,3 +1,15 @@
-06:36:48 **** Incremental Build of configuration Release for project NavigationSystem ****
+17:00:16 **** Incremental Build of configuration Debug for project Complex ****
+make all 
+Building file: ../CComplex.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CComplex.d" -MT"CComplex.o" -o "CComplex.o" "../CComplex.cpp"
+Finished building: ../CComplex.cpp
+ 
+Building target: Complex
+Invoking: GCC C++ Linker
+g++  -o "Complex"  ./CComplex.o ./main.o   
+Finished building target: Complex
+ 
+17:00:18 **** Incremental Build of configuration Debug for project Complex ****
 make all 
 make: Für das Ziel „all“ ist nichts zu tun.
