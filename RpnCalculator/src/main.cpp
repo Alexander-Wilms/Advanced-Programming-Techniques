@@ -7,6 +7,7 @@
 
 #include "CLifoBuffer.h"
 #include "CFraction.h"
+#include "CRpnCalculator.h"
 #include <iostream>
 
 int main(void) {
@@ -20,5 +21,23 @@ int main(void) {
 	lifoBuffer.pop(storage);
 	lifoBuffer.pop(storage);
 	lifoBuffer.print();
+
+	CRpnCalculator calculator;
+	calculator.pushValue(CFraction(5,2));
+	calculator.pushValue(CFraction(6,5));
+	calculator.multiply();
+	calculator.pushValue(CFraction(1,2));
+	calculator.add();
+	calculator.pushValue(CFraction(1,3));
+	calculator.substract();
+	calculator.pushValue(CFraction(5,1));
+	calculator.pushValue(CFraction(1,6));
+	calculator.add();
+	calculator.pushValue(CFraction(11,4));
+	calculator.add();
+	calculator.divide();
+	calculator.popResult(storage);
+	storage.print();
+
 	return 0;
 }

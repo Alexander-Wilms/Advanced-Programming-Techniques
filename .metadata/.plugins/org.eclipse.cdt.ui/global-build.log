@@ -1,6 +1,15 @@
-18:20:13 **** Incremental Build of configuration Debug for project RpnCalculator ****
+18:43:32 **** Incremental Build of configuration Debug for project RpnCalculator ****
 make all 
-make: Für das Ziel „all“ ist nichts zu tun.
-18:20:15 **** Incremental Build of configuration Debug for project RpnCalculator ****
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: RpnCalculator
+Invoking: GCC C++ Linker
+g++  -o "RpnCalculator"  ./src/CFraction.o ./src/CLifoBuffer.o ./src/CRpnCalculator.o ./src/main.o   
+Finished building target: RpnCalculator
+ 
+18:43:34 **** Incremental Build of configuration Debug for project RpnCalculator ****
 make all 
 make: Für das Ziel „all“ ist nichts zu tun.
