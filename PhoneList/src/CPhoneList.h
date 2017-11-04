@@ -20,7 +20,7 @@ public:
 	void print();
 private:
 	bool nameExists(std::string name, int& pos);
-	std::string numberDoubled(std::string, unsigned long long number);
+	std::string numberDoubled(std::string name, long long number);
 	std::vector<CPhoneListElement> m_list;
 };
 

@@ -13,13 +13,14 @@
 
 class CPhoneListElement {
 public:
-	CPhoneListElement(std::string name, unsigned long long number);
+	CPhoneListElement(std::string name, long long number);
 	std::string getName();
-	int getNumber(int index);
-	void addNumber(unsigned long long number);
-	bool numberInList(unsigned long long number);
+	int getNoNumber();
+	long long getNumber(int index);
+	void addNumber(long long number);
+	bool numberInList(long long number);
 private:
-	std::vector<unsigned long long> m_number;
+	std::vector<long long> m_number;
 	std::string m_name;
 };
 
