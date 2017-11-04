@@ -28,5 +28,13 @@ int main(void) {
 
 	bank.generateReport();
 
+	bank.deleteAccount(111117);
+
+	bank.generateReport();
+
+	bank.deleteCustomer("Paul Panther");
+
+	bank.generateReport();
+
 	return 0;
 }
