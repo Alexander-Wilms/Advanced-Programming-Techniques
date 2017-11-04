@@ -1833,3 +1833,12 @@ org.eclipse.core.runtime.CoreException: No property tester contributes a propert
 
 !ENTRY org.eclipse.cdt.core 1 0 2017-11-03 18:02:27.024
 !MESSAGE Indexed 'RpnCalculator' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-11-03 23:29:29.930
+!MESSAGE Indexed 'Bank' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-11-04 02:03:01.628
+!MESSAGE Indexed 'Bank' (5 sources, 197 headers) in 6,96 sec: 18.264 declarations; 29.510 references; 0 unresolved inclusions; 1 syntax errors; 226 unresolved names (0,47 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-11-04 02:58:38.309
+!MESSAGE Indexed 'Bank' (5 sources, 228 headers) in 13,2 sec: 25.786 declarations; 44.828 references; 0 unresolved inclusions; 2 syntax errors; 220 unresolved names (0,31 %)
