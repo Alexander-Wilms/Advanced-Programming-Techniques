@@ -10,8 +10,8 @@
 #include <cmath>
 #include <iostream>
 
-//#define SHOWADDRESS
-//#define DEBUG
+#define SHOWADDRESS
+#define DEBUG
 #define DEG2RAD M_PI/180
 
 /**
