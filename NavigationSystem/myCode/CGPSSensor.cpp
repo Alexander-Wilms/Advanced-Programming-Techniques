@@ -8,6 +8,7 @@
 #include "CGPSSensor.h"
 #include "CWaypoint.h"
 
+#include <climits>
 #include <iostream>
 #include <string>
 
@@ -20,39 +21,32 @@ CGPSSensor::CGPSSensor() {
  * @return The entered coordinate
  */
 CWaypoint CGPSSensor::getCurrentPosition() {
-	std::string slatitude, slongitude;
 	double latitude, longitude;
 
 	std::cout << "GPS Sensor" << std::endl;
 
 	// input validation
-	while(true){
-		std::cout << "\tEnter latitude: ";
-		std::cin >> slatitude;
-		// try to parse string
-		try {
-			latitude = std::stod(slatitude);
-			break;
-		} catch(...) { // catch all exceptions
-			std::cin.clear();
-			std::cin.ignore();
-			std::cout << "ERROR in CGPSSensor::getCurrentPosition(): Input could not be parsed" << std::endl;
-		}
+	std::cout << "\tEnter latitude: ";
+	while (!(std::cin >> latitude)) {
+		std::cin.clear();
+		std::cin.ignore(INT_MAX, '\n');
+		std::cout
+				<< "ERROR in CGPSSensor::getCurrentPosition(): Input could not be parsed"
+				<< std::endl << "\tEnter latitude: ";
 	}
+	std::cin.clear();
+	std::cin.ignore(INT_MAX, '\n');
 
-	while(true){
-		std::cout << "\tEnter longitude: ";
-		std::cin >> slongitude;
-		// try to parse string
-		try {
-			longitude = std::stod(slongitude);
-			break;
-		} catch(...) { // catch all exceptions
-			std::cin.clear();
-			std::cin.ignore();
-			std::cout << "ERROR in CGPSSensor::getCurrentPosition(): Input could not be parsed" << std::endl;
-		}
+	std::cout << "\tEnter longitude: ";
+	while (!(std::cin >> longitude)) {
+		std::cin.clear();
+		std::cin.ignore(INT_MAX, '\n');
+		std::cout
+				<< "ERROR in CGPSSensor::getCurrentPosition(): Input could not be parsed"
+				<< std::endl << "\tEnter longitude: ";
 	}
+	std::cin.clear();
+	std::cin.ignore(INT_MAX, '\n');
 
 	CWaypoint returnValue("GPS coordinate", latitude, longitude);
 	return returnValue;
