@@ -8,15 +8,8 @@
 #include "CRoute.h"
 #include "CPOI.h"
 
-#include <climits>
 #include <iostream>
 
-/**
- * CRoute constructor
- *
- * @param maxWp 	maximum number of waypoints
- * @param maxPoi 	maximum number of POIs
- */
 CRoute::CRoute(unsigned int maxWp, unsigned int maxPoi) {
 	m_maxWp = maxWp;
 	m_maxPoi = maxPoi;
@@ -29,20 +22,18 @@ CRoute::CRoute(unsigned int maxWp, unsigned int maxPoi) {
 	 * m_pWaypoint initially contains CWaypoints object constructed
 	 * using the default arguments.
 	 *
-	 * m_pPOI initially contains null pointers
+	 * m_pPOI initially contains undefined values
 	 */
+	// check against 0
 	m_pWaypoint = new CWaypoint[maxWp];
 	m_pPoi = new CPOI*[maxPoi];
+
+	std::fill(m_pPoi, m_pPoi+maxPoi, nullptr);
 
 	m_nextPoi = 0;
 	m_nextWp = 0;
 }
 
-/**
- * Copy constructor
- *
- * @param origin 	A reference to an existing CRoute instance
- */
 CRoute::CRoute(const CRoute& origin) {
 	m_maxWp = origin.m_maxWp;
 	m_maxPoi = origin.m_maxPoi;
@@ -54,32 +45,22 @@ CRoute::CRoute(const CRoute& origin) {
 
 	// cppcheck complained that the value of pointer 'm_pWaypoint',
 	// which points to allocated memory, is copied
-	// in copy constructor instead of allocating new memory
+	// in copy constructor instead of allocating new memory. Therefore,
+	// now I'm allocating new memory and manually copying the values into
+	// the new array
 	m_pWaypoint = new CWaypoint[m_maxWp];
 	m_pPoi = new CPOI*[m_maxPoi];
 
-	for (unsigned int i = 0; i < m_maxWp; i++) {
-		m_pWaypoint[i] = origin.m_pWaypoint[i];
-	}
-
-	for (unsigned int j = 0; j < m_maxPoi; j++) {
-		m_pPoi[j] = origin.m_pPoi[j];
-	}
+	// copy the CWaypoint and CPOI* array contents
+	std::copy(origin.m_pWaypoint, origin.m_pWaypoint+m_maxWp, m_pWaypoint);
+	std::copy(origin.m_pPoi, origin.m_pPoi+m_maxPoi, m_pPoi);
 }
 
-/**
- * CRoute destructor deletes the dynamic arrays
- */
 CRoute::~CRoute() {
 	delete[] m_pWaypoint;
 	delete[] m_pPoi;
 }
 
-/**
- * Connects the route object to a POI database
- *
- * @param pPoiDB A pointer to a PoiDatabase
- */
 void CRoute::connectToPoiDatabase(CPoiDatabase* pPoiDB) {
 	// Don't connect to null pointers
 	if (pPoiDB != nullptr) {
@@ -91,75 +72,35 @@ void CRoute::connectToPoiDatabase(CPoiDatabase* pPoiDB) {
 	}
 }
 
-/**
- * Adds a waypoint to the route
- *
- * @param namePoi 	The name of the wayoint to add
- */
-void CRoute::addWaypoint(std::string namePoi) {
-	double latitude, longitude;
-
-	std::cout << namePoi << ":" << std::endl;
-
-	// input validation
-	std::cout << "\tEnter latitude: ";
-	while(!(std::cin >> latitude)) {
-		std::cin.clear();
-		std::cin.ignore(INT_MAX,'\n');
-		std::cout << "ERROR in CRoute::addWaypoint(): Input could not be parsed" << std::endl
-				<< "\tEnter latitude: ";
-	}
-	std::cin.clear();
-	std::cin.ignore(INT_MAX,'\n');
-
-	std::cout << "\tEnter longitude: ";
-	while(!(std::cin >> longitude)) {
-		std::cin.clear();
-		std::cin.ignore(INT_MAX,'\n');
-		std::cout << "ERROR in CRoute::addWaypoint(): Input could not be parsed" << std::endl
-				<< "\tEnter longitude: ";
-	}
-	std::cin.clear();
-	std::cin.ignore(INT_MAX,'\n');
-
-	m_pWaypoint[m_nextWp] = CWaypoint(namePoi, latitude, longitude);
+void CRoute::addWaypoint(CWaypoint const& wp) {
+	m_pWaypoint[m_nextWp] = wp;
 	m_nextWp++;
 }
 
-/**
- * Adds a POI to the route
- *
- * @param namePoi 	The name of the POI to add
- */
 void CRoute::addPoi(std::string namePoi) {
 	// search for POI in database
 	// if one was found, add it to the route
 
 	// Only access POI database if it exists
 	if (m_pPoiDatabase != nullptr) {
-		// Don't store null pointers
-		if (m_pPoiDatabase->getPointerToPoi(namePoi) != nullptr) {
-			m_pPoi[m_nextPoi] = m_pPoiDatabase->getPointerToPoi(namePoi);
-			m_nextPoi++;
-		} else {
-			std::cout << "ERROR in CRoute::addPoi(): Tried store null pointer"
-					<< std::endl;
+			// check array bounds
+			if(m_nextPoi < 10) {
+				// Don't store null pointers
+				if (m_pPoiDatabase->getPointerToPoi(namePoi) != nullptr) {
+				m_pPoi[m_nextPoi] = m_pPoiDatabase->getPointerToPoi(namePoi);
+				m_nextPoi++;
+			} else {
+				std::cout << "ERROR in CRoute::addPoi(): Tried store null pointer"
+						<< std::endl;
+			}
 		}
 	} else {
 		std::cout
-				<< "ERROR in CRoute::addPoi(): Tried to dereference null pointer"
-				<< std::endl;
+				<< "ERROR in CRoute::addPoi(): Tried to dereference null pointer" << std::endl
+				<< "Did you forget to connect to a CPoiDatabase?" << std::endl;
 	}
 }
 
-/**
- * Finds the nearest POI to the given waypoint and returns the distance
- *
- * @param wp 	Reference to a waypoint
- * @param poi 	Reference to a POI, which is used to store the next POI
- *
- * @return The distance
- */
 double CRoute::getDistanceNextPoi(const CWaypoint& wp, CPOI& poi) {
 	double returnValue = -1;
 	bool firstPOI = true;
@@ -193,9 +134,6 @@ double CRoute::getDistanceNextPoi(const CWaypoint& wp, CPOI& poi) {
 	return returnValue;
 }
 
-/**
- * Print all waypoints and POIs of the route
- */
 void CRoute::print() {
 	std::cout << "Our Route has " << m_nextWp << " Waypoints and " << m_nextPoi
 			<< " Points of Interest" << std::endl;

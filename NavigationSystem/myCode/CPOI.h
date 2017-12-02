@@ -22,9 +22,32 @@ typedef enum {RESTAURANT, TOURISTIC, GASSTATION, UNIVERSITY} t_poi;
  */
 class CPOI : public CWaypoint {
 public:
+	/**
+	 * Prints the properties of the POI
+	 */
 	void print();
+
+	/**
+	 * Creates a new POI with the given properties
+	 *
+	 * @param type			The POI's type
+	 * @param name			The POI's name
+	 * @param description	The POI's description
+	 * @param latitude		The POI's latitude
+	 * @param longitude		The POI's longitude
+	 */
 	explicit CPOI(t_poi type = RESTAURANT, std::string name = "defaultname", std::string description = "defaultdescription",
 			double latitude = 37, double longitude = 42);
+
+	/**
+	 * Returns a members of the POI by reference
+	 *
+	 * @param name			variable where to store the POI's name
+	 * @param latitude		variable where to store the POI's latitude
+	 * @param longitude		variable where to store the POI's longitude
+	 * @param type			variable where to store the POI's type
+	 * @param description	variable where to store the POI's description
+	 */
 	void getAllDataByReference(std::string& name, double& latitude, double& longitude, t_poi& type, std::string& description);
 private:
 	/**

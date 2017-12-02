@@ -1,0 +1,24 @@
+1.1
+a) -
+b) -
+c)  sizeof(m_name): 32
+    sizeof(m_latitude): 8
+    sizeof(m_longitude): 8
+f) Best file: CWaypoint.h, since it's included by CWaypoint.cpp and main.cpp
+h) Finding: pass by reference results in the variables having the same addresses
+
+1.2
+a)  CWaypoint*: Pointer to dynamically allocated memory containing CWaypoints
+    CPOI**: Pointer to dynamically allocated memory containing pointers to CPOIs stored in a CPoiDatabase
+b) We have a separate CPoiDatabase instance, probably to save memory. CRoute just stores a pointer to the instance. CNavigationSystem creates a CPoiDatabse instance and calls connectPoiDatabase with a pointer to the array.
+c)  They shouldn't be accessible when the CNavigationSystem is not running
+
+1.3
+f)  Order of implementation: first implement classes, which don't depend on other classes, and then go up the inheritance hierarchy:
+
+CWaypoint
+CGPSSensor
+CPOI
+CPoiDatabase
+CRoute
+CNavigationSystem

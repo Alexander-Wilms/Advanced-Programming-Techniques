@@ -10,17 +10,10 @@
 #include <cmath>
 #include <iostream>
 
-#define SHOWADDRESS
-#define DEBUG
+//#define SHOWADDRESS
+//#define DEBUG
 #define DEG2RAD M_PI/180
 
-/**
- * CWaypoint constructor
- *
- * @param name 			The waypoint's name
- * @param latitude 		The waypoint's latitude
- * @param longitude 	The waypoint's longitude
- */
 CWaypoint::CWaypoint(std::string name, double latitude, double longitude) {
 	set(name, latitude, longitude);
 	#ifdef SHOWADDRESS
@@ -38,13 +31,6 @@ CWaypoint::CWaypoint(std::string name, double latitude, double longitude) {
 	#endif
 }
 
-/**
- * Sets the waypoint's properties
- *
- * @param name 			The waypoint's name
- * @param latitude 		The waypoint's latitude
- * @param longitude 	The waypoint's longitude
- */
 void CWaypoint::set(std::string name, double latitude, double longitude) {
 	m_name = name;
 
@@ -63,40 +49,18 @@ void CWaypoint::set(std::string name, double latitude, double longitude) {
 	}
 }
 
-/**
- * Returns the waypoint's name
- *
- * @return The name
- */
 std::string CWaypoint::getName(){
 	return m_name;
 }
 
-/**
- * Returns the waypoint's latitude
- *
- * @return The latitude
- */
 double CWaypoint::getLatitude() const{
 	return m_latitude;
 }
 
-/*
- * Return the waypoint's longitude
- *
- * @return The longitude
- */
 double CWaypoint::getLongitude() const {
 	return m_longitude;
 }
 
-/**
- * Returns all properties of the waypoint by reference
- *
- * @param name 			The variable where to store the name
- * @param latitude 		The variable where to store the latitude
- * @param longitude 	The variable where to store the longitude
- */
 void CWaypoint::getAllDataByReference(std::string& name, double& latitude, double& longitude) {
 	name = m_name;
 	latitude = m_latitude;
@@ -110,24 +74,12 @@ void CWaypoint::getAllDataByReference(std::string& name, double& latitude, doubl
 	std::cout << "address of parameter variable \"longitude\": " << &longitude << std::endl;
 }
 
-/**
- * Calculates the distance between this CWaypoint instance and another
- *
- * @param wp 	The other waypoint
- *
- * @return	 	The distance between both waypoints
- */
 double CWaypoint::calculateDistance(const CWaypoint& wp) const {
 	double R = 6378.17;
 	return R*std::acos(std::sin(m_latitude*DEG2RAD)*std::sin(wp.getLatitude()*DEG2RAD)+
 			std::cos(m_latitude*DEG2RAD)*std::cos(wp.getLatitude()*DEG2RAD)*std::cos(wp.getLongitude()*DEG2RAD-m_longitude*DEG2RAD));
 }
 
-/**
- * Prints the waypoint
- *
- * @param format 	The format used to print the coordinate (DEGREE or MMSS)
- */
 void CWaypoint::print(int format) {
 	if(format == DEGREE) {
 		std::cout << m_name << " on latitude = " << m_latitude << " and longitude " << m_longitude << std::endl;
@@ -144,13 +96,6 @@ void CWaypoint::print(int format) {
 	}
 }
 
-/**
- * Transforms longitude into degrees, minutes and seconds
- *
- * @param deg 	variable where to store the degrees
- * @param mm 	variable where to store the minutes
- * @param ss 	variable where to store the seconds
- */
 void CWaypoint::transformLongitude2degmmss(int& deg, int& mm, double& ss) {
 	double longitude = m_longitude;
 
@@ -162,13 +107,6 @@ void CWaypoint::transformLongitude2degmmss(int& deg, int& mm, double& ss) {
 	ss = longitude * 3600;
 }
 
-/**
- * Transforms latitude into degrees, minutes and seconds
- *
- * @param deg 	variable where to store the degrees
- * @param mm 	variable where to store the minutes
- * @param ss 	variable where to store the seconds
- */
 void CWaypoint::transformLatitude2degmmss(int& deg, int& mm, double& ss) {
 	double latitude = m_latitude;
 

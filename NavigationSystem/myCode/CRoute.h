@@ -14,14 +14,60 @@
 
 class CRoute {
 public:
+	/**
+	 * CRoute constructor
+	 *
+	 * @param maxWp 	maximum number of waypoints
+	 * @param maxPoi 	maximum number of POIs
+	 */
 	CRoute(unsigned int maxWp, unsigned int maxPoi);
+
+	/**
+	 * Copy constructor
+	 *
+	 * @param origin 	A reference to an existing CRoute instance
+	 */
 	CRoute(const CRoute& origin);
+
+	/**
+	 * CRoute destructor deletes the dynamic arrays
+	 */
 	~CRoute();
+
+	/**
+	 * Connects the route object to a POI database
+	 *
+	 * @param pPoiDB A pointer to a PoiDatabase
+	 */
 	void connectToPoiDatabase(CPoiDatabase* pPoiDB);
-	void addWaypoint(std::string namePoi);
+
+	/**
+	 * Adds a waypoint to the route
+	 *
+	 * @param namePoi 	The name of the wayoint to add
+	 */
+	void addWaypoint(CWaypoint const& wp);
+
+	/**
+	 * Adds a POI to the route
+	 *
+	 * @param namePoi 	The name of the POI to add
+	 */
 	void addPoi(std::string namePoi);
+
+	/**
+	 * Finds the nearest POI to the given waypoint and returns the distance
+	 *
+	 * @param wp 	Reference to a waypoint
+	 * @param poi 	Reference to a POI, which is used to store the next POI
+	 *
+	 * @return The distance
+	 */
 	double getDistanceNextPoi(const CWaypoint& wp, CPOI& poi);
-	double getDistanceNextPoi(const CWaypoint& wp);
+
+	/**
+	 * Print all waypoints and POIs of the route
+	 */
 	void print();
 private:
 	/**

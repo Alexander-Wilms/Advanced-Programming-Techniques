@@ -15,7 +15,9 @@ int main() {
 	std::cout << "Constructor" << std::endl << "===========" << std::endl;
 	CWaypoint berlin("Berlin", 52.518611, 13.408333);
 	CWaypoint tokio("Tokio", 35.683889, 139.774444);
-	CWaypoint newWaypoint();
+	// no brackets, otherwise it's interpreted as a
+	// function declaration
+	CWaypoint newWaypoint;
 
 	std::cout << std::endl << "print method" << std::endl << "============"
 			<< std::endl;
@@ -53,6 +55,22 @@ int main() {
 
 	CNavigationSystem navigationSystem = CNavigationSystem();
 	navigationSystem.run();
+
+	std::cout << std::endl << "Test CRoute's copy constructor" << std::endl
+			<< "==============================" << std::endl;
+
+	CPoiDatabase poiDatabase;
+	poiDatabase.addPoi(RESTAURANT, "Mensa HDA", "The best Mensa in the world",
+			10, 20);
+	CRoute* proute1 = new CRoute(10, 10);
+	proute1->connectToPoiDatabase(&poiDatabase);
+	proute1->addPoi("Mensa HDA");
+	proute1->print();
+
+	CRoute route2 = *proute1; // calls the copy constructor
+	delete proute1;
+	// route2 still has access to its associated member variables
+	route2.print();
 
 	return 0;
 }

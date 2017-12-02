@@ -18,7 +18,19 @@
  */
 class CNavigationSystem {
 public:
+	/**
+	 * Constructor of CNavigationSystem
+	 *
+	 * calls the constructor of the member m_route, otherwise
+	 * a constructor CRoute::CRoute() without arguments is required
+	 *
+	 * m_PoiDatabase() is initialized like this, since cppcheck suggested it for performance reasons
+	 */
 	CNavigationSystem();
+
+	/**
+	 * Starts the navigation system
+	 */
 	void run();
 private:
 	/**
@@ -36,10 +48,25 @@ private:
 	 */
 	CPoiDatabase m_PoiDatabase;
 
-	// testcases
+	/**
+	 * test cases
+	 */
 	void addPOIsToDatabase();
+
+	/**
+	 * Allows the user to enter coordinates for waypoints and POIs of the given route
+	 */
 	void enterRoute();
+
+	/**
+	 * Prints all waypoints and POIs of the route
+	 */
 	void printRoute();
+
+	/**
+	 * Requests the current location from the GPS sensor and prints the
+	 * distance to the next POI of the route
+	 */
 	void printDistanceCurPosNextPoi();
 };
 

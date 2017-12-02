@@ -16,7 +16,16 @@
  */
 class CGPSSensor {
 public:
+	/**
+	 * Constructor
+	 */
 	CGPSSensor();
+
+	/**
+	 * Simulates reading the current GPS coordinate
+	 *
+	 * @return The entered coordinate
+	 */
 	CWaypoint getCurrentPosition();
 };
 

@@ -15,11 +15,6 @@
 CGPSSensor::CGPSSensor() {
 }
 
-/**
- * Simulates reading the GPS coordinate
- *
- * @return The entered coordinate
- */
 CWaypoint CGPSSensor::getCurrentPosition() {
 	double latitude, longitude;
 
