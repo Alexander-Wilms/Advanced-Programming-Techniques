@@ -11,8 +11,7 @@
 #include <iostream>
 #include <string>
 
-CWpDatabase::CWpDatabase() {
-	std::cout << "CWpDatabase::CWpDatabase()" << std::endl;
+CWpDatabase::CWpDatabase() : m_Waypoint() {
 }
 
 void CWpDatabase::addWp(CWaypoint const& wp) {
@@ -26,6 +25,7 @@ CWaypoint* CWpDatabase::getPointerToWp(std::string name) {
 	std::map<std::string,CWaypoint>::iterator it = m_Waypoint.find(name);
 
 	if(it == m_Waypoint.end()) {
+		// nothing found
 		std::cout << "ERROR in CWpDatabase::getPointerToWp(): Could not find POI " << name << std::endl;
 		returnValue = nullptr;
 	} else {

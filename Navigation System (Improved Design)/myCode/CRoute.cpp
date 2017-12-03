@@ -11,7 +11,6 @@
 #include <iostream>
 
 CRoute::CRoute() {
-	std::cout << "CRoute::CRoute()" << std::endl;
 	m_pPoiDatabase = nullptr;
 	m_pWpDatabase = nullptr;
 }
@@ -19,11 +18,7 @@ CRoute::CRoute() {
 CRoute::CRoute(const CRoute& origin) {
 	m_pPoiDatabase = origin.m_pPoiDatabase;
 	m_pWpDatabase = origin.m_pWpDatabase;
-
 	m_route = origin.m_route;
-}
-
-CRoute::~CRoute() {
 }
 
 void CRoute::connectToPoiDatabase(CPoiDatabase* pPoiDB) {
@@ -50,12 +45,30 @@ void CRoute::connectToWpDatabase(CWpDatabase* pWpDB) {
 
 void CRoute::addWaypoint(std::string name) {
 	std::cout << "CRoute::addWaypoint()" << std::endl;
-	std::cout << "Pushing back: " << m_pWpDatabase->getPointerToWp(name) << std::endl;
-	m_route.push_back(m_pWpDatabase->getPointerToWp(name));
+
+	if (m_pWpDatabase != nullptr) {
+//		std::cout << "Pushing back: " << m_pWpDatabase->getPointerToWp(name) << std::endl;
+		CWaypoint* wp = m_pWpDatabase->getPointerToWp(name);
+
+		if (wp != nullptr) {
+			// we found a POI with the given name in the PoiDatabase
+
+			m_route.push_back(wp);
+
+		} else {
+
+			std::cout << "ERROR in CRoute:addPoi(): No waypoint with name "
+					<< name << " found in m_pWpDatabase" << std::endl;
+		}
+	} else {
+		std::cout
+				<< "ERROR in CRoute::addWaypoint(): Tried to dereference null pointer"
+				<< std::endl << "Did you forget to connect to a CWpDatabase?"
+				<< std::endl;
+	}
 }
 
 void CRoute::addPoi(std::string namePoi, std::string afterWp) {
-	std::cout << "CRoute::addPoi()" << std::endl;
 	// search for POI in database
 	// if one was found, add it to the route
 
@@ -68,52 +81,32 @@ void CRoute::addPoi(std::string namePoi, std::string afterWp) {
 		if (poi != nullptr) {
 			// we found a POI with the given name in the PoiDatabase
 
-			std::cout << "m_route contains " << m_route.size() << " elements" << std::endl;
-
 			// iterate over the route from the back until we've found a waypoint with a matching name
-			for(std::list<CWaypoint*>::reverse_iterator rit = m_route.rbegin(); rit != m_route.rend(); ++rit) { // ATTENTION: _increment_ reverse iterator
+			for (std::list<CWaypoint*>::reverse_iterator rit = m_route.rbegin();
+					rit != m_route.rend(); ++rit) { // ATTENTION: _increment_ reverse iterator
 				// can afterWp also reference a POI?
 
-				std::cout << "inside for loop" << std::endl;
-
-				std::cout << "rit: " << *rit << std::endl;
-
-				CWaypoint* debug = *rit.base();
-
-
-				std::cout << (*rit)->getLatitude() << std::endl;
-
-				(*rit)->print(1);
-
-
-				std::cout << "after print" << std::endl;
-
-				std::cout << "getName(): " << (*rit.base())->getName() << std::endl;
-
-				//CWaypoint debug(*(*rit.base()));
-
-				//std::cout << "after CWaypoint constructor" << std::endl;
-
-				//std::cout << "getName(): " << debug.getName() << std::endl;
-
-
-				if((*rit)->getName() == afterWp) {
+				if ((*rit)->getName() == afterWp) {
 					// we found a waypoint with the given name in the route
-					m_route.insert(rit.base(), (CWaypoint*) poi);
+					m_route.insert(rit.base(), poi);
 					waypointFound = true;
+					break;
 				}
 			}
 
-			if(!waypointFound) {
-				std::cout << "ERROR in CRoute:addPoi(): No waypoint with name " << afterWp << " found in m_route" << std::endl;
+			if (!waypointFound) {
+				std::cout << "ERROR in CRoute:addPoi(): No waypoint with name '"
+						<< afterWp << "' found in m_route" << std::endl;
 			}
-
 		} else {
-			std::cout << "ERROR in CRoute:addPoi(): No POI with name " << namePoi << " found in m_pPoiDatabase" << std::endl;
+			std::cout << "ERROR in CRoute:addPoi(): No POI with name "
+					<< namePoi << " found in m_pPoiDatabase" << std::endl;
 		}
 	} else {
-		std::cout << "ERROR in CRoute::addPoi(): Tried to dereference null pointer" << std::endl
-				<< "Did you forget to connect to a CPoiDatabase?" << std::endl;
+		std::cout
+				<< "ERROR in CRoute::addPoi(): Tried to dereference null pointer"
+				<< std::endl << "Did you forget to connect to a CPoiDatabase?"
+				<< std::endl;
 	}
 }
 
@@ -151,47 +144,107 @@ double CRoute::getDistanceNextPoi(const CWaypoint& wp, CPOI& poi) {
 }
 
 void CRoute::print() {
-
-	for(std::list<CWaypoint*>::iterator it = m_route.begin(); it != m_route.end(); it++) {
-		// HINT:
-		// source type is not polymorpic ->
-		// base class needs a virtual function, e.g. the destructor
-		CPOI* pPOI = dynamic_cast<CPOI*> (*it);
-		if(pPOI != nullptr) {
+	for (std::list<CWaypoint*>::iterator it = m_route.begin();
+			it != m_route.end(); it++) {
+		/**
+		 * HINT:
+		 * source type is not polymorphic ->
+		 * base class needs a virtual function, e.g. the destructor
+		 */
+		CPOI* pPOI = dynamic_cast<CPOI*>(*it);
+		if (pPOI != nullptr) {
 			// it is indeed a POI
-			std::cout << *pPOI << std::endl;
-		}
+			std::cout << "POI " << *pPOI << std::endl;
+		} else {
 
-		CWaypoint* pWp = dynamic_cast<CWaypoint*> (*it);
-		if(pWp != nullptr) {
-			// it is indeed a waypoint
-			std::cout << *pWp << std::endl;
+			/**
+			 * all elements can be cast to CWaypoint*, but it's
+			 * not necessary if we already successfully cast it
+			 * to CPOI*, otherwise we would print the element twice
+			 */
+			CWaypoint* pWp = dynamic_cast<CWaypoint*>(*it);
+			if (pWp != nullptr) {
+				// it is indeed a waypoint
+				std::cout << "Waypoint " << *pWp << std::endl;
+			}
+
 		}
 	}
 }
 
-CRoute& CRoute::operator +=(std::string name) {
+CRoute& CRoute::operator+=(std::string name) {
+	bool nothingFound = true;
 
-	CWaypoint* wp = m_pWpDatabase->getPointerToWp(name);
+	if (m_pWpDatabase != nullptr) {
+		if (m_pPoiDatabase != nullptr) {
+			CWaypoint* wp = m_pWpDatabase->getPointerToWp(name);
+			CPOI* poi = m_pPoiDatabase->getPointerToPoi(name);
 
-	CPOI* poi = m_pPoiDatabase->getPointerToPoi(name);
+			if (wp != nullptr) {
+				// waypoint found
+				m_route.push_back(wp);
+				nothingFound = false;
+			} else {
+				std::cout << "WARNING in CRoute:operator+=(): No waypoint with name '"
+						<< name << "' found in m_pWpDatabase" << std::endl;
+			}
 
-	if (wp != nullptr) {
-		// waypoint found
-		m_route.push_back(wp);
-	}
+			if (poi != nullptr) {
+				// POI found
+				m_route.push_back(poi);
+				nothingFound = false;
+			} else {
+				std::cout << "WARNING in CRoute:operator+=(): No POI with name '"
+						<< name << "' found in m_pPoiDatabase" << std::endl;
+			}
 
-	if (poi != nullptr) {
-		// poi found
-		m_route.push_back(poi);
+			if(nothingFound) {
+				std::cout << "ERROR in CRoute:operator+=(): No POI or waypoint with name '"
+						<< name << "' found in m_pPoiDatabase respectively m_pWpDatabase" << std::endl;
+			}
+		} else {
+			std::cout
+					<< "ERROR in CRoute::operator+=(): Tried to dereference null pointer"
+					<< std::endl
+					<< "Did you forget to connect to a CPoiDatabase?"
+					<< std::endl;
+		}
+	} else {
+		std::cout
+				<< "ERROR in CRoute::operator+=(): Tried to dereference null pointer"
+				<< std::endl << "Did you forget to connect to a CWpDatabase?"
+				<< std::endl;
 	}
 
 	return *this;
 }
 
-CRoute& CRoute::operator= (const CRoute& r) {
+CRoute& CRoute::operator=(const CRoute& r) {
 	m_pPoiDatabase = r.m_pPoiDatabase;
 	m_pWpDatabase = r.m_pWpDatabase;
 	m_route = r.m_route;
 	return *this;
+}
+
+CRoute& CRoute::operator+(const CRoute& r) {
+	bool sameDatabases = false;
+
+	if(m_pPoiDatabase == r.m_pPoiDatabase) {
+		if(m_pWpDatabase == r.m_pWpDatabase) {
+			sameDatabases = true;
+			// https://stackoverflow.com/questions/1449703/how-to-append-a-listt-object-to-another
+			m_route.insert(m_route.end(), r.m_route.begin(), r.m_route.end());
+		} else {
+			std::cout << "ERROR in CRoute::operator+(): Waypoint databases differ" << std::endl;
+		}
+	} else {
+		std::cout << "ERROR in CRoute::operator+(): POI databases differ" << std::endl;
+	}
+
+	if(sameDatabases) {
+		return *this;
+	} else {
+		CRoute* emptyRoute = new CRoute();
+		return *emptyRoute;
+	}
 }

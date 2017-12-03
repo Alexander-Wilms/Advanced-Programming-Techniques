@@ -29,11 +29,6 @@ public:
 	CRoute(const CRoute& origin);
 
 	/**
-	 * CRoute destructor deletes the dynamic arrays
-	 */
-	~CRoute();
-
-	/**
 	 * Connects the route object to a POI database
 	 *
 	 * @param pPoiDB A pointer to a PoiDatabase
@@ -85,6 +80,13 @@ public:
 	 * Assigns another route to this instance
 	 */
 	CRoute& operator= (const CRoute& r);
+
+	/**
+	 * Adds 2 routes by concatenating the content, if they are connected to
+	 * the same waypoint and POI database. If not, an error message is shown
+	 * and an empty route is returned
+	 */
+	CRoute& operator+ (const CRoute& r);
 
 private:
 	std::list<CWaypoint*> m_route;

@@ -11,7 +11,7 @@
 #include <iostream>
 
 //#define SHOWADDRESS
-#define DEBUG
+//#define DEBUG
 #define DEG2RAD M_PI/180
 
 CWaypoint::CWaypoint(std::string name, double latitude, double longitude) {
