@@ -116,11 +116,10 @@ protected:
 	 */
 	double m_longitude;
 
+	/**
+	 * output operator
+	 */
 	friend std::ostream& operator<< (std::ostream& os, const CWaypoint& wp);
-
-	// can be accessed by 'friend' operator<< method
-
-
 };
 
 #endif /* CWAYPOINT_H_ */

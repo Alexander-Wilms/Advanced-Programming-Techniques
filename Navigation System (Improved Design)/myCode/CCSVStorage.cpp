@@ -10,7 +10,7 @@
 #include <iostream>
 
 CCSVStorage::CCSVStorage() :
-	remaingLine(), delimiter(";")
+	delimiter(";")
 {
 }
 
@@ -82,8 +82,6 @@ bool CCSVStorage::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 			std::getline(file,line,'\n');
 			// empty line or EOF, nothing to do either way
 			if(line == "\n" || file.eof()) { continue; }
-
-			line = trim(line, "\n");
 			remainingLine = line;
 
 			printError(status = checkNoOfFields(line, 5), lineNumber, line);
@@ -124,8 +122,6 @@ bool CCSVStorage::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 			std::getline(file,line,'\n');
 			// empty line or EOF, nothing to do either way
 			if(line == "\n" || file.eof()) { continue; }
-
-			line = trim(line, "\n");
 			remainingLine = line;
 
 			printError(status = checkNoOfFields(line, 3), lineNumber, line);
@@ -206,15 +202,6 @@ void CCSVStorage::printError(ParseStatus status, unsigned int lineNumber,
 	}
 }
 
-std::string CCSVStorage::trim(const std::string& source, const std::string& t) {
-	std::string returnValue;
-	if(source.size() > 1 && source.substr(source.size()-1, 1) == t) {
-		returnValue.append(source, 0, source.size()-1);
-		return returnValue;
-	}
-	return source;
-}
-
 std::string CCSVStorage::getDigits(const std::string& source) {
 	std::string returnValue;
 	for(unsigned int i = 0; i < source.size(); i++) {
@@ -225,8 +212,8 @@ std::string CCSVStorage::getDigits(const std::string& source) {
 	return returnValue;
 }
 
-CCSVStorage::ParseStatus CCSVStorage::checkNoOfFields(std::string line,
-		unsigned int expectedNo) {
+CCSVStorage::ParseStatus CCSVStorage::checkNoOfFields(const std::string& line,
+		unsigned int expectedNo) const {
 	unsigned int count = std::count(line.begin(), line.end(), ';');
 	if(count < expectedNo-1) {
 		return ERR_TOO_FEW_FIELDS;

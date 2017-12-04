@@ -2,7 +2,7 @@
  * CCSVStorage.h
  *
  *  Created on: 03.12.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #ifndef MYCODE_CCSVSTORAGE_H_
@@ -82,25 +82,77 @@ public:
 	std::string getDigits(const std::string& source);
 
 private:
+	/**
+	 * base name of the database files
+	 * The file names are:
+	 * - <mediaName>-wp.txt
+	 * - <mediaName>-poi.txt
+	 */
 	std::string mediaName;
 
-	std::string trim(const std::string& source, const std::string& t);
+	/**
+	 * The character used to separate the fields
+	 */
+	std::string delimiter;
 
-	std::string remaingLine;
+	/**
+	 * Check if there are as many fields in this line as expected
+	 *
+	 * @param line The current line
+	 * @param expectedNo The expected number of fields
+	 *
+	 * @return OK or an error
+	 */
+	ParseStatus checkNoOfFields(const std::string& line, unsigned int expectedNo) const;
 
-	ParseStatus checkNoOfFields(std::string line, unsigned int expectedNo);
-
+	/**
+	 * Extract the longitude from the remainder of the current line
+	 *
+	 * @param remainingLine The remainder of the current line
+	 * @param longitudeParsed Variable to return the longitude by reference
+	 *
+	 * @return OK or an error
+	 */
 	ParseStatus extractLongitude(std::string& remainingLine, double& longitudeParsed);
 
+	/**
+	 * Extract the POI or waypoint latitude from the remainder of the current line
+	 *
+	 * @param remainingLine The remainder of the current line
+	 * @param latitudeParsed Variable to return the latitude by reference
+	 *
+	 * @return OK or an error
+	 */
 	ParseStatus extractLatitude(std::string& remainingLine, double& latitudeParsed);
 
+	/**
+	 * Extract the name from the remainder of the current line
+	 *
+	 * @param remainingLine The remainder of the current line
+	 * @param nameParsed Variable to return the name by reference
+	 *
+	 * @return OK or an error
+	 */
 	ParseStatus extractName(std::string& remainingLine, std::string& nameParsed);
 
+	/**
+	 * Extract the POI description from the remainder of the current line
+	 *
+	 * @param remainingLine The remainder of the current line
+	 * @param descriptionParsed Variable to return the name by reference
+	 *
+	 * @return OK or an error
+	 */
 	ParseStatus extractDescription(std::string& remainingLine, std::string& descriptionParsed);
 
+	/**
+	 * Extract the POI type from the remainder of the current line
+	 *
+	 * @param remainingLine The remainder of the current Line
+	 * @pram typeParsed Variable to return the type by reference
+	 */
 	ParseStatus extractType(std::string& remainingLine, t_poi& typeParsed);
 
-	std::string delimiter;
 };
 
 #endif /* MYCODE_CCSVSTORAGE_H_ */
