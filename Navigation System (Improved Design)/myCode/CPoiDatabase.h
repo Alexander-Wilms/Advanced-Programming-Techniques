@@ -41,6 +41,16 @@ public:
 	 * @return A pointer to the POI with the given name
 	 */
 	CPOI* getPointerToPoi(std::string name);
+
+	/**
+	 * Returns a const pointer to the map
+	 */
+	const std::map<std::string, CPOI>& getDB() const;
+
+	/**
+	 * Deletes all elements of the database
+	 */
+	void clearDb();
 private:
 	/**
 	 * A map to store all known POIs

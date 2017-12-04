@@ -46,3 +46,28 @@ void CPOI::print() {
 	// call print() method of the superclass
 	CWaypoint::print(MMSS);
 }
+
+std::string CPOI::getTypeAsString() const {
+	switch(m_type) {
+	case RESTAURANT:
+		return "RESTAURANT";
+		break;
+	case TOURISTIC:
+		return "TOURISTIC";
+		break;
+	case GASSTATION:
+		return "GASSTATION";
+		break;
+	case UNIVERSITY:
+		return "UNIVERSITY";
+		break;
+	case SIGHTSEEING:
+		return "SIGHTSEEING";
+	}
+
+	return "";
+}
+
+std::string CPOI::getDescription() const {
+	return m_description;
+}

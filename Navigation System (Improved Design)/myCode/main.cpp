@@ -5,9 +5,11 @@
  *      Author: Fabian Alexander Wilms
  */
 
-#include <iostream>
+#include "CCSVStorage.h"
+#include "CPersistentStorage.h"
 #include "CNavigationSystem.h"
 #include "CWaypoint.h"
+#include <iostream>
 
 int main() {
 //	CWaypoint amsterdam("Amsterdam", 52.370197222222, 4.8904444444444);
@@ -82,11 +84,43 @@ int main() {
 	route2.print();
 
 	std::cout << std::endl << "Test CRoute's assignment operator" << std::endl
-				<< "==============================" << std::endl;
+				           << "=================================" << std::endl;
 
 	CRoute route3;
 	route3 = route2;
 	route3.print();
+
+	std::cout << "Test writing the DBs to files" << std::endl
+			  << "=============================" << std::endl;
+//	CPoiDatabase poiDatabaseCVSWriteTest;
+//	poiDatabaseCVSWriteTest.addPoi(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world", 49.866934, 8.637911));
+//	poiDatabaseCVSWriteTest.addPoi(CPOI(SIGHTSEEING, "Berlin", "Berlin City Center", 52.51, 13.4));
+//	CWpDatabase wpDatabaseCVSWriteTest;
+//	wpDatabaseCVSWriteTest.addWp(CWaypoint("Amsterdam", 52.3731, 4.8922));
+//	wpDatabaseCVSWriteTest.addWp(CWaypoint("Darmstadt", 49.872833, 8.651222));
+//	CCSVStorage myCVSStorage;
+//	myCVSStorage.setMediaName("test-export");
+//	myCVSStorage.writeData(wpDatabaseCVSWriteTest, poiDatabaseCVSWriteTest);
+
+//	std::cout << "Test reading Dbs from files" << std::endl
+//	          << "===========================" << std::endl;
+//	CWpDatabase wpDatabaseCVSReadTest;
+//	CPoiDatabase poiDatabaseCVSReadTest;
+//	CCSVStorage myCVSStorageReadTest;
+//	myCVSStorageReadTest.setMediaName("test-export");
+//	myCVSStorageReadTest.readData(wpDatabaseCVSReadTest, poiDatabaseCVSReadTest, CPersistentStorage::REPLACE);
+//	myCVSStorageReadTest.setMediaName("test-export-import-export");
+//	myCVSStorageReadTest.writeData(wpDatabaseCVSReadTest, poiDatabaseCVSReadTest);
+
+	std::cout << "Error handling" << std::endl
+	          << "==============" << std::endl;
+	CWpDatabase wpDatabaseCVSReadErrorsTest;
+	CPoiDatabase poiDatabaseCVSReadErrorsTest;
+	CCSVStorage myCVSStorageReadErrorsTest;
+	myCVSStorageReadErrorsTest.setMediaName("test-errors-import");
+	myCVSStorageReadErrorsTest.readData(wpDatabaseCVSReadErrorsTest, poiDatabaseCVSReadErrorsTest, CPersistentStorage::REPLACE);
+	myCVSStorageReadErrorsTest.setMediaName("test-errors-import-export");
+	myCVSStorageReadErrorsTest.writeData(wpDatabaseCVSReadErrorsTest, poiDatabaseCVSReadErrorsTest);
 
 	return 0;
 }

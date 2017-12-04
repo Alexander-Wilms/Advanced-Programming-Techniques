@@ -15,7 +15,7 @@
  * Use an enum to make it easier to differentiate between the
  * POI types
  */
-typedef enum {RESTAURANT, TOURISTIC, GASSTATION, UNIVERSITY} t_poi;
+typedef enum {RESTAURANT, TOURISTIC, GASSTATION, UNIVERSITY, SIGHTSEEING} t_poi;
 
 /**
  * CPOI represents a Point Of Interest and inherits from CWaypoint
@@ -49,6 +49,16 @@ public:
 	 * @param description	variable where to store the POI's description
 	 */
 	void getAllDataByReference(std::string& name, double& latitude, double& longitude, t_poi& type, std::string& description);
+
+	/**
+	 * returns the POI's type as a string
+	 */
+	std::string getTypeAsString() const;
+
+	/**
+	 * returns the POI's description
+	 */
+	std::string getDescription() const;
 private:
 	/**
 	 * Describes the type of POI of this instance

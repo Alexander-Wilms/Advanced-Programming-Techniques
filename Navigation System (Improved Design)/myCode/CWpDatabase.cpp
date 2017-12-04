@@ -34,3 +34,11 @@ CWaypoint* CWpDatabase::getPointerToWp(std::string name) {
 
 	return returnValue;
 }
+
+const std::map<std::string, CWaypoint>& CWpDatabase::getDB() const {
+	return m_Waypoint;
+}
+
+void CWpDatabase::clearDb() {
+	m_Waypoint.clear();
+}

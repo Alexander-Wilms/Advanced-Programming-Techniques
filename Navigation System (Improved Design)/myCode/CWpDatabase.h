@@ -41,6 +41,16 @@ public:
 	 * @return A pointer to the waypoint with the given name
 	 */
 	CWaypoint* getPointerToWp(std::string name);
+
+	/**
+	 * Returns a const pointer to the map
+	 */
+	const std::map<std::string, CWaypoint>& getDB() const;
+
+	/**
+	 * Deletes all elements of the database
+	 */
+	void clearDb();
 private:
 	/**
 	 * A map to store all known waypoints
