@@ -57,7 +57,7 @@ public:
 	/**
 	 * The type of error detected while parsing the CSV file
 	 */
-	enum ParseError {
+	enum ParseStatus {
 		ERR_TOO_FEW_FIELDS,
 		ERR_TOO_MANY_FIELDS,
 		ERR_TEXT_INSTEAD_OF_NUMBER,
@@ -69,13 +69,15 @@ public:
 		ERR_EMPTY_FIELD_LONGITUDE,
 		ERR_UNKNOWN_POI_TYPE,
 		ERR_COULDNT_PARSE_LONGITUDE,
-		ERR_COULDNT_PARSE_LATITUDE
+		ERR_COULDNT_PARSE_LATITUDE,
+		ERR_TOO_MANY_POINTS,
+		OK
 	};
 
 	/**
 	 * Prints the specified error to the console
 	 */
-	void printError(ParseError problem, unsigned int lineNumber, std::string lineContent);
+	void printError(CCSVStorage::ParseStatus problem, unsigned int lineNumber, std::string lineContent);
 
 	std::string getDigits(const std::string& source);
 
@@ -83,6 +85,22 @@ private:
 	std::string mediaName;
 
 	std::string trim(const std::string& source, const std::string& t);
+
+	std::string remaingLine;
+
+	ParseStatus checkNoOfFields(std::string line, unsigned int expectedNo);
+
+	ParseStatus extractLongitude(std::string& remainingLine, double& longitudeParsed);
+
+	ParseStatus extractLatitude(std::string& remainingLine, double& latitudeParsed);
+
+	ParseStatus extractName(std::string& remainingLine, std::string& nameParsed);
+
+	ParseStatus extractDescription(std::string& remainingLine, std::string& descriptionParsed);
+
+	ParseStatus extractType(std::string& remainingLine, t_poi& typeParsed);
+
+	std::string delimiter;
 };
 
 #endif /* MYCODE_CCSVSTORAGE_H_ */

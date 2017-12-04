@@ -1,6 +1,7 @@
 SIGHTSEEING;Berlin;Berlin City Center;52.51;13.4
 SIGHTSEEING;Berlin;52.51;13.4
 SIGHTSEEING;Berlin;Berlin City Center;52.51;13.4;Superfluous field
+SIGHTSEEING;Berlin;Berlin City Center;52.51;13..4
 SIGHTSEEING;Berlin;Berlin City Center;Text;13.4
 SIGHTSEEING;Berlin;Berlin City Center;52,51;13.4
 ;Berlin;Berlin City Center;52.51;13.4

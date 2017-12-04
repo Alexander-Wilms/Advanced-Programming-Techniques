@@ -6,9 +6,12 @@
  */
 
 #include "CCSVStorage.h"
+#include <algorithm>
 #include <iostream>
 
-CCSVStorage::CCSVStorage() {
+CCSVStorage::CCSVStorage() :
+	remaingLine(), delimiter(";")
+{
 }
 
 CCSVStorage::~CCSVStorage() {
@@ -63,204 +66,144 @@ bool CCSVStorage::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 	}
 
 	std::ifstream file;
-	std::string delimiter = ";";
+	ParseStatus status;
 
 	// first read all POIs from the file
-	std::string line, remainingLine, type, name, description, latitude, longitude, tmp, superfluousField;
-	t_poi typeParsed;
-	double latitudeParsed, longitudeParsed;
+	std::string line, remainingLine, type, name, description, tmp, superfluousField;
+	t_poi POItype;
+	double latitude, longitude;
 	unsigned int lineNumber = 0;
 	file.open(mediaName + "-poi.txt");
 	if(file.is_open()) {
 		while(!file.eof()){
 			lineNumber++;
-			line = "";
-			type = "";
-			name = "";
-			description = "";
-			latitude = "";
-			longitude = "";
 
 			// first read the entire line, since there's no easy way to peek
 			std::getline(file,line,'\n');
-			if(line == "\n" || file.eof()) {
-				// empty line or EOF, nothing to do either way
-				continue;
-			}
+			// empty line or EOF, nothing to do either way
+			if(line == "\n" || file.eof()) { continue; }
+
 			line = trim(line, "\n");
 			remainingLine = line;
 
-			// https://stackoverflow.com/questions/14265581/parse-split-a-string-in-c-using-string-delimiter-standard-c
-			type = remainingLine.substr(0, remainingLine.find(delimiter));
-			remainingLine = remainingLine.substr(remainingLine.find(delimiter)+1, remainingLine.size());
-			if(type == "") {
-				printError(ERR_EMPTY_FIELD_TYPE, lineNumber, line);
-				continue;
-			} else {
-				std::cout << "type: " << type << std::endl;
-				if(type == "RESTAURANT") {
-					typeParsed = RESTAURANT;
-				} else if(type == "TOURISTIC") {
-					typeParsed = TOURISTIC;
-				} else if(type == "GASSTATION") {
-					typeParsed = GASSTATION;
-				} else if(type == "UNIVERSITY") {
-					typeParsed = UNIVERSITY;
-				} else if(type == "SIGHTSEEING") {
-					typeParsed = SIGHTSEEING;
-				} else {
-					printError(ERR_UNKNOWN_POI_TYPE, lineNumber, line);
-				}
-			}
+			printError(status = checkNoOfFields(line, 5), lineNumber, line);
+			if (status != OK) { continue; }
 
-			// if there are no more semicolons in the remaining line, there's too
-			// few entries
-			if(remainingLine.find(';') == std::string::npos) {
-				printError(ERR_TOO_FEW_FIELDS, lineNumber, line);
-				continue;
-			}
+			printError(status = extractType(remainingLine, POItype), lineNumber, line);
+			if (status != OK) { continue; }
 
-			name = remainingLine.substr(0, remainingLine.find(delimiter));
-			remainingLine = remainingLine.substr(remainingLine.find(delimiter)+1, remainingLine.size());
-			std::cout << "name: " << name << std::endl;
-			if(name == "") {
-				printError(ERR_EMPTY_FIELD_NAME, lineNumber, line);
-				continue;
-			}
+			printError(status = extractName(remainingLine, name), lineNumber, line);
+			if (status != OK) { continue; }
 
-			// if there are no more semicolons in the remaining line, there's too
-			// few entries
-			if(remainingLine.find(';') == std::string::npos) {
-				printError(ERR_TOO_FEW_FIELDS, lineNumber, line);
-				continue;
-			}
+			printError(status = extractDescription(remainingLine, description), lineNumber, line);
+			if (status != OK) { continue; }
 
-			description = remainingLine.substr(0, remainingLine.find(delimiter));
-			remainingLine = remainingLine.substr(remainingLine.find(delimiter)+1, remainingLine.size());
-			std::cout << "description: " << description << std::endl;
-			if(description == "") {
-				printError(ERR_EMPTY_FIELD_DESCRIPTION, lineNumber, line);
-				continue;
-			}
+			printError(status = extractLatitude(remainingLine, latitude), lineNumber, line);
+			if (status != OK) { continue; }
 
-			// if there are no more semicolons in the remaining line, there's too
-			// few entries
-			if(remainingLine.find(';') == std::string::npos) {
-				printError(ERR_TOO_FEW_FIELDS, lineNumber, line);
-				continue;
-			}
-
-			latitude = remainingLine.substr(0, remainingLine.find(delimiter));
-			remainingLine = remainingLine.substr(remainingLine.find(delimiter)+1, remainingLine.size());
-			if(latitude == "") {
-				printError(ERR_EMPTY_FIELD_LATITUDE, lineNumber, line);
-				continue;
-			} else {
-				// http://www.cplusplus.com/reference/string/string/find/
-				if(latitude.find(',') == std::string::npos) {
-					try {
-						std::cout << "latitude: " << latitude << std::endl;
-						latitudeParsed = std::stod(latitude);
-					} catch (const std::invalid_argument& ia) {
-						printError(ERR_COULDNT_PARSE_LATITUDE, lineNumber, line);
-						continue;
-					}
-				} else {
-					printError(ERR_COMMA_INSTEAD_OF_POINT, lineNumber, line);
-					continue;
-				}
-			}
-
-			longitude = remainingLine.substr(0, remainingLine.find(delimiter));
-			remainingLine = remainingLine.substr(remainingLine.find(delimiter)+1, remainingLine.size());
-			if(longitude == "") {
-				printError(ERR_EMPTY_FIELD_LONGITUDE, lineNumber, line);
-				continue;
-			} else {
-				if(longitude.find(',') == std::string::npos) {
-					try {
-						std::cout << "longitude: " << longitude << std::endl;
-						longitudeParsed = std::stod(longitude);
-					} catch (const std::invalid_argument& ia) {
-						printError(ERR_COULDNT_PARSE_LONGITUDE, lineNumber, line);
-						continue;
-					}
-				} else {
-					printError(ERR_COMMA_INSTEAD_OF_POINT, lineNumber, line);
-					continue;
-				}
-			}
-
-			if(remainingLine != longitude) {
-				//std::cout << "<" << remainingLine << ">" << std::endl;
-				printError(ERR_TOO_MANY_FIELDS, lineNumber, line);
-				continue;
-			}
+			printError(status = extractLongitude(remainingLine, longitude), lineNumber, line);
+			if (status != OK) { continue; }
 
 			if(poiDb.getPointerToPoi(name) == nullptr) {
-				poiDb.addPoi(CPOI(typeParsed, name, description, latitudeParsed, longitudeParsed));
+				poiDb.addPoi(CPOI(POItype, name, description, latitude, longitude));
 			}
 		}
 		file.close();
 	} else {
-		std::cout << "ERROR in CCSVStorage::writeData(): Couldn't open file " << mediaName << "-poi.txt" << std::endl;
+		std::cout << "ERROR in CCSVStorage::readData(): Couldn't open file " << mediaName << "-poi.txt" << std::endl;
 	}
 
-
-	lineNumber = 0;
 	// then read all waypoints from the file
+	lineNumber = 0;
 	file.open(mediaName + "-wp.txt");
+	if(file.is_open()) {
+		while(!file.eof()){
+			lineNumber++;
 
+			// first read the entire line, since there's no easy way to peek
+			std::getline(file,line,'\n');
+			// empty line or EOF, nothing to do either way
+			if(line == "\n" || file.eof()) { continue; }
 
+			line = trim(line, "\n");
+			remainingLine = line;
 
-	file.close();
+			printError(status = checkNoOfFields(line, 3), lineNumber, line);
+			if (status != OK) { continue; }
+
+			printError(status = extractName(remainingLine, name), lineNumber, line);
+			if (status != OK) { continue; }
+
+			printError(status = extractLatitude(remainingLine, latitude), lineNumber, line);
+			if (status != OK) { continue; }
+
+			printError(status = extractLongitude(remainingLine, longitude), lineNumber, line);
+			if (status != OK) { continue; }
+
+			if(waypointDb.getPointerToWp(name) == nullptr) {
+				waypointDb.addWp(CWaypoint(name, latitude, longitude));
+			}
+		}
+		file.close();
+	} else {
+		std::cout << "ERROR in CCSVStorage::readData(): Couldn't open file " << mediaName << "-wp.txt" << std::endl;
+	}
 
 	return true;
 }
 
-void CCSVStorage::printError(ParseError problem, unsigned int lineNumber,
+void CCSVStorage::printError(ParseStatus status, unsigned int lineNumber,
 		std::string lineContent) {
-	std::cout << "ERROR: ";
 
-	switch(problem) {
-	case ERR_TOO_FEW_FIELDS:
-		std::cout << "too few fields";
-		break;
-	case ERR_TOO_MANY_FIELDS:
-		std::cout << "too many fields";
-		break;
-	case ERR_TEXT_INSTEAD_OF_NUMBER:
-		std::cout << "text where a number is expected";
-		break;
-	case ERR_COMMA_INSTEAD_OF_POINT:
-		std::cout << "comma instead of point";
-		break;
-	case ERR_EMPTY_FIELD_TYPE:
-		std::cout << "empty field 'type'";
-		break;
-	case ERR_EMPTY_FIELD_NAME:
-		std::cout << "empty field 'name'";
-		break;
-	case ERR_EMPTY_FIELD_DESCRIPTION:
-		std::cout << "empty field 'description'";
-		break;
-	case ERR_EMPTY_FIELD_LATITUDE:
-		std::cout << "empty field 'latitude'";
-		break;
-	case ERR_EMPTY_FIELD_LONGITUDE:
-		std::cout << "empty field 'longitude'";
-		break;
-	case ERR_COULDNT_PARSE_LONGITUDE:
-		std::cout << "couldn't parse longitude";
-		break;
-	case ERR_COULDNT_PARSE_LATITUDE:
-		std::cout << "couldn't parse latitude";
-		break;
-	case ERR_UNKNOWN_POI_TYPE:
-		std::cout << "unknown POI type";
+	if(status != OK) {
+		std::cout << "ERROR: ";
+
+		switch(status) {
+		case ERR_TOO_FEW_FIELDS:
+			std::cout << "too few fields";
+			break;
+		case ERR_TOO_MANY_FIELDS:
+			std::cout << "too many fields";
+			break;
+		case ERR_TEXT_INSTEAD_OF_NUMBER:
+			std::cout << "text where a number is expected";
+			break;
+		case ERR_COMMA_INSTEAD_OF_POINT:
+			std::cout << "comma instead of point";
+			break;
+		case ERR_EMPTY_FIELD_TYPE:
+			std::cout << "empty field 'type'";
+			break;
+		case ERR_EMPTY_FIELD_NAME:
+			std::cout << "empty field 'name'";
+			break;
+		case ERR_EMPTY_FIELD_DESCRIPTION:
+			std::cout << "empty field 'description'";
+			break;
+		case ERR_EMPTY_FIELD_LATITUDE:
+			std::cout << "empty field 'latitude'";
+			break;
+		case ERR_EMPTY_FIELD_LONGITUDE:
+			std::cout << "empty field 'longitude'";
+			break;
+		case ERR_COULDNT_PARSE_LONGITUDE:
+			std::cout << "couldn't parse longitude";
+			break;
+		case ERR_COULDNT_PARSE_LATITUDE:
+			std::cout << "couldn't parse latitude";
+			break;
+		case ERR_UNKNOWN_POI_TYPE:
+			std::cout << "unknown POI type";
+			break;
+		case ERR_TOO_MANY_POINTS:
+			std::cout << "too many points";
+			break;
+		case OK:
+			;
+		}
+
+		std::cout << " in line " << lineNumber << ": " << lineContent << std::endl;
 	}
-
-	std::cout << " in line " << lineNumber << ": " << lineContent << std::endl;
 }
 
 std::string CCSVStorage::trim(const std::string& source, const std::string& t) {
@@ -274,11 +217,128 @@ std::string CCSVStorage::trim(const std::string& source, const std::string& t) {
 
 std::string CCSVStorage::getDigits(const std::string& source) {
 	std::string returnValue;
-
 	for(unsigned int i = 0; i < source.size(); i++) {
 		if('0' <= (char) source.at(i) && (char) source.at(i) <= '9') {
 			returnValue.append(source,i,1);
 		}
 	}
 	return returnValue;
+}
+
+CCSVStorage::ParseStatus CCSVStorage::checkNoOfFields(std::string line,
+		unsigned int expectedNo) {
+	unsigned int count = std::count(line.begin(), line.end(), ';');
+	if(count < expectedNo-1) {
+		return ERR_TOO_FEW_FIELDS;
+	} else if (count > expectedNo-1){
+		return ERR_TOO_MANY_FIELDS;
+	}
+
+	return OK;
+}
+
+CCSVStorage::ParseStatus CCSVStorage::extractLongitude(std::string& remainingLine, double& longitudeParsed) {
+	std::string longitude = remainingLine.substr(0, remainingLine.find(delimiter));
+	remainingLine = remainingLine.substr(remainingLine.find(delimiter)+1, remainingLine.size());
+	if(longitude == "") {
+		return ERR_EMPTY_FIELD_LONGITUDE;
+	} else {
+		if(longitude.find(',') == std::string::npos) {
+			// http://www.cplusplus.com/forum/beginner/48769/
+			if(longitude.find_first_not_of("0123456789.") == std::string::npos) {
+				if(std::count(longitude.begin(), longitude.end(), '.') <= 1) {
+					try {
+						longitudeParsed = std::stod(longitude);
+					} catch (const std::invalid_argument& ia) {
+						return ERR_COULDNT_PARSE_LONGITUDE;
+					}
+				} else {
+					return ERR_TOO_MANY_POINTS;
+				}
+			} else {
+				return ERR_TEXT_INSTEAD_OF_NUMBER;
+			}
+		} else {
+			return ERR_COMMA_INSTEAD_OF_POINT;
+		}
+	}
+
+	return OK;
+}
+
+CCSVStorage::ParseStatus CCSVStorage::extractLatitude(std::string& remainingLine, double& latitudeParsed) {
+	std::string longitude = remainingLine.substr(0, remainingLine.find(delimiter));
+	remainingLine = remainingLine.substr(remainingLine.find(delimiter)+1, remainingLine.size());
+	if(longitude == "") {
+		return ERR_EMPTY_FIELD_LATITUDE;
+	} else {
+		if(longitude.find(',') == std::string::npos) {
+			// http://www.cplusplus.com/forum/beginner/48769/
+			if(longitude.find_first_not_of("0123456789.") == std::string::npos) {
+				if(std::count(longitude.begin(), longitude.end(), '.') <= 1) {
+				try {
+					latitudeParsed = std::stod(longitude);
+				} catch (const std::invalid_argument& ia) {
+					return ERR_COULDNT_PARSE_LONGITUDE;
+				}
+			} else {
+				return ERR_TOO_MANY_POINTS;
+			}
+			} else {
+				return ERR_TEXT_INSTEAD_OF_NUMBER;
+			}
+		} else {
+			return ERR_COMMA_INSTEAD_OF_POINT;
+		}
+	}
+
+	return OK;
+}
+
+CCSVStorage::ParseStatus CCSVStorage::extractName(std::string& remainingLine, std::string& nameParsed) {
+	std::string name = remainingLine.substr(0, remainingLine.find(delimiter));
+	remainingLine = remainingLine.substr(remainingLine.find(delimiter)+1, remainingLine.size());
+	if(name == "") {
+		return ERR_EMPTY_FIELD_NAME;
+	}
+	nameParsed = name;
+
+	return OK;
+}
+
+CCSVStorage::ParseStatus CCSVStorage::extractDescription(std::string& remainingLine,
+		std::string& descriptionParsed) {
+	std::string description = remainingLine.substr(0, remainingLine.find(delimiter));
+	remainingLine = remainingLine.substr(remainingLine.find(delimiter)+1, remainingLine.size());
+	if(description == "") {
+		return ERR_EMPTY_FIELD_DESCRIPTION;
+	}
+
+	return OK;
+}
+
+CCSVStorage::ParseStatus CCSVStorage::extractType(std::string& remainingLine,
+		t_poi& typeParsed) {
+	// https://stackoverflow.com/questions/14265581/parse-split-a-string-in-c-using-string-delimiter-standard-c
+	std::string type = remainingLine.substr(0, remainingLine.find(delimiter));
+	remainingLine = remainingLine.substr(remainingLine.find(delimiter)+1, remainingLine.size());
+	if(type == "") {
+		return ERR_EMPTY_FIELD_TYPE;
+	} else {
+		if(type == "RESTAURANT") {
+			typeParsed = RESTAURANT;
+		} else if(type == "TOURISTIC") {
+			typeParsed = TOURISTIC;
+		} else if(type == "GASSTATION") {
+			typeParsed = GASSTATION;
+		} else if(type == "UNIVERSITY") {
+			typeParsed = UNIVERSITY;
+		} else if(type == "SIGHTSEEING") {
+			typeParsed = SIGHTSEEING;
+		} else {
+			return ERR_UNKNOWN_POI_TYPE;
+		}
+	}
+
+	return OK;
 }

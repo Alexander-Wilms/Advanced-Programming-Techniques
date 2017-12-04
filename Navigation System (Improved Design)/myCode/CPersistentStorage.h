@@ -24,6 +24,9 @@ public:
 * @param name the media to be used
 */
 virtual void setMediaName(std::string name) = 0;
+
+//virtual ~CPersistentStorage();
+
 /**
 * Write the data to the persistent storage.
 *
