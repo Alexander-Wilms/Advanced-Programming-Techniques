@@ -42,6 +42,7 @@ bool CCSVStorage::writeData(const CWpDatabase& waypointDb,
 		file.close();
 	} else {
 		std::cout << "ERROR in CCSVStorage::writeData(): Couldn't open file " << mediaName << "-poi.txt" << std::endl;
+		return false;
 	}
 
 	// then write all waypoints into a file
@@ -53,6 +54,7 @@ bool CCSVStorage::writeData(const CWpDatabase& waypointDb,
 		file.close();
 	} else {
 		std::cout << "ERROR in CCSVStorage::writeData(): Couldn't open file " << mediaName << "-wp.txt" << std::endl;
+		return false;
 	}
 
 	return true;
@@ -109,6 +111,7 @@ bool CCSVStorage::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 		file.close();
 	} else {
 		std::cout << "ERROR in CCSVStorage::readData(): Couldn't open file " << mediaName << "-poi.txt" << std::endl;
+		return false;
 	}
 
 	// then read all waypoints from the file
@@ -143,6 +146,7 @@ bool CCSVStorage::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 		file.close();
 	} else {
 		std::cout << "ERROR in CCSVStorage::readData(): Couldn't open file " << mediaName << "-wp.txt" << std::endl;
+		return false;
 	}
 
 	return true;

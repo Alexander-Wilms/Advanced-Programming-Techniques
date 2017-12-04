@@ -112,34 +112,28 @@ void CRoute::addPoi(std::string namePoi, std::string afterWp) {
 
 double CRoute::getDistanceNextPoi(const CWaypoint& wp, CPOI& poi) {
 	double returnValue = -1;
-//	bool firstPOI = true;
-//
-//	if(m_pPoi == nullptr) {
-//		std::cout << "ERROR in CRoute::getDistanceNextPoi(): m_pPoi is a null pointer" << std::endl;
-//	}
-//
-//	// iterate over all POIs of the route
-//	for (unsigned int j = 0; j < m_nextPoi; j++) {
-//		// Don't dereference null pointers
-//		if (m_pPoi[j] != nullptr) {
-//			if (firstPOI == true) {
-//				// the first POI
-//				returnValue = wp.calculateDistance((CWaypoint) *m_pPoi[j]);
-//				poi = *m_pPoi[j];
-//				firstPOI = false;
-//			} else if (wp.calculateDistance((CWaypoint) *m_pPoi[j])
-//					< returnValue) {
-//				// found a POI that's even closer
-//				returnValue = wp.calculateDistance((CWaypoint) *m_pPoi[j]);
-//				poi = *m_pPoi[j];
-//			}
-//		} else {
-//			std::cout
-//					<< "ERROR in CRoute::getDistanceNextPoi(): Tried to dereference null pointer"
-//					<< std::endl;
-//		}
-//	}
-//
+	bool firstPOI = true;
+
+	if(m_pPoiDatabase == nullptr) {
+		std::cout << "ERROR in CRoute::getDistanceNextPoi(): Tried to dereference CWaypoint* null pointer"
+	  		<< std::endl;
+		return -1;
+	}
+
+	for(std::map<std::string, CPOI>::const_iterator it = m_pPoiDatabase->getDB().begin(); it != m_pPoiDatabase->getDB().end(); ++it) {
+
+			if (firstPOI == true) {
+				// the first POI
+				returnValue = wp.calculateDistance((CWaypoint) it->second);
+				poi = (it->second);
+				firstPOI = false;
+			} else if (wp.calculateDistance((CWaypoint) it->second)
+					< returnValue) {
+				// found a POI that's even closer
+				returnValue = wp.calculateDistance((CWaypoint) it->second);
+				poi = (it->second);
+			}
+	}
 	return returnValue;
 }
 
