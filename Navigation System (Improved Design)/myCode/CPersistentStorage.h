@@ -2,7 +2,7 @@
  * CPersistentStorage.h
  *
  *  Created on: 03.12.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #ifndef MYCODE_CPERSISTENTSTORAGE_H_
