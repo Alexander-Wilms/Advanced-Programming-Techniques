@@ -23,7 +23,7 @@ CPOI* CPoiDatabase::getPointerToPoi(std::string name) {
 	std::map<std::string,CPOI>::iterator it = m_POI.find(name);
 
 	if(it == m_POI.end()) {
-		std::cout << "WARNING in CPoiDatabase::getPointerToPoi(): Could not find POI '" << name << "'" << std::endl;
+		std::cout << "INFO in CPoiDatabase::getPointerToPoi(): Could not find POI '" << name << "'" << std::endl;
 		returnValue = nullptr;
 	} else {
 		returnValue = &(it->second);

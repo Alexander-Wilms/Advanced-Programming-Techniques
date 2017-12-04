@@ -300,6 +300,7 @@ CCSVStorage::ParseStatus CCSVStorage::extractDescription(std::string& remainingL
 	if(description == "") {
 		return ERR_EMPTY_FIELD_DESCRIPTION;
 	}
+	descriptionParsed = description;
 
 	return OK;
 }

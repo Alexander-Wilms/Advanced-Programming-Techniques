@@ -1,0 +1,2 @@
+SIGHTSEEING;Berlin;Berlin City Center;52.51;13.4
+RESTAURANT;Mensa HDA;The best Mensa in the world;49.8669;8.63791

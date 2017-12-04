@@ -30,6 +30,9 @@ public:
 	*/
 	virtual void setMediaName(std::string name) = 0;
 
+	// flint++: Classes with virtual functions should not have a public non-virtual destructor.
+	virtual ~CPersistentStorage();
+
 	/**
 	* Write the data to the persistent storage.
 	*
@@ -56,5 +59,8 @@ public:
 	virtual bool readData (CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 	MergeMode mode) = 0;
 };
+
+inline CPersistentStorage::~CPersistentStorage() {
+}
 
 #endif /* MYCODE_CPERSISTENTSTORAGE_H_ */

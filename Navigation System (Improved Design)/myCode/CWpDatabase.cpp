@@ -26,7 +26,7 @@ CWaypoint* CWpDatabase::getPointerToWp(std::string name) {
 
 	if(it == m_Waypoint.end()) {
 		// nothing found
-		std::cout << "ERROR in CWpDatabase::getPointerToWp(): Could not find waypoint '" << name << "'" << std::endl;
+		std::cout << "INFO in CWpDatabase::getPointerToWp(): Could not find waypoint '" << name << "'" << std::endl;
 		returnValue = nullptr;
 	} else {
 		returnValue = &(it->second);
