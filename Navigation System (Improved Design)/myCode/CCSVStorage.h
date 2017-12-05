@@ -149,7 +149,9 @@ private:
 	 * Extract the POI type from the remainder of the current line
 	 *
 	 * @param remainingLine The remainder of the current Line
-	 * @pram typeParsed Variable to return the type by reference
+	 * @param typeParsed Variable to return the type by reference
+	 *
+	 * @returns OK or an error
 	 */
 	ParseStatus extractType(std::string& remainingLine, t_poi& typeParsed);
 

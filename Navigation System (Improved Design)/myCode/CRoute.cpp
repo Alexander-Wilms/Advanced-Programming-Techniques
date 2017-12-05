@@ -10,9 +10,10 @@
 
 #include <iostream>
 
-CRoute::CRoute() {
-	m_pPoiDatabase = nullptr;
-	m_pWpDatabase = nullptr;
+CRoute::CRoute() :
+m_pPoiDatabase(nullptr),
+m_pWpDatabase(nullptr)
+{
 }
 
 CRoute::CRoute(const CRoute& origin) {
@@ -142,7 +143,7 @@ void CRoute::print() {
 			it != m_route.end(); it++) {
 		/**
 		 * HINT:
-		 * source type is not polymorphic ->
+		 * Error message: source type is not polymorphic ->
 		 * base class needs a virtual function, e.g. the destructor
 		 */
 		CPOI* pPOI = dynamic_cast<CPOI*>(*it);
