@@ -1,0 +1,3 @@
+RESTAURANT;Mensa HDA;The best Mensa in the world;10;20
+RESTAURANT;Piet Friet;1A Pommes Frites;50;5
+RESTAURANT;Sitte;More expensive but also good;11;22

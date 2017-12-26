@@ -1,0 +1,17 @@
+Code changes required for implementing CCSVStorage:
+
+Class: CPoiDatabase
+Change: add getDB() const
+Reason: readonly data access needed in order to write CSV file
+
+Class: CPoiDatabase
+Change: add clearDB()
+Reason: clearing DB required for REPLACE operation
+
+Class: CPOI
+Change: add getTypeAsString()
+Reason: uncoupling from t_poi type in CCSVStorage::write()
+
+Class: CPOI
+Change: add getDescription()
+Reason: in accordance with other CPOI getter methods; getAllDataByReference seems overkill
