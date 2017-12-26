@@ -5,19 +5,20 @@
  *      Author: Fabian Alexander Wilms
  */
 
-#include "CCSVStorage.h"
+#include "CCsvPersistence.h"
+
 #include <algorithm>
 #include <iostream>
 
-CCSVStorage::CCSVStorage() :
+CCsvPersistence::CCsvPersistence() :
 	m_delimiter(";")
 {
 }
 
-CCSVStorage::~CCSVStorage() {
+CCsvPersistence::~CCsvPersistence() {
 }
 
-void CCSVStorage::setMediaName(std::string name) {
+void CCsvPersistence::setMediaName(std::string name) {
 	/**
 	 * Note: mediaName is not the file name!
 	 * The file names are:
@@ -27,8 +28,8 @@ void CCSVStorage::setMediaName(std::string name) {
 	mediaName = name;
 }
 
-bool CCSVStorage::writeData(const CWpDatabase& waypointDb,
-		const CPoiDatabase& poiDb) {
+bool CCsvPersistence::writeData(const CDatabase<std::string, CWaypoint>& waypointDb,
+		const CDatabase<std::string, CPOI>& poiDb) {
 	std::ofstream file;
 	const std::map<std::string, CWaypoint> pWaypointMap = waypointDb.getDB();
 	const std::map<std::string, CPOI> pPOIMap = poiDb.getDB();
@@ -60,7 +61,7 @@ bool CCSVStorage::writeData(const CWpDatabase& waypointDb,
 	return true;
 }
 
-bool CCSVStorage::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
+bool CCsvPersistence::readData(CDatabase<std::string, CWaypoint>& waypointDb, CDatabase<std::string, CPOI>& poiDb,
 		CPersistentStorage::MergeMode enumMergeMode) {
 	if(enumMergeMode == REPLACE) {
 		waypointDb.clearDb();
@@ -104,8 +105,8 @@ bool CCSVStorage::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 			printError(status = extractLongitude(remainingLine, longitude), lineNumber, line);
 			if (status != OK) { continue; }
 
-			if(poiDb.getPointerToPoi(name) == nullptr) {
-				poiDb.addPoi(CPOI(POItype, name, description, latitude, longitude));
+			if(poiDb.getPointerToElement(name) == nullptr) {
+				poiDb.addElement(CPOI(POItype, name, description, latitude, longitude));
 				std::cout << "INFO in CCSVStorage::readData(): Added POI '" << name << "'" << std::endl;
 			}
 		}
@@ -140,8 +141,8 @@ bool CCSVStorage::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 			printError(status = extractLongitude(remainingLine, longitude), lineNumber, line);
 			if (status != OK) { continue; }
 
-			if(waypointDb.getPointerToWp(name) == nullptr) {
-				waypointDb.addWp(CWaypoint(name, latitude, longitude));
+			if(waypointDb.getPointerToElement(name) == nullptr) {
+				waypointDb.addElement(CWaypoint(name, latitude, longitude));
 				std::cout << "INFO in CCSVStorage::readData(): Added waypoint '" << name << "'" << std::endl;
 			}
 		}
@@ -154,7 +155,7 @@ bool CCSVStorage::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 	return true;
 }
 
-void CCSVStorage::printError(ParseStatus status, unsigned int lineNumber,
+void CCsvPersistence::printError(ParseStatus status, unsigned int lineNumber,
 		std::string lineContent) {
 
 	if(status != OK) {
@@ -208,7 +209,7 @@ void CCSVStorage::printError(ParseStatus status, unsigned int lineNumber,
 	}
 }
 
-std::string CCSVStorage::getDigits(const std::string& source) {
+std::string CCsvPersistence::getDigits(const std::string& source) {
 	std::string returnValue;
 	for(unsigned int i = 0; i < source.size(); i++) {
 		if('0' <= (char) source.at(i) && (char) source.at(i) <= '9') {
@@ -218,7 +219,7 @@ std::string CCSVStorage::getDigits(const std::string& source) {
 	return returnValue;
 }
 
-CCSVStorage::ParseStatus CCSVStorage::checkNoOfFields(const std::string& line,
+CCsvPersistence::ParseStatus CCsvPersistence::checkNoOfFields(const std::string& line,
 		unsigned int expectedNo) const {
 	unsigned int count = std::count(line.begin(), line.end(), ';');
 	if(count < expectedNo-1) {
@@ -230,7 +231,7 @@ CCSVStorage::ParseStatus CCSVStorage::checkNoOfFields(const std::string& line,
 	return OK;
 }
 
-CCSVStorage::ParseStatus CCSVStorage::extractLongitude(std::string& remainingLine, double& longitudeParsed) {
+CCsvPersistence::ParseStatus CCsvPersistence::extractLongitude(std::string& remainingLine, double& longitudeParsed) {
 	std::string longitude = remainingLine.substr(0, remainingLine.find(m_delimiter));
 	remainingLine = remainingLine.substr(remainingLine.find(m_delimiter)+1, remainingLine.size());
 	if(longitude == "") {
@@ -259,7 +260,7 @@ CCSVStorage::ParseStatus CCSVStorage::extractLongitude(std::string& remainingLin
 	return OK;
 }
 
-CCSVStorage::ParseStatus CCSVStorage::extractLatitude(std::string& remainingLine, double& latitudeParsed) {
+CCsvPersistence::ParseStatus CCsvPersistence::extractLatitude(std::string& remainingLine, double& latitudeParsed) {
 	std::string longitude = remainingLine.substr(0, remainingLine.find(m_delimiter));
 	remainingLine = remainingLine.substr(remainingLine.find(m_delimiter)+1, remainingLine.size());
 	if(longitude == "") {
@@ -288,7 +289,7 @@ CCSVStorage::ParseStatus CCSVStorage::extractLatitude(std::string& remainingLine
 	return OK;
 }
 
-CCSVStorage::ParseStatus CCSVStorage::extractName(std::string& remainingLine, std::string& nameParsed) {
+CCsvPersistence::ParseStatus CCsvPersistence::extractName(std::string& remainingLine, std::string& nameParsed) {
 	std::string name = remainingLine.substr(0, remainingLine.find(m_delimiter));
 	remainingLine = remainingLine.substr(remainingLine.find(m_delimiter)+1, remainingLine.size());
 	if(name == "") {
@@ -299,7 +300,7 @@ CCSVStorage::ParseStatus CCSVStorage::extractName(std::string& remainingLine, st
 	return OK;
 }
 
-CCSVStorage::ParseStatus CCSVStorage::extractDescription(std::string& remainingLine,
+CCsvPersistence::ParseStatus CCsvPersistence::extractDescription(std::string& remainingLine,
 		std::string& descriptionParsed) {
 	std::string description = remainingLine.substr(0, remainingLine.find(m_delimiter));
 	remainingLine = remainingLine.substr(remainingLine.find(m_delimiter)+1, remainingLine.size());
@@ -311,7 +312,7 @@ CCSVStorage::ParseStatus CCSVStorage::extractDescription(std::string& remainingL
 	return OK;
 }
 
-CCSVStorage::ParseStatus CCSVStorage::extractType(std::string& remainingLine,
+CCsvPersistence::ParseStatus CCsvPersistence::extractType(std::string& remainingLine,
 		t_poi& typeParsed) {
 	// https://stackoverflow.com/questions/14265581/parse-split-a-string-in-c-using-string-delimiter-standard-c
 	std::string type = remainingLine.substr(0, remainingLine.find(m_delimiter));

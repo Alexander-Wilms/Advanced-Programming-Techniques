@@ -8,12 +8,11 @@
 #ifndef CNAVIGATIONSYSTEM_H_
 #define CNAVIGATIONSYSTEM_H_
 
+#include "CCsvPersistence.h"
 #include "CGPSSensor.h"
-#include "CPoiDatabase.h"
-#include "CWpDatabase.h"
+#include "CDatabase.h"
 #include "CRoute.h"
 #include "CPersistentStorage.h"
-#include "CCSVStorage.h"
 
 /**
  * The navigation system, which allows interacting with a route
@@ -49,17 +48,17 @@ private:
 	/**
 	 * A database of all known POIs
 	 */
-	CPoiDatabase m_PoiDatabase;
+	CDatabase<std::string, CPOI> m_PoiDatabase;
 
 	/**
 	 * A database of all known Waypoints
 	 */
-	CWpDatabase m_WpDatabase;
+	CDatabase<std::string, CWaypoint> m_WpDatabase;
 
 	/**
 	 * Allows handling persistent database storages
 	 */
-	CCSVStorage m_CSVStorage;
+	CCsvPersistence m_CSVStorage;
 
 	/**
 	 * test cases

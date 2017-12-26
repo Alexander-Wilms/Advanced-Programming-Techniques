@@ -5,20 +5,20 @@
  *      Author: Fabian Alexander Wilms
  */
 
-#ifndef MYCODE_CCSVSTORAGE_H_
-#define MYCODE_CCSVSTORAGE_H_
+#ifndef MYCODE_CCSVPERSISTENCE_H_
+#define MYCODE_CCSVPERSISTENCE_H_
 
 #include "CPersistentStorage.h"
-#include "CPoiDatabase.h"
-#include "CWpDatabase.h"
+#include "CDatabase.h"
+#include "CPOI.h"
 #include <fstream>
 #include <string>
 
-class CCSVStorage: public CPersistentStorage {
+class CCsvPersistence: public CPersistentStorage {
 public:
-	CCSVStorage();
+	CCsvPersistence();
 
-	~CCSVStorage();
+	~CCsvPersistence();
 
 	/**
 	* Set the name of the media to be used for persistent storage.
@@ -36,7 +36,7 @@ public:
 	* @param poiDb the database with points of interest
 	* @return true if the data could be saved successfully
 	*/
-	bool writeData(const CWpDatabase& waypointDb, const CPoiDatabase& poiDb);
+	bool writeData(const CDatabase<std::string, CWaypoint>& waypointDb, const CDatabase<std::string, CPOI>& poiDb);
 
 	/**
 	* Fill the databases with the data from persistent storage. If
@@ -51,7 +51,7 @@ public:
 	* @param mode the merge mode
 	* @return true if the data could be read successfully
 	*/
-	bool readData (CWpDatabase& waypointDb, CPoiDatabase& poiDb, CPersistentStorage::MergeMode mode);
+	bool readData (CDatabase<std::string, CWaypoint>& waypointDb, CDatabase<std::string, CPOI>& poiDb, CPersistentStorage::MergeMode mode);
 
 
 	/**
@@ -77,7 +77,7 @@ public:
 	/**
 	 * Prints the specified error to the console
 	 */
-	void printError(CCSVStorage::ParseStatus problem, unsigned int lineNumber, std::string lineContent);
+	void printError(CCsvPersistence::ParseStatus problem, unsigned int lineNumber, std::string lineContent);
 
 	std::string getDigits(const std::string& source);
 
@@ -157,4 +157,4 @@ private:
 
 };
 
-#endif /* MYCODE_CCSVSTORAGE_H_ */
+#endif /* MYCODE_CCSVPERSISTENCE_H_ */

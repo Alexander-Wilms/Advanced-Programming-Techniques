@@ -5,11 +5,11 @@
  *      Author: Fabian Alexander Wilms
  */
 
-#include "CCSVStorage.h"
 #include "CPersistentStorage.h"
 #include "CNavigationSystem.h"
 #include "CWaypoint.h"
 #include <iostream>
+#include "CCsvPersistence.h"
 
 int main() {
 
@@ -63,12 +63,12 @@ int main() {
 				               << "==============================" << std::endl;
 
 
-	CPoiDatabase poiDatabase;
-	poiDatabase.addPoi(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world",
+	CDatabase<std::string, CPOI> poiDatabase;
+	poiDatabase.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world",
 			10, 20));
-	CWpDatabase wpDatabase;
-	wpDatabase.addWp(CWaypoint("Darmstadt", 49.872833, 8.651222));
-	wpDatabase.addWp(CWaypoint("Berlin", 52.518611, 13.408333));
+	CDatabase<std::string, CWaypoint> wpDatabase;
+	wpDatabase.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
+	wpDatabase.addElement(CWaypoint("Berlin", 52.518611, 13.408333));
 	CRoute* proute1 = new CRoute();
 	proute1->connectToPoiDatabase(&poiDatabase);
 	proute1->connectToWpDatabase(&wpDatabase);
@@ -116,11 +116,11 @@ int main() {
 	std::cout << "TEST: The sum of two routes with the same databases:" << std::endl;
 	route2.print();
 	CRoute route4;
-	CPoiDatabase poiDatabaseOperatorPlus;
-	poiDatabaseOperatorPlus.addPoi(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world",
+	CDatabase<std::string, CPOI> poiDatabaseOperatorPlus;
+	poiDatabaseOperatorPlus.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world",
 				10, 20));
-	CWpDatabase wpDatabaseOperatorPlus;
-	wpDatabase.addWp(CWaypoint("Darmstadt", 49.872833, 8.651222));
+	CDatabase<std::string, CWaypoint> wpDatabaseOperatorPlus;
+	wpDatabase.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
 	route4.connectToPoiDatabase(&poiDatabaseOperatorPlus);
 	route4.connectToWpDatabase(&wpDatabaseOperatorPlus);
 	std::cout << "TEST: Adding two routes using the same databases shouldn't work:" << std::endl;
@@ -129,22 +129,22 @@ int main() {
 
 	std::cout << std::endl << "Test writing the DBs to files" << std::endl
 			               << "=============================" << std::endl;
-	CPoiDatabase poiDatabaseCVSWriteTest;
-	poiDatabaseCVSWriteTest.addPoi(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world", 49.866934, 8.637911));
-	poiDatabaseCVSWriteTest.addPoi(CPOI(SIGHTSEEING, "Berlin", "Berlin City Center", 52.51, 13.4));
-	CWpDatabase wpDatabaseCVSWriteTest;
-	wpDatabaseCVSWriteTest.addWp(CWaypoint("Amsterdam", 52.3731, 4.8922));
-	wpDatabaseCVSWriteTest.addWp(CWaypoint("Darmstadt", 49.872833, 8.651222));
-	CCSVStorage myCVSStorage;
+	CDatabase<std::string, CPOI> poiDatabaseCVSWriteTest;
+	poiDatabaseCVSWriteTest.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world", 49.866934, 8.637911));
+	poiDatabaseCVSWriteTest.addElement(CPOI(SIGHTSEEING, "Berlin", "Berlin City Center", 52.51, 13.4));
+	CDatabase<std::string, CWaypoint> wpDatabaseCVSWriteTest;
+	wpDatabaseCVSWriteTest.addElement(CWaypoint("Amsterdam", 52.3731, 4.8922));
+	wpDatabaseCVSWriteTest.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
+	CCsvPersistence myCVSStorage;
 	myCVSStorage.setMediaName("test-export");
 	myCVSStorage.writeData(wpDatabaseCVSWriteTest, poiDatabaseCVSWriteTest);
 	std::cout << "TEST: Check if the files 'test-export-poi/wp.txt' have the expected content" << std::endl;
 
 	std::cout << std::endl << "Test reading Dbs from files and writing it back" << std::endl
 	          	           << "===============================================" << std::endl;
-	CWpDatabase wpDatabaseCVSReadTest;
-	CPoiDatabase poiDatabaseCVSReadTest;
-	CCSVStorage myCVSStorageReadTest;
+	CDatabase<std::string, CWaypoint> wpDatabaseCVSReadTest;
+	CDatabase<std::string, CPOI> poiDatabaseCVSReadTest;
+	CCsvPersistence myCVSStorageReadTest;
 	myCVSStorageReadTest.setMediaName("test-export");
 	myCVSStorageReadTest.readData(wpDatabaseCVSReadTest, poiDatabaseCVSReadTest, CPersistentStorage::REPLACE);
 	myCVSStorageReadTest.setMediaName("test-export-import-export");
@@ -153,9 +153,9 @@ int main() {
 
 	std::cout << std::endl << "Error handling" << std::endl
 	          	  	  	   << "==============" << std::endl;
-	CWpDatabase wpDatabaseCVSReadErrorsTest;
-	CPoiDatabase poiDatabaseCVSReadErrorsTest;
-	CCSVStorage myCVSStorageReadErrorsTest;
+	CDatabase<std::string, CWaypoint> wpDatabaseCVSReadErrorsTest;
+	CDatabase<std::string, CPOI> poiDatabaseCVSReadErrorsTest;
+	CCsvPersistence myCVSStorageReadErrorsTest;
 	myCVSStorageReadErrorsTest.setMediaName("test-errors-import");
 	myCVSStorageReadErrorsTest.readData(wpDatabaseCVSReadErrorsTest, poiDatabaseCVSReadErrorsTest, CPersistentStorage::REPLACE);
 	myCVSStorageReadErrorsTest.setMediaName("test-errors-import-export");

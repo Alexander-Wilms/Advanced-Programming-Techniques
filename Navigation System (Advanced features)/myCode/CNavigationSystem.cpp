@@ -8,10 +8,10 @@
 #include "CNavigationSystem.h"
 
 #include "CRoute.h"
-#include "CCSVStorage.h"
 #include "CPersistentStorage.h"
 #include <iostream>
 #include <string>
+#include "CCsvPersistence.h"
 
 // #define SETUP_DBS
 
@@ -19,7 +19,7 @@ CNavigationSystem::CNavigationSystem() :
 	m_route(),
 	m_PoiDatabase(),
 	m_WpDatabase() {
-	 m_CSVStorage = CCSVStorage();
+	 m_CSVStorage = CCsvPersistence();
 	 m_CSVStorage.setMediaName("navigationsystemdata");
 }
 
@@ -54,14 +54,14 @@ void CNavigationSystem::printRoute() {
 
 void CNavigationSystem::addPOIsAndWpsToDatabase() {
 	CWaypoint Amsterdam("Amsterdam", 52.370197222222, 4.8904444444444);
-	m_WpDatabase.addWp(Amsterdam);
-	m_WpDatabase.addWp(CWaypoint("Darmstadt", 49.872833, 8.651222));
-	m_WpDatabase.addWp(CWaypoint("Berlin", 52.518611, 13.408333));
+	m_WpDatabase.addElement(Amsterdam);
+	m_WpDatabase.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
+	m_WpDatabase.addElement(CWaypoint("Berlin", 52.518611, 13.408333));
 
 	CPOI PietFriet(RESTAURANT, "Piet Friet", "1A Pommes Frites", 50, 5);
-	m_PoiDatabase.addPoi(PietFriet);
-	m_PoiDatabase.addPoi(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world", 10, 20));
-	m_PoiDatabase.addPoi(CPOI(RESTAURANT, "Sitte", "More expensive but also good", 11, 22));
+	m_PoiDatabase.addElement(PietFriet);
+	m_PoiDatabase.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world", 10, 20));
+	m_PoiDatabase.addElement(CPOI(RESTAURANT, "Sitte", "More expensive but also good", 11, 22));
 }
 
 void CNavigationSystem::printDistanceCurPosNextPoi() {

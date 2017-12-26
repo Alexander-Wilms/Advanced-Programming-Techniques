@@ -22,7 +22,7 @@ CRoute::CRoute(const CRoute& origin) {
 	m_route = origin.m_route;
 }
 
-void CRoute::connectToPoiDatabase(CPoiDatabase* pPoiDB) {
+void CRoute::connectToPoiDatabase(CDatabase<std::string, CPOI>* pPoiDB) {
 	// Don't connect to null pointers
 	if (pPoiDB != nullptr) {
 		m_pPoiDatabase = pPoiDB;
@@ -33,7 +33,7 @@ void CRoute::connectToPoiDatabase(CPoiDatabase* pPoiDB) {
 	}
 }
 
-void CRoute::connectToWpDatabase(CWpDatabase* pWpDB) {
+void CRoute::connectToWpDatabase(CDatabase<std::string, CWaypoint>* pWpDB) {
 	// Don't connect to null pointers
 	if (pWpDB != nullptr) {
 		m_pWpDatabase = pWpDB;
@@ -46,7 +46,7 @@ void CRoute::connectToWpDatabase(CWpDatabase* pWpDB) {
 
 void CRoute::addWaypoint(std::string name) {
 	if (m_pWpDatabase != nullptr) {
-		CWaypoint* wp = m_pWpDatabase->getPointerToWp(name);
+		CWaypoint* wp = m_pWpDatabase->getPointerToElement(name);
 
 		if (wp != nullptr) {
 			// we found a POI with the given name in the PoiDatabase
@@ -72,7 +72,7 @@ void CRoute::addPoi(std::string namePoi, std::string afterWp) {
 
 	if (m_pPoiDatabase != nullptr) {
 		// we're connected to a PoiDatabase
-		CPOI* poi = m_pPoiDatabase->getPointerToPoi(namePoi);
+		CPOI* poi = m_pPoiDatabase->getPointerToElement(namePoi);
 
 		if (poi != nullptr) {
 			// we found a POI with the given name in the PoiDatabase
@@ -170,8 +170,8 @@ CRoute& CRoute::operator+=(std::string name) {
 
 	if (m_pWpDatabase != nullptr) {
 		if (m_pPoiDatabase != nullptr) {
-			CWaypoint* wp = m_pWpDatabase->getPointerToWp(name);
-			CPOI* poi = m_pPoiDatabase->getPointerToPoi(name);
+			CWaypoint* wp = m_pWpDatabase->getPointerToElement(name);
+			CPOI* poi = m_pPoiDatabase->getPointerToElement(name);
 
 			if (wp != nullptr) {
 				// waypoint found

@@ -11,8 +11,7 @@
 #include <string>
 #include <list>
 #include "CPOI.h"
-#include "CPoiDatabase.h"
-#include "CWpDatabase.h"
+#include "CDatabase.h"
 
 class CRoute {
 public:
@@ -33,14 +32,14 @@ public:
 	 *
 	 * @param pPoiDB A pointer to a PoiDatabase
 	 */
-	void connectToPoiDatabase(CPoiDatabase* pPoiDB);
+	void connectToPoiDatabase(CDatabase<std::string, CPOI>* pPoiDB);
 
 	/**
 	 * Connects the route object to a POI database
 	 *
 	 * @param pPoiDB A pointer to a PoiDatabase
 	 */
-	void connectToWpDatabase(CWpDatabase* pWpDB);
+	void connectToWpDatabase(CDatabase<std::string, CWaypoint>* pWpDB);
 
 	/**
 	 * Adds a waypoint to the route
@@ -94,12 +93,12 @@ private:
 	/**
 	 * A pointer to an existing POI database
 	 */
-	CPoiDatabase* m_pPoiDatabase;
+	CDatabase<std::string, CPOI>* m_pPoiDatabase;
 
 	/**
 	 * A pointer to an existing waypoint database
 	 */
-	CWpDatabase* m_pWpDatabase;
+	CDatabase<std::string, CWaypoint>* m_pWpDatabase;
 };
 
 #endif /* CROUTE_H_ */
