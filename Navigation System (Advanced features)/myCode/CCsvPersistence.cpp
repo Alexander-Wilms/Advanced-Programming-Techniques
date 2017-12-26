@@ -22,46 +22,46 @@ void CCsvPersistence::setMediaName(std::string name) {
 	/**
 	 * Note: mediaName is not the file name!
 	 * The file names are:
-	 * - <mediaName>-wp.txt
-	 * - <mediaName>-poi.txt
+	 * - <mediaName>-wp.csv
+	 * - <mediaName>-poi.csv
 	 */
 	mediaName = name;
 }
 
-bool CCsvPersistence::writeData(const CDatabase<std::string, CWaypoint>& waypointDb,
-		const CDatabase<std::string, CPOI>& poiDb) {
+bool CCsvPersistence::writeData(const CWpDatabase& waypointDb,
+		const CPoiDatabase& poiDb) {
 	std::ofstream file;
 	const std::map<std::string, CWaypoint> pWaypointMap = waypointDb.getDB();
 	const std::map<std::string, CPOI> pPOIMap = poiDb.getDB();
 
 	// first write all POIs into a file
-	file.open(mediaName + "-poi.txt");
+	file.open(mediaName + "-poi.csv");
 	if(file.is_open()) {
 		for (std::map<std::string,CPOI>::const_iterator it = pPOIMap.begin(); it != pPOIMap.end(); it++) {
 			file << it->second.getTypeAsString() << ";" << it->second.getName() << ";" << it->second.getDescription() << ";" << it->second.getLatitude() << ";" << it->second.getLongitude() << std::endl;
 		}
 		file.close();
 	} else {
-		std::cout << "ERROR in CCSVStorage::writeData(): Couldn't open file " << mediaName << "-poi.txt" << std::endl;
+		std::cout << "ERROR in CCSVStorage::writeData(): Couldn't open file " << mediaName << "-poi.csv" << std::endl;
 		return false;
 	}
 
 	// then write all waypoints into a file
-	file.open(mediaName + "-wp.txt");
+	file.open(mediaName + "-wp.csv");
 	if(file.is_open()) {
 		for (std::map<std::string,CWaypoint>::const_iterator it = pWaypointMap.begin(); it != pWaypointMap.end(); it++) {
 			file << it->second.getName() << ";" << it->second.getLatitude() << ";" << it->second.getLongitude() << std::endl;
 		}
 		file.close();
 	} else {
-		std::cout << "ERROR in CCSVStorage::writeData(): Couldn't open file " << mediaName << "-wp.txt" << std::endl;
+		std::cout << "ERROR in CCSVStorage::writeData(): Couldn't open file " << mediaName << "-wp.csv" << std::endl;
 		return false;
 	}
 
 	return true;
 }
 
-bool CCsvPersistence::readData(CDatabase<std::string, CWaypoint>& waypointDb, CDatabase<std::string, CPOI>& poiDb,
+bool CCsvPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 		CPersistentStorage::MergeMode enumMergeMode) {
 	if(enumMergeMode == REPLACE) {
 		waypointDb.clearDb();
@@ -76,7 +76,7 @@ bool CCsvPersistence::readData(CDatabase<std::string, CWaypoint>& waypointDb, CD
 	t_poi POItype;
 	double latitude, longitude;
 	unsigned int lineNumber = 0;
-	file.open(mediaName + "-poi.txt");
+	file.open(mediaName + "-poi.csv");
 	if(file.is_open()) {
 		while(!file.eof()){
 			lineNumber++;
@@ -112,13 +112,13 @@ bool CCsvPersistence::readData(CDatabase<std::string, CWaypoint>& waypointDb, CD
 		}
 		file.close();
 	} else {
-		std::cout << "ERROR in CCSVStorage::readData(): Couldn't open file " << mediaName << "-poi.txt" << std::endl;
+		std::cout << "ERROR in CCSVStorage::readData(): Couldn't open file " << mediaName << "-poi.csv" << std::endl;
 		return false;
 	}
 
 	// then read all waypoints from the file
 	lineNumber = 0;
-	file.open(mediaName + "-wp.txt");
+	file.open(mediaName + "-wp.csv");
 	if(file.is_open()) {
 		while(!file.eof()){
 			lineNumber++;
@@ -148,7 +148,7 @@ bool CCsvPersistence::readData(CDatabase<std::string, CWaypoint>& waypointDb, CD
 		}
 		file.close();
 	} else {
-		std::cout << "ERROR in CCSVStorage::readData(): Couldn't open file " << mediaName << "-wp.txt" << std::endl;
+		std::cout << "ERROR in CCSVStorage::readData(): Couldn't open file " << mediaName << "-wp.csv" << std::endl;
 		return false;
 	}
 

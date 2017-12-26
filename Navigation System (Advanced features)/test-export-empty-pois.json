@@ -1,0 +1,16 @@
+{
+		"waypoints": [
+			{
+				"name": "Amsterdam",
+				"latitude": "52.373100",
+				"longitude": "4.892200"
+			},
+			{
+				"name": "Darmstadt",
+				"latitude": "49.872833",
+				"longitude": "8.651222"
+			}
+		],
+		"pois": [
+		]
+}

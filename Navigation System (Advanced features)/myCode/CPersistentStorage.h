@@ -8,7 +8,8 @@
 #ifndef MYCODE_CPERSISTENTSTORAGE_H_
 #define MYCODE_CPERSISTENTSTORAGE_H_
 
-#include "CDatabase.h"
+#include "CWpDatabase.h"
+#include "CPoiDatabase.h"
 #include "CPOI.h"
 #include <string>
 
@@ -40,8 +41,8 @@ public:
 	* @param poiDb the database with points of interest
 	* @return true if the data could be saved successfully
 	*/
-	virtual bool writeData (const CDatabase<std::string, CWaypoint>& waypointDb,
-	const CDatabase<std::string, CPOI>& poiDb) = 0;
+	virtual bool writeData (const CWpDatabase& waypointDb,
+	const CPoiDatabase& poiDb) = 0;
 
 	/**
 	* Fill the databases with the data from persistent storage. If
@@ -56,7 +57,7 @@ public:
 	* @param mode the merge mode
 	* @return true if the data could be read successfully
 	*/
-	virtual bool readData (CDatabase<std::string, CWaypoint>& waypointDb, CDatabase<std::string, CPOI>& poiDb,
+	virtual bool readData (CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 	MergeMode mode) = 0;
 };
 

@@ -8,8 +8,9 @@
 #include "CPersistentStorage.h"
 #include "CNavigationSystem.h"
 #include "CWaypoint.h"
-#include <iostream>
 #include "CCsvPersistence.h"
+#include "CJsonPersistence.h"
+#include <iostream>
 
 int main() {
 
@@ -63,10 +64,10 @@ int main() {
 				               << "==============================" << std::endl;
 
 
-	CDatabase<std::string, CPOI> poiDatabase;
+	CPoiDatabase poiDatabase;
 	poiDatabase.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world",
 			10, 20));
-	CDatabase<std::string, CWaypoint> wpDatabase;
+	CWpDatabase wpDatabase;
 	wpDatabase.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
 	wpDatabase.addElement(CWaypoint("Berlin", 52.518611, 13.408333));
 	CRoute* proute1 = new CRoute();
@@ -116,10 +117,10 @@ int main() {
 	std::cout << "TEST: The sum of two routes with the same databases:" << std::endl;
 	route2.print();
 	CRoute route4;
-	CDatabase<std::string, CPOI> poiDatabaseOperatorPlus;
+	CPoiDatabase poiDatabaseOperatorPlus;
 	poiDatabaseOperatorPlus.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world",
 				10, 20));
-	CDatabase<std::string, CWaypoint> wpDatabaseOperatorPlus;
+	CWpDatabase wpDatabaseOperatorPlus;
 	wpDatabase.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
 	route4.connectToPoiDatabase(&poiDatabaseOperatorPlus);
 	route4.connectToWpDatabase(&wpDatabaseOperatorPlus);
@@ -127,39 +128,63 @@ int main() {
 	CRoute routetest = route2 + route4;
 	std::cout << "TEST: The sum of two routes with different databases should be an empty route:" << std::endl;
 
-	std::cout << std::endl << "Test writing the DBs to files" << std::endl
+	std::cout << std::endl << "Test writing the DBs to CSV files" << std::endl
 			               << "=============================" << std::endl;
-	CDatabase<std::string, CPOI> poiDatabaseCVSWriteTest;
+	CPoiDatabase poiDatabaseCVSWriteTest;
 	poiDatabaseCVSWriteTest.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world", 49.866934, 8.637911));
 	poiDatabaseCVSWriteTest.addElement(CPOI(SIGHTSEEING, "Berlin", "Berlin City Center", 52.51, 13.4));
-	CDatabase<std::string, CWaypoint> wpDatabaseCVSWriteTest;
+	CWpDatabase wpDatabaseCVSWriteTest;
 	wpDatabaseCVSWriteTest.addElement(CWaypoint("Amsterdam", 52.3731, 4.8922));
 	wpDatabaseCVSWriteTest.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
 	CCsvPersistence myCVSStorage;
 	myCVSStorage.setMediaName("test-export");
 	myCVSStorage.writeData(wpDatabaseCVSWriteTest, poiDatabaseCVSWriteTest);
-	std::cout << "TEST: Check if the files 'test-export-poi/wp.txt' have the expected content" << std::endl;
+	std::cout << "TEST: Check if the files 'test-export-poi/wp.csv' have the expected content" << std::endl;
 
-	std::cout << std::endl << "Test reading Dbs from files and writing it back" << std::endl
+	std::cout << std::endl << "Test reading Dbs from CSV files and writing it back" << std::endl
 	          	           << "===============================================" << std::endl;
-	CDatabase<std::string, CWaypoint> wpDatabaseCVSReadTest;
-	CDatabase<std::string, CPOI> poiDatabaseCVSReadTest;
+	CWpDatabase wpDatabaseCVSReadTest;
+	CPoiDatabase poiDatabaseCVSReadTest;
 	CCsvPersistence myCVSStorageReadTest;
 	myCVSStorageReadTest.setMediaName("test-export");
 	myCVSStorageReadTest.readData(wpDatabaseCVSReadTest, poiDatabaseCVSReadTest, CPersistentStorage::REPLACE);
 	myCVSStorageReadTest.setMediaName("test-export-import-export");
 	myCVSStorageReadTest.writeData(wpDatabaseCVSReadTest, poiDatabaseCVSReadTest);
-	std::cout << "TEST: Check if the 'test-export-import-export-poi/wp.txt' files have the same content as the 'test-export-poi/wp.txt' files" << std::endl;
+	std::cout << "TEST: Check if the 'test-export-import-export-poi/wp.csv' files have the same content as the 'test-export-poi/wp.csv' files" << std::endl;
 
-	std::cout << std::endl << "Error handling" << std::endl
+	std::cout << std::endl << "CSV: Error handling" << std::endl
 	          	  	  	   << "==============" << std::endl;
-	CDatabase<std::string, CWaypoint> wpDatabaseCVSReadErrorsTest;
-	CDatabase<std::string, CPOI> poiDatabaseCVSReadErrorsTest;
+	CWpDatabase wpDatabaseCVSReadErrorsTest;
+	CPoiDatabase poiDatabaseCVSReadErrorsTest;
 	CCsvPersistence myCVSStorageReadErrorsTest;
 	myCVSStorageReadErrorsTest.setMediaName("test-errors-import");
 	myCVSStorageReadErrorsTest.readData(wpDatabaseCVSReadErrorsTest, poiDatabaseCVSReadErrorsTest, CPersistentStorage::REPLACE);
 	myCVSStorageReadErrorsTest.setMediaName("test-errors-import-export");
 	myCVSStorageReadErrorsTest.writeData(wpDatabaseCVSReadErrorsTest, poiDatabaseCVSReadErrorsTest);
+
+	std::cout << std::endl << "Test writing the DBs to JSON files" << std::endl
+				               << "=============================" << std::endl;
+	CPoiDatabase poiDatabaseJSONWriteTest;
+	CWpDatabase wpDatabaseJSONWriteTest;
+	CJsonPersistence myJSONStorage;
+
+
+	myJSONStorage.setMediaName("test-export-empty-waypoints-empty-pois");
+	myJSONStorage.writeData(wpDatabaseJSONWriteTest, poiDatabaseJSONWriteTest);
+
+	wpDatabaseJSONWriteTest.addElement(CWaypoint("Amsterdam", 52.3731, 4.8922));
+	wpDatabaseJSONWriteTest.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
+
+
+	myJSONStorage.setMediaName("test-export-empty-pois");
+	myJSONStorage.writeData(wpDatabaseJSONWriteTest, poiDatabaseJSONWriteTest);
+
+	poiDatabaseJSONWriteTest.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world", 49.866934, 8.637911));
+	poiDatabaseJSONWriteTest.addElement(CPOI(SIGHTSEEING, "Berlin", "Berlin City Center", 52.51, 13.4));
+
+	myJSONStorage.setMediaName("test-export");
+	myJSONStorage.writeData(wpDatabaseJSONWriteTest, poiDatabaseJSONWriteTest);
+	std::cout << "TEST: Check if the files 'test-export-poi/wp.json' have the expected content" << std::endl;
 
 	return 0;
 }

@@ -22,7 +22,7 @@ CRoute::CRoute(const CRoute& origin) {
 	m_route = origin.m_route;
 }
 
-void CRoute::connectToPoiDatabase(CDatabase<std::string, CPOI>* pPoiDB) {
+void CRoute::connectToPoiDatabase(CPoiDatabase* pPoiDB) {
 	// Don't connect to null pointers
 	if (pPoiDB != nullptr) {
 		m_pPoiDatabase = pPoiDB;
@@ -33,7 +33,7 @@ void CRoute::connectToPoiDatabase(CDatabase<std::string, CPOI>* pPoiDB) {
 	}
 }
 
-void CRoute::connectToWpDatabase(CDatabase<std::string, CWaypoint>* pWpDB) {
+void CRoute::connectToWpDatabase(CWpDatabase* pWpDB) {
 	// Don't connect to null pointers
 	if (pWpDB != nullptr) {
 		m_pWpDatabase = pWpDB;

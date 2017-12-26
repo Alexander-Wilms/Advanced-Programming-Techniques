@@ -9,7 +9,8 @@
 #define MYCODE_CJSONPERSISTENCE_H_
 
 #include "CPersistentStorage.h"
-#include "CDatabase.h"
+#include "CWpDatabase.h"
+#include "CPoiDatabase.h"
 #include <fstream>
 #include <string>
 
@@ -22,11 +23,30 @@ private:
 	 * - <mediaName>-poi.txt
 	 */
 	std::string mediaName;
+
+	unsigned int m_currentIndentation;
+
+	void indent(std::ofstream& file);
 public:
 	CJsonPersistence();
-	virtual ~CJsonPersistence();
+	~CJsonPersistence();
 
-	bool readData();
+	/**
+		* Fill the databases with the data from persistent storage. If
+		* merge mode is MERGE, the content in the persistent storage
+		* will be merged with any content already existing in the data
+		* bases. If merge mode is REPLACE, already existing content
+		* will be removed before inserting the content from the persistent
+		* storage.
+		*
+		* @param waypointDb the the data base with way points
+		* @param poiDb the database with points of interest
+		* @param mode the merge mode
+		* @return true if the data could be read successfully
+		*/
+	bool readData(CWpDatabase& waypointDb,
+			CPoiDatabase& poiDb,
+			CPersistentStorage::MergeMode mode);
 
 	/**
 		* Write the data to the persistent storage.
@@ -35,7 +55,7 @@ public:
 		* @param poiDb the database with points of interest
 		* @return true if the data could be saved successfully
 		*/
-		bool writeData(const CDatabase<std::string, CWaypoint>& waypointDb, const CDatabase<std::string, CPOI>& poiDb);
+		bool writeData(const CWpDatabase& waypointDb, const CPoiDatabase& poiDb);
 
 		void setMediaName(std::string name);
 
@@ -47,7 +67,9 @@ public:
 
 		bool printWaypoint(std::ofstream& file, const CWaypoint* wp);
 
-		bool printDB(std::ofstream& file, const CDatabase<std::string, CWaypoint>& p_db);
+		bool printWpDB(std::ofstream& file, const CWpDatabase& wpdb);
+
+		bool printPoiDB(std::ofstream& file, const CPoiDatabase& poidb);
 
 };
 

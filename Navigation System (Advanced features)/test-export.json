@@ -1,0 +1,30 @@
+{
+			"waypoints": [
+				{
+					"name": "Amsterdam",
+					"latitude": "52.373100",
+					"longitude": "4.892200"
+				},
+				{
+					"name": "Darmstadt",
+					"latitude": "49.872833",
+					"longitude": "8.651222"
+				}
+			],
+			"pois": [
+				{
+					"name": "Berlin",
+					"latitude": "52.510000",
+					"longitude": "13.400000",
+					"type": "Sightseeing",
+					"description": "Berlin City Center"
+				},
+				{
+					"name": "Mensa HDA",
+					"latitude": "49.866934",
+					"longitude": "8.637911",
+					"type": "Restaurant",
+					"description": "The best Mensa in the world"
+				}
+			]
+}

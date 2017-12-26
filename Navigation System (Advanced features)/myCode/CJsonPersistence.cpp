@@ -2,12 +2,13 @@
  * CJsonPersistence.cpp
  *
  *  Created on: 26.12.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #include "CJsonPersistence.h"
 
-CJsonPersistence::CJsonPersistence() {
+CJsonPersistence::CJsonPersistence() :
+		m_currentIndentation(0) {
 	// TODO Auto-generated constructor stub
 
 }
@@ -20,69 +21,121 @@ void CJsonPersistence::setMediaName(std::string name) {
 	mediaName = name;
 }
 
-bool CJsonPersistence::writeData(const CDatabase<std::string, CWaypoint>& waypointDb,
-		const CDatabase<std::string, CPOI>& poiDb) {
+bool CJsonPersistence::writeData(const CWpDatabase& waypointDb,
+		const CPoiDatabase& poiDb) {
 	std::ofstream file;
 
 	// first write all POIs into a file
-	file.open(mediaName + ".txt");
-	if(file.is_open()) {
-		file << "{";
-		printDB(file, waypointDb);
-		const CDatabase<std::string, CWaypoint>* p_PoiDatabase = dynamic_cast<const CDatabase<std::string, CWaypoint>*>(&poiDb);
-		printDB(file, *p_PoiDatabase);
-		file << "}";
+	file.open(mediaName + ".json");
+	if (file.is_open()) {
+		file << "{" << std::endl;
+		m_currentIndentation++;
+		printWpDB(file, waypointDb);
+		printPoiDB(file, poiDb);
+		file << "}" << std::endl;
 		file.close();
 		return true;
 	} else {
-		std::cout << "ERROR in CJsonStorage::writeData(): Couldn't open file " << mediaName << ".txt" << std::endl;
+		std::cout << "ERROR in CJsonStorage::writeData(): Couldn't open file "
+				<< mediaName << ".json" << std::endl;
 		return false;
 	}
 
 	return false;
 }
 
-
-
-bool CJsonPersistence::printDB(std::ofstream& file, const CDatabase<std::string, CWaypoint>& p_db) {
-	// CDatabase needs to be polymorphic -> requires a virtual destructor
-
-	if(dynamic_cast<const CDatabase<std::string, CPOI>*>(&p_db) != nullptr) {
-		// it's a database of POIs
-		file << "\"pois\": [";
-	} else {
-		file << "\"waypoints\": [";
+void CJsonPersistence::indent(std::ofstream& file) {
+	for (unsigned int i = 0; i < m_currentIndentation - 1; i++) {
+		file << "\t";
 	}
+}
 
-	const std::map<std::string, CWaypoint> DbMap = p_db.getDB();
+bool CJsonPersistence::printWpDB(std::ofstream& file, const CWpDatabase& wpdb) {
+	m_currentIndentation++;
 
-	for(std::map<std::string, CWaypoint>::const_iterator it = DbMap.begin(); it != DbMap.end(); it++) {
+	// it's a database of waypoints
+	indent(file);
+	file << "\"waypoints\": [" << std::endl;
+
+	const std::map<std::string, CWaypoint> DbMap = wpdb.getDB();
+
+	int NoOfWaypoints = DbMap.size();
+
+	for (std::map<std::string, CWaypoint>::const_iterator it = DbMap.begin();
+			it != DbMap.end(); it++) {
 		printWaypoint(file, &(it->second));
+		NoOfWaypoints--;
+		if (NoOfWaypoints != 0) {
+			file << ",";
+		}
+
+		file << std::endl;
 	}
 
-	file << "]";
+	indent(file);
+	file << "]," << std::endl;
+
+	m_currentIndentation--;
+
+	return true;
+}
+
+bool CJsonPersistence::printPoiDB(std::ofstream& file,
+		const CPoiDatabase& poidb) {
+	m_currentIndentation++;
+
+	// it's a database of POIs
+	indent(file);
+	file << "\"pois\": [" << std::endl;
+	const std::map<std::string, CPOI> DbMap = poidb.getDB();
+	int NoOfPois = DbMap.size();
+
+	for (std::map<std::string, CPOI>::const_iterator it = DbMap.begin();
+			it != DbMap.end(); it++) {
+		printWaypoint(file, &(it->second));
+		NoOfPois--;
+		if (NoOfPois != 0) {
+			file << ",";
+		}
+
+		file << std::endl;
+	}
+
+	indent(file);
+	file << "]" << std::endl;
+
+	m_currentIndentation--;
 
 	return true;
 }
 
 bool CJsonPersistence::printWaypoint(std::ofstream& file, const CWaypoint* wp) {
-	file << "{";
+	m_currentIndentation++;
 
-	file << "\t";
+	indent(file);
+	file << "{" << std::endl;
 
 	printKeyValue("name", wp->getName(), file);
+	file << "," << std::endl;
 	printKeyValue("latitude", wp->getLatitude(), file);
+	file << "," << std::endl;
 	printKeyValue("longitude", wp->getLongitude(), file);
-
 
 	const CPOI* p_poi = dynamic_cast<const CPOI*>(wp);
 
-	if(p_poi != nullptr) {
+	if (p_poi != nullptr) {
+		file << "," << std::endl;
 		printKeyValue("type", p_poi->getTypeAsString(), file);
+		file << "," << std::endl;
 		printKeyValue("description", p_poi->getDescription(), file);
 	}
 
+	file << std::endl;
+
+	indent(file);
 	file << "}";
+
+	m_currentIndentation--;
 
 	return true;
 }
@@ -93,15 +146,19 @@ bool CJsonPersistence::printWaypoint(std::ofstream& file, const CWaypoint* wp) {
  * error: use of deleted function ‘std::basic_ofstream<_CharT, _Traits>::basic_ofstream(
  * const std::basic_ofstream<_CharT, _Traits>&) [with _CharT = char; _Traits = std::char_traits<char>]’
  */
-bool CJsonPersistence::printKeyValue(std::string key, std::string value, std::ofstream& file) {
-	file << "\"" << key << "\": \"" << value << "\"";
+bool CJsonPersistence::printKeyValue(std::string key, std::string value,
+		std::ofstream& file) {
+	indent(file);
+	file << "\t\"" << key << "\": \"" << value << "\"";
 	return true;
 }
 
-bool CJsonPersistence::printKeyValue(std::string key, double value, std::ofstream& file) {
+bool CJsonPersistence::printKeyValue(std::string key, double value,
+		std::ofstream& file) {
 	return printKeyValue(key, std::to_string(value), file);
 }
 
-bool CJsonPersistence::readData() {
+bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
+		CPersistentStorage::MergeMode mode) {
 	return false;
 }

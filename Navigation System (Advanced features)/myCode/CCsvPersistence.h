@@ -9,7 +9,8 @@
 #define MYCODE_CCSVPERSISTENCE_H_
 
 #include "CPersistentStorage.h"
-#include "CDatabase.h"
+#include "CWpDatabase.h"
+#include "CPoiDatabase.h"
 #include "CPOI.h"
 #include <fstream>
 #include <string>
@@ -36,7 +37,7 @@ public:
 	* @param poiDb the database with points of interest
 	* @return true if the data could be saved successfully
 	*/
-	bool writeData(const CDatabase<std::string, CWaypoint>& waypointDb, const CDatabase<std::string, CPOI>& poiDb);
+	bool writeData(const CWpDatabase& waypointDb, const CPoiDatabase& poiDb);
 
 	/**
 	* Fill the databases with the data from persistent storage. If
@@ -51,7 +52,7 @@ public:
 	* @param mode the merge mode
 	* @return true if the data could be read successfully
 	*/
-	bool readData (CDatabase<std::string, CWaypoint>& waypointDb, CDatabase<std::string, CPOI>& poiDb, CPersistentStorage::MergeMode mode);
+	bool readData (CWpDatabase& waypointDb, CPoiDatabase& poiDb, CPersistentStorage::MergeMode mode);
 
 
 	/**

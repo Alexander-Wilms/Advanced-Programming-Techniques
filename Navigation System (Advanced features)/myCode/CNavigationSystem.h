@@ -48,12 +48,12 @@ private:
 	/**
 	 * A database of all known POIs
 	 */
-	CDatabase<std::string, CPOI> m_PoiDatabase;
+	CPoiDatabase m_PoiDatabase;
 
 	/**
 	 * A database of all known Waypoints
 	 */
-	CDatabase<std::string, CWaypoint> m_WpDatabase;
+	CWpDatabase m_WpDatabase;
 
 	/**
 	 * Allows handling persistent database storages

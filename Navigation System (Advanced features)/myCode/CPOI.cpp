@@ -53,19 +53,19 @@ void CPOI::print() {
 std::string CPOI::getTypeAsString() const {
 	switch(m_type) {
 	case RESTAURANT:
-		return "RESTAURANT";
+		return "Restaurant";
 		break;
 	case TOURISTIC:
-		return "TOURISTIC";
+		return "Touristic";
 		break;
 	case GASSTATION:
-		return "GASSTATION";
+		return "Gasstation";
 		break;
 	case UNIVERSITY:
-		return "UNIVERSITY";
+		return "University";
 		break;
 	case SIGHTSEEING:
-		return "SIGHTSEEING";
+		return "Sightseeing";
 	}
 
 	return "";
