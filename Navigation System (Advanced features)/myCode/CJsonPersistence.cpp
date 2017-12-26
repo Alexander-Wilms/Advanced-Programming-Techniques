@@ -24,14 +24,15 @@ void CJsonPersistence::setMediaName(std::string name) {
 bool CJsonPersistence::writeData(const CWpDatabase& waypointDb,
 		const CPoiDatabase& poiDb) {
 	std::ofstream file;
+	m_currentIndentation = 0;
 
 	// first write all POIs into a file
 	file.open(mediaName + ".json");
 	if (file.is_open()) {
 		file << "{" << std::endl;
 		m_currentIndentation++;
-		printWpDB(file, waypointDb);
-		printPoiDB(file, poiDb);
+		printDB(file, waypointDb);
+		printDB(file, poiDb);
 		file << "}" << std::endl;
 		file.close();
 		return true;
@@ -50,66 +51,7 @@ void CJsonPersistence::indent(std::ofstream& file) {
 	}
 }
 
-bool CJsonPersistence::printWpDB(std::ofstream& file, const CWpDatabase& wpdb) {
-	m_currentIndentation++;
-
-	// it's a database of waypoints
-	indent(file);
-	file << "\"waypoints\": [" << std::endl;
-
-	const std::map<std::string, CWaypoint> DbMap = wpdb.getDB();
-
-	int NoOfWaypoints = DbMap.size();
-
-	for (std::map<std::string, CWaypoint>::const_iterator it = DbMap.begin();
-			it != DbMap.end(); it++) {
-		printWaypoint(file, &(it->second));
-		NoOfWaypoints--;
-		if (NoOfWaypoints != 0) {
-			file << ",";
-		}
-
-		file << std::endl;
-	}
-
-	indent(file);
-	file << "]," << std::endl;
-
-	m_currentIndentation--;
-
-	return true;
-}
-
-bool CJsonPersistence::printPoiDB(std::ofstream& file,
-		const CPoiDatabase& poidb) {
-	m_currentIndentation++;
-
-	// it's a database of POIs
-	indent(file);
-	file << "\"pois\": [" << std::endl;
-	const std::map<std::string, CPOI> DbMap = poidb.getDB();
-	int NoOfPois = DbMap.size();
-
-	for (std::map<std::string, CPOI>::const_iterator it = DbMap.begin();
-			it != DbMap.end(); it++) {
-		printWaypoint(file, &(it->second));
-		NoOfPois--;
-		if (NoOfPois != 0) {
-			file << ",";
-		}
-
-		file << std::endl;
-	}
-
-	indent(file);
-	file << "]" << std::endl;
-
-	m_currentIndentation--;
-
-	return true;
-}
-
-bool CJsonPersistence::printWaypoint(std::ofstream& file, const CWaypoint* wp) {
+bool CJsonPersistence::printEntry(std::ofstream& file, const CWaypoint* wp) {
 	m_currentIndentation++;
 
 	indent(file);
@@ -121,6 +63,7 @@ bool CJsonPersistence::printWaypoint(std::ofstream& file, const CWaypoint* wp) {
 	file << "," << std::endl;
 	printKeyValue("longitude", wp->getLongitude(), file);
 
+	// check if this waypoint is also a POI
 	const CPOI* p_poi = dynamic_cast<const CPOI*>(wp);
 
 	if (p_poi != nullptr) {
@@ -138,24 +81,6 @@ bool CJsonPersistence::printWaypoint(std::ofstream& file, const CWaypoint* wp) {
 	m_currentIndentation--;
 
 	return true;
-}
-
-/**
- * when we're passing 'file' by value instead of by reference, the compilation error occurs:
- *
- * error: use of deleted function ‘std::basic_ofstream<_CharT, _Traits>::basic_ofstream(
- * const std::basic_ofstream<_CharT, _Traits>&) [with _CharT = char; _Traits = std::char_traits<char>]’
- */
-bool CJsonPersistence::printKeyValue(std::string key, std::string value,
-		std::ofstream& file) {
-	indent(file);
-	file << "\t\"" << key << "\": \"" << value << "\"";
-	return true;
-}
-
-bool CJsonPersistence::printKeyValue(std::string key, double value,
-		std::ofstream& file) {
-	return printKeyValue(key, std::to_string(value), file);
 }
 
 bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
