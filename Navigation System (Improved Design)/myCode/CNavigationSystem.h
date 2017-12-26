@@ -12,6 +12,8 @@
 #include "CPoiDatabase.h"
 #include "CWpDatabase.h"
 #include "CRoute.h"
+#include "CPersistentStorage.h"
+#include "CCSVStorage.h"
 
 /**
  * The navigation system, which allows interacting with a route
@@ -53,6 +55,11 @@ private:
 	 * A database of all known Waypoints
 	 */
 	CWpDatabase m_WpDatabase;
+
+	/**
+	 * Allows handling persistent database storages
+	 */
+	CCSVStorage m_CSVStorage;
 
 	/**
 	 * test cases

@@ -7,27 +7,37 @@
 
 #include "CNavigationSystem.h"
 
+#include "CRoute.h"
+#include "CCSVStorage.h"
+#include "CPersistentStorage.h"
 #include <iostream>
 #include <string>
-#include "CRoute.h"
+
+// #define SETUP_DBS
 
 CNavigationSystem::CNavigationSystem() :
-		m_route(), m_PoiDatabase(), m_WpDatabase() {
-	std::cout << "CNavigationSystem::CNavigationSystem()" << std::endl;
+	m_route(),
+	m_PoiDatabase(),
+	m_WpDatabase() {
+	 m_CSVStorage = CCSVStorage();
+	 m_CSVStorage.setMediaName("navigationsystemdata");
 }
 
 void CNavigationSystem::run() {
-	std::cout << "CNavigationSystem::run()" << std::endl;
 	m_route.connectToPoiDatabase(&m_PoiDatabase);
 	m_route.connectToWpDatabase(&m_WpDatabase);
+#ifdef SETUP_DBS
 	addPOIsAndWpsToDatabase();
+	m_CSVStorage.writeData(m_WpDatabase, m_PoiDatabase);
+#endif
+	m_CSVStorage.readData(m_WpDatabase, m_PoiDatabase, CPersistentStorage::REPLACE);
 	enterRoute();
 	printRoute();
 	printDistanceCurPosNextPoi();
+	m_CSVStorage.writeData(m_WpDatabase, m_PoiDatabase);
 }
 
 void CNavigationSystem::enterRoute() {
-	std::cout << "CNavigationSystem::enterRoute()" << std::endl;
 	m_route.addWaypoint("Amsterdam");
 	m_route.addWaypoint("Darmstadt");
 	m_route.addWaypoint("Berlin");

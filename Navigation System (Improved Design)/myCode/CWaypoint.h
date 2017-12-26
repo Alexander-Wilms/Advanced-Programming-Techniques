@@ -117,7 +117,7 @@ protected:
 	double m_longitude;
 
 	/**
-	 * output operator
+	 * The output operator
 	 */
 	friend std::ostream& operator<< (std::ostream& os, const CWaypoint& wp);
 };

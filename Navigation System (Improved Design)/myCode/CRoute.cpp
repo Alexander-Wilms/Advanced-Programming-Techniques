@@ -45,21 +45,16 @@ void CRoute::connectToWpDatabase(CWpDatabase* pWpDB) {
 }
 
 void CRoute::addWaypoint(std::string name) {
-	std::cout << "CRoute::addWaypoint()" << std::endl;
-
 	if (m_pWpDatabase != nullptr) {
-//		std::cout << "Pushing back: " << m_pWpDatabase->getPointerToWp(name) << std::endl;
 		CWaypoint* wp = m_pWpDatabase->getPointerToWp(name);
 
 		if (wp != nullptr) {
 			// we found a POI with the given name in the PoiDatabase
-
 			m_route.push_back(wp);
-
+			std::cout << "INFO in CRoute::addWaypoint(): Added waypoint '" << name << "'" << std::endl;
 		} else {
-
-			std::cout << "ERROR in CRoute:addPoi(): No waypoint with name "
-					<< name << " found in m_pWpDatabase" << std::endl;
+			std::cout << "ERROR in CRoute:addPoi(): No waypoint with name '"
+					<< name << "' found in m_pWpDatabase" << std::endl;
 		}
 	} else {
 		std::cout
@@ -90,6 +85,7 @@ void CRoute::addPoi(std::string namePoi, std::string afterWp) {
 				if ((*rit)->getName() == afterWp) {
 					// we found a waypoint with the given name in the route
 					m_route.insert(rit.base(), poi);
+					std::cout << "INFO in CRoute::addPoi(): Added POI '" << namePoi << "'" << std::endl;
 					waypointFound = true;
 					break;
 				}
@@ -100,8 +96,8 @@ void CRoute::addPoi(std::string namePoi, std::string afterWp) {
 						<< afterWp << "' found in m_route" << std::endl;
 			}
 		} else {
-			std::cout << "ERROR in CRoute:addPoi(): No POI with name "
-					<< namePoi << " found in m_pPoiDatabase" << std::endl;
+			std::cout << "ERROR in CRoute:addPoi(): No POI with name '"
+					<< namePoi << "' found in m_pPoiDatabase" << std::endl;
 		}
 	} else {
 		std::cout
@@ -161,6 +157,8 @@ void CRoute::print() {
 			if (pWp != nullptr) {
 				// it is indeed a waypoint
 				std::cout << "Waypoint " << *pWp << std::endl;
+			} else {
+				std::cout << "ERROR in CRoute::print(): Couldn't dynamic_cast to either CPOI* or CWaypoint*" << std::endl;
 			}
 
 		}
@@ -236,10 +234,11 @@ CRoute& CRoute::operator+(const CRoute& r) {
 		std::cout << "ERROR in CRoute::operator+(): POI databases differ" << std::endl;
 	}
 
-	if(sameDatabases) {
-		return *this;
-	} else {
-		CRoute* emptyRoute = new CRoute();
-		return *emptyRoute;
+	if(!sameDatabases) {
+		m_route.clear();
 	}
+
+
+
+	return *this;
 }

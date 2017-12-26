@@ -81,10 +81,6 @@ double CWaypoint::calculateDistance(const CWaypoint& wp) const {
 }
 
 void CWaypoint::print(int format) {
-	std::cout << "CWaypoint::print()" << std::endl;
-	std::cout << "CWaypoint::print(): m_latitude" << m_latitude << std::endl;
-	std::cout << "CWaypoint::print(): m_name" << m_name << std::endl;
-
 	if(format == DEGREE) {
 		std::cout << m_name << " on latitude = " << m_latitude << " and longitude " << m_longitude << std::endl;
 	} else if(format == MMSS) {

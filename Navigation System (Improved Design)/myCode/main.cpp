@@ -12,6 +12,7 @@
 #include <iostream>
 
 int main() {
+
 	CWaypoint amsterdam("Amsterdam", 52.370197222222, 4.8904444444444);
 	CWaypoint darmstadt("Darmstadt", 49.872833, 8.651222);
 	std::cout << "Constructor" << std::endl << "===========" << std::endl;
@@ -58,7 +59,7 @@ int main() {
 	CNavigationSystem navigationSystem = CNavigationSystem();
 	navigationSystem.run();
 
-	std::cout << std::endl << "Test CRoute's operator+=" << std::endl
+	std::cout << std::endl << "Test CRoute's operator+= and addPoi" << std::endl
 				               << "==============================" << std::endl;
 
 
@@ -67,6 +68,7 @@ int main() {
 			10, 20));
 	CWpDatabase wpDatabase;
 	wpDatabase.addWp(CWaypoint("Darmstadt", 49.872833, 8.651222));
+	wpDatabase.addWp(CWaypoint("Berlin", 52.518611, 13.408333));
 	CRoute* proute1 = new CRoute();
 	proute1->connectToPoiDatabase(&poiDatabase);
 	proute1->connectToWpDatabase(&wpDatabase);
@@ -82,7 +84,11 @@ int main() {
 	(*proute1) += "Darmstadt";
 	proute1->print();
 
-	std::cout << "TEST: Now, adding the POI should succeed:" << std::endl;
+	std::cout << "TEST: Adding another waypoint:" << std::endl;
+	(*proute1) += "Berlin";
+	proute1->print();
+
+	std::cout << "TEST: Now, adding the POI after waypoint 'Darmstadt' should succeed:" << std::endl;
 	proute1->addPoi("Mensa HDA", "Darmstadt");
 	proute1->print();
 

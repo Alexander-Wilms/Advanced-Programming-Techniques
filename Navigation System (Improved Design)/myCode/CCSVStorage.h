@@ -93,7 +93,7 @@ private:
 	/**
 	 * The character used to separate the fields
 	 */
-	std::string delimiter;
+	std::string m_delimiter;
 
 	/**
 	 * Check if there are as many fields in this line as expected
