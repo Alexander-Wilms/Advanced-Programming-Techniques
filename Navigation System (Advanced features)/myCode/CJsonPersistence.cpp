@@ -8,6 +8,7 @@
 #include "CJsonPersistence.h"
 #include "CJsonScanner.h"
 #include <algorithm>
+#include <exception>
 
 //#define DEBUG
 
@@ -122,12 +123,19 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 		t_poi type;
 		std::string description;
 
+		try {
+			token = jsonScanner.nextToken();
+		} catch (std::exception& e) {
+			std::cout << e.what() << std::endl;
+			return false;
+		}
+
 		/**
 		 * ensure that we don't end up in an infinite loop when
 		 * - there's no next token, but parsing is not complete OR
 		 * - the JSON is incomplete and the parser is still expecting more tokens
 		 */
-		while((token = jsonScanner.nextToken()) && !parsingComplete) {
+		while(token && !parsingComplete) {
 			event = token->getType();
 
 
@@ -394,6 +402,14 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							return false;
 					}
 
+			}
+
+			// store the next token
+			try {
+				token = jsonScanner.nextToken();
+			} catch (std::exception& e) {
+				std::cout << e.what() << std::endl;
+				return false;
 			}
 		}
 	}

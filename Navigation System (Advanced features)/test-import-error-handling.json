@@ -1,12 +1,12 @@
 {
 	"pois": [
-		{
+		{ *
 		"name": 42,
 		"latitude": "error",
 		"longitude": 13.4,,
 		"type": "Sightseeing"
 		"description": "Berlin City Center"
-		},
+		}, @
 		"description": "The best Mensa in the world",
 		"type": "Restaurant",
 		"longitude": 8.63791,

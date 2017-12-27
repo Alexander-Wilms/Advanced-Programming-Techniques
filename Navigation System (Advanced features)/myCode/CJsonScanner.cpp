@@ -31,6 +31,7 @@ CJsonToken* CJsonScanner::nextToken() {
 	if (scanResult == -1) {
 		string illegalChar(YYText());
 		// Found illegal character, currently ignored.
+		throw std::runtime_error("Invalid character '" + illegalChar + "' encountered in line " + std::to_string(scannedLine()));
 	}
 	return token;
 }
