@@ -17,6 +17,23 @@
 
 class CJsonPersistence: public CPersistentStorage {
 private:
+
+	enum stateType {
+		WAITING_FOR_FIRST_TOKEN,
+		WAITING_FOR_DB_NAME,
+		WAITING_FOR_DB_BEGIN,
+		WAITING_FOR_ARRAY_BEGIN,
+		WAITING_FOR_OBJECT_BEGIN,
+		WAITING_FOR_ATTRIBUTE_NAME,
+		WAITING_FOR_NAME_SEPARATOR,
+		WAITING_FOR_VALUE,
+		WAITING_FOR_ATTRIBUTE_SEPARATOR_OR_END_OF_OBJECT,
+		WAITING_FOR_OBJECT_SEPARATOR_OR_END_OF_ARRAY,
+		WAITING_FOR_ARRAY_SEPARATOR_OR_END_OF_FILE
+	};
+
+
+
 	/**
 	 * base name of the database files
 	 * The file names are:
@@ -97,7 +114,7 @@ inline bool CJsonPersistence::printDB(std::ofstream& file, const CDatabase<std::
 	}
 
 	indent(file);
-	file << "]," << std::endl;
+	file << "]";
 
 	m_currentIndentation--;
 
@@ -108,7 +125,12 @@ template<class T>
 inline bool CJsonPersistence::printKeyValue(std::string key, T value,
 		std::ofstream& file) {
 	indent(file);
-	file << "\t\"" << key << "\": \"" << value << "\"";
+	file << "\"" << key << "\": ";
+	if(std::is_same<T, std::string>::value) {
+		file << "\"" << value << "\"";
+	}else if(std::is_same<T, double>::value) {
+		file << value;
+	}
 	return true;
 }
 

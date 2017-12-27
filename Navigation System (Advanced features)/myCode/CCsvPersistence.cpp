@@ -62,8 +62,8 @@ bool CCsvPersistence::writeData(const CWpDatabase& waypointDb,
 }
 
 bool CCsvPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
-		CPersistentStorage::MergeMode enumMergeMode) {
-	if(enumMergeMode == REPLACE) {
+		CPersistentStorage::MergeMode mode) {
+	if(mode == REPLACE) {
 		waypointDb.clearDb();
 		poiDb.clearDb();
 	}

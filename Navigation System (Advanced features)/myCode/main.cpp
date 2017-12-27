@@ -141,7 +141,7 @@ int main() {
 	myCVSStorage.writeData(wpDatabaseCVSWriteTest, poiDatabaseCVSWriteTest);
 	std::cout << "TEST: Check if the files 'test-export-poi/wp.csv' have the expected content" << std::endl;
 
-	std::cout << std::endl << "Test reading Dbs from CSV files and writing it back" << std::endl
+	std::cout << std::endl << "Test reading DBs from CSV files and writing it back" << std::endl
 	          	           << "===============================================" << std::endl;
 	CWpDatabase wpDatabaseCVSReadTest;
 	CPoiDatabase poiDatabaseCVSReadTest;
@@ -184,7 +184,18 @@ int main() {
 
 	myJSONStorage.setMediaName("test-export");
 	myJSONStorage.writeData(wpDatabaseJSONWriteTest, poiDatabaseJSONWriteTest);
-	std::cout << "TEST: Check if the files 'test-export-poi/wp.json' have the expected content" << std::endl;
+	std::cout << "TEST: Check if the file 'test-export.json' has the expected content" << std::endl;
+
+	std::cout << std::endl << "Test reading the DBs from JSON files and writing them back" << std::endl
+					               << "=============================" << std::endl;
+	CWpDatabase wpDatabaseJSONReadTest;
+	CPoiDatabase poiDatabaseJSONReadTest;
+	CJsonPersistence myJSONStorageReadTest;
+	myJSONStorageReadTest.setMediaName("mergePartOne");
+	myJSONStorageReadTest.readData(wpDatabaseJSONReadTest, poiDatabaseJSONReadTest, CPersistentStorage::REPLACE);
+	myJSONStorageReadTest.setMediaName("test-export-import-export");
+	myJSONStorageReadTest.writeData(wpDatabaseJSONReadTest, poiDatabaseJSONReadTest);
+	std::cout << "TEST: Check if the 'test-export-import-export.csv' file has the same content as the 'test-export-poi/wp.csv' files" << std::endl;
 
 	return 0;
 }

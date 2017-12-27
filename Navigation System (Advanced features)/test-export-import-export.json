@@ -1,0 +1,49 @@
+{
+	"waypoints": [
+		{
+		"name": "newAmsterdam",
+		"latitude": 52.3792,
+		"longitude": 4.89943
+		},
+		{
+		"name": "newBerlin",
+		"latitude": 52.5166,
+		"longitude": 13.4
+		},
+		{
+		"name": "newNew York",
+		"latitude": 40.7128,
+		"longitude": -74.006
+		}
+	],
+	"pois": [
+		{
+		"name": "newBrandenburger Tor",
+		"latitude": 52.5163,
+		"longitude": 13.3777,
+		"type": "Touristic",
+		"description": "Pretty Gate."
+		},
+		{
+		"name": "newSchloss Neuschwanenstein",
+		"latitude": 47.5576,
+		"longitude": 10.7498,
+		"type": "Touristic",
+		"description": "Pretty castle."
+		},
+		{
+		"name": "newStatue of Liberty",
+		"latitude": 40.6892,
+		"longitude": -74.0445,
+		"type": "Touristic",
+		"description": "Pretty Statue."
+		},
+		{
+		"name": "newh-da",
+		"latitude": 49.8661,
+		"longitude": 8.63975,
+		"type": "University",
+		"description": "Best university. Free ice-cream!"
+		}
+	]
+}

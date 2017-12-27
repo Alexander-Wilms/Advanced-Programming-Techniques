@@ -1,16 +1,16 @@
 {
 	"waypoints": [
 		{
-			"name": "Amsterdam",
-			"latitude": "52.3731",
-			"longitude": "4.8922"
+		"name": "Amsterdam",
+		"latitude": 52.3731,
+		"longitude": 4.8922
 		},
 		{
-			"name": "Darmstadt",
-			"latitude": "49.8728",
-			"longitude": "8.65122"
+		"name": "Darmstadt",
+		"latitude": 49.8728,
+		"longitude": 8.65122
 		}
 	],
 	"pois": [
-	],
+	]
 }
