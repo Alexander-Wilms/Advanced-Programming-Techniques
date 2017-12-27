@@ -238,7 +238,10 @@ CRoute& CRoute::operator+(const CRoute& r) {
 		m_route.clear();
 	}
 
-
-
 	return *this;
+}
+
+const std::vector<const CWaypoint*> CRoute::getRoute() {
+	const std::vector<const CWaypoint*> returnValue{std::begin(m_route), std::end(m_route)};
+	return returnValue;
 }

@@ -8,11 +8,12 @@
 #ifndef CROUTE_H_
 #define CROUTE_H_
 
-#include <string>
-#include <list>
 #include "CPOI.h"
 #include "CPoiDatabase.h"
 #include "CWpDatabase.h"
+#include <list>
+#include <string>
+#include <vector>
 
 class CRoute {
 public:
@@ -87,6 +88,8 @@ public:
 	 * and an empty route is returned
 	 */
 	CRoute& operator+ (const CRoute& r);
+
+	const std::vector<const CWaypoint*> getRoute();
 
 private:
 	std::list<CWaypoint*> m_route;
