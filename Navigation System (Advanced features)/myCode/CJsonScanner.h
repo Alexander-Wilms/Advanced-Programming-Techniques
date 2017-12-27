@@ -38,7 +38,7 @@ public:
 	/**
 	 * Create a new scanner that reads the given input stream.
 	 */
-	CJsonScanner(std::istream& input);
+	explicit CJsonScanner(std::istream& input);
 
 	/**
 	 * Frees all allocated resources.

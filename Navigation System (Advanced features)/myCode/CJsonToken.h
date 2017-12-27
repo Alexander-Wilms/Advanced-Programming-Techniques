@@ -26,7 +26,7 @@ public:
 	enum TokenType { BEGIN_OBJECT, END_OBJECT, BEGIN_ARRAY, END_ARRAY,
 		NAME_SEPARATOR, VALUE_SEPARATOR, STRING, NUMBER, BOOL, JSON_NULL };
 
-	CJsonToken(TokenType type);
+	explicit CJsonToken(TokenType type);
 	virtual ~CJsonToken();
 
 	/**
@@ -59,7 +59,7 @@ public:
 	/**
 	 * Create a token with the given value.
 	 */
-	CJsonValueToken(T value) : CJsonToken(tokenType) {
+	explicit CJsonValueToken(T value) : CJsonToken(tokenType) {
 		this->value = value;
 	}
 

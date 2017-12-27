@@ -5,14 +5,19 @@
  *      Author: Fabian Alexander Wilms
  */
 
-#ifndef TEST_CADDWAYPOINTTESTS_H_
-#define TEST_CADDWAYPOINTTESTS_H_
+#ifndef TEST_CCOPYCONSTRUCTORTESTS_H_
+#define TEST_CCOPYCONSTRUCTORTESTS_H_
 
 #include "cppunit/TestFixture.h"
 #include "cppunit/TestSuite.h"
 #include "cppunit/TestCaller.h"
 
-class CAddWaypointTests : public CppUnit::TestFixture {
+#include "../myCode/CRoute.h"
+#include "../myCode/CPoiDatabase.h"
+#include "../myCode/CWpDatabase.h"
+#include <vector>
+
+class CCopyConstructorTests : public CppUnit::TestFixture {
 private:
 	CRoute* m_route;
 	CPoiDatabase poiDatabase;
@@ -29,33 +34,29 @@ public:
 
 		m_route->connectToPoiDatabase(&poiDatabase);
 		m_route->connectToWpDatabase(&wpDatabase);
+
+		m_route->addWaypoint("Darmstadt");
+		m_route->addPoi("Mensa HDA", "Darmstadt");
 	}
 
 	void tearDown() {
 		delete m_route;
 	}
 
-	void testAddWaypointSuccess() {
-		m_route->addWaypoint("Darmstadt");
-		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
-		CPPUNIT_ASSERT_EQUAL(1, (int) routeVector.size());
-	}
-
-	void testAddWaypointFailure() {
-		m_route->addWaypoint("Timbuktu");
-		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
-		CPPUNIT_ASSERT_EQUAL(0, (int) routeVector.size());
+	void testCopyConstructor() {
+		std::vector<const CWaypoint*> originalRouteVector = m_route->getRoute();
+		CRoute routeCopy = *m_route;
+		std::vector<const CWaypoint*> copyRouteVector = routeCopy.getRoute();
+		CPPUNIT_ASSERT_EQUAL((int) originalRouteVector.size(), (int) copyRouteVector.size());
 	}
 
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
 
-		suite->addTest(new CppUnit::TestCaller<CAddWaypointTests>("Load Existing", &CAddWaypointTests::testAddWaypointSuccess));
-		suite->addTest(new CppUnit::TestCaller<CAddWaypointTests>("Load Existing", &CAddWaypointTests::testAddWaypointFailure));
+		suite->addTest(new CppUnit::TestCaller<CCopyConstructorTests>("Testing copy constructor", &CCopyConstructorTests::testCopyConstructor));
 
 		return suite;
 	}
-
 };
 
-#endif /* TEST_CADDWAYPOINTTESTS_H_ */
+#endif /* TEST_CCOPYCONSTRUCTORTESTS_H_ */

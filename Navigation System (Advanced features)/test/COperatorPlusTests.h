@@ -16,33 +16,91 @@
 
 class COperatorPlusTests : public CppUnit::TestFixture {
 private:
-	CRoute* m_route;
+	CRoute m_route_original;
+	CRoute m_route_sameWpDBdifferentPOIDB;
+	CRoute m_route_differentWpDBsamePOIDB;
+	CRoute m_route_differentWpDBdifferentPOIDB;
+	CRoute m_route_sameWpDBsamePOIDB;
+	CRoute m_routeResult;
 public:
 
 	void setUp() {
-		m_route = new CRoute();
-		CPoiDatabase poiDatabase;
-		poiDatabase.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world",
-				10, 20));
-		CWpDatabase wpDatabase;
-		wpDatabase.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
-		wpDatabase.addElement(CWaypoint("Berlin", 52.518611, 13.408333));
+		CPoiDatabase poiDatabase_1;
+		poiDatabase_1.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world", 10, 20));
+		CWpDatabase wpDatabase_1;
+		wpDatabase_1.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
+		wpDatabase_1.addElement(CWaypoint("Berlin", 52.518611, 13.408333));
 
-		m_route->connectToPoiDatabase(&poiDatabase);
-		m_route->connectToWpDatabase(&wpDatabase);
+		CPoiDatabase poiDatabase_2;
+		poiDatabase_2.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world", 10, 20));
+		CWpDatabase wpDatabase_2;
+		wpDatabase_2.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
+		wpDatabase_2.addElement(CWaypoint("Berlin", 52.518611, 13.408333));
+
+		m_route_original.connectToWpDatabase(&wpDatabase_1);
+		m_route_original.connectToPoiDatabase(&poiDatabase_1);
+		m_route_original.addWaypoint("Darmstadt");
+		m_route_original.addWaypoint("Berlin");
+		m_route_original.addPoi("Mensa HDA", "Darmstadt");
+
+		m_route_sameWpDBsamePOIDB.connectToWpDatabase(&wpDatabase_1);
+		m_route_sameWpDBsamePOIDB.connectToPoiDatabase(&poiDatabase_1);
+		m_route_sameWpDBsamePOIDB.addWaypoint("Berlin");
+		m_route_sameWpDBsamePOIDB.addPoi("Mensa HDA", "Darmstadt");
+
+		m_route_sameWpDBdifferentPOIDB.connectToWpDatabase(&wpDatabase_1);
+		m_route_sameWpDBdifferentPOIDB.connectToPoiDatabase(&poiDatabase_2);
+		m_route_sameWpDBdifferentPOIDB.addWaypoint("Berlin");
+		m_route_sameWpDBdifferentPOIDB.addPoi("Mensa HDA", "Darmstadt");
+
+		m_route_differentWpDBsamePOIDB.connectToWpDatabase(&wpDatabase_2);
+		m_route_differentWpDBsamePOIDB.connectToPoiDatabase(&poiDatabase_1);
+		m_route_differentWpDBsamePOIDB.addWaypoint("Berlin");
+		m_route_differentWpDBsamePOIDB.addPoi("Mensa HDA", "Darmstadt");
+
+		m_route_differentWpDBdifferentPOIDB.connectToWpDatabase(&wpDatabase_2);
+		m_route_differentWpDBdifferentPOIDB.connectToPoiDatabase(&poiDatabase_2);
+		m_route_differentWpDBdifferentPOIDB.addWaypoint("Berlin");
+		m_route_differentWpDBdifferentPOIDB.addPoi("Mensa HDA", "Darmstadt");
 	}
 
 	void tearDown() {
-		delete m_route;
 	}
 
-//	static CppUnit::TestSuite* suite() {
-//		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
-//
-//		suite->addTest(new CppUnit::TestCaller<CLoadTests>("Load Existing", &CLoadTests::testLoadExisting));
-//		return suite;
-//	}
+	void addingRoutesWithSameDatabases() {
+		m_routeResult = m_route_original + m_route_sameWpDBsamePOIDB;
+		std::vector<const CWaypoint*> routeVector = m_routeResult.getRoute();
+		CPPUNIT_ASSERT_EQUAL(6, (int) routeVector.size());
+	}
 
+	void addingRoutesWithDifferentWaypointDatabases() {
+		m_routeResult = m_route_original + m_route_differentWpDBsamePOIDB;
+		std::vector<const CWaypoint*> routeVector = m_routeResult.getRoute();
+		CPPUNIT_ASSERT_EQUAL(0, (int) routeVector.size());
+	}
+
+	void addingRoutesWithDifferentPOIDatabases() {
+		m_routeResult = m_route_original + m_route_sameWpDBdifferentPOIDB;
+		std::vector<const CWaypoint*> routeVector = m_routeResult.getRoute();
+		CPPUNIT_ASSERT_EQUAL(0, (int) routeVector.size());
+	}
+
+	void addingRoutesWithDifferentDatabases() {
+		m_routeResult = m_route_original + m_route_differentWpDBdifferentPOIDB;
+		std::vector<const CWaypoint*> routeVector = m_routeResult.getRoute();
+		CPPUNIT_ASSERT_EQUAL(0, (int) routeVector.size());
+	}
+
+	static CppUnit::TestSuite* suite() {
+		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
+
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusTests>("Load Existing", &COperatorPlusTests::addingRoutesWithSameDatabases));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusTests>("Load Existing", &COperatorPlusTests::addingRoutesWithDifferentWaypointDatabases));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusTests>("Load Existing", &COperatorPlusTests::addingRoutesWithDifferentPOIDatabases));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusTests>("Load Existing", &COperatorPlusTests::addingRoutesWithDifferentDatabases));
+
+		return suite;
+	}
 };
 
 #endif /* TEST_COPERATORPLUSTESTS_H_ */

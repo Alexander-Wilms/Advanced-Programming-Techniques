@@ -101,7 +101,7 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 
 	file.open(mediaName + ".json");
 	if(file.is_open()) {
-		APT::CJsonToken* token = new APT::CJsonToken(APT::CJsonToken::TokenType::BEGIN_OBJECT);
+		APT::CJsonToken* token;
 		APT::CJsonScanner jsonScanner(file);
 		APT::CJsonToken::TokenType event;
 		stateType state = WAITING_FOR_FIRST_TOKEN;

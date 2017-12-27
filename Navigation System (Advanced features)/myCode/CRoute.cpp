@@ -19,17 +19,27 @@ m_pWpDatabase(nullptr)
 CRoute::CRoute(const CRoute& origin) {
 	m_pPoiDatabase = origin.m_pPoiDatabase;
 	m_pWpDatabase = origin.m_pWpDatabase;
-	m_route = origin.m_route;
+	//m_route = origin.m_route;
+	origin.m_route.begin();
+	origin.m_route.end();
+	m_route.begin();
+
+m_route = origin.m_route;
+//	std::copy (
+//			origin.m_route.begin(),
+//			origin.m_route.end(),
+//			m_route.begin());
 }
 
 void CRoute::connectToPoiDatabase(CPoiDatabase* pPoiDB) {
+
 	// Don't connect to null pointers
 	if (pPoiDB != nullptr) {
 		m_pPoiDatabase = pPoiDB;
 	} else {
 		std::cout
-				<< "ERROR in CRoute::connectToPoiDatabase(): Pointer to PoiDB is a null pointer"
-				<< std::endl;
+		<< "ERROR in CRoute::connectToPoiDatabase(): Pointer to PoiDB is a null pointer"
+		<< std::endl;
 	}
 }
 
@@ -39,8 +49,8 @@ void CRoute::connectToWpDatabase(CWpDatabase* pWpDB) {
 		m_pWpDatabase = pWpDB;
 	} else {
 		std::cout
-				<< "ERROR in CRoute::connectToWpDatabase(): Pointer to WpDB is a null pointer"
-				<< std::endl;
+		<< "ERROR in CRoute::connectToWpDatabase(): Pointer to WpDB is a null pointer"
+		<< std::endl;
 	}
 }
 
@@ -58,9 +68,9 @@ void CRoute::addWaypoint(std::string name) {
 		}
 	} else {
 		std::cout
-				<< "ERROR in CRoute::addWaypoint(): Tried to dereference null pointer"
-				<< std::endl << "Did you forget to connect to a CWpDatabase?"
-				<< std::endl;
+		<< "ERROR in CRoute::addWaypoint(): Tried to dereference null pointer"
+		<< std::endl << "Did you forget to connect to a CWpDatabase?"
+		<< std::endl;
 	}
 }
 
@@ -101,9 +111,9 @@ void CRoute::addPoi(std::string namePoi, std::string afterWp) {
 		}
 	} else {
 		std::cout
-				<< "ERROR in CRoute::addPoi(): Tried to dereference null pointer"
-				<< std::endl << "Did you forget to connect to a CPoiDatabase?"
-				<< std::endl;
+		<< "ERROR in CRoute::addPoi(): Tried to dereference null pointer"
+		<< std::endl << "Did you forget to connect to a CPoiDatabase?"
+		<< std::endl;
 	}
 }
 
@@ -113,23 +123,23 @@ double CRoute::getDistanceNextPoi(const CWaypoint& wp, CPOI& poi) {
 
 	if(m_pPoiDatabase == nullptr) {
 		std::cout << "ERROR in CRoute::getDistanceNextPoi(): Tried to dereference CWaypoint* null pointer"
-	  		<< std::endl;
+				<< std::endl;
 		return -1;
 	}
 
 	for(std::map<std::string, CPOI>::const_iterator it = m_pPoiDatabase->getDB().begin(); it != m_pPoiDatabase->getDB().end(); ++it) {
 
-			if (firstPOI == true) {
-				// the first POI
-				returnValue = wp.calculateDistance((CWaypoint) it->second);
-				poi = (it->second);
-				firstPOI = false;
-			} else if (wp.calculateDistance((CWaypoint) it->second)
-					< returnValue) {
-				// found a POI that's even closer
-				returnValue = wp.calculateDistance((CWaypoint) it->second);
-				poi = (it->second);
-			}
+		if (firstPOI == true) {
+			// the first POI
+			returnValue = wp.calculateDistance((CWaypoint) it->second);
+			poi = (it->second);
+			firstPOI = false;
+		} else if (wp.calculateDistance((CWaypoint) it->second)
+				< returnValue) {
+			// found a POI that's even closer
+			returnValue = wp.calculateDistance((CWaypoint) it->second);
+			poi = (it->second);
+		}
 	}
 	return returnValue;
 }
@@ -197,16 +207,16 @@ CRoute& CRoute::operator+=(std::string name) {
 			}
 		} else {
 			std::cout
-					<< "ERROR in CRoute::operator+=(): Tried to dereference null pointer"
-					<< std::endl
-					<< "Did you forget to connect to a CPoiDatabase?"
-					<< std::endl;
+			<< "ERROR in CRoute::operator+=(): Tried to dereference null pointer"
+			<< std::endl
+			<< "Did you forget to connect to a CPoiDatabase?"
+			<< std::endl;
 		}
 	} else {
 		std::cout
-				<< "ERROR in CRoute::operator+=(): Tried to dereference null pointer"
-				<< std::endl << "Did you forget to connect to a CWpDatabase?"
-				<< std::endl;
+		<< "ERROR in CRoute::operator+=(): Tried to dereference null pointer"
+		<< std::endl << "Did you forget to connect to a CWpDatabase?"
+		<< std::endl;
 	}
 
 	return *this;
@@ -216,6 +226,8 @@ CRoute& CRoute::operator=(const CRoute& r) {
 	m_pPoiDatabase = r.m_pPoiDatabase;
 	m_pWpDatabase = r.m_pWpDatabase;
 	m_route = r.m_route;
+	//std::copy(r.m_route.begin(), r.m_route.end(), m_route.begin());
+
 	return *this;
 }
 
@@ -244,4 +256,8 @@ CRoute& CRoute::operator+(const CRoute& r) {
 const std::vector<const CWaypoint*> CRoute::getRoute() {
 	const std::vector<const CWaypoint*> returnValue{std::begin(m_route), std::end(m_route)};
 	return returnValue;
+}
+
+CRoute::~CRoute() {
+	std::cout << "CRoute destructor" << std::endl;
 }

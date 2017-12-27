@@ -124,7 +124,7 @@ int main() {
 	wpDatabase.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
 	route4.connectToPoiDatabase(&poiDatabaseOperatorPlus);
 	route4.connectToWpDatabase(&wpDatabaseOperatorPlus);
-	std::cout << "TEST: Adding two routes using the same databases shouldn't work:" << std::endl;
+	std::cout << "TEST: Adding two routes using the different databases shouldn't work:" << std::endl;
 	CRoute routetest = route2 + route4;
 	std::cout << "TEST: The sum of two routes with different databases should be an empty route:" << std::endl;
 

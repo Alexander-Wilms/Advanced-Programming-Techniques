@@ -5,8 +5,8 @@
  *      Author: mnl
  */
 
-#include <string>
 #include "CJsonScanner.h"
+#include <string>
 
 using namespace std;
 

@@ -47,10 +47,23 @@ public:
 		CPPUNIT_ASSERT_EQUAL(2, (int) routeVector.size());
 	}
 
+	void testAddPOIFailureMissingWaypoint() {
+		m_route->addPoi("Mensa HDA", "Darmstadt");
+		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
+		CPPUNIT_ASSERT_EQUAL(0, (int) routeVector.size());
+	}
+
+	void testAddPOIFailureMissingPOI() {
+		m_route->addPoi("White House", "Darmstadt");
+		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
+		CPPUNIT_ASSERT_EQUAL(0, (int) routeVector.size());
+	}
 
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
-		suite->addTest(new CppUnit::TestCaller<CAddPoiTests>("Add POI", &CAddPoiTests::testAddPOISuccessful));
+		suite->addTest(new CppUnit::TestCaller<CAddPoiTests>("Add POI successfully", &CAddPoiTests::testAddPOISuccessful));
+		suite->addTest(new CppUnit::TestCaller<CAddPoiTests>("Fail to add POI", &CAddPoiTests::testAddPOIFailureMissingWaypoint));
+		suite->addTest(new CppUnit::TestCaller<CAddPoiTests>("Fail to add POI", &CAddPoiTests::testAddPOIFailureMissingPOI));
 		return suite;
 	}
 
