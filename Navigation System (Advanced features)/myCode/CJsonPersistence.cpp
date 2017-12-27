@@ -9,7 +9,7 @@
 #include "CJsonScanner.h"
 #include <algorithm>
 
-#define DEBUG
+//#define DEBUG
 
 CJsonPersistence::CJsonPersistence() :
 		m_currentIndentation(0) {
@@ -130,7 +130,7 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 		while((token = jsonScanner.nextToken()) && !parsingComplete) {
 			event = token->getType();
 
-#ifdef DEBUG
+
 			std::string stateTypeStrings[] = {
 					"WAITING_FOR_FIRST_TOKEN",
 					"WAITING_FOR_DB_NAME",
@@ -158,6 +158,7 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 					"JSON_NULL"
 			};
 
+#ifdef DEBUG
 			std::cout << std::endl << "state: " << stateTypeStrings[state] << std::endl;
 			std::cout << "event: " << eventTypeStrings[event] << std::endl;
 #endif
@@ -169,7 +170,8 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							state = WAITING_FOR_DB_NAME;
 							break;
 						default:
-							std::cout << "did not expect current event in current state" << std::endl;
+							std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+							return false;
 					}
 					break;
 				case WAITING_FOR_DB_NAME:
@@ -179,7 +181,8 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							state = WAITING_FOR_DB_BEGIN;
 							break;
 						default:
-							std::cout << "did not expect current event in current state" << std::endl;
+							std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+							return false;
 					}
 					break;
 				case WAITING_FOR_DB_BEGIN:
@@ -188,7 +191,8 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							state = WAITING_FOR_ARRAY_BEGIN;
 							break;
 						default:
-							std::cout << "did not expect current event in current state" << std::endl;
+							std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+							return false;
 					}
 					break;
 				case WAITING_FOR_ARRAY_BEGIN:
@@ -197,7 +201,8 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							state = WAITING_FOR_OBJECT_BEGIN;
 							break;
 						default:
-							std::cout << "did not expect current event in current state" << std::endl;
+							std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+							return false;
 					}
 					break;
 				case WAITING_FOR_OBJECT_BEGIN:
@@ -212,18 +217,22 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							state = WAITING_FOR_ATTRIBUTE_NAME;
 							break;
 						default:
-							std::cout << "did not expect current event in current state" << std::endl;
+							std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+							return false;
 					}
 					break;
 				case WAITING_FOR_ATTRIBUTE_NAME:
 					switch(event) {
 						case APT::CJsonToken::TokenType::STRING:
 							currentAttributeName = ((APT::CJsonValueToken<APT::CJsonToken::STRING,std::string>*)token)->getValue();
-							std::cout << "attribute name: >" << currentAttributeName << "<" << std::endl;
+#ifdef DEBUG
+							std::cout << "attribute name: \"" << currentAttributeName << "\"" << std::endl;
+#endif
 							state = WAITING_FOR_NAME_SEPARATOR;
 							break;
 						default:
-							std::cout << "did not expect current event in current state" << std::endl;
+							std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+							return false;
 					}
 					break;
 				case WAITING_FOR_NAME_SEPARATOR:
@@ -232,7 +241,8 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							state = WAITING_FOR_VALUE;
 							break;
 						default:
-							std::cout << "did not expect current event in current state" << std::endl;
+							std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+							return false;
 					}
 					break;
 				case WAITING_FOR_VALUE:
@@ -275,6 +285,9 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 								std::cout << "attribute value: >" << description << "<" << std::endl;
 #endif
 								descriptionParsed = true;
+							} else {
+								std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << " for attribute \"" << currentAttributeName << "\"" << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+								return false;
 							}
 							state = WAITING_FOR_ATTRIBUTE_SEPARATOR_OR_END_OF_OBJECT;
 							break;
@@ -291,11 +304,15 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 								std::cout << "attribute value: >" << longitude << "<" << std::endl;
 #endif
 								longitudeParsed = true;
+							} else {
+								std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << " for attribute \"" << currentAttributeName << "\"" << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+								return false;
 							}
 							state = WAITING_FOR_ATTRIBUTE_SEPARATOR_OR_END_OF_OBJECT;
 							break;
 						default:
-							std::cout << "did not expect current event in current state" << std::endl;
+							std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+							return false;
 					}
 					break;
 				case WAITING_FOR_ATTRIBUTE_SEPARATOR_OR_END_OF_OBJECT:
@@ -309,23 +326,46 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 								if(nameParsed && latitudeParsed && longitudeParsed) {
 									// add waypoint to waypoint DB
 									std::cout << "found a waypoint" << std::endl;
-									waypointDb.addElement(CWaypoint(name, latitude, longitude));
+									if(waypointDb.getPointerToElement(name) == nullptr) {
+										waypointDb.addElement(CWaypoint(name, latitude, longitude));
+#ifdef DEBUG
+										std::cout << "INFO in CJsonPersistence::readData(): Added waypoint '" << name << "'" << std::endl;
+#endif
+									} else {
+#ifdef DEBUG
+										std::cout << "INFO in CJsonPersistence::readData(): Waypoint '" << name << "' already exists in DB" << std::endl;
+#endif
+									}
+
 								} else {
 									std::cout << "ERROR in CJsonPersistence::readData(): Waypoint has too few attributes in line " << jsonScanner.scannedLine() << std::endl;
+									return false;
 								}
 							} else if(currentDB == "pois") {
 								if(nameParsed && latitudeParsed && longitudeParsed && typeParsed && descriptionParsed) {
 									// add waypoint to POI DB
 									std::cout << "found a poi" << std::endl;
 									poiDb.addElement(CPOI(type, name, description, latitude, longitude));
+									if(poiDb.getPointerToElement(name) == nullptr) {
+										poiDb.addElement(CPOI(type, name, description, latitude, longitude));
+#ifdef DEBUG
+										std::cout << "INFO in CJSONStorage::readData(): Added POI '" << name << "'" << std::endl;
+#endif
+									} else {
+#ifdef DEBUG
+										std::cout << "INFO in CJsonPersistence::readData(): POI '" << name << "'  already exists in DB" << std::endl;
+#endif
+									}
 								} else {
 									std::cout << "ERROR in CJsonPersistence::readData(): POI has too few attributes in line " << jsonScanner.scannedLine() << std::endl;
+									return false;
 								}
 							}
 							state = WAITING_FOR_OBJECT_SEPARATOR_OR_END_OF_ARRAY;
 							break;
 						default:
-							std::cout << "did not expect current event in current state" << std::endl;
+							std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+							return false;
 					}
 					break;
 				case WAITING_FOR_OBJECT_SEPARATOR_OR_END_OF_ARRAY:
@@ -337,7 +377,8 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							state = WAITING_FOR_OBJECT_BEGIN;
 							break;
 						default:
-							std::cout << "did not expect current event in current state" << std::endl;
+							std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+							return false;
 					}
 					break;
 				case WAITING_FOR_ARRAY_SEPARATOR_OR_END_OF_FILE:
@@ -349,7 +390,8 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							state = WAITING_FOR_DB_NAME;
 							break;
 						default:
-							std::cout << "did not expect current event in current state" << std::endl;
+							std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
+							return false;
 					}
 
 			}

@@ -191,11 +191,33 @@ int main() {
 	CWpDatabase wpDatabaseJSONReadTest;
 	CPoiDatabase poiDatabaseJSONReadTest;
 	CJsonPersistence myJSONStorageReadTest;
-	myJSONStorageReadTest.setMediaName("mergePartOne");
+	myJSONStorageReadTest.setMediaName("test-export");
 	myJSONStorageReadTest.readData(wpDatabaseJSONReadTest, poiDatabaseJSONReadTest, CPersistentStorage::REPLACE);
 	myJSONStorageReadTest.setMediaName("test-export-import-export");
 	myJSONStorageReadTest.writeData(wpDatabaseJSONReadTest, poiDatabaseJSONReadTest);
-	std::cout << "TEST: Check if the 'test-export-import-export.csv' file has the same content as the 'test-export-poi/wp.csv' files" << std::endl;
+	std::cout << "TEST: Check if the 'test-export.json' file has the same content as the 'test-export-import-export.json' file" << std::endl;
+
+	std::cout << std::endl << "Test reading the DBs from JSON files and writing them back" << std::endl
+					               << "=============================" << std::endl;
+	CWpDatabase wpDatabaseJSONReadOrderTest;
+	CPoiDatabase poiDatabaseJSONReadOrderTest;
+	CJsonPersistence myJSONStorageReadOrderTest;
+	myJSONStorageReadOrderTest.setMediaName("test-import-order");
+	myJSONStorageReadOrderTest.readData(wpDatabaseJSONReadOrderTest, poiDatabaseJSONReadOrderTest, CPersistentStorage::REPLACE);
+	myJSONStorageReadOrderTest.setMediaName("test-import-order-export");
+	myJSONStorageReadOrderTest.writeData(wpDatabaseJSONReadOrderTest, poiDatabaseJSONReadOrderTest);
+	std::cout << "TEST: Check if the 'test-import-order-export.json' file has the same content as the 'test-import-order.json' file" << std::endl;
+
+	std::cout << std::endl << "Test reading the DBs from invalid JSON files and writing them back" << std::endl
+					               << "=============================" << std::endl;
+	CWpDatabase wpDatabaseJSONReadInvalidTest;
+	CPoiDatabase poiDatabaseJSONReadInvalidTest;
+	CJsonPersistence myJSONStorageReadInvalidTest;
+	myJSONStorageReadInvalidTest.setMediaName("test-import-error-handling");
+	myJSONStorageReadInvalidTest.readData(wpDatabaseJSONReadInvalidTest, poiDatabaseJSONReadInvalidTest, CPersistentStorage::REPLACE);
+	myJSONStorageReadInvalidTest.setMediaName("test-import-error-handling-export");
+	myJSONStorageReadInvalidTest.writeData(wpDatabaseJSONReadInvalidTest, poiDatabaseJSONReadInvalidTest);
+	std::cout << "TEST: Check if the 'test-import-error-handling.json' file has the same content as the 'test-import-error-handling-export.json' file" << std::endl;
 
 	return 0;
 }

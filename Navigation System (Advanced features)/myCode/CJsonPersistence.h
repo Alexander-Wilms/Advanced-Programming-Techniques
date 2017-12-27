@@ -2,7 +2,7 @@
  * CJsonPersistence.h
  *
  *  Created on: 26.12.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #ifndef MYCODE_CJSONPERSISTENCE_H_
