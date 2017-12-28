@@ -13,7 +13,7 @@
 // https://stackoverflow.com/questions/13210248/cppunit-creating-a-simple-test
 #include <cppunit/ui/text/TestRunner.h>
 #include <cppunit/TestResultCollector.h>
-#include <cppunit/XmlOutputter.h>
+#include <cppunit/TextOutputter.h>
 #include "CCopyConstructorTests.h"
 #include "COperatorAssignmentTests.h"
 
@@ -24,6 +24,10 @@
 int main (int argc, char* argv[]) {
 	// Eclipse in-built indexer is worse than useless:
 	// https://stackoverflow.com/a/10081040/2278742
+
+	CppUnit::TestResult controller;
+	CppUnit::TestResultCollector result;
+	controller.addListener ( &result );
 	CppUnit::TextUi::TestRunner runner;
 
 	runner.addTest( CAddPoiTests::suite() );
@@ -37,7 +41,7 @@ int main (int argc, char* argv[]) {
 	runner.addTest( COperatorPlusTests::suite() );
 	runner.addTest( CPrintTests::suite() );
 
-	CppUnit::TestResult controller;
-	runner.run(controller);
-	return 0;
+	runner.setOutputter(new CppUnit::TextOutputter(&runner.result(), std::clog));
+
+	return runner.run () ? 0 : 1;
 }

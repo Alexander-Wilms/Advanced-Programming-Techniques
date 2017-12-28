@@ -45,7 +45,7 @@ public:
 
 	void testCopyConstructor() {
 		std::vector<const CWaypoint*> originalRouteVector = m_route->getRoute();
-		CRoute routeCopy = *m_route;
+		CRoute routeCopy = *m_route; // calls the copy constructor
 		std::vector<const CWaypoint*> copyRouteVector = routeCopy.getRoute();
 		CPPUNIT_ASSERT_EQUAL((int) originalRouteVector.size(), (int) copyRouteVector.size());
 	}

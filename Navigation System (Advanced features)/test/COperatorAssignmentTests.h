@@ -21,7 +21,6 @@ private:
 public:
 
 	void setUp() {
-		std::cout << "COperatorAssignment setUp" << std::endl;
 		m_route_1 = new CRoute();
 		m_route_2 = new CRoute();
 

@@ -42,9 +42,11 @@ public:
 
 	void testAddPOISuccessful() {
 		m_route->addWaypoint("Darmstadt");
+		m_route->addWaypoint("Berlin");
 		m_route->addPoi("Mensa HDA", "Darmstadt");
 		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
 		CPPUNIT_ASSERT_EQUAL(2, (int) routeVector.size());
+		CPPUNIT_ASSERT_EQUAL(std::string("Mensa HDA"), routeVector.at(1)->getName());
 	}
 
 	void testAddPOIFailureMissingWaypoint() {

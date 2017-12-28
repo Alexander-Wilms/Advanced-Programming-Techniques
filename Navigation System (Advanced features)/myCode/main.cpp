@@ -93,40 +93,9 @@ int main() {
 	proute1->addPoi("Mensa HDA", "Darmstadt");
 	proute1->print();
 
-	std::cout << std::endl << "Test CRoute's copy constructor" << std::endl
-				           << "==============================" << std::endl;
-	CRoute route2 = *proute1; // calls the copy constructor
-	proute1->print();
-	delete proute1;
-	std::cout << "TEST: If the copy constructor works, the following route is the same as above and thus still has access to it's member variables:" << std::endl;
-	route2.print();
-
-	std::cout << std::endl << "Test CRoute's assignment operator" << std::endl
-				           << "=================================" << std::endl;
+	CRoute route2 = *proute1;
 	CRoute route3;
 	route3 = route2;
-	std::cout << "TEST: The original route:" << std::endl;
-	route2.print();
-	std::cout << "TEST: If the overloaded assignment operator works, the following route is the same as above:" << std::endl;
-	route3.print();
-
-	std::cout << std::endl << "Test CRoute's operator+" << std::endl
-				           << "=================================" << std::endl;
-	std::cout << "TEST: Adding two routes using the same databases should work:" << std::endl;
-	route2 = route2 + route3;
-	std::cout << "TEST: The sum of two routes with the same databases:" << std::endl;
-	route2.print();
-	CRoute route4;
-	CPoiDatabase poiDatabaseOperatorPlus;
-	poiDatabaseOperatorPlus.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world",
-				10, 20));
-	CWpDatabase wpDatabaseOperatorPlus;
-	wpDatabase.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
-	route4.connectToPoiDatabase(&poiDatabaseOperatorPlus);
-	route4.connectToWpDatabase(&wpDatabaseOperatorPlus);
-	std::cout << "TEST: Adding two routes using the different databases shouldn't work:" << std::endl;
-	CRoute routetest = route2 + route4;
-	std::cout << "TEST: The sum of two routes with different databases should be an empty route:" << std::endl;
 
 	std::cout << std::endl << "Test writing the DBs to CSV files" << std::endl
 			               << "=============================" << std::endl;
