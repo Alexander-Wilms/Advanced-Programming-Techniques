@@ -19,20 +19,10 @@ m_pWpDatabase(nullptr)
 CRoute::CRoute(const CRoute& origin) {
 	m_pPoiDatabase = origin.m_pPoiDatabase;
 	m_pWpDatabase = origin.m_pWpDatabase;
-	//m_route = origin.m_route;
-	origin.m_route.begin();
-	origin.m_route.end();
-	m_route.begin();
-
-m_route = origin.m_route;
-//	std::copy (
-//			origin.m_route.begin(),
-//			origin.m_route.end(),
-//			m_route.begin());
+	m_route = origin.m_route;
 }
 
 void CRoute::connectToPoiDatabase(CPoiDatabase* pPoiDB) {
-
 	// Don't connect to null pointers
 	if (pPoiDB != nullptr) {
 		m_pPoiDatabase = pPoiDB;

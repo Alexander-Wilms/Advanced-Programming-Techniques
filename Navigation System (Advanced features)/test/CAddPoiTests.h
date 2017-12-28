@@ -63,9 +63,11 @@ public:
 
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
+
 		suite->addTest(new CppUnit::TestCaller<CAddPoiTests>("Add POI successfully", &CAddPoiTests::testAddPOISuccessful));
-		suite->addTest(new CppUnit::TestCaller<CAddPoiTests>("Fail to add POI", &CAddPoiTests::testAddPOIFailureMissingWaypoint));
-		suite->addTest(new CppUnit::TestCaller<CAddPoiTests>("Fail to add POI", &CAddPoiTests::testAddPOIFailureMissingPOI));
+		suite->addTest(new CppUnit::TestCaller<CAddPoiTests>("Fail to add POI due to missing waypoint", &CAddPoiTests::testAddPOIFailureMissingWaypoint));
+		suite->addTest(new CppUnit::TestCaller<CAddPoiTests>("Fail to add POI due to missing POI", &CAddPoiTests::testAddPOIFailureMissingPOI));
+
 		return suite;
 	}
 

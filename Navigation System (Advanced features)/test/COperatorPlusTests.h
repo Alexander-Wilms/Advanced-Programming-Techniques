@@ -94,10 +94,10 @@ public:
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
 
-		suite->addTest(new CppUnit::TestCaller<COperatorPlusTests>("Load Existing", &COperatorPlusTests::addingRoutesWithSameDatabases));
-		suite->addTest(new CppUnit::TestCaller<COperatorPlusTests>("Load Existing", &COperatorPlusTests::addingRoutesWithDifferentWaypointDatabases));
-		suite->addTest(new CppUnit::TestCaller<COperatorPlusTests>("Load Existing", &COperatorPlusTests::addingRoutesWithDifferentPOIDatabases));
-		suite->addTest(new CppUnit::TestCaller<COperatorPlusTests>("Load Existing", &COperatorPlusTests::addingRoutesWithDifferentDatabases));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusTests>("Successfully add routes", &COperatorPlusTests::addingRoutesWithSameDatabases));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusTests>("Fail to add routes due to different waypoint DBs", &COperatorPlusTests::addingRoutesWithDifferentWaypointDatabases));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusTests>("Fail to add routes due to different POI DBs", &COperatorPlusTests::addingRoutesWithDifferentPOIDatabases));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusTests>("Fail to add routes due to different waypoint and POI DBs", &COperatorPlusTests::addingRoutesWithDifferentDatabases));
 
 		return suite;
 	}

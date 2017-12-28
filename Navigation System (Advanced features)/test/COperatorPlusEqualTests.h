@@ -84,12 +84,12 @@ public:
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
 
-		suite->addTest(new CppUnit::TestCaller<COperatorPlusEqualTests>("Load Existing", &COperatorPlusEqualTests::testWpDatabaseNullPointer));
-		suite->addTest(new CppUnit::TestCaller<COperatorPlusEqualTests>("Load Missing", &COperatorPlusEqualTests::testPoiDatabaseNullPointer));
-		suite->addTest(new CppUnit::TestCaller<COperatorPlusEqualTests>("Load Missing", &COperatorPlusEqualTests::testAddWaypointSuccessfullyAndPOISuccessfully));
-		suite->addTest(new CppUnit::TestCaller<COperatorPlusEqualTests>("Load Missing", &COperatorPlusEqualTests::testAddWaypointSuccessfullyAndPOIUnsuccessfully));
-		suite->addTest(new CppUnit::TestCaller<COperatorPlusEqualTests>("Load Missing", &COperatorPlusEqualTests::testAddWaypointUnsuccessfullyAndPOISuccessfully));
-		suite->addTest(new CppUnit::TestCaller<COperatorPlusEqualTests>("Load Missing", &COperatorPlusEqualTests::testAddWaypointUnsuccessfullyAndPOIUnsuccessfully));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusEqualTests>("Fail due to waypoint DB null pointer", &COperatorPlusEqualTests::testWpDatabaseNullPointer));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusEqualTests>("Fail due to POI db null pointer", &COperatorPlusEqualTests::testPoiDatabaseNullPointer));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusEqualTests>("Add waypoint and POI", &COperatorPlusEqualTests::testAddWaypointSuccessfullyAndPOISuccessfully));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusEqualTests>("Add only waypoint", &COperatorPlusEqualTests::testAddWaypointSuccessfullyAndPOIUnsuccessfully));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusEqualTests>("Add only POI", &COperatorPlusEqualTests::testAddWaypointUnsuccessfullyAndPOISuccessfully));
+		suite->addTest(new CppUnit::TestCaller<COperatorPlusEqualTests>("Add neither waypoint nor POI", &COperatorPlusEqualTests::testAddWaypointUnsuccessfullyAndPOIUnsuccessfully));
 
 		return suite;
 	}

@@ -51,8 +51,8 @@ public:
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
 
-		suite->addTest(new CppUnit::TestCaller<CConnectToWpDatabaseTests>("Load Existing", &CConnectToWpDatabaseTests::testConnectingToNullPointer));
-		suite->addTest(new CppUnit::TestCaller<CConnectToWpDatabaseTests>("Load Missing", &CConnectToWpDatabaseTests::testConnectingToDatabase));
+		suite->addTest(new CppUnit::TestCaller<CConnectToWpDatabaseTests>("Fail to connect to null pointer", &CConnectToWpDatabaseTests::testConnectingToNullPointer));
+		suite->addTest(new CppUnit::TestCaller<CConnectToWpDatabaseTests>("Connect to waypoint DB", &CConnectToWpDatabaseTests::testConnectingToDatabase));
 
 		return suite;
 	}

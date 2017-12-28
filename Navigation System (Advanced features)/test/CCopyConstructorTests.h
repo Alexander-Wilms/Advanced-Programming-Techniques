@@ -53,7 +53,7 @@ public:
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
 
-		suite->addTest(new CppUnit::TestCaller<CCopyConstructorTests>("Testing copy constructor", &CCopyConstructorTests::testCopyConstructor));
+		suite->addTest(new CppUnit::TestCaller<CCopyConstructorTests>("Test copy constructor", &CCopyConstructorTests::testCopyConstructor));
 
 		return suite;
 	}

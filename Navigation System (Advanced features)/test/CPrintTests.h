@@ -49,7 +49,9 @@ public:
 
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
-		suite->addTest(new CppUnit::TestCaller<CPrintTests>("Add POI successfully", &CPrintTests::testPrint));
+
+		suite->addTest(new CppUnit::TestCaller<CPrintTests>("Print route", &CPrintTests::testPrint));
+
 		return suite;
 	}
 

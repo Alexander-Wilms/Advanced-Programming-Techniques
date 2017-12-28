@@ -50,8 +50,8 @@ public:
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
 
-		suite->addTest(new CppUnit::TestCaller<CAddWaypointTests>("Load Existing", &CAddWaypointTests::testAddWaypointSuccess));
-		suite->addTest(new CppUnit::TestCaller<CAddWaypointTests>("Load Existing", &CAddWaypointTests::testAddWaypointFailure));
+		suite->addTest(new CppUnit::TestCaller<CAddWaypointTests>("Successfully add a waypoint", &CAddWaypointTests::testAddWaypointSuccess));
+		suite->addTest(new CppUnit::TestCaller<CAddWaypointTests>("Fail to add a missing waypoint", &CAddWaypointTests::testAddWaypointFailure));
 
 		return suite;
 	}

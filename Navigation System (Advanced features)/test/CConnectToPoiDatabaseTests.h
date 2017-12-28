@@ -53,8 +53,8 @@ public:
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
 
-		suite->addTest(new CppUnit::TestCaller<CConnectToPoiDatabaseTests>("Load Existing", &CConnectToPoiDatabaseTests::testConnectingToNullPointer));
-		suite->addTest(new CppUnit::TestCaller<CConnectToPoiDatabaseTests>("Load Existing", &CConnectToPoiDatabaseTests::testConnectingToDatabase));
+		suite->addTest(new CppUnit::TestCaller<CConnectToPoiDatabaseTests>("Fail to connect to nullptr", &CConnectToPoiDatabaseTests::testConnectingToNullPointer));
+		suite->addTest(new CppUnit::TestCaller<CConnectToPoiDatabaseTests>("Connect to POI DB", &CConnectToPoiDatabaseTests::testConnectingToDatabase));
 
 		return suite;
 	}

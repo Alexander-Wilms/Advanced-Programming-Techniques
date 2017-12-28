@@ -56,7 +56,7 @@ public:
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
 
-		suite->addTest(new CppUnit::TestCaller<COperatorAssignmentTests>("Load Existing", &COperatorAssignmentTests::testAssignment));
+		suite->addTest(new CppUnit::TestCaller<COperatorAssignmentTests>("Test the assignment operator", &COperatorAssignmentTests::testAssignment));
 
 		return suite;
 	}

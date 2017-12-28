@@ -51,8 +51,8 @@ public:
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
 
-		suite->addTest(new CppUnit::TestCaller<CGetDistanceNextPoiTests>("Load Existing", &CGetDistanceNextPoiTests::testPoiDatabaseNullPointer));
-		suite->addTest(new CppUnit::TestCaller<CGetDistanceNextPoiTests>("Load Existing", &CGetDistanceNextPoiTests::testDistanceCalculation));
+		suite->addTest(new CppUnit::TestCaller<CGetDistanceNextPoiTests>("Fail due to DB null pointer", &CGetDistanceNextPoiTests::testPoiDatabaseNullPointer));
+		suite->addTest(new CppUnit::TestCaller<CGetDistanceNextPoiTests>("Calculate the distance", &CGetDistanceNextPoiTests::testDistanceCalculation));
 
 		return suite;
 	}
