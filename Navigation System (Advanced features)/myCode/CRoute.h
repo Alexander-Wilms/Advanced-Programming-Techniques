@@ -22,8 +22,6 @@ public:
 	 */
 	CRoute();
 
-	~CRoute();
-
 	/**
 	 * Copy constructor
 	 *

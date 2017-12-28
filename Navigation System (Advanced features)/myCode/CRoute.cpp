@@ -226,8 +226,6 @@ CRoute& CRoute::operator=(const CRoute& r) {
 	m_pPoiDatabase = r.m_pPoiDatabase;
 	m_pWpDatabase = r.m_pWpDatabase;
 	m_route = r.m_route;
-	//std::copy(r.m_route.begin(), r.m_route.end(), m_route.begin());
-
 	return *this;
 }
 
@@ -256,8 +254,4 @@ CRoute& CRoute::operator+(const CRoute& r) {
 const std::vector<const CWaypoint*> CRoute::getRoute() {
 	const std::vector<const CWaypoint*> returnValue{std::begin(m_route), std::end(m_route)};
 	return returnValue;
-}
-
-CRoute::~CRoute() {
-	std::cout << "CRoute destructor" << std::endl;
 }
