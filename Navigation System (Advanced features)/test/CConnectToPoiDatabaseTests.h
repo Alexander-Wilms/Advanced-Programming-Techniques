@@ -33,6 +33,7 @@ public:
 	}
 
 	void testConnectingToNullPointer() {
+		m_route->connectToWpDatabase(&wpDatabase);
 		m_route->connectToPoiDatabase(nullptr);
 		m_route->addWaypoint("Darmstadt");
 		m_route->addPoi("Mensa HDA", "Darmstadt");
@@ -41,6 +42,7 @@ public:
 	}
 
 	void testConnectingToDatabase() {
+		m_route->connectToWpDatabase(&wpDatabase);
 		m_route->connectToPoiDatabase(&poiDatabase);
 		m_route->addWaypoint("Darmstadt");
 		m_route->addPoi("Mensa HDA", "Darmstadt");

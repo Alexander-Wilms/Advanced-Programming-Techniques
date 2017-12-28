@@ -62,7 +62,7 @@ public:
 		m_route->connectToPoiDatabase(&poiDatabase);
 		*m_route += "Berlin";
 		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
-		CPPUNIT_ASSERT_EQUAL(2, (int) routeVector.size());
+		CPPUNIT_ASSERT_EQUAL(1, (int) routeVector.size());
 	}
 
 	void testAddWaypointUnsuccessfullyAndPOISuccessfully() {
@@ -70,7 +70,7 @@ public:
 		m_route->connectToPoiDatabase(&poiDatabase);
 		*m_route += "Mensa HDA";
 		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
-		CPPUNIT_ASSERT_EQUAL(2, (int) routeVector.size());
+		CPPUNIT_ASSERT_EQUAL(1, (int) routeVector.size());
 	}
 
 	void testAddWaypointUnsuccessfullyAndPOIUnsuccessfully() {
@@ -78,7 +78,7 @@ public:
 		m_route->connectToPoiDatabase(&poiDatabase);
 		*m_route += "Timbuktu";
 		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
-		CPPUNIT_ASSERT_EQUAL(2, (int) routeVector.size());
+		CPPUNIT_ASSERT_EQUAL(0, (int) routeVector.size());
 	}
 
 	static CppUnit::TestSuite* suite() {

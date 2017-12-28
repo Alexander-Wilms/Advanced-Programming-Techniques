@@ -45,22 +45,22 @@ public:
 
 		m_route_sameWpDBsamePOIDB.connectToWpDatabase(&wpDatabase_1);
 		m_route_sameWpDBsamePOIDB.connectToPoiDatabase(&poiDatabase_1);
-		m_route_sameWpDBsamePOIDB.addWaypoint("Berlin");
+		m_route_sameWpDBsamePOIDB.addWaypoint("Darmstadt");
 		m_route_sameWpDBsamePOIDB.addPoi("Mensa HDA", "Darmstadt");
 
 		m_route_sameWpDBdifferentPOIDB.connectToWpDatabase(&wpDatabase_1);
 		m_route_sameWpDBdifferentPOIDB.connectToPoiDatabase(&poiDatabase_2);
-		m_route_sameWpDBdifferentPOIDB.addWaypoint("Berlin");
+		m_route_sameWpDBdifferentPOIDB.addWaypoint("Darmstadt");
 		m_route_sameWpDBdifferentPOIDB.addPoi("Mensa HDA", "Darmstadt");
 
 		m_route_differentWpDBsamePOIDB.connectToWpDatabase(&wpDatabase_2);
 		m_route_differentWpDBsamePOIDB.connectToPoiDatabase(&poiDatabase_1);
-		m_route_differentWpDBsamePOIDB.addWaypoint("Berlin");
+		m_route_differentWpDBsamePOIDB.addWaypoint("Darmstadt");
 		m_route_differentWpDBsamePOIDB.addPoi("Mensa HDA", "Darmstadt");
 
 		m_route_differentWpDBdifferentPOIDB.connectToWpDatabase(&wpDatabase_2);
 		m_route_differentWpDBdifferentPOIDB.connectToPoiDatabase(&poiDatabase_2);
-		m_route_differentWpDBdifferentPOIDB.addWaypoint("Berlin");
+		m_route_differentWpDBdifferentPOIDB.addWaypoint("Darmstadt");
 		m_route_differentWpDBdifferentPOIDB.addPoi("Mensa HDA", "Darmstadt");
 	}
 
@@ -70,7 +70,7 @@ public:
 	void addingRoutesWithSameDatabases() {
 		m_routeResult = m_route_original + m_route_sameWpDBsamePOIDB;
 		std::vector<const CWaypoint*> routeVector = m_routeResult.getRoute();
-		CPPUNIT_ASSERT_EQUAL(6, (int) routeVector.size());
+		CPPUNIT_ASSERT_EQUAL(5, (int) routeVector.size());
 	}
 
 	void addingRoutesWithDifferentWaypointDatabases() {

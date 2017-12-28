@@ -25,6 +25,8 @@ int main (int argc, char* argv[]) {
 	// Eclipse in-built indexer is worse than useless:
 	// https://stackoverflow.com/a/10081040/2278742
 
+	// https://schneide.wordpress.com/2009/04/14/structuring-cppunit-tests/
+
 	CppUnit::TestResult controller;
 	CppUnit::TestResultCollector result;
 	controller.addListener ( &result );
