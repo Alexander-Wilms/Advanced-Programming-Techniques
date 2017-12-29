@@ -2,7 +2,7 @@
  * CWpDatabase.cpp
  *
  *  Created on: 26.12.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #include "CWpDatabase.h"

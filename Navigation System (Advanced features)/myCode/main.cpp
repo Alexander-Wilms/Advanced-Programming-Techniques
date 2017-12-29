@@ -77,21 +77,9 @@ int main() {
 	proute1->addPoi("Mensa HDA", "doesn't exist");
 	proute1->print();
 
-	std::cout << "TEST: Adding POI should fail if the corresponding waypoint doesn't exist:" << std::endl;
-	proute1->addPoi("Mensa HDA", "Darmstadt");
-	proute1->print();
-
-	std::cout << "TEST: Adding the previously missing waypoint:" << std::endl;
 	(*proute1) += "Darmstadt";
-	proute1->print();
-
-	std::cout << "TEST: Adding another waypoint:" << std::endl;
 	(*proute1) += "Berlin";
-	proute1->print();
-
-	std::cout << "TEST: Now, adding the POI after waypoint 'Darmstadt' should succeed:" << std::endl;
 	proute1->addPoi("Mensa HDA", "Darmstadt");
-	proute1->print();
 
 	CRoute route2 = *proute1;
 	CRoute route3;

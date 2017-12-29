@@ -150,8 +150,8 @@ void CRoute::print() {
 
 			/**
 			 * all elements can be cast to CWaypoint*, but it's
-			 * not necessary if we already successfully cast it
-			 * to CPOI*, otherwise we would print the element twice
+			 * not necessary to print it if we already successfully
+			 * cast it to CPOI*, otherwise we would print the element twice
 			 */
 			CWaypoint* pWp = dynamic_cast<CWaypoint*>(*it);
 			if (pWp != nullptr) {

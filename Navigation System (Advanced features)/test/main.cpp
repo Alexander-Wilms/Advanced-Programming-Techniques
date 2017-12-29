@@ -43,7 +43,7 @@ int main (int argc, char* argv[]) {
 	runner.addTest( COperatorPlusTests::suite() );
 	runner.addTest( CPrintTests::suite() );
 
-	runner.setOutputter(new CppUnit::TextOutputter(&runner.result(), std::clog));
+	runner.setOutputter(new CppUnit::TextOutputter(&runner.result(), std::cout));
 
-	return runner.run () ? 0 : 1;
+	return runner.run ("", false, true, false) ? 0 : 1;
 }

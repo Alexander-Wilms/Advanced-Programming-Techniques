@@ -26,9 +26,6 @@ public:
 		poiDatabase.addElement(CPOI(SIGHTSEEING, "Darmstadt", "Worth a visit", 50, 9));
 		wpDatabase.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
 		wpDatabase.addElement(CWaypoint("Berlin", 52.518611, 13.408333));
-
-
-
 	}
 
 	void tearDown() {
@@ -55,6 +52,10 @@ public:
 		*m_route += "Darmstadt";
 		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
 		CPPUNIT_ASSERT_EQUAL(2, (int) routeVector.size());
+		// ensure that the 0th element is _not_ a CPOI instance
+		CPPUNIT_ASSERT_EQUAL((const CPOI*) nullptr, dynamic_cast<const CPOI*>(routeVector[0]));
+		// ensure that the 1th element _is_ a CPOI instance
+		CPPUNIT_ASSERT_ASSERTION_FAIL(CPPUNIT_ASSERT_EQUAL((const CPOI*) nullptr, dynamic_cast<const CPOI*>(routeVector[1])));
 	}
 
 	void testAddWaypointSuccessfullyAndPOIUnsuccessfully() {
@@ -63,6 +64,8 @@ public:
 		*m_route += "Berlin";
 		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
 		CPPUNIT_ASSERT_EQUAL(1, (int) routeVector.size());
+		// ensure that the 0th element is _not_ a CPOI instance
+		CPPUNIT_ASSERT_EQUAL((const CPOI*) nullptr, dynamic_cast<const CPOI*>(routeVector[0]));
 	}
 
 	void testAddWaypointUnsuccessfullyAndPOISuccessfully() {
@@ -71,6 +74,8 @@ public:
 		*m_route += "Mensa HDA";
 		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
 		CPPUNIT_ASSERT_EQUAL(1, (int) routeVector.size());
+		// ensure that the 1th element _is_ a CPOI instance
+		CPPUNIT_ASSERT_ASSERTION_FAIL(CPPUNIT_ASSERT_EQUAL((const CPOI*) nullptr, dynamic_cast<const CPOI*>(routeVector[0])));
 	}
 
 	void testAddWaypointUnsuccessfullyAndPOIUnsuccessfully() {

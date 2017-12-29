@@ -47,6 +47,10 @@ public:
 		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
 		CPPUNIT_ASSERT_EQUAL(3, (int) routeVector.size());
 		CPPUNIT_ASSERT_EQUAL(std::string("Mensa HDA"), routeVector.at(1)->getName());
+		// ensure that the 0th element is _not_ a CPOI instance
+		CPPUNIT_ASSERT_EQUAL((const CPOI*) nullptr, dynamic_cast<const CPOI*>(routeVector[0]));
+		// ensure that the 1th element _is_ a CPOI instance
+		CPPUNIT_ASSERT_ASSERTION_FAIL(CPPUNIT_ASSERT_EQUAL((const CPOI*) nullptr, dynamic_cast<const CPOI*>(routeVector[1])));
 	}
 
 	void testAddPOIFailureMissingWaypoint() {
@@ -56,9 +60,10 @@ public:
 	}
 
 	void testAddPOIFailureMissingPOI() {
+		m_route->addWaypoint("Darmstadt");
 		m_route->addPoi("White House", "Darmstadt");
 		std::vector<const CWaypoint*> routeVector = m_route->getRoute();
-		CPPUNIT_ASSERT_EQUAL(0, (int) routeVector.size());
+		CPPUNIT_ASSERT_EQUAL(1, (int) routeVector.size());
 	}
 
 	static CppUnit::TestSuite* suite() {

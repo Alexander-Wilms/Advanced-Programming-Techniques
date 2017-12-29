@@ -2,7 +2,7 @@
  * CPoiDatabase.h
  *
  *  Created on: 26.12.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #ifndef MYCODE_CPOIDATABASE_H_
