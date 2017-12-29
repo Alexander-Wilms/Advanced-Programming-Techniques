@@ -23,15 +23,18 @@ public:
 	 */
 	CDatabase();
 
+	/**
+	 * Destructor
+	 */
 	virtual ~CDatabase();
 
 	/**
-	 * Adds an element to the database
+	 * Add an element to the database
 	 */
 	void addElement(T const& object);
 
 	/**
-	 * Searches the PoiDatabase for a element by its name and returns a pointer to it
+	 * Search the PoiDatabase for a element by its name and returns a pointer to it
 	 *
 	 * @param name 	The name of the element to be searched
 	 *
@@ -40,7 +43,9 @@ public:
 	T* getPointerToElement(K key);
 
 	/**
-	 * Returns a const pointer to the map
+	 * Returns a const reference to the std::map used to store the database
+	 *
+	 * @return A const reference to the std::map
 	 */
 	const std::map<K, T>& getDB() const;
 
@@ -72,7 +77,9 @@ inline T* CDatabase<K, T>::getPointerToElement(K key) {
 
 	if(it == m_storage.end()) {
 		// nothing found
+#ifdef DEBUG
 		std::cout << "INFO in CDatabase::getPointerToElement(): Could not find element '" << key << "'" << std::endl;
+#endif
 		returnValue = nullptr;
 	} else {
 		returnValue = &(it->second);

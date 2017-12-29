@@ -60,31 +60,6 @@ int main() {
 	CNavigationSystem navigationSystem = CNavigationSystem();
 	navigationSystem.run();
 
-	std::cout << std::endl << "Test CRoute's operator+= and addPoi" << std::endl
-				               << "==============================" << std::endl;
-
-
-	CPoiDatabase poiDatabase;
-	poiDatabase.addElement(CPOI(RESTAURANT, "Mensa HDA", "The best Mensa in the world",
-			10, 20));
-	CWpDatabase wpDatabase;
-	wpDatabase.addElement(CWaypoint("Darmstadt", 49.872833, 8.651222));
-	wpDatabase.addElement(CWaypoint("Berlin", 52.518611, 13.408333));
-	CRoute* proute1 = new CRoute();
-	proute1->connectToPoiDatabase(&poiDatabase);
-	proute1->connectToWpDatabase(&wpDatabase);
-	std::cout << "TEST: Adding POI should fail if the corresponding waypoint doesn't exist:" << std::endl;
-	proute1->addPoi("Mensa HDA", "doesn't exist");
-	proute1->print();
-
-	(*proute1) += "Darmstadt";
-	(*proute1) += "Berlin";
-	proute1->addPoi("Mensa HDA", "Darmstadt");
-
-	CRoute route2 = *proute1;
-	CRoute route3;
-	route3 = route2;
-
 	std::cout << std::endl << "Test writing the DBs to CSV files" << std::endl
 			               << "=============================" << std::endl;
 	CPoiDatabase poiDatabaseCVSWriteTest;

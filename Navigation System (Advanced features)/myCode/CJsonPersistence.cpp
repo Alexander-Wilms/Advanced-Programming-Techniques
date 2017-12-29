@@ -10,8 +10,6 @@
 #include <algorithm>
 #include <exception>
 
-//#define DEBUG
-
 CJsonPersistence::CJsonPersistence() :
 		m_currentIndentation(0) {
 	// TODO Auto-generated constructor stub
@@ -270,7 +268,8 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 #endif
 
 								if(typeString == "") {
-									std::cout << "empty poi type" << std::endl;
+									std::cout << "ERROR in CJsonPersistence::readData(): Empty POI type " << std::endl;
+									return false;
 								} else {
 									if(typeString == "RESTAURANT") {
 										type = RESTAURANT;
@@ -283,14 +282,15 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 									} else if(typeString == "SIGHTSEEING") {
 										type = SIGHTSEEING;
 									} else {
-										std::cout << "unknown POI type" << std::endl;
+										std::cout << "ERROR in CJsonPersistence::readData(): Unknown POI type " << typeString << std::endl;
+										return false;
 									}
 								}
 								typeParsed = true;
 							} else if(currentAttributeName == "description") {
 								description = ((APT::CJsonValueToken<APT::CJsonToken::STRING,std::string>*)token)->getValue();
 #ifdef DEBUG
-								std::cout << "attribute value: >" << description << "<" << std::endl;
+								std::cout << "INFO in CJsonPersistence::readData(): attribute value: >" << description << "<" << std::endl;
 #endif
 								descriptionParsed = true;
 							} else {
@@ -303,13 +303,13 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							if(currentAttributeName == "latitude") {
 								latitude = ((APT::CJsonValueToken<APT::CJsonToken::NUMBER,double>*)token)->getValue();
 #ifdef DEBUG
-								std::cout << "attribute value: >" << latitude << "<" << std::endl;
+								std::cout << "INFO in CJsonPersistence::readData(): attribute value: >" << latitude << "<" << std::endl;
 #endif
 								latitudeParsed = true;
 							} else if(currentAttributeName == "longitude") {
 								longitude = ((APT::CJsonValueToken<APT::CJsonToken::NUMBER,double>*)token)->getValue();
 #ifdef DEBUG
-								std::cout << "attribute value: >" << longitude << "<" << std::endl;
+								std::cout << "INFO in CJsonPersistence::readData(): attribute value: >" << longitude << "<" << std::endl;
 #endif
 								longitudeParsed = true;
 							} else {
@@ -329,11 +329,15 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							state = WAITING_FOR_ATTRIBUTE_NAME;
 							break;
 						case APT::CJsonToken::TokenType::END_OBJECT:
-							std::cout << "currentDB: " << currentDB << std::endl;
+#ifdef DEBUG
+									std::cout << "INFO in CJsonPersistence::readData(): currentDB: '" << currentDB << "'" << std::endl;
+#endif
 							if(currentDB == "waypoints") {
 								if(nameParsed && latitudeParsed && longitudeParsed) {
 									// add waypoint to waypoint DB
-									std::cout << "found a waypoint" << std::endl;
+#ifdef DEBUG
+									std::cout << "INFO in CJsonPersistence::readData(): Found waypoint '" << name << "'" << std::endl;
+#endif
 									if(waypointDb.getPointerToElement(name) == nullptr) {
 										waypointDb.addElement(CWaypoint(name, latitude, longitude));
 #ifdef DEBUG
@@ -352,7 +356,9 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							} else if(currentDB == "pois") {
 								if(nameParsed && latitudeParsed && longitudeParsed && typeParsed && descriptionParsed) {
 									// add waypoint to POI DB
-									std::cout << "found a poi" << std::endl;
+#ifdef DEBUG
+									std::cout << "INFO in CJsonPersistence::readData(): Found POI '" << name << "'" << std::endl;
+#endif
 									poiDb.addElement(CPOI(type, name, description, latitude, longitude));
 									if(poiDb.getPointerToElement(name) == nullptr) {
 										poiDb.addElement(CPOI(type, name, description, latitude, longitude));
@@ -401,7 +407,6 @@ bool CJsonPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 							std::cout << "ERROR in CJsonPersistence::readData(): Did not expect event " << eventTypeStrings[event] << " in state " << stateTypeStrings[state] << std::endl << "Token ignored in line " << jsonScanner.scannedLine() << std::endl;
 							return false;
 					}
-
 			}
 
 			// store the next token

@@ -6,11 +6,9 @@
  */
 
 #include "CGPSSensor.h"
-#include "CWaypoint.h"
 
 #include <climits>
 #include <iostream>
-#include <string>
 
 CGPSSensor::CGPSSensor() {
 }

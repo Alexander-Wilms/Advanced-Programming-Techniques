@@ -16,11 +16,11 @@
 // #define SETUP_DBS
 
 CNavigationSystem::CNavigationSystem() :
-	m_route(),
-	m_PoiDatabase(),
-	m_WpDatabase() {
-	 m_CSVStorage = CCsvPersistence();
-	 m_CSVStorage.setMediaName("navigationsystemdata");
+m_route(),
+m_PoiDatabase(),
+m_WpDatabase() {
+	m_CSVStorage = CCsvPersistence();
+	m_CSVStorage.setMediaName("navigationsystemdata");
 }
 
 void CNavigationSystem::run() {

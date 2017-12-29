@@ -18,6 +18,10 @@
 class CJsonPersistence: public CPersistentStorage {
 private:
 
+	/**
+	 * Enum that contains all possible states the parser can
+	 * be in
+	 */
 	enum stateType {
 		WAITING_FOR_FIRST_TOKEN,
 		WAITING_FOR_DB_NAME,
@@ -32,21 +36,29 @@ private:
 		WAITING_FOR_ARRAY_SEPARATOR_OR_END_OF_FILE
 	};
 
-
-
 	/**
-	 * base name of the database files
-	 * The file names are:
-	 * - <mediaName>-wp.txt
-	 * - <mediaName>-poi.txt
+	 * Base name of the database file
 	 */
 	std::string mediaName;
 
+	/**
+	 * Store the current level of indentation
+	 */
 	unsigned int m_currentIndentation;
 
+	/**
+	 * Print as many tabs as m_currentIndentation specifies
+	 */
 	void indent(std::ofstream& file);
 public:
+	/**
+	 * Constructor
+	 */
 	CJsonPersistence();
+
+	/**
+	 * Destructor
+	 */
 	~CJsonPersistence();
 
 	/**
@@ -75,27 +87,50 @@ public:
 	 */
 	bool writeData(const CWpDatabase& waypointDb, const CPoiDatabase& poiDb);
 
+	/*
+	 * Set the base name of the database file
+	 */
 	void setMediaName(std::string name);
 
+	/**
+	 * Print a key value pair, where the value is either
+	 * a string or a number to the provided file
+	 *
+	 * @param key The attribute name
+	 * @param value The attribute value
+	 * @param file The file stream
+	 */
 	template<class T>
 	bool printKeyValue(std::string key, T value, std::ofstream& file);
 
+	/**
+	 * Print the fields of a CWaypoint or CPOI to a file
+	 *
+	 * @param file The file stream
+	 * @param wp The waypoint or POI
+	 */
 	bool printEntry(std::ofstream& file, const CWaypoint* wp);
 
+	/**
+	 * Print the contents of the database, which may contain CWaypoints or CPOIs
+	 *
+	 * @paramm file The file stream
+	 * @param wpdb The database
+	 */
 	template<class T>
 	bool printDB(std::ofstream& file, const CDatabase<std::string, T>& wpdb);
-
 };
 
 template<class T>
 inline bool CJsonPersistence::printDB(std::ofstream& file, const CDatabase<std::string, T>& wpdb) {
 	m_currentIndentation++;
 
-	// it's a database of waypoints
 	indent(file);
 	if(std::is_same<T, CWaypoint>::value) {
+		// it's a database of waypoints
 		file << "\"waypoints\": [" << std::endl;
 	} else if(std::is_same<T, CPOI>::value) {
+		// it's a database of POIs
 		file << "\"pois\": [" << std::endl;
 	}
 

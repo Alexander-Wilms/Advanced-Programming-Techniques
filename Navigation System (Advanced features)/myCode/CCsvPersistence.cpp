@@ -1,5 +1,5 @@
 /*
- * CCSVStorage.cpp
+ * CCsvPersistence.cpp
  *
  *  Created on: 03.12.2017
  *      Author: Fabian Alexander Wilms
@@ -11,7 +11,7 @@
 #include <iostream>
 
 CCsvPersistence::CCsvPersistence() :
-	m_delimiter(";")
+m_delimiter(";")
 {
 }
 
@@ -42,7 +42,7 @@ bool CCsvPersistence::writeData(const CWpDatabase& waypointDb,
 		}
 		file.close();
 	} else {
-		std::cout << "ERROR in CCSVStorage::writeData(): Couldn't open file " << mediaName << "-poi.csv" << std::endl;
+		std::cout << "ERROR in CCsvPersistence::writeData(): Couldn't open file " << mediaName << "-poi.csv" << std::endl;
 		return false;
 	}
 
@@ -54,7 +54,7 @@ bool CCsvPersistence::writeData(const CWpDatabase& waypointDb,
 		}
 		file.close();
 	} else {
-		std::cout << "ERROR in CCSVStorage::writeData(): Couldn't open file " << mediaName << "-wp.csv" << std::endl;
+		std::cout << "ERROR in CCsvPersistence::writeData(): Couldn't open file " << mediaName << "-wp.csv" << std::endl;
 		return false;
 	}
 
@@ -107,12 +107,14 @@ bool CCsvPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 
 			if(poiDb.getPointerToElement(name) == nullptr) {
 				poiDb.addElement(CPOI(POItype, name, description, latitude, longitude));
-				std::cout << "INFO in CCSVStorage::readData(): Added POI '" << name << "'" << std::endl;
+#ifdef DEBUG
+				std::cout << "INFO in CCsvPersistence::readData(): Added POI '" << name << "'" << std::endl;
+#endif
 			}
 		}
 		file.close();
 	} else {
-		std::cout << "ERROR in CCSVStorage::readData(): Couldn't open file " << mediaName << "-poi.csv" << std::endl;
+		std::cout << "ERROR in CCsvPersistence::readData(): Couldn't open file " << mediaName << "-poi.csv" << std::endl;
 		return false;
 	}
 
@@ -143,12 +145,14 @@ bool CCsvPersistence::readData(CWpDatabase& waypointDb, CPoiDatabase& poiDb,
 
 			if(waypointDb.getPointerToElement(name) == nullptr) {
 				waypointDb.addElement(CWaypoint(name, latitude, longitude));
-				std::cout << "INFO in CCSVStorage::readData(): Added waypoint '" << name << "'" << std::endl;
+#ifdef DEBUG
+				std::cout << "INFO in CCsvPersistence::readData(): Added waypoint '" << name << "'" << std::endl;
+#endif
 			}
 		}
 		file.close();
 	} else {
-		std::cout << "ERROR in CCSVStorage::readData(): Couldn't open file " << mediaName << "-wp.csv" << std::endl;
+		std::cout << "ERROR in CCsvPersistence::readData(): Couldn't open file " << mediaName << "-wp.csv" << std::endl;
 		return false;
 	}
 
@@ -256,7 +260,6 @@ CCsvPersistence::ParseStatus CCsvPersistence::extractLongitude(std::string& rema
 			return ERR_COMMA_INSTEAD_OF_POINT;
 		}
 	}
-
 	return OK;
 }
 
@@ -316,6 +319,7 @@ CCsvPersistence::ParseStatus CCsvPersistence::extractType(std::string& remaining
 		t_poi& typeParsed) {
 	// https://stackoverflow.com/questions/14265581/parse-split-a-string-in-c-using-string-delimiter-standard-c
 	std::string type = remainingLine.substr(0, remainingLine.find(m_delimiter));
+	std::transform(type.begin(), type.end(),type.begin(), ::toupper);
 	remainingLine = remainingLine.substr(remainingLine.find(m_delimiter)+1, remainingLine.size());
 	if(type == "") {
 		return ERR_EMPTY_FIELD_TYPE;

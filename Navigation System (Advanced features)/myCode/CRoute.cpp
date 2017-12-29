@@ -51,7 +51,9 @@ void CRoute::addWaypoint(std::string name) {
 		if (wp != nullptr) {
 			// we found a POI with the given name in the PoiDatabase
 			m_route.push_back(wp);
+#ifdef DEBUG
 			std::cout << "INFO in CRoute::addWaypoint(): Added waypoint '" << name << "'" << std::endl;
+#endif
 		} else {
 			std::cout << "ERROR in CRoute:addPoi(): No waypoint with name '"
 					<< name << "' found in m_pWpDatabase" << std::endl;
@@ -85,7 +87,9 @@ void CRoute::addPoi(std::string namePoi, std::string afterWp) {
 				if ((*rit)->getName() == afterWp) {
 					// we found a waypoint with the given name in the route
 					m_route.insert(rit.base(), poi);
+#ifdef DEBUG
 					std::cout << "INFO in CRoute::addPoi(): Added POI '" << namePoi << "'" << std::endl;
+#endif
 					waypointFound = true;
 					break;
 				}
