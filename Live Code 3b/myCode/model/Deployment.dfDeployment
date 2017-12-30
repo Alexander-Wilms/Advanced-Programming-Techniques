@@ -1,0 +1,309 @@
+package id2yrhqj93yvl86j93yw7ty;
+
+/**
+@version 2.0
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidakbkzj93yvl86j93ywuak:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid5tt0cj93yvl86j93yxa1s:oiref><oihard>
+@__modelType reference 
+*/
+class reference1 {
+}
+/**
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidbq3e9j93yvl86j93yxi2u:oiref><oihard>
+@__modelType reference 
+*/
+class reference2 {
+}
+/**
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidhymq8j93yvl86j93yxpmj:oiref><oihard>
+@__modelType reference 
+*/
+class reference3 {
+}
+/**
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid8m8i3j93yvl86j93yxwoh:oiref><oihard>
+@__modelType reference 
+*/
+class reference4 {
+}
+/**
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid7c1n0j93yvl86j93z07d4:oiref><oihard>
+@__modelType reference 
+*/
+class reference5 {
+}
+/**
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6innej93yvl86j93z11nt:oiref><oihard>
+@__modelType reference 
+*/
+class reference6 {
+}
+/**
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6qly0j93yvl86j93z1m4x:oiref><oihard>
+@__modelType reference 
+*/
+class reference7 {
+}
+/**
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidgc2oqj93yvl86j93z6raw:oiref><oihard>
+@__modelType reference 
+*/
+class reference8 {
+}
+/**
+@__ref <oiref:cpp#Class#Lidar:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference10 {
+}
+/**
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid7pyk4j94dxkjaj94dxxq7:oiref><oihard>
+@__modelType reference 
+*/
+class reference9 {
+}
+/**
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6toq7j94dxkjaj94dye3k:oiref><oihard>
+@__modelType reference 
+*/
+class reference11 {
+}
+/**
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid3dersj94dxkjaj94dzx3w:oiref><oihard>
+@__modelType reference 
+*/
+class reference13 {
+}
+}/**
+
+@__tags
+@shapeType DeploymentDiagram
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9Gh2gAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAKRGVwbG95
+bWVudHQABUZyb21teHg= 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidgc2oqj93yvl86j93z6raw:oiref>=470,330,100,60,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidhymq8j93yvl86j93yxpmj.linkidbhzhtj93yvl86j93z2ke7:oiref>=817,270,684,330:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidakbkzj93yvl86j93ywuak:oiref>=600,20,100,100,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidhymq8j93yvl86j93yxpmj:oiref>=780,170,100,100,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidakbkzj93yvl86j93ywuak.linkid8hqcmj93yvl86j93yypgm:oiref>=700,100,1000,100,1000,170:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidakbkzj93yvl86j93ywuak.linkidd61hhj93yvl86j93yyjfy:oiref>=671,120,671,170:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid3dersj94dxkjaj94dzx3w:oiref>=-20,470,417,108,0:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid7pyk4j94dxkjaj94dxxq7:oiref>=-10,40,346,40,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6toq7j94dxkjaj94dye3k:oiref>=-30,320,410,70,0:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6innej93yvl86j93z11nt.linkidf7ckjj93yvl86j93z4i4i:oiref>=790,360,759,360:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidhymq8j93yvl86j93yxpmj.linkidborafj93yvl86j93z33yd:oiref>=855,270,855,330:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid7c1n0j93yvl86j93z07d4:oiref>=610,330,149,60,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid5tt0cj93yvl86j93yxa1s:oiref>=378,168,100,100,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidgc2oqj93yvl86j93z6raw.linkidfwhfzj93yvl86j93z7uzq:oiref>=541,390,541,444:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidgc2oqj93yvl86j93z6raw.linkidh511mj93yvl86j93z9pgv:oiref>=520,390,520,470:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid8m8i3j93yvl86j93yxwoh:oiref>=950,170,113,100,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidhymq8j93yvl86j93yxpmj.linkid9bc3ij93yvl86j93z39fj:oiref>=867,270,1002,330:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidakbkzj93yvl86j93ywuak.linkid84no1j93yvl86j93yymff:oiref>=685,120,830,170:oigroup>
+<oigroup:<oiref:cpp#Class#Lidar:oiref>=450,470,195,157,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6innej93yvl86j93z11nt:oiref>=790,330,115,60,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidbq3e9j93yvl86j93yxi2u.linkid4n3ydj93yvl86j93z7241:oiref>=641,270,520,330:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6innej93yvl86j93z11nt.linkid8u93fj93yvl86j93z4m27:oiref>=905,360,950,360:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidakbkzj93yvl86j93ywuak.linkid800uqj93yvl86j93yydbd:oiref>=600,90,420,90,420,168:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidbq3e9j93yvl86j93yxi2u:oiref>=590,170,103,100,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6qly0j93yvl86j93z1m4x:oiref>=950,330,105,60,1:oigroup>
+ 
+*/
+class __positions {
+}
+/**
+@shapeType Node
+@__modelType node
+@name Car 
+*/
+class nodeidakbkzj93yvl86j93ywuak {
+/**
+@shapeType AssociatesLink
+@__modelType link
+@aggregation
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid5tt0cj93yvl86j93yxa1s:oiref><oihard> 
+*/
+class linkid800uqj93yvl86j93yydbd {
+}
+/**
+@shapeType AssociatesLink
+@__modelType link
+@aggregation
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidbq3e9j93yvl86j93yxi2u:oiref><oihard> 
+*/
+class linkidd61hhj93yvl86j93yyjfy {
+}
+/**
+@shapeType AssociatesLink
+@__modelType link
+@aggregation
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidhymq8j93yvl86j93yxpmj:oiref><oihard> 
+*/
+class linkid84no1j93yvl86j93yymff {
+}
+/**
+@shapeType AssociatesLink
+@__modelType link
+@aggregation
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid8m8i3j93yvl86j93yxwoh:oiref><oihard> 
+*/
+class linkid8hqcmj93yvl86j93yypgm {
+}
+}
+/**
+@shapeType Node
+@__modelType node
+@name HMI 
+*/
+class nodeid5tt0cj93yvl86j93yxa1s {
+}
+/**
+@shapeType Node
+@__modelType node
+@name Laserscanner 
+*/
+class nodeidbq3e9j93yvl86j93yxi2u {
+/**
+@shapeType AssociatesLink
+@__modelType link
+@aggregation
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidgc2oqj93yvl86j93z6raw:oiref><oihard> 
+*/
+class linkid4n3ydj93yvl86j93z7241 {
+}
+}
+/**
+@shapeType Node
+@__modelType node
+@name Controller 
+*/
+class nodeidhymq8j93yvl86j93yxpmj {
+/**
+@shapeType AssociatesLink
+@__modelType link
+@aggregation
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid7c1n0j93yvl86j93z07d4:oiref><oihard> 
+*/
+class linkidbhzhtj93yvl86j93z2ke7 {
+}
+/**
+@shapeType AssociatesLink
+@__modelType link
+@aggregation
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6innej93yvl86j93z11nt:oiref><oihard> 
+*/
+class linkidborafj93yvl86j93z33yd {
+}
+/**
+@shapeType AssociatesLink
+@__modelType link
+@aggregation
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6qly0j93yvl86j93z1m4x:oiref><oihard> 
+*/
+class linkid9bc3ij93yvl86j93z39fj {
+}
+}
+/**
+@shapeType Node
+@__modelType node
+@name Motioncontroller 
+*/
+class nodeid8m8i3j93yvl86j93yxwoh {
+}
+/**
+@shapeType Component
+@__modelType node
+@name Communication
+@instanceForm 
+*/
+class nodeid7c1n0j93yvl86j93z07d4 {
+}
+/**
+@shapeType Component
+@__modelType node
+@name Controller
+@instanceForm 
+*/
+class nodeid6innej93yvl86j93z11nt {
+/**
+@shapeType AssociatesLink
+@__modelType link
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid7c1n0j93yvl86j93z07d4:oiref><oihard> 
+*/
+class linkidf7ckjj93yvl86j93z4i4i {
+}
+/**
+@shapeType AssociatesLink
+@__modelType link
+@__ref <oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6qly0j93yvl86j93z1m4x:oiref><oihard> 
+*/
+class linkid8u93fj93yvl86j93z4m27 {
+}
+}
+/**
+@shapeType Component
+@__modelType node
+@name Actuator
+@instanceForm 
+*/
+class nodeid6qly0j93yvl86j93z1m4x {
+}
+/**
+@shapeType Component
+@__modelType node
+@name Lidar
+@instanceForm 
+*/
+class nodeidgc2oqj93yvl86j93z6raw {
+/**
+@shapeType SupportsLink
+@__modelType link
+@__ref <oiref:cpp#Class#Lidar:oiref><oihard> 
+*/
+class linkidh511mj93yvl86j93z9pgv {
+}
+}
+/**
+@shapeType Note
+@__modelType node
+@name Note1
+@text Node represents an entity of hardware + optional software 
+*/
+class nodeid7pyk4j94dxkjaj94dxxq7 {
+}
+/**
+@shapeType Note
+@__modelType node
+@name Note2
+@text A component represent a software functionalty, which may consist out of any number of classes 
+*/
+class nodeid6toq7j94dxkjaj94dye3k {
+}
+/**
+@shapeType Note
+@__modelType node
+@name Note3
+@text An interface class is a class which serves as an external interface to a component. Also referred to as public class 
+*/
+class nodeid3dersj94dxkjaj94dzx3w {
+}

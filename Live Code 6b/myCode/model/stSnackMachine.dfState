@@ -1,0 +1,239 @@
+package iddaj6xj9xyweivj9y0hbdw;
+
+/**
+@version 2.0
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeid32cwxj9xyweivj9y0heq3:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeid5ah38j9xyweivj9y0id2r:oiref><oihard>
+@__modelType reference 
+*/
+class reference29 {
+}
+/**
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi:oiref><oihard>
+@__modelType reference 
+*/
+class reference30 {
+}
+/**
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidfetwoj9xyweivj9y0o1yo:oiref><oihard>
+@__modelType reference 
+*/
+class reference31 {
+}
+/**
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeide22ugj9xyweivj9y0ufmc:oiref><oihard>
+@__modelType reference 
+*/
+class reference32 {
+}
+}/**
+
+@__tags
+@shapeType StateDiagram
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV+yrPQAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAOc3RTbmFj
+a01hY2hpbmV0AAVGcm9tbXh4 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidfetwoj9xyweivj9y0o1yo.linkid98dxej9xyweivj9y0wasy:oiref>=390,380,200,32,1:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidfetwoj9xyweivj9y0o1yo:oiref>=280,290,170,46,1:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeid32cwxj9xyweivj9y0heq3:oiref>=344,47,12,12,1:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi.linkid6tnctj9xyweivj9y0r939:oiref>=80,110,200,32,1:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeide22ugj9xyweivj9y0ufmc.linkid8h9ldj9y13i1tj9y157mr:oiref>=760,277,80,16,1:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidfetwoj9xyweivj9y0o1yo.linkid98dxej9xyweivj9y0wasy:oiref>=323,336,323,430:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeide22ugj9xyweivj9y0ufmc.linkid4vq7uj9y13i1tj9y16xs0:oiref>=870,234,72,16,1:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidfetwoj9xyweivj9y0o1yo.linkid520tnj9xyweivj9y0unwa:oiref>=367,336,367,430:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeide22ugj9xyweivj9y0ufmc:oiref>=280,430,144,46,1:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeid5ah38j9xyweivj9y0id2r:oiref>=860,80,117,104,1:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi.linkid6tnctj9xyweivj9y0r939:oiref>=320,145,280,145,280,200,340,200,340,150:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeide22ugj9xyweivj9y0ufmc.linkid8h9ldj9y13i1tj9y157mr:oiref>=424,450,750,450,750,120,384,120:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeide22ugj9xyweivj9y0ufmc.linkiddqfunj9xyweivj9y12mxw:oiref>=382,506,171,16,1:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeide22ugj9xyweivj9y0ufmc.linkid4vq7uj9y13i1tj9y16xs0:oiref>=424,458,910,460,810,60,384,115:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidfetwoj9xyweivj9y0o1yo.linkid520tnj9xyweivj9y0unwa:oiref>=150,370,165,16,1:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi.linkidj7xzwj9xyweivj9y0oc4i:oiref>=362,212,191,16,1:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeide22ugj9xyweivj9y0ufmc.linkiddqfunj9xyweivj9y12mxw:oiref>=424,466,444,466,444,496,414,496,414,476:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidfetwoj9xyweivj9y0o1yo.linkid7mrywj9xyweivj9y0z1rh:oiref>=460,300,200,16,1:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidfetwoj9xyweivj9y0o1yo.linkidbxlnrj9xyweivj9y1106e:oiref>=50,230,144,16,1:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi.linkideiagpj9xyweivj9y0m37u:oiref>=343,180,169,16,1:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeid32cwxj9xyweivj9y0heq3.linkid7w5icj9xyweivj9y0kd3x:oiref>=350,59,350,110:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi.linkidj7xzwj9xyweivj9y0oc4i:oiref>=352,150,352,290:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi:oiref>=320,110,64,40,1:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidfetwoj9xyweivj9y0o1yo.linkid7mrywj9xyweivj9y0z1rh:oiref>=450,326,470,326,470,356,440,356,440,336:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidfetwoj9xyweivj9y0o1yo.linkidbxlnrj9xyweivj9y1106e:oiref>=280,300,230,300,230,140,320,135:oigroup>
+<oigroup:<oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi.linkideiagpj9xyweivj9y0m37u:oiref>=384,140,404,140,404,170,374,170,374,150:oigroup>
+*/
+class __positions {
+}
+/**
+@shapeType StartState
+@__modelType node
+@name StartState1
+@backgroundColor 0,0,0 
+*/
+class nodeid32cwxj9xyweivj9y0heq3 {
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi:oiref><oihard> 
+*/
+class linkid7w5icj9xyweivj9y0kd3x {
+}
+}
+/**
+@shapeType Note
+@__modelType node
+@name Note1
+@text Events:
+
+ev_EnterMoney
+ev_PressButton
+ev_Cancel
+ev_OpenTray(?) 
+*/
+class nodeid5ah38j9xyweivj9y0id2r {
+}
+/**
+@shapeType State
+@__modelType node
+@name IS_IDLE 
+*/
+class nodeidimywcj9xyweivj9y0k1zi {
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi:oiref><oihard>
+@event ev_EnterMoney
+@action returnMoney() 
+*/
+class linkideiagpj9xyweivj9y0m37u {
+}
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidfetwoj9xyweivj9y0o1yo:oiref><oihard>
+@event ev_PressButton
+@condition trayIsNotEmpty()*/
+class linkidj7xzwj9xyweivj9y0oc4i {
+}
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi:oiref><oihard>
+@event ev_PressButton
+@condition !trayIsNotEmpty()
+@action showMessage() 
+*/
+class linkid6tnctj9xyweivj9y0r939 {
+}
+}
+/**
+@shapeType State
+@__modelType node
+@name IS_WAITINGPAYMENT 
+*/
+class nodeidfetwoj9xyweivj9y0o1yo {
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeide22ugj9xyweivj9y0ufmc:oiref><oihard>
+@event ev_EnterMoney
+@condition exactMatch()*/
+class linkid520tnj9xyweivj9y0unwa {
+}
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeide22ugj9xyweivj9y0ufmc:oiref><oihard>
+@event ev_EnterMoney
+@condition overpaid()
+@action returnChange() 
+*/
+class linkid98dxej9xyweivj9y0wasy {
+}
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidfetwoj9xyweivj9y0o1yo:oiref><oihard>
+@event ev_EnterMoney
+@condition notEnoughMoney() 
+*/
+class linkid7mrywj9xyweivj9y0z1rh {
+}
+/**
+@shapeType InternalTransition
+@__modelType member
+@name entry
+@eventArguments
+@action showRemainingPrice 
+*/
+class memberid879ktj9xyweivj9y0zkyf {
+}
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi:oiref><oihard>
+@event ev_Cancel
+@action returnMoney()
+*/
+class linkidbxlnrj9xyweivj9y1106e {
+}
+}
+/**
+@shapeType State
+@__modelType node
+@name IS_PROVIDINGSNACK 
+*/
+class nodeide22ugj9xyweivj9y0ufmc {
+/**
+@shapeType InternalTransition
+@__modelType member
+@name entry
+@eventArguments
+@action provideSnack 
+*/
+class memberid60w6sj9xyweivj9y0xjsl {
+}
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeide22ugj9xyweivj9y0ufmc:oiref><oihard>
+@event ev_ENterMoney 
+@action returnMoney()
+*/
+class linkiddqfunj9xyweivj9y12mxw {
+}
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi:oiref><oihard>
+@event ev_OpenTray 
+*/
+class linkid8h9ldj9y13i1tj9y157mr {
+}
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#iddaj6xj9xyweivj9y0hbdw.nodeidimywcj9xyweivj9y0k1zi:oiref><oihard>
+@event ev_Timeout 
+*/
+class linkid4vq7uj9y13i1tj9y16xs0 {
+}
+}

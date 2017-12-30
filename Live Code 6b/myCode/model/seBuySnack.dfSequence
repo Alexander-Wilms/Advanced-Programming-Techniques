@@ -1,0 +1,484 @@
+package id8iwu3j9y13i1tj9y1h86z;
+
+/**
+@version 2.0
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidej3s5j9y13i1tj9y1hso6:oiref><oihard>
+@__modelType reference 
+*/
+class reference3 {
+}
+/**
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidc13u3j9y13i1tj9y1j3lx:oiref><oihard>
+@__modelType reference 
+*/
+class reference4 {
+}
+/**
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidetiarj9y13i1tj9y1jc5u:oiref><oihard>
+@__modelType reference 
+*/
+class reference5 {
+}
+/**
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f:oiref><oihard>
+@__modelType reference 
+*/
+class reference6 {
+}
+/**
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidabwezj9y13i1tj9y1o83s:oiref><oihard>
+@__modelType reference 
+*/
+class reference7 {
+}
+/**
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid18d61j9y13i1tj9y1pox0:oiref><oihard>
+@__modelType reference 
+*/
+class reference8 {
+}
+/**
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidbg1bfj9y13i1tj9y1va7h:oiref><oihard>
+@__modelType reference 
+*/
+class reference9 {
+}
+}/**
+Good case: Snack is available and enough money has been entered
+@__tags
+@shapeType SequenceDiagram
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV+yrPQAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAKc2VCdXlT
+bmFja3QABUZyb21teHg= 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ytt9j9y13i1tj9y1p1bg:oiref>=285,315,748,315:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.nodeid5oh6vj9y13i1tj9y1mq2v:oiref>=748,245,14,40,1:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkidr3xrj9y13i1tj9y1oj2l:oiref>=289,270,127,16,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidbg1bfj9y13i1tj9y1va7h:oiref>=858,30,90,445,1:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6inasj9y13i1tj9y1kqlq:oiref>=289,160,126,16,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid8ps3oj9y13i1tj9y1q3b5:oiref>=:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid3ymikj9y13i1tj9y1pban:oiref>=285,340,1009,340:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid4y2fkj9y13i1tj9y1mq2i:oiref>=285,245,748,245:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.linkid2gpjzj9y13i1tj9y1voh2:oiref>=762,255,896,255:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidbg1bfj9y13i1tj9y1va7h.nodeidj3tvxj9y13i1tj9y1vohm:oiref>=896,255,14,20,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ojpoj9y13i1tj9y1kh3i:oiref>=285,137,615,137:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidej3s5j9y13i1tj9y1hso6.linkid86w4lj9y13i1tj9y1i43s:oiref>=132,106,72,16,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.linkid58z8xj9y13i1tj9y1vohp:oiref>=:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidej3s5j9y13i1tj9y1hso6.linkid2fiiij9y13i1tj9y1i44e:oiref>=:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkidfta2lj9y13i1tj9y1oj30:oiref>=:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b:oiref>=222,30,113,445,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.nodeidkz6oj9y13i1tj9y1i44b:oiref>=271,126,14,269,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidabwezj9y13i1tj9y1o83s.nodeid2xs71j9y13i1tj9y1oj2x:oiref>=1009,290,14,20,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid18d61j9y13i1tj9y1pox0.nodeidaxxyhj9y13i1tj9y1q3av:oiref>=1122,365,14,20,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkidc27q3j9y13i1tj9y1lzd6:oiref>=:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid74tdaj9y13i1tj9y1lzcp:oiref>=289,200,179,16,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6tdstj9y13i1tj9y1kqm9:oiref>=:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.nodeidgo9qjj9y13i1tj9y1p1bu:oiref>=748,315,14,20,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidabwezj9y13i1tj9y1o83s.nodeidc1yorj9y13i1tj9y1pbb1:oiref>=1009,340,14,20,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidetiarj9y13i1tj9y1jc5u:oiref>=577,30,90,445,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6inasj9y13i1tj9y1kqlq:oiref>=285,180,453,180:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidc13u3j9y13i1tj9y1j3lx.nodeidafd1hj9y13i1tj9y1kqm4:oiref>=453,180,14,20,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkidr3xrj9y13i1tj9y1oj2l:oiref>=285,290,1009,290:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid8ev3gj9y13i1tj9y1q3a8:oiref>=289,345,146,16,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidc13u3j9y13i1tj9y1j3lx:oiref>=415,30,90,445,1:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ytt9j9y13i1tj9y1p1bg:oiref>=289,295,134,16,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid18d61j9y13i1tj9y1pox0:oiref>=1084,30,90,445,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidabwezj9y13i1tj9y1o83s:oiref>=971,30,90,445,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidej3s5j9y13i1tj9y1hso6.linkid86w4lj9y13i1tj9y1i43s:oiref>=128,126,271,126:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.nodeidcehs8j9y13i1tj9y1lzd2:oiref>=748,220,14,20,1:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid3ymikj9y13i1tj9y1pban:oiref>=289,320,140,16,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid8f2d6j9y13i1tj9y1kh3y:oiref>=:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid4y2fkj9y13i1tj9y1mq2i:oiref>=289,225,110,16,0:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.linkid2gpjzj9y13i1tj9y1voh2:oiref>=766,235,119,16,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid74tdaj9y13i1tj9y1lzcp:oiref>=285,220,748,220:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidej3s5j9y13i1tj9y1hso6:oiref>=76,30,90,445,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidetiarj9y13i1tj9y1jc5u.nodeidi5sezj9y13i1tj9y1kh3v:oiref>=615,137,14,20,1:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ojpoj9y13i1tj9y1kh3i:oiref>=289,117,135,16,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid8ev3gj9y13i1tj9y1q3a8:oiref>=285,365,1122,365:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f:oiref>=710,30,90,445,1:oigroup>
+*/
+class __positions {
+}
+/**
+@shapeType Object
+@__modelType node
+@name m_snackmachine 
+*/
+class nodeidijsuaj9y13i1tj9y1hb9b {
+/**
+@shapeType DependencyLink
+@__modelType link
+@__ref <oiref:cpp#Class#CSnackMachine:oiref><oihard> 
+*/
+class linkid62a4sj9y13i1tj9y1hpu8 {
+}
+/**
+@shapeType Activation
+@__modelType node
+@name Activation1
+@activationMessage <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidej3s5j9y13i1tj9y1hso6.linkid86w4lj9y13i1tj9y1i43s:oiref> 
+*/
+class nodeidkz6oj9y13i1tj9y1i44b {
+}
+/**
+@shapeType MessageLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidetiarj9y13i1tj9y1jc5u:oiref><oihard>
+@sendingInstant 137
+@processingDuration 20 
+@sequenceNumber 1.1
+@diagram_uniqe_name <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.diagram:oiref>
+@operation <oiref:cpp#Member#CDisplay#displayString#(##)#:oiref>
+@operationNameAsText 'displayString():void'
+@showReturnArrow*/
+class linkid6ojpoj9y13i1tj9y1kh3i {
+}
+/**
+@shapeType CollaborationLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidetiarj9y13i1tj9y1jc5u:oiref><oihard> 
+*/
+class linkid8f2d6j9y13i1tj9y1kh3y {
+}
+/**
+@shapeType MessageLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidc13u3j9y13i1tj9y1j3lx:oiref><oihard>
+@sendingInstant 180
+@processingDuration 20 
+@sequenceNumber 1.2
+@diagram_uniqe_name <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.diagram:oiref>
+@operation <oiref:cpp#Member#CKeyboard#getNumber#(##)#:oiref>
+@operationNameAsText 'getNumber():void'
+@minProcessingDuration 20
+*/
+class linkid6inasj9y13i1tj9y1kqlq {
+}
+/**
+@shapeType CollaborationLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidc13u3j9y13i1tj9y1j3lx:oiref><oihard> 
+*/
+class linkid6tdstj9y13i1tj9y1kqm9 {
+}
+/**
+@shapeType MessageLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f:oiref><oihard>
+@sendingInstant 220
+@processingDuration 20 
+@sequenceNumber 1.3
+@diagram_uniqe_name <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.diagram:oiref>
+@operation <oiref:cpp#Member#CSnackArray#getNumberOfSnacks#(##)#:oiref>
+@operationNameAsText 'getNumberOfSnacks():void'
+*/
+class linkid74tdaj9y13i1tj9y1lzcp {
+}
+/**
+@shapeType CollaborationLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f:oiref><oihard> 
+*/
+class linkidc27q3j9y13i1tj9y1lzd6 {
+}
+/**
+@shapeType MessageLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f:oiref><oihard>
+@sendingInstant 245
+@processingDuration 40
+@sequenceNumber 1.4
+@diagram_uniqe_name <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.diagram:oiref>
+@operation <oiref:cpp#Member#CSnackArray#getPrice#(##)#:oiref>
+@operationNameAsText 'operation1():void'
+*/
+class linkid4y2fkj9y13i1tj9y1mq2i {
+}/**
+@shapeType MessageLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidabwezj9y13i1tj9y1o83s:oiref><oihard>
+@sendingInstant 290
+@processingDuration 20 
+@sequenceNumber 1.5
+@diagram_uniqe_name <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.diagram:oiref>
+@operation <oiref:cpp#Member#CPaymentSlot#enterMoney#(##)#:oiref>
+@operationNameAsText 'enterMoney():void'
+*/
+class linkidr3xrj9y13i1tj9y1oj2l {
+}
+/**
+@shapeType CollaborationLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidabwezj9y13i1tj9y1o83s:oiref><oihard> 
+*/
+class linkidfta2lj9y13i1tj9y1oj30 {
+}
+/**
+@shapeType MessageLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f:oiref><oihard>
+@sendingInstant 315
+@processingDuration 20 
+@sequenceNumber 1.6
+@diagram_uniqe_name <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.diagram:oiref>
+@operation <oiref:cpp#Member#CSnackArray#deliverSnack#(##)#:oiref>
+@operationNameAsText 'deliverSnack():void'
+*/
+class linkid6ytt9j9y13i1tj9y1p1bg {
+}/**
+@shapeType MessageLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidabwezj9y13i1tj9y1o83s:oiref><oihard>
+@sendingInstant 340
+@processingDuration 20 
+@sequenceNumber 1.7
+@diagram_uniqe_name <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.diagram:oiref>
+@operation <oiref:cpp#Member#CPaymentSlot#returnChange#(##)#:oiref>
+@operationNameAsText 'returnChange():void'
+*/
+class linkid3ymikj9y13i1tj9y1pban {
+}/**
+@shapeType MessageLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid18d61j9y13i1tj9y1pox0:oiref><oihard>
+@sendingInstant 365
+@processingDuration 20 
+@sequenceNumber 1.8
+@diagram_uniqe_name <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.diagram:oiref>
+@operation <oiref:cpp#Member#CTray#getOpenStatus#(##)#:oiref>
+@operationNameAsText 'getOpenStatus():void'
+*/
+class linkid8ev3gj9y13i1tj9y1q3a8 {
+}
+/**
+@shapeType CollaborationLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid18d61j9y13i1tj9y1pox0:oiref><oihard> 
+*/
+class linkid8ps3oj9y13i1tj9y1q3b5 {
+}
+}
+/**
+@shapeType Object
+@__modelType node
+@name main
+@stereotype actor 
+*/
+class nodeidej3s5j9y13i1tj9y1hso6 {
+/**
+@shapeType MessageLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b:oiref><oihard>
+@sendingInstant 126
+@processingDuration 269
+@sequenceNumber 1
+@diagram_uniqe_name <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.diagram:oiref>
+@operation <oiref:cpp#Member#CSnackMachine#run#(##)#:oiref>
+@operationNameAsText 'run():void' 
+*/
+class linkid86w4lj9y13i1tj9y1i43s {
+}
+/**
+@shapeType CollaborationLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b:oiref><oihard> 
+*/
+class linkid2fiiij9y13i1tj9y1i44e {
+}
+}
+/**
+@shapeType Object
+@__modelType node
+@name m_keyboard 
+*/
+class nodeidc13u3j9y13i1tj9y1j3lx {
+/**
+@shapeType DependencyLink
+@__modelType link
+@__ref <oiref:cpp#Class#CKeyboard:oiref><oihard> 
+*/
+class linkid5537sj9y13i1tj9y1jirh {
+}
+/**
+@shapeType Activation
+@__modelType node
+@name Activation3
+@activationMessage <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6inasj9y13i1tj9y1kqlq:oiref> 
+*/
+class nodeidafd1hj9y13i1tj9y1kqm4 {
+}
+}
+/**
+@shapeType Object
+@__modelType node
+@name m_display 
+*/
+class nodeidetiarj9y13i1tj9y1jc5u {
+/**
+@shapeType DependencyLink
+@__modelType link
+@__ref <oiref:cpp#Class#CDisplay:oiref><oihard> 
+*/
+class linkid9u8bwj9y13i1tj9y1joa8 {
+}
+/**
+@shapeType Activation
+@__modelType node
+@name Activation2
+@activationMessage <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ojpoj9y13i1tj9y1kh3i:oiref> 
+*/
+class nodeidi5sezj9y13i1tj9y1kh3v {
+}
+}
+/**
+@shapeType Object
+@__modelType node
+@name m_snacktray 
+*/
+class nodeid2xx30j9y13i1tj9y1lk3f {
+/**
+@shapeType DependencyLink
+@__modelType link
+@__ref <oiref:cpp#Class#CSnackArray:oiref><oihard> 
+*/
+class linkid67qksj9y13i1tj9y1lrfd {
+}
+/**
+@shapeType Activation
+@__modelType node
+@name Activation4
+@activationMessage <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid74tdaj9y13i1tj9y1lzcp:oiref> 
+*/
+class nodeidcehs8j9y13i1tj9y1lzd2 {
+}
+/**
+@shapeType Activation
+@__modelType node
+@name Activation5
+@activationMessage <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid4y2fkj9y13i1tj9y1mq2i:oiref> 
+*/
+class nodeid5oh6vj9y13i1tj9y1mq2v {
+}
+/**
+@shapeType Activation
+@__modelType node
+@name Activation7
+@activationMessage <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ytt9j9y13i1tj9y1p1bg:oiref> 
+*/
+class nodeidgo9qjj9y13i1tj9y1p1bu {
+}
+/**
+@shapeType MessageLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidbg1bfj9y13i1tj9y1va7h:oiref><oihard>
+@sendingInstant 255
+@processingDuration 20 
+@sequenceNumber 1.4.1
+@diagram_uniqe_name <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.diagram:oiref>
+@operation <oiref:cpp#Member#CSnack#getPrice#(##)#:oiref>
+@operationNameAsText 'getPrice():void'
+*/
+class linkid2gpjzj9y13i1tj9y1voh2 {
+}
+/**
+@shapeType CollaborationLink
+@__modelType link
+@__ref <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidbg1bfj9y13i1tj9y1va7h:oiref><oihard> 
+*/
+class linkid58z8xj9y13i1tj9y1vohp {
+}
+}
+/**
+@shapeType Object
+@__modelType node
+@name m_payslot 
+*/
+class nodeidabwezj9y13i1tj9y1o83s {
+/**
+@shapeType DependencyLink
+@__modelType link
+@__ref <oiref:cpp#Class#CPaymentSlot:oiref><oihard> 
+*/
+class linkiddx9svj9y13i1tj9y1oeac {
+}
+/**
+@shapeType Activation
+@__modelType node
+@name Activation6
+@activationMessage <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkidr3xrj9y13i1tj9y1oj2l:oiref> 
+*/
+class nodeid2xs71j9y13i1tj9y1oj2x {
+}
+/**
+@shapeType Activation
+@__modelType node
+@name Activation8
+@activationMessage <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid3ymikj9y13i1tj9y1pban:oiref> 
+*/
+class nodeidc1yorj9y13i1tj9y1pbb1 {
+}
+}
+/**
+@shapeType Object
+@__modelType node
+@name m_tray 
+*/
+class nodeid18d61j9y13i1tj9y1pox0 {
+/**
+@shapeType DependencyLink
+@__modelType link
+@__ref <oiref:cpp#Class#CTray:oiref><oihard> 
+*/
+class linkid9ozt8j9y13i1tj9y1pyjx {
+}
+/**
+@shapeType Activation
+@__modelType node
+@name Activation9
+@activationMessage <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid8ev3gj9y13i1tj9y1q3a8:oiref> 
+*/
+class nodeidaxxyhj9y13i1tj9y1q3av {
+}
+}
+/**
+@shapeType Object
+@__modelType node
+@name m_snack 
+*/
+class nodeidbg1bfj9y13i1tj9y1va7h {
+/**
+@shapeType DependencyLink
+@__modelType link
+@__ref <oiref:cpp#Class#CSnack:oiref><oihard> 
+*/
+class linkidi7367j9y13i1tj9y1vi0l {
+}
+/**
+@shapeType Activation
+@__modelType node
+@name Activation10
+@activationMessage <oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.linkid2gpjzj9y13i1tj9y1voh2:oiref> 
+*/
+class nodeidj3tvxj9y13i1tj9y1vohm {
+}
+}

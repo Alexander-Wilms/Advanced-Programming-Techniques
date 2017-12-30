@@ -1,0 +1,268 @@
+package id5uy79j9xvvv07j9xvxltp;
+
+/**
+@version 2.0
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidaqh82j9xvvv07j9xvyct7:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidgxuwsj9xvvv07j9xvyhmt:oiref><oihard>
+@__modelType reference 
+*/
+class reference1 {
+}
+/**
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidbv6h9j9xvvv07j9xvym65:oiref><oihard>
+@__modelType reference 
+*/
+class reference2 {
+}
+/**
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid67f54j9xvvv07j9xvyv6r:oiref><oihard>
+@__modelType reference 
+*/
+class reference3 {
+}
+/**
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidjkuybj9xvvv07j9xvz806:oiref><oihard>
+@__modelType reference 
+*/
+class reference4 {
+}
+/**
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid572okj9xvvv07j9xvzud1:oiref><oihard>
+@__modelType reference 
+*/
+class reference5 {
+}
+/**
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid5jfdsj9xvvv07j9xw09d8:oiref><oihard>
+@__modelType reference 
+*/
+class reference6 {
+}
+/**
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid9kj9uj9xvvv07j9xw2ikv:oiref><oihard>
+@__modelType reference 
+*/
+class reference7 {
+}
+/**
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid4kp0fj9xvvv07j9xw3g3o:oiref><oihard>
+@__modelType reference 
+*/
+class reference8 {
+}
+/**
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidj0jrnj9xvvv07j9xw4pff:oiref><oihard>
+@__modelType reference 
+*/
+class reference9 {
+}
+/**
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeiddsx0vj9xvvv07j9xw5go6:oiref><oihard>
+@__modelType reference 
+*/
+class reference10 {
+}
+/**
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidbqhndj9xvvv07j9xw5p61:oiref><oihard>
+@__modelType reference 
+*/
+class reference11 {
+}
+}/**
+
+@__tags
+@shapeType UseCaseDiagram 
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV+yrPQAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAKdWNPdmVy
+dmlld3QABUZyb21teHg=
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid572okj9xvvv07j9xvzud1:oiref>=281,239,132,26,1:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid67f54j9xvvv07j9xvyv6r.linkid2q9vqj9xvvv07j9xvz33v:oiref>=243,60,163,77:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidbv6h9j9xvvv07j9xvym65.linkidhfqqij9xvvv07j9xw0hvc:oiref>=167,358,322,358:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidgxuwsj9xvvv07j9xvyhmt.linkid1oobnj9xvvv07j9xvzgmc:oiref>=150,201,274,166:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid67f54j9xvvv07j9xvyv6r:oiref>=243,44,149,26,1:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidbqhndj9xvvv07j9xw5p61:oiref>=726,367,194,26,1:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid5jfdsj9xvvv07j9xw09d8:oiref>=322,345,142,26,1:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidbqhndj9xvvv07j9xw5p61.linkideyycaj9xvvv07j9xw5ys9:oiref>=920,380,985,380:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeiddsx0vj9xvvv07j9xw5go6.linkidajtadj9xvvv07j9xw62rc:oiref>=862,319,985,368:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidj0jrnj9xvvv07j9xw4pff:oiref>=638,164,286,48,1:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidaqh82j9xvvv07j9xvyct7.linkid1i6r6j9xvvv07j9xvzjan:oiref>=163,134,274,158:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid4kp0fj9xvvv07j9xw3g3o:oiref>=643,78,286,26,1:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidgxuwsj9xvvv07j9xvyhmt.linkid68a52j9xvvv07j9xw00jq:oiref>=150,252,281,252:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidjkuybj9xvvv07j9xvz806:oiref>=274,150,204,26,1:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid9kj9uj9xvvv07j9xw2ikv:oiref>=985,353,97,77,1:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeiddsx0vj9xvvv07j9xw5go6:oiref>=678,303,184,26,1:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidj0jrnj9xvvv07j9xw4pff.linkid40pkej9xvvv07j9xw52j5:oiref>=781,212,1009,353:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid4kp0fj9xvvv07j9xw3g3o.linkid3ej0aj9xvvv07j9xw3stk:oiref>=786,104,1033,353:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidaqh82j9xvvv07j9xvyct7:oiref>=111,67,52,77,1:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidbv6h9j9xvvv07j9xvym65:oiref>=115,331,52,77,1:oigroup>
+<oigroup:<oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidgxuwsj9xvvv07j9xvyhmt:oiref>=98,191,52,77,1:oigroup>
+*/
+class __positions {
+}
+/**
+@shapeType Actor
+@__modelType node
+@name Captain 
+*/
+class nodeidaqh82j9xvvv07j9xvyct7 {
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidjkuybj9xvvv07j9xvz806:oiref><oihard> 
+*/
+class linkid1i6r6j9xvvv07j9xvzjan {
+}
+}
+/**
+@shapeType Actor
+@__modelType node
+@name Sailor 
+*/
+class nodeidgxuwsj9xvvv07j9xvyhmt {
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidjkuybj9xvvv07j9xvz806:oiref><oihard> 
+*/
+class linkid1oobnj9xvvv07j9xvzgmc {
+}
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid572okj9xvvv07j9xvzud1:oiref><oihard> 
+*/
+class linkid68a52j9xvvv07j9xw00jq {
+}
+}
+/**
+@shapeType Actor
+@__modelType node
+@name Boat 
+*/
+class nodeidbv6h9j9xvvv07j9xvym65 {
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid5jfdsj9xvvv07j9xw09d8:oiref><oihard> 
+*/
+class linkidhfqqij9xvvv07j9xw0hvc {
+}
+}
+/**
+@shapeType UseCase
+@__modelType node
+@name Navigate the boat 
+*/
+class nodeid67f54j9xvvv07j9xvyv6r {
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeidaqh82j9xvvv07j9xvyct7:oiref><oihard> 
+*/
+class linkid2q9vqj9xvvv07j9xvz33v {
+}
+}
+/**
+@shapeType UseCase
+@__modelType node
+@name ENter and leave the boat 
+*/
+class nodeidjkuybj9xvvv07j9xvz806 {
+}
+/**
+@shapeType UseCase
+@__modelType node
+@name Raise the sails 
+*/
+class nodeid572okj9xvvv07j9xvzud1 {
+}
+/**
+@shapeType UseCase
+@__modelType node
+@name Sail the vast sea 
+*/
+class nodeid5jfdsj9xvvv07j9xw09d8 {
+}
+/**
+@shapeType Actor
+@__modelType node
+@name Simulation User 
+*/
+class nodeid9kj9uj9xvvv07j9xw2ikv {
+}
+/**
+@shapeType UseCase
+@__modelType node
+@name Create Boat, Capzain, Sailor Object 
+*/
+class nodeid4kp0fj9xvvv07j9xw3g3o {
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid9kj9uj9xvvv07j9xw2ikv:oiref><oihard> 
+*/
+class linkid3ej0aj9xvvv07j9xw3stk {
+}
+}
+/**
+@shapeType UseCase
+@__modelType node
+@name CHoose boat and have crew enter the boat 
+*/
+class nodeidj0jrnj9xvvv07j9xw4pff {
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid9kj9uj9xvvv07j9xw2ikv:oiref><oihard> 
+*/
+class linkid40pkej9xvvv07j9xw52j5 {
+}
+}
+/**
+@shapeType UseCase
+@__modelType node
+@name Have captain navigate 
+*/
+class nodeiddsx0vj9xvvv07j9xw5go6 {
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid9kj9uj9xvvv07j9xw2ikv:oiref><oihard> 
+*/
+class linkidajtadj9xvvv07j9xw62rc {
+}
+}
+/**
+@shapeType UseCase
+@__modelType node
+@name Have crew set the sails 
+*/
+class nodeidbqhndj9xvvv07j9xw5p61 {
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id5uy79j9xvvv07j9xvxltp.nodeid9kj9uj9xvvv07j9xw2ikv:oiref><oihard> 
+*/
+class linkideyycaj9xvvv07j9xw5ys9 {
+}
+}

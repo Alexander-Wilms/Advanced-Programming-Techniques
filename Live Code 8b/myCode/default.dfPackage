@@ -1,0 +1,53 @@
+package id3b260jai0qjufjai0qksh;
+
+/**
+@version 2.0
+@physicalPackage
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:cpp#Class#Coordinate:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:cpp#Class#Class1:oiref><oihard>
+@__modelType reference 
+*/
+class reference2 {
+}
+}/**
+@__tags
+@shapeType ClassDiagram
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV/6xfwAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAJPGRlZmF1
+bHQ+dAAFRnJvbW14eA==
+@elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACdAAiPG9pcmVmOmNwcCNDbGFzcyNDb29yZGluYXRlOm9p
+cmVmPnNxAH4AAD9AAAAAAAAMdwgAAAAQAAAAAXNyAA5qYXZhLmxhbmcuTG9uZzuL5JDMjyPfAgAB
+SgAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAFf+sX8AHNyABNqYXZh
+LnV0aWwuQXJyYXlMaXN0eIHSHZnHYZ0DAAFJAARzaXpleHAAAAABdwQAAAAKc3IAJWRlLm1ubC5k
+b2Nib29rNFRBLmltcGwuQ2hhbmdlTG9nRW50cnkHjY61+aoknwIAA0wACGhvc3RuYW1ldAASTGph
+dmEvbGFuZy9TdHJpbmc7TAAEbmFtZXEAfgAKTAAEdXNlcnEAfgAKeHB0AAhGcm9tbS1OQnQACkNv
+b3JkaW5hdGV0AAVGcm9tbXh4dAAePG9pcmVmOmNwcCNDbGFzcyNDbGFzczE6b2lyZWY+c3EAfgAA
+P0AAAAAAAAx3CAAAABAAAAABc3EAfgAEAAABX/rF/ABzcQB+AAcAAAABdwQAAAAKc3EAfgAJcQB+
+AAx0AAZDbGFzczFxAH4ADnh4eA== 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:cpp#Class#CCoordinate:oiref>=509,165,101,143,1:oigroup>
+<oigroup:<oiref:cpp#Class#Class1:oiref>=342,117,83,82,1:oigroup>
+<oigroup:<oiref:cpp#Class#Coordinate:oiref>=10,10,111,159,1:oigroup>
+*/
+class __positions {
+}

@@ -1,0 +1,171 @@
+package idhtno4j9dv3xabj9dvje3y;
+
+/**
+@version 2.0
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid4mad0j9dv3xabj9dvjh5j:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeidc8xywj9dv3xabj9dvqa66:oiref><oihard>
+@__modelType reference 
+*/
+class reference4 {
+}
+/**
+@__ref <oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz:oiref><oihard>
+@__modelType reference 
+*/
+class reference5 {
+}
+/**
+@__ref <oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeidle26j9dv3xabj9dvuhk1:oiref><oihard>
+@__modelType reference 
+*/
+class reference6 {
+}
+}/**
+
+@__tags
+@shapeType UseCaseDiagram
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9qk+wAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAPdWNHcmFw
+Y2FsU3lzdGVtdAAFRnJvbW14eA== 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeidfixpcj9dv3xabj9dvkelx:oiref>=380,80,204,26,1:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeidbdrsnj9dv3xabj9dvo0ss:oiref>=390,300,286,48,1:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeidbdrsnj9dv3xabj9dvo0ss.linkid68bbmj9dv3xabj9dvocfd:oiref>=528,300,528,218:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid4mad0j9dv3xabj9dvjh5j.linkid8jieyj9dv3xabj9dwud47:oiref>=109,247,485,428:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeidle26j9dv3xabj9dvuhk1:oiref>=860,300,225,26,1:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz:oiref>=266,26,517,488,0:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid4mad0j9dv3xabj9dvjh5j.linkidiyoyij9dv3xabj9dvnz4n:oiref>=148,194,380,194:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeid9q3nfj9dv3xabj9dwu3te:oiref>=373,428,225,26,1:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeidfg0s9j9dv3xabj9dvnp0e.linkidbl3elj9dv3xabj9dvp8uo:oiref>=482,170,482,106:oigroup>
+<oigroup:Composite#<<extend>>#<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeidle26j9dv3xabj9dvuhk1.linkid50h4sj9dv3xabj9dvuuj7:oiref>=732,293,72,16,0:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeidfg0s9j9dv3xabj9dvnp0e:oiref>=380,170,286,48,1:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeidc8xywj9dv3xabj9dvqa66:oiref>=490,120,307,40,1:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid4mad0j9dv3xabj9dvjh5j:oiref>=70,170,78,77,1:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeidle26j9dv3xabj9dvuhk1.linkid50h4sj9dv3xabj9dvuuj7:oiref>=860,313,676,313:oigroup>
+<oigroup:<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid4mad0j9dv3xabj9dvjh5j.linkid2s9ejj9dv3xabj9dvnmva:oiref>=109,170,431,106:oigroup>
+<oigroup:Composite#<<extend>>#<oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeidbdrsnj9dv3xabj9dvo0ss.linkid68bbmj9dv3xabj9dvocfd:oiref>=452,249,72,16,0:oigroup>
+*/
+class __positions {
+}
+/**
+@shapeType Actor
+@__modelType node
+@name Programmer 
+*/
+class nodeid4mad0j9dv3xabj9dvjh5j {
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeidfixpcj9dv3xabj9dvkelx:oiref><oihard> 
+*/
+class linkid2s9ejj9dv3xabj9dvnmva {
+}
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeidfg0s9j9dv3xabj9dvnp0e:oiref><oihard> 
+*/
+class linkidiyoyij9dv3xabj9dvnz4n {
+}
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeid9q3nfj9dv3xabj9dwu3te:oiref><oihard> 
+*/
+class linkid8jieyj9dv3xabj9dwud47 {
+}
+}
+/**
+@shapeType Note
+@__modelType node
+@name Note1
+@text The include relation might be a bit over engineered 
+*/
+class nodeidc8xywj9dv3xabj9dvqa66 {
+}
+/**
+@shapeType SystemBoundary
+@__modelType node
+@name Graphical Sytem
+@backgroundColor 200,200,200 
+*/
+class nodeid7x610j9dv3xabj9dvr7oz {
+/**
+We want to create objects of the following kind:
+- Triangles
+- Circles
+- Textblocks
+- Rectangles
+@shapeType UseCase
+@__modelType node
+@name Create graphical objects 
+*/
+class nodeidfixpcj9dv3xabj9dvkelx {
+}/**
+@shapeType UseCase
+@__modelType node
+@name Print the objects on a single screen 
+*/
+class nodeidfg0s9j9dv3xabj9dvnp0e {
+/**
+@shapeType IncludesLink
+@__modelType link
+@__ref <oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeidfixpcj9dv3xabj9dvkelx:oiref><oihard> 
+*/
+class linkidbl3elj9dv3xabj9dvp8uo {
+}
+}/**
+@shapeType UseCase
+@__modelType node
+@name Print the objects on multiple screens 
+*/
+class nodeidbdrsnj9dv3xabj9dvo0ss {
+/**
+@shapeType ExtendsLink
+@__modelType link
+@__ref <oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeidfg0s9j9dv3xabj9dvnp0e:oiref><oihard> 
+*/
+class linkid68bbmj9dv3xabj9dvocfd {
+}
+}
+/**
+@shapeType UseCase
+@__modelType node
+@name Move objects on the screen 
+*/
+class nodeid9q3nfj9dv3xabj9dwu3te {
+}
+}
+/**
+@shapeType UseCase
+@__modelType node
+@name Display objects on real GUI 
+*/
+class nodeidle26j9dv3xabj9dvuhk1 {
+/**
+@shapeType ExtendsLink
+@__modelType link
+@__ref <oiref:design#Class#idhtno4j9dv3xabj9dvje3y.nodeid7x610j9dv3xabj9dvr7oz.nodeidbdrsnj9dv3xabj9dvo0ss:oiref><oihard> 
+*/
+class linkid50h4sj9dv3xabj9dvuuj7 {
+}
+}

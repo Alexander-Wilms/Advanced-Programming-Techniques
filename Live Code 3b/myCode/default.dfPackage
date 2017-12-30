@@ -1,0 +1,53 @@
+package id2eyakj93yvl86j93yvm6e;
+
+/**
+@version 2.0
+@physicalPackage
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:design#Class#idg3kgoj93yvl86j93yvxkc.diagram:oiref><oihard>
+@__modelType reference
+@__fqn <oiref:#Package#model:oiref> 
+*/
+class reference {
+}
+}/**
+@__tags
+@shapeType ClassDiagram
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9Gh2gAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAJPGRlZmF1
+bHQ+dAAFRnJvbW14eA==
+@elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAAEdAAfPG9pcmVmOmNwcCNDbGFzcyNDTWF0cml4Om9pcmVm
+PnNxAH4AAD9AAAAAAAAMdwgAAAAQAAAAAXNyAA5qYXZhLmxhbmcuTG9uZzuL5JDMjyPfAgABSgAF
+dmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAFfRodoAHNyABNqYXZhLnV0
+aWwuQXJyYXlMaXN0eIHSHZnHYZ0DAAFJAARzaXpleHAAAAABdwQAAAAKc3IAJWRlLm1ubC5kb2Ni
+b29rNFRBLmltcGwuQ2hhbmdlTG9nRW50cnkHjY61+aoknwIAA0wACGhvc3RuYW1ldAASTGphdmEv
+bGFuZy9TdHJpbmc7TAAEbmFtZXEAfgAKTAAEdXNlcnEAfgAKeHB0AAhGcm9tbS1OQnQAB0NNYXRy
+aXh0AAVGcm9tbXh4dAAkPG9pcmVmOmNwcCNDbGFzcyNtYXRyaXhkYXRhX3Q6b2lyZWY+c3EAfgAA
+P0AAAAAAAAx3CAAAABAAAAABc3EAfgAEAAABX0aHaABzcQB+AAcAAAABdwQAAAAKc3EAfgAJcQB+
+AAx0AAxtYXRyaXhkYXRhX3RxAH4ADnh4dAAjPG9pcmVmOmNwcCNDbGFzcyNDQ29vcmRpbmF0ZTpv
+aXJlZj5zcQB+AAA/QAAAAAAADHcIAAAAEAAAAAFzcQB+AAQAAAFfRodoAHNxAH4ABwAAAAF3BAAA
+AApzcQB+AAlxAH4ADHQAC0NDb29yZGluYXRlcQB+AA54eHQAJDxvaXJlZjpjcHAjQ2xhc3MjbWF0
+cml4SW5pdF90Om9pcmVmPnNxAH4AAD9AAAAAAAAMdwgAAAAQAAAAAXNxAH4ABAAAAV9Gh2gAc3EA
+fgAHAAAAAXcEAAAACnNxAH4ACXEAfgAMdAAMbWF0cml4SW5pdF90cQB+AA54eHg= 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:design#Class#idg3kgoj93yvl86j93yvxkc.diagram:oiref>=40,30,133,136,1:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CMatrix:oiref><Autodependency><oiref:cpp#Class#matrixInit_t:oiref>=738,300,738,243:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CMatrix#m_pData:oiref>=630,333,561,333:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#matrixdata_t:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=480,333,441,333:oigroup>
+*/
+class __positions {
+}

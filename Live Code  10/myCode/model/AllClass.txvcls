@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="idaduz3h6qfat40h6qjqw5s">
+        <property name="$metaclass" value="Class Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="&lt;oiref:cpp#Class#APT::CRecord:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="430,270,310,270"/>
+            <property name="bounds_setted_by_user" value="true"/>
+        </reference>
+        <reference df-class-name="reference12" referencedUin="&lt;oiref:cpp#Class#Test::BasicTest:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="40,30,174,126"/>
+            <reference referencedUin="MemberLink#&lt;oiref:cpp#Member#Test::BasicTest#m_db:oiref&gt;">
+                <property name="sourceAnchor" value="127,156"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="127,270"/>
+                <reference referencedUin="Composite#supplierCardinality#MemberLink#&lt;oiref:cpp#Member#Test::BasicTest#m_db:oiref&gt;">
+                    <property name="bounds" value="95,250,28,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+        </reference>
+        <reference df-class-name="reference13" referencedUin="&lt;oiref:cpp#Class#APT::CAddressDB:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="40,270,270,270"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#m_records:oiref&gt;">
+                <property name="sourceAnchor" value="310,450"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="430,450"/>
+                <reference referencedUin="Composite#clientCardinality#MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#m_records:oiref&gt;">
+                    <property name="bounds" value="314,430,15,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+                <reference referencedUin="Composite#supplierCardinality#MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#m_records:oiref&gt;">
+                    <property name="bounds" value="400,430,26,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+            <reference referencedUin="MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#lnkCRecord:oiref&gt;">
+                <property name="sourceAnchor" value="310,360"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="430,360"/>
+                <reference referencedUin="Composite#clientQualifier#MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#lnkCRecord:oiref&gt;">
+                    <property name="bounds" value="314,360,61,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+                <reference referencedUin="Composite#clientCardinality#MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#lnkCRecord:oiref&gt;">
+                    <property name="bounds" value="314,340,15,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+                <reference referencedUin="Composite#supplierCardinality#MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#lnkCRecord:oiref&gt;">
+                    <property name="bounds" value="398,340,28,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+        </reference>
+        <reference referencedUin="Autodependency&lt;oiref:cpp#Class#Test::BasicTest:oiref&gt;&lt;Autodependency&gt;&lt;oiref:cpp#Class#APT::CRecord:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="sourceAnchor" value="170,156"/>
+            <property name="bendpoints" value=""/>
+            <property name="targetAnchor" value="585,270"/>
+        </reference>
+    </view>
+</nodeSet>

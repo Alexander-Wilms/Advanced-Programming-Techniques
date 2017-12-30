@@ -1,0 +1,289 @@
+package idb23m2j9xyweivj9y00vg3;
+
+/**
+@version 2.0
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeide3dsvj9xyweivj9y00y94:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidembrcj9xyweivj9y01jpv:oiref><oihard>
+@__modelType reference 
+*/
+class reference19 {
+}
+/**
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidd5s8qj9xyweivj9y034o4:oiref><oihard>
+@__modelType reference 
+*/
+class reference20 {
+}
+/**
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidhdz4kj9xyweivj9y0379x:oiref><oihard>
+@__modelType reference 
+*/
+class reference21 {
+}
+/**
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeid59vuwj9xyweivj9y0574i:oiref><oihard>
+@__modelType reference 
+*/
+class reference22 {
+}
+/**
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidhcce4j9xyweivj9y05fnz:oiref><oihard>
+@__modelType reference 
+*/
+class reference23 {
+}
+/**
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeiddiwvjj9xyweivj9y05n0b:oiref><oihard>
+@__modelType reference 
+*/
+class reference24 {
+}
+/**
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidi7pynj9xyweivj9y06p8x:oiref><oihard>
+@__modelType reference 
+*/
+class reference25 {
+}
+/**
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidd758uj9xyweivj9y07o1c:oiref><oihard>
+@__modelType reference 
+*/
+class reference26 {
+}
+/**
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidh3h4vj9xyweivj9y0agli:oiref><oihard>
+@__modelType reference 
+*/
+class reference27 {
+}
+/**
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeid6vyt8j9xyweivj9y0bcro:oiref><oihard>
+@__modelType reference 
+*/
+class reference28 {
+}
+}/**
+
+@__tags
+@shapeType ActivityDiagram
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV+yrPQAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAKYWNCdXlT
+bmFja3QABUZyb21teHg= 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeid59vuwj9xyweivj9y0574i.linkidhdj9zj9xyweivj9y05ynx:oiref>=220,353,220,390:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeide3dsvj9xyweivj9y00y94.linkid78tggj9xyweivj9y01vfy:oiref>=220,50,220,100:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeiddiwvjj9xyweivj9y05n0b.linkid1cfsgj9xyweivj9y06sri:oiref>=230,503,228,560:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidhcce4j9xyweivj9y05fnz.linkid3y6jwj9xyweivj9y0anr6:oiref>=190,400,90,400,90,429:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidd758uj9xyweivj9y07o1c:oiref>=180,430,117,23,1:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeiddiwvjj9xyweivj9y05n0b:oiref>=170,480,115,23,1:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidh3h4vj9xyweivj9y0agli.linkid8u43ej9xyweivj9y0b5vc:oiref>=90,452,90,570,220,568:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidd758uj9xyweivj9y07o1c.linkid2s76yj9xyweivj9y07zef:oiref>=232,453,232,480:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidd5s8qj9xyweivj9y034o4.linkid3v0a7j9xyweivj9y03sjn:oiref>=220,200,220,270:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeid59vuwj9xyweivj9y0574i:oiref>=170,330,191,23,1:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidhcce4j9xyweivj9y05fnz:oiref>=190,390,60,20,1:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidd5s8qj9xyweivj9y034o4.linkid1olvtj9xyweivj9y044be:oiref>=400,142,118,16,1:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidhcce4j9xyweivj9y05fnz.linkidguhu6j9xyweivj9y061dn:oiref>=220,410,220,430:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidhdz4kj9xyweivj9y0379x.linkidcrmawj9xyweivj9y05vem:oiref>=221,293,221,330:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidhdz4kj9xyweivj9y0379x:oiref>=140,270,158,23,1:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidd5s8qj9xyweivj9y034o4.linkid3v0a7j9xyweivj9y03sjn:oiref>=230,227,138,16,1:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidi7pynj9xyweivj9y06p8x:oiref>=220,560,15,15,1:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidd5s8qj9xyweivj9y034o4.linkid1olvtj9xyweivj9y044be:oiref>=250,190,390,190,390,110,277,110:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidembrcj9xyweivj9y01jpv.linkidca081j9xyweivj9y03pls:oiref>=220,123,220,180:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidembrcj9xyweivj9y01jpv:oiref>=170,100,107,23,1:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidh3h4vj9xyweivj9y0agli:oiref>=44,429,113,23,1:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidd5s8qj9xyweivj9y034o4:oiref>=190,180,60,20,1:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeid6vyt8j9xyweivj9y0bcro:oiref>=-80,320,204,40,1:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidhcce4j9xyweivj9y05fnz.linkid5mqb0j9xyweivj9y064ko:oiref>=410,362,168,16,1:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeide3dsvj9xyweivj9y00y94:oiref>=214,38,12,12,1:oigroup>
+<oigroup:Composite#$transitionInplaceEditing#<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidhcce4j9xyweivj9y05fnz.linkid3y6jwj9xyweivj9y0anr6:oiref>=89,410,102,16,1:oigroup>
+<oigroup:<oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidhcce4j9xyweivj9y05fnz.linkid5mqb0j9xyweivj9y064ko:oiref>=250,400,400,400,400,340,361,340:oigroup> 
+*/
+class __positions {
+}
+/**
+@shapeType StartState
+@__modelType node
+@name StartState1
+@backgroundColor 0,0,0 
+*/
+class nodeide3dsvj9xyweivj9y00y94 {
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidembrcj9xyweivj9y01jpv:oiref><oihard> 
+*/
+class linkid78tggj9xyweivj9y01vfy {
+}
+}
+/**
+@shapeType Activity
+@__modelType node
+@name Select Snack 
+*/
+class nodeidembrcj9xyweivj9y01jpv {
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidd5s8qj9xyweivj9y034o4:oiref><oihard> 
+*/
+class linkidca081j9xyweivj9y03pls {
+}
+}
+/**
+@shapeType Decision
+@__modelType node
+@name Decision1 
+*/
+class nodeidd5s8qj9xyweivj9y034o4 {
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidhdz4kj9xyweivj9y0379x:oiref><oihard>
+@condition snack tray is not empty 
+*/
+class linkid3v0a7j9xyweivj9y03sjn {
+}
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidembrcj9xyweivj9y01jpv:oiref><oihard>
+@condition snack tray is empty 
+*/
+class linkid1olvtj9xyweivj9y044be {
+}
+}
+/**
+@shapeType Activity
+@__modelType node
+@name SHow price on display 
+*/
+class nodeidhdz4kj9xyweivj9y0379x {
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeid59vuwj9xyweivj9y0574i:oiref><oihard> 
+*/
+class linkidcrmawj9xyweivj9y05vem {
+}
+}
+/**
+@shapeType Activity
+@__modelType node
+@name Enter Money or press cancel 
+*/
+class nodeid59vuwj9xyweivj9y0574i {
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidhcce4j9xyweivj9y05fnz:oiref><oihard> 
+*/
+class linkidhdj9zj9xyweivj9y05ynx {
+}
+}
+/**
+@shapeType Decision
+@__modelType node
+@name Decision2 
+*/
+class nodeidhcce4j9xyweivj9y05fnz {
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidd758uj9xyweivj9y07o1c:oiref><oihard> 
+*/
+class linkidguhu6j9xyweivj9y061dn {
+}
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeid59vuwj9xyweivj9y0574i:oiref><oihard>
+@condition entered money not sufficient 
+*/
+class linkid5mqb0j9xyweivj9y064ko {
+}
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidh3h4vj9xyweivj9y0agli:oiref><oihard>
+@condition Cancel pressed 
+*/
+class linkid3y6jwj9xyweivj9y0anr6 {
+}
+}
+/**
+@shapeType Activity
+@__modelType node
+@name Deposit snack 
+*/
+class nodeiddiwvjj9xyweivj9y05n0b {
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidi7pynj9xyweivj9y06p8x:oiref><oihard> 
+*/
+class linkid1cfsgj9xyweivj9y06sri {
+}
+}
+/**
+@shapeType EndState
+@__modelType node
+@name EndState1
+@backgroundColor 0,0,0 
+*/
+class nodeidi7pynj9xyweivj9y06p8x {
+}
+/**
+@shapeType Activity
+@__modelType node
+@name Return change 
+*/
+class nodeidd758uj9xyweivj9y07o1c {
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeiddiwvjj9xyweivj9y05n0b:oiref><oihard> 
+*/
+class linkid2s76yj9xyweivj9y07zef {
+}
+}
+/**
+@shapeType Activity
+@__modelType node
+@name Return money 
+*/
+class nodeidh3h4vj9xyweivj9y0agli {
+/**
+@shapeType TransitionLink
+@__modelType link
+@__ref <oiref:design#Class#idb23m2j9xyweivj9y00vg3.nodeidi7pynj9xyweivj9y06p8x:oiref><oihard> 
+*/
+class linkid8u43ej9xyweivj9y0b5vc {
+}
+}
+/**
+@shapeType Note
+@__modelType node
+@name Note1
+@text Cancel can be pressed anytime 
+*/
+class nodeid6vyt8j9xyweivj9y0bcro {
+}

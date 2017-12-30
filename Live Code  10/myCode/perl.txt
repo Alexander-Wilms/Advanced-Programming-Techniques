@@ -1,0 +1,16 @@
+
+This is perl 5, version 16, subversion 3 (v5.16.3) built for MSWin32-x64-multi-thread
+(with 1 registered patch, see perl -V for more detail)
+
+Copyright 1987-2012, Larry Wall
+
+Binary build 1603 [296746] provided by ActiveState http://www.ActiveState.com
+Built Mar 13 2013 13:31:10
+
+Perl may be copied only under the terms of either the Artistic License or the
+GNU General Public License, which may be found in the Perl 5 source kit.
+
+Complete documentation for Perl, including FAQ lists, should be found on
+this system using "man perl" or "perldoc perl".  If you have access to the
+Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+

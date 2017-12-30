@@ -1,0 +1,47 @@
+package id5i8aj9dv3xabj9dv3ym7;
+
+/**
+@version 2.0
+@physicalPackage
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:cpp#Class#CText:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+}/**
+@__tags
+@shapeType ClassDiagram 
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9qk+wAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAFbW9kZWx0
+AAVGcm9tbXhzcQB+AAIAAAFfjqBwAHNxAH4ABQAAAAF3BAAAAApzcQB+AAd0AAhGcm9tbS1OQnQA
+BW1vZGVsdAAFRnJvbW14eA==
+@elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAAdPG9pcmVmOmNwcCNDbGFzcyNDVGV4dDpvaXJlZj5z
+cQB+AAA/QAAAAAAADHcIAAAAEAAAAAFzcgAOamF2YS5sYW5nLkxvbmc7i+SQzI8j3wIAAUoABXZh
+bHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAABX46gcABzcgATamF2YS51dGls
+LkFycmF5TGlzdHiB0h2Zx2GdAwABSQAEc2l6ZXhwAAAAAXcEAAAACnNyACVkZS5tbmwuZG9jYm9v
+azRUQS5pbXBsLkNoYW5nZUxvZ0VudHJ5B42OtfmqJJ8CAANMAAhob3N0bmFtZXQAEkxqYXZhL2xh
+bmcvU3RyaW5nO0wABG5hbWVxAH4ACkwABHVzZXJxAH4ACnhwdAAIRnJvbW0tTkJ0AAVDVGV4dHQA
+BUZyb21teHh4
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:cpp#Class#CDatabase:oiref>=148,25,160,126,1:oigroup>
+<oigroup:<oiref:cpp#Class#CRectangle:oiref>=10,10,86,85,1:oigroup>
+<oigroup:<oiref:cpp#Class#CText:oiref>=728,296,99,98,1:oigroup>
+<oigroup:<oiref:cpp#Class#CGraphicObject:oiref>=48,125,172,126,1:oigroup>
+*/
+class __positions {
+}

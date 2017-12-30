@@ -1,0 +1,76 @@
+package id9p420j8txut2hj8txuu08;
+
+/**
+@version 2.0
+@physicalPackage
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:design#Class#id6jh9wj8txut2hj8txwl9d.diagram:oiref><oihard>
+@__modelType reference
+@__fqn <oiref:#Package#model:oiref> 
+*/
+class reference {
+}
+/**
+@__ref <oiref:cpp#Class#CMatrix:oiref><oihard>
+@__modelType reference 
+*/
+class reference6 {
+}
+/**
+@__ref <oiref:cpp#Class#matrixInit_t:oiref><oihard>
+@__modelType reference 
+*/
+class reference7 {
+}
+/**
+@__ref <oiref:cpp#Class#matrixdata_t:oiref><oihard>
+@__modelType reference 
+*/
+class reference8 {
+}
+}/**
+@__tags
+@shapeType ClassDiagram
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9Gh2gAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAJPGRlZmF1
+bHQ+dAAFRnJvbW14c3EAfgACAAABXyJ65ABzcQB+AAUAAAABdwQAAAAKc3EAfgAHdAAIRnJvbW0t
+TkJ0AAk8ZGVmYXVsdD50AAVGcm9tbXh4
+@elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAAfPG9pcmVmOmNwcCNDbGFzcyNDTWF0cml4Om9pcmVm
+PnNxAH4AAD9AAAAAAAAMdwgAAAAQAAAAAnNyAA5qYXZhLmxhbmcuTG9uZzuL5JDMjyPfAgABSgAF
+dmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAFfRodoAHNyABNqYXZhLnV0
+aWwuQXJyYXlMaXN0eIHSHZnHYZ0DAAFJAARzaXpleHAAAAABdwQAAAAKc3IAJWRlLm1ubC5kb2Ni
+b29rNFRBLmltcGwuQ2hhbmdlTG9nRW50cnkHjY61+aoknwIAA0wACGhvc3RuYW1ldAASTGphdmEv
+bGFuZy9TdHJpbmc7TAAEbmFtZXEAfgAKTAAEdXNlcnEAfgAKeHB0AAhGcm9tbS1OQnQAB0NNYXRy
+aXh0AAVGcm9tbXhzcQB+AAQAAAFfInrkAHNxAH4ABwAAAAF3BAAAAApzcQB+AAl0AAhGcm9tbS1O
+QnQAB0NNYXRyaXh0AAVGcm9tbXh4dAAkPG9pcmVmOmNwcCNDbGFzcyNtYXRyaXhkYXRhX3Q6b2ly
+ZWY+c3EAfgAAP0AAAAAAAAx3CAAAABAAAAACc3EAfgAEAAABX0aHaABzcQB+AAcAAAABdwQAAAAK
+c3EAfgAJcQB+AAx0AAxtYXRyaXhkYXRhX3RxAH4ADnhzcQB+AAQAAAFfInrkAHNxAH4ABwAAAAF3
+BAAAAApzcQB+AAlxAH4AEnQADG1hdHJpeGRhdGFfdHEAfgAUeHh0ACQ8b2lyZWY6Y3BwI0NsYXNz
+I21hdHJpeEluaXRfdDpvaXJlZj5zcQB+AAA/QAAAAAAADHcIAAAAEAAAAAJzcQB+AAQAAAFfRodo
+AHNxAH4ABwAAAAF3BAAAAApzcQB+AAlxAH4ADHQADG1hdHJpeEluaXRfdHEAfgAOeHNxAH4ABAAA
+AV8ieuQAc3EAfgAHAAAAAXcEAAAACnNxAH4ACXEAfgASdAAMbWF0cml4SW5pdF90cQB+ABR4eHg=
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CMatrix#m_pData:oiref>=249,292,28,16,0:oigroup>
+<oigroup:<oiref:cpp#Class#CMatrix:oiref>=248,20,302,260,0:oigroup>
+<oigroup:<oiref:cpp#Class#matrixdata_t:oiref>=234,312,81,46,1:oigroup>
+<oigroup:<oiref:design#Class#id6jh9wj8txut2hj8txwl9d.diagram:oiref>=10,10,83,95,1:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CMatrix:oiref><Autodependency><oiref:cpp#Class#matrixInit_t:oiref>=374,280,374,311:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CMatrix#m_pData:oiref>=281,280,281,312:oigroup>
+<oigroup:<oiref:cpp#Class#matrixInit_t:oiref>=333,311,83,155,1:oigroup>
+*/
+class __positions {
+}

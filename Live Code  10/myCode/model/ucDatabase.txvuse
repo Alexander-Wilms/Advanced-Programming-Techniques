@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id1y3tgg2ew03yzg2f0r140">
+        <property name="$metaclass" value="Use Case Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="0,89,52,77"/>
+            <reference referencedUin="design:link:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkid8tvocg2ew03yzg2f0sgpn:id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m">
+                <property name="sourceAnchor" value="52,109"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="187,96"/>
+            </reference>
+            <reference referencedUin="design:link:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkidhh84vg2ew03yzg2f0si7g:id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m">
+                <property name="sourceAnchor" value="52,142"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="169,142"/>
+            </reference>
+            <reference referencedUin="design:link:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkid87lp2h6ql9goyh6qlk2zb:id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m">
+                <property name="sourceAnchor" value="6,166"/>
+                <property name="bendpoints" value="120,310"/>
+                <property name="targetAnchor" value="304,350"/>
+                <property name="bounds_setted_by_user" value="true"/>
+            </reference>
+            <reference referencedUin="design:link:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkidebo31g2ew03yzg2f0sk7i:id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m">
+                <property name="sourceAnchor" value="52,156"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="219,187"/>
+            </reference>
+            <reference referencedUin="design:link:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkid2h95gh6ql9goyh6qliwx1:id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m">
+                <property name="sourceAnchor" value="16,166"/>
+                <property name="bendpoints" value="140,260"/>
+                <property name="targetAnchor" value="302,290"/>
+                <property name="bounds_setted_by_user" value="true"/>
+            </reference>
+            <reference referencedUin="design:link:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkiddsmhpg2ew03yzg2f0sf57:id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m">
+                <property name="sourceAnchor" value="26,89"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="296,46"/>
+            </reference>
+            <reference referencedUin="design:link:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkid80k5eg2ew03yzg2f0slhi:id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m">
+                <property name="sourceAnchor" value="26,166"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="265,237"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference12" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidc0jerg2ew03yzg2f0riys">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="187,90,219,26"/>
+            <reference referencedUin="design:link:::id1y3tgg2ew03yzg2f0r140.nodeidc0jerg2ew03yzg2f0riys.linkidevxsvg2ew03yzg2f0tb8l:id1y3tgg2ew03yzg2f0r140.nodeidc0jerg2ew03yzg2f0riys">
+                <property name="sourceAnchor" value="301,90"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="633,44"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference1" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="200,200,200"/>
+            <property name="bounds" value="137,-20,320,428"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid2ggqtg2ew03yzg2f0rzt4:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj">
+                <property name="bounds" value="82,197,136,26"/>
+            </reference>
+            <reference referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid3vu74h6ql9goyh6qli7de:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj">
+                <property name="bounds" value="73,310,174,26"/>
+            </reference>
+            <reference referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid9u4smg2ew03yzg2f0s4yw:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj">
+                <property name="bounds" value="72,257,170,26"/>
+                <reference referencedUin="design:link:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid9u4smg2ew03yzg2f0s4yw.linkidcl0bwg2ew03yzg2f0tv87:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid9u4smg2ew03yzg2f0s4yw:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj">
+                    <property name="sourceAnchor" value="328,237"/>
+                    <property name="bendpoints" value=""/>
+                    <property name="targetAnchor" value="624,164"/>
+                </reference>
+            </reference>
+            <reference referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeida0c6sg2ew03yzg2f0rbfj:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj">
+                <property name="bounds" value="50,40,218,26"/>
+                <reference referencedUin="design:link:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeida0c6sg2ew03yzg2f0rbfj.linkid73b84g2ew03yzg2f0t8vy:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeida0c6sg2ew03yzg2f0rbfj:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj">
+                    <property name="sourceAnchor" value="413,32"/>
+                    <property name="bendpoints" value=""/>
+                    <property name="targetAnchor" value="499,32"/>
+                </reference>
+            </reference>
+            <reference referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeidj99lvg2ew03yzg2f0rqf0:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj">
+                <property name="bounds" value="32,150,265,26"/>
+            </reference>
+            <reference referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid8n9clh6ql9goyh6qljs52:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj">
+                <property name="bounds" value="83,370,159,26"/>
+            </reference>
+        </reference>
+    </view>
+    <node uin="id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m">
+        <property name="$metaclass" value="Actor"/>
+        <property name="$name" value="User"/>
+        <link uin="id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkiddsmhpg2ew03yzg2f0sf57">
+            <participant role="Supplier" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeida0c6sg2ew03yzg2f0rbfj:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj"/>
+            <participant role="Client" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkid8tvocg2ew03yzg2f0sgpn">
+            <participant role="Supplier" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidc0jerg2ew03yzg2f0riys"/>
+            <participant role="Client" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkidhh84vg2ew03yzg2f0si7g">
+            <participant role="Supplier" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeidj99lvg2ew03yzg2f0rqf0:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj"/>
+            <participant role="Client" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkidebo31g2ew03yzg2f0sk7i">
+            <participant role="Supplier" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid2ggqtg2ew03yzg2f0rzt4:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj"/>
+            <participant role="Client" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkid80k5eg2ew03yzg2f0slhi">
+            <participant role="Supplier" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid9u4smg2ew03yzg2f0s4yw:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj"/>
+            <participant role="Client" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkid2h95gh6ql9goyh6qliwx1">
+            <participant role="Supplier" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid3vu74h6ql9goyh6qli7de:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj"/>
+            <participant role="Client" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkid87lp2h6ql9goyh6qlk2zb">
+            <participant role="Supplier" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid8n9clh6ql9goyh6qljs52:id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj"/>
+            <participant role="Client" referencedUin="design:node:::id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+    </node>
+    <node uin="id1y3tgg2ew03yzg2f0r140.nodeidc0jerg2ew03yzg2f0riys">
+        <property name="$metaclass" value="Use Case"/>
+        <property name="$name" value="Store adress database file"/>
+    </node>
+    <node uin="id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj">
+        <property name="$metaclass" value="System Boundary"/>
+        <property name="$name" value="Adress Database"/>
+        <node uin="id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid9u4smg2ew03yzg2f0s4yw">
+            <property name="$metaclass" value="Use Case"/>
+            <property name="$name" value="Print filtered records"/>
+        </node>
+        <node uin="id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid2ggqtg2ew03yzg2f0rzt4">
+            <property name="$metaclass" value="Use Case"/>
+            <property name="$name" value="Print all records"/>
+        </node>
+        <node uin="id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeidj99lvg2ew03yzg2f0rqf0">
+            <property name="$metaclass" value="Use Case"/>
+            <property name="$name" value="Enter adress record by keyboard"/>
+        </node>
+        <node uin="id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeida0c6sg2ew03yzg2f0rbfj">
+            <property name="$metaclass" value="Use Case"/>
+            <property name="$name" value="Load adress database file"/>
+        </node>
+        <node uin="id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid3vu74h6ql9goyh6qli7de">
+            <property name="$metaclass" value="Use Case"/>
+            <property name="$name" value="Print sorted by name"/>
+        </node>
+        <node uin="id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid8n9clh6ql9goyh6qljs52">
+            <property name="$metaclass" value="Use Case"/>
+            <property name="$name" value="Lookup by number"/>
+        </node>
+    </node>
+</nodeSet>

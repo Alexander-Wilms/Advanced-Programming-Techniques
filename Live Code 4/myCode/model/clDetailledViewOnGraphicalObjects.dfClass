@@ -1,0 +1,94 @@
+package idalb6ej9dv3xabj9dwsvwg;
+
+/**
+@version 2.0
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:cpp#Class#CRectangle:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference {
+}
+/**
+@__ref <oiref:cpp#Class#CTriangle:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference21 {
+}
+/**
+@__ref <oiref:cpp#Class#CCircle:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference22 {
+}
+/**
+@__ref <oiref:cpp#Class#CCoordinate:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference23 {
+}
+/**
+@__ref <oiref:cpp#Class#CGraphicObject:oiref><oihard>
+@__modelType reference
+@__imported 
+*/
+class reference24 {
+}
+/**
+@__ref <oiref:design#Class#idalb6ej9dv3xabj9dwsvwg.nodeidhniqtj9dv3xabj9dx1g4f:oiref><oihard>
+@__modelType reference 
+*/
+class reference26 {
+}
+}/**
+
+@__tags
+@shapeType ClassDiagram
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9qk+wAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAhY2xEZXRh
+aWxsZWRWaWV3T25HcmFwaGljYWxPYmplY3RzdAAFRnJvbW14eA== 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:design#Class#idalb6ej9dv3xabj9dwsvwg.nodeidhniqtj9dv3xabj9dx1g4f:oiref>=10,311,190,40,1:oigroup>
+<oigroup:<oiref:cpp#Class#CCoordinate:oiref>=560,260,91,142,1:oigroup>
+<oigroup:<oiref:cpp#Class#CRectangle:oiref>=165,50,86,85,1:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=530,316,26,16,0:oigroup>
+<oigroup:<oiref:cpp#Member#CGraphicObject#m_coordinate:oiref>=358,474,0,0,1:oigroup>
+<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=465,316,15,16,0:oigroup>
+<oigroup:<oiref:cpp#Class#CCircle:oiref>=37,50,142,110,1:oigroup>
+<oigroup:<oiref:cpp#Extends#CRectangle#CGraphicObject:oiref>=208,135,310,271:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CTriangle:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=349,135,605,260:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=461,336,560,336:oigroup>
+<oigroup:<oiref:cpp#Class#CGraphicObject:oiref>=272,271,189,222,1:oigroup>
+<oigroup:<oiref:cpp#Class#CTriangle:oiref>=287,50,83,85,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CGraphicObject#m_coordinate:oiref>=444,334,560,334:oigroup>
+<oigroup:<oiref:cpp#Extends#CCircle#CGraphicObject:oiref>=87,160,87,300,272,300:oigroup>
+<oigroup:<oiref:cpp#Extends#CTriangle#CGraphicObject:oiref>=328,135,328,271:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CCircle:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=133,160,582,260:oigroup>
+*/
+class __positions {
+}
+/**
+@shapeType Note
+@__modelType node
+@name Note1
+@text Inheritance
+A circle "is a" graphical object 
+*/
+class nodeidhniqtj9dv3xabj9dx1g4f {
+}

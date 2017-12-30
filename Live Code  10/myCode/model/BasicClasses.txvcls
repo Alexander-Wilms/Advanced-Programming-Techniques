@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="idf38w3h6yt59tih6yt8qsg">
+        <property name="$metaclass" value="Class Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="&lt;oiref:cpp#Class#APT::CAddressDB:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="20,20,370,310"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#m_records:oiref&gt;">
+                <property name="sourceAnchor" value="390,220"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="510,220"/>
+                <reference referencedUin="Composite#clientCardinality#MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#m_records:oiref&gt;">
+                    <property name="bounds" value="394,200,15,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+                <reference referencedUin="Composite#supplierCardinality#MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#m_records:oiref&gt;">
+                    <property name="bounds" value="480,200,26,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+            <reference referencedUin="MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#lnkCRecord:oiref&gt;">
+                <property name="sourceAnchor" value="390,120"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="510,120"/>
+                <reference referencedUin="Composite#clientQualifier#MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#lnkCRecord:oiref&gt;">
+                    <property name="bounds" value="394,120,61,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+                <reference referencedUin="Composite#clientCardinality#MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#lnkCRecord:oiref&gt;">
+                    <property name="bounds" value="394,100,15,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+                <reference referencedUin="Composite#supplierCardinality#MemberLink#&lt;oiref:cpp#Member#APT::CAddressDB#lnkCRecord:oiref&gt;">
+                    <property name="bounds" value="478,100,28,16"/>
+                    <property name="bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+        </reference>
+        <reference df-class-name="reference1" referencedUin="&lt;oiref:cpp#Class#APT::CRecord:oiref&gt;">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="510,20,320,300"/>
+            <property name="bounds_setted_by_user" value="true"/>
+        </reference>
+    </view>
+</nodeSet>

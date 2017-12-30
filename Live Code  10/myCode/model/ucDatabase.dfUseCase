@@ -1,0 +1,215 @@
+package id1y3tgg2ew03yzg2f0r140;
+
+/**
+@version 2.0
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidg6ykg2ew03yzg2f0r6jb:oiref><oihard>
+@__modelType reference 
+*/
+class reference10 {
+}
+/**
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidc0jerg2ew03yzg2f0riys:oiref><oihard>
+@__modelType reference 
+*/
+class reference12 {
+}
+/**
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj:oiref><oihard>
+@__modelType reference 
+*/
+class reference1 {
+}
+/**
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid7eayvg2h78042g2h7b2lh:oiref><oihard>
+@__modelType reference 
+*/
+class reference2 {
+}
+}/**
+
+@__tags
+@shapeType UseCaseDiagram 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeida0c6sg2ew03yzg2f0rbfj.linkid73b84g2ew03yzg2f0t8vy:oiref>=405,33,507,33:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid2ggqtg2ew03yzg2f0rzt4:oiref>=219,177,136,26,1:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid9u4smg2ew03yzg2f0s4yw.linkidcl0bwg2ew03yzg2f0tv87:oiref>=322,237,621,166:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m:oiref>=0,89,52,77,1:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidg6ykg2ew03yzg2f0r6jb:oiref>=827,60,64,77,1:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid7eayvg2h78042g2h7b2lh.nodeid9tys0g2ew03yzg2f0thf9:oiref>=507,140,228,26,1:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidc0jerg2ew03yzg2f0riys:oiref>=187,90,219,26,1:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid9u4smg2ew03yzg2f0s4yw:oiref>=209,237,170,26,1:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkid8tvocg2ew03yzg2f0sgpn:oiref>=52,109,187,96:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkidhh84vg2ew03yzg2f0si7g:oiref>=52,143,177,143:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid7eayvg2h78042g2h7b2lh.nodeiddf85mg2ew03yzg2f0srm0:oiref>=507,20,246,26,1:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidc0jerg2ew03yzg2f0riys.linkidevxsvg2ew03yzg2f0tb8l:oiref>=296,90,589,46:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeida0c6sg2ew03yzg2f0rbfj:oiref>=187,20,218,26,1:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeidj99lvg2ew03yzg2f0rqf0:oiref>=177,130,265,26,1:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkidebo31g2ew03yzg2f0sk7i:oiref>=52,156,219,187:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidg6ykg2ew03yzg2f0r6jb.linkid5fd6g2ew03yzg2f0txf7:oiref>=827,122,735,150:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkiddsmhpg2ew03yzg2f0sf57:oiref>=26,89,296,46:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid1fga0g2ew03yzg2f0r33m.linkid80k5eg2ew03yzg2f0slhi:oiref>=26,166,265,237:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidg6ykg2ew03yzg2f0r6jb.linkid7cgukg2ew03yzg2f0te7s:oiref>=827,75,753,36:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj:oiref>=137,-20,320,428,0:oigroup>
+<oigroup:<oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid7eayvg2h78042g2h7b2lh:oiref>=484,-19,286,425,0:oigroup>
+*/
+class __positions {
+}
+/**
+@shapeType Actor
+@__modelType node
+@name User 
+*/
+class nodeid1fga0g2ew03yzg2f0r33m {
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeida0c6sg2ew03yzg2f0rbfj:oiref><oihard> 
+*/
+class linkiddsmhpg2ew03yzg2f0sf57 {
+}
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidc0jerg2ew03yzg2f0riys:oiref><oihard> 
+*/
+class linkid8tvocg2ew03yzg2f0sgpn {
+}
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeidj99lvg2ew03yzg2f0rqf0:oiref><oihard> 
+*/
+class linkidhh84vg2ew03yzg2f0si7g {
+}
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid2ggqtg2ew03yzg2f0rzt4:oiref><oihard> 
+*/
+class linkidebo31g2ew03yzg2f0sk7i {
+}
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeidadyeag2h78042g2h7a4lj.nodeid9u4smg2ew03yzg2f0s4yw:oiref><oihard> 
+*/
+class linkid80k5eg2ew03yzg2f0slhi {
+}
+}
+/**
+@shapeType Actor
+@__modelType node
+@name Developer
+*/
+class nodeidg6ykg2ew03yzg2f0r6jb {
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid7eayvg2h78042g2h7b2lh.nodeiddf85mg2ew03yzg2f0srm0:oiref><oihard> 
+*/
+class linkid7cgukg2ew03yzg2f0te7s {
+}
+/**
+@shapeType CommunicatesLink
+@__modelType link
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid7eayvg2h78042g2h7b2lh.nodeid9tys0g2ew03yzg2f0thf9:oiref><oihard> 
+*/
+class linkid5fd6g2ew03yzg2f0txf7 {
+}
+}
+/**
+@shapeType UseCase
+@__modelType node
+@name Store adress database file 
+*/
+class nodeidc0jerg2ew03yzg2f0riys {
+/**
+@shapeType IncludesLink
+@__modelType link
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid7eayvg2h78042g2h7b2lh.nodeiddf85mg2ew03yzg2f0srm0:oiref><oihard> 
+*/
+class linkidevxsvg2ew03yzg2f0tb8l {
+}
+}
+/**
+@shapeType SystemBoundary
+@__modelType node
+@name Adress Database
+@backgroundColor 200,200,200 
+*/
+class nodeidadyeag2h78042g2h7a4lj {
+/**
+@shapeType UseCase
+@__modelType node
+@name Print filtered records 
+*/
+class nodeid9u4smg2ew03yzg2f0s4yw {
+/**
+@shapeType IncludesLink
+@__modelType link
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid7eayvg2h78042g2h7b2lh.nodeid9tys0g2ew03yzg2f0thf9:oiref><oihard> 
+*/
+class linkidcl0bwg2ew03yzg2f0tv87 {
+}
+}/**
+@shapeType UseCase
+@__modelType node
+@name Print all records 
+*/
+class nodeid2ggqtg2ew03yzg2f0rzt4 {
+}/**
+@shapeType UseCase
+@__modelType node
+@name Enter adress record by keyboard 
+*/
+class nodeidj99lvg2ew03yzg2f0rqf0 {
+}/**
+@shapeType UseCase
+@__modelType node
+@name Load adress database file 
+*/
+class nodeida0c6sg2ew03yzg2f0rbfj {
+/**
+@shapeType IncludesLink
+@__modelType link
+@__ref <oiref:design#Class#id1y3tgg2ew03yzg2f0r140.nodeid7eayvg2h78042g2h7b2lh.nodeiddf85mg2ew03yzg2f0srm0:oiref><oihard> 
+*/
+class linkid73b84g2ew03yzg2f0t8vy {
+}
+}}
+/**
+@shapeType SystemBoundary
+@__modelType node
+@name IO Library
+@backgroundColor 200,200,200 
+*/
+class nodeid7eayvg2h78042g2h7b2lh {
+/**
+@shapeType UseCase
+@__modelType node
+@name Get a FileIO library for text files 
+*/
+class nodeiddf85mg2ew03yzg2f0srm0 {
+}/**
+@shapeType UseCase
+@__modelType node
+@name Get some string extensions 
+*/
+class nodeid9tys0g2ew03yzg2f0thf9 {
+}}

@@ -1,0 +1,189 @@
+package iddqbibjarzxancjarzxc2h;
+
+/**
+@version 2.0
+@physicalPackage
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:cpp#Class#CFormat:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:cpp#Class#CCSV:oiref><oihard>
+@__modelType reference 
+*/
+class reference1 {
+}
+/**
+@__ref <oiref:cpp#Class#CJSON:oiref><oihard>
+@__modelType reference 
+*/
+class reference2 {
+}
+/**
+@__ref <oiref:cpp#Class#CAdressDatabase:oiref><oihard>
+@__modelType reference 
+*/
+class reference3 {
+}
+/**
+@__ref <oiref:cpp#Class#CStorage:oiref><oihard>
+@__modelType reference 
+*/
+class reference4 {
+}
+/**
+@__ref <oiref:cpp#Class#CPhoneEntry:oiref><oihard>
+@__modelType reference 
+*/
+class reference5 {
+}
+/**
+@__ref <oiref:cpp#Class#CWaypoint:oiref><oihard>
+@__modelType reference 
+*/
+class reference6 {
+}
+/**
+@__ref <oiref:design#Class#iddqbibjarzxancjarzxc2h.nodeid38pq8jarzxancjas0ij43:oiref><oihard>
+@__modelType reference 
+*/
+class reference7 {
+}
+/**
+@__ref <oiref:cpp#Class#CFileIO:oiref><oihard>
+@__modelType reference 
+*/
+class reference8 {
+}
+/**
+@__ref <oiref:cpp#Class#CExport:oiref><oihard>
+@__modelType reference 
+*/
+class reference13 {
+}
+/**
+@__ref <oiref:design#Class#iddqbibjarzxancjarzxc2h.nodeidc44wajas4w80ljas7wap4:oiref><oihard>
+@__modelType reference 
+*/
+class reference9 {
+}
+/**
+@__ref <oiref:design#Class#iddqbibjarzxancjarzxc2h.nodeid2iavljas4w80ljas7xv9s:oiref><oihard>
+@__modelType reference 
+*/
+class reference11 {
+}
+/**
+@__ref <oiref:design#Class#iddqbibjarzxancjarzxc2h.nodeid38pq8jarzxancjas0ij12:oiref><oihard>
+@__modelType reference 
+*/
+class reference14 {
+}
+}/**
+@__tags
+@shapeType ClassDiagram 
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAWAe0oAAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAJPGRlZmF1
+bHQ+dAAFRnJvbW14eA==
+@elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAAJdAAfPG9pcmVmOmNwcCNDbGFzcyNDRmlsZUlPOm9pcmVm
+PnNxAH4AAD9AAAAAAAAMdwgAAAAQAAAAAXNyAA5qYXZhLmxhbmcuTG9uZzuL5JDMjyPfAgABSgAF
+dmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAFgHtKAAHNyABNqYXZhLnV0
+aWwuQXJyYXlMaXN0eIHSHZnHYZ0DAAFJAARzaXpleHAAAAABdwQAAAAKc3IAJWRlLm1ubC5kb2Ni
+b29rNFRBLmltcGwuQ2hhbmdlTG9nRW50cnkHjY61+aoknwIAA0wACGhvc3RuYW1ldAASTGphdmEv
+bGFuZy9TdHJpbmc7TAAEbmFtZXEAfgAKTAAEdXNlcnEAfgAKeHB0AAhGcm9tbS1OQnQAB0NGaWxl
+SU90AAVGcm9tbXh4dAAcPG9pcmVmOmNwcCNDbGFzcyNDQ1NWOm9pcmVmPnNxAH4AAD9AAAAAAAAM
+dwgAAAAQAAAAAXNxAH4ABAAAAWAe0oAAc3EAfgAHAAAAAXcEAAAACnNxAH4ACXEAfgAMdAAEQ0NT
+VnEAfgAOeHh0AB08b2lyZWY6Y3BwI0NsYXNzI0NKU09OOm9pcmVmPnNxAH4AAD9AAAAAAAAMdwgA
+AAAQAAAAAXNxAH4ABAAAAWAe0oAAc3EAfgAHAAAAAXcEAAAACnNxAH4ACXEAfgAMdAAFQ0pTT05x
+AH4ADnh4dAAfPG9pcmVmOmNwcCNDbGFzcyNDRm9ybWF0Om9pcmVmPnNxAH4AAD9AAAAAAAAMdwgA
+AAAQAAAAAXNxAH4ABAAAAWAe0oAAc3EAfgAHAAAAAXcEAAAACnNxAH4ACXEAfgAMdAAHQ0Zvcm1h
+dHEAfgAOeHh0ACM8b2lyZWY6Y3BwI0NsYXNzI0NQaG9uZUVudHJ5Om9pcmVmPnNxAH4AAD9AAAAA
+AAAMdwgAAAAQAAAAAXNxAH4ABAAAAWAe0oAAc3EAfgAHAAAAAXcEAAAACnNxAH4ACXEAfgAMdAAL
+Q1Bob25lRW50cnlxAH4ADnh4dAAfPG9pcmVmOmNwcCNDbGFzcyNDRXhwb3J0Om9pcmVmPnNxAH4A
+AD9AAAAAAAAMdwgAAAAQAAAAAXNxAH4ABAAAAWAe0oAAc3EAfgAHAAAAAXcEAAAACnNxAH4ACXEA
+fgAMdAAHQ0V4cG9ydHEAfgAOeHh0ACc8b2lyZWY6Y3BwI0NsYXNzI0NBZHJlc3NEYXRhYmFzZTpv
+aXJlZj5zcQB+AAA/QAAAAAAADHcIAAAAEAAAAAFzcQB+AAQAAAFgHtKAAHNxAH4ABwAAAAF3BAAA
+AApzcQB+AAlxAH4ADHQAD0NBZHJlc3NEYXRhYmFzZXEAfgAOeHh0ACE8b2lyZWY6Y3BwI0NsYXNz
+I0NXYXlwb2ludDpvaXJlZj5zcQB+AAA/QAAAAAAADHcIAAAAEAAAAAFzcQB+AAQAAAFgHtKAAHNx
+AH4ABwAAAAF3BAAAAApzcQB+AAlxAH4ADHQACUNXYXlwb2ludHEAfgAOeHh0ACA8b2lyZWY6Y3Bw
+I0NsYXNzI0NTdG9yYWdlOm9pcmVmPnNxAH4AAD9AAAAAAAAMdwgAAAAQAAAAAXNxAH4ABAAAAWAe
+0oAAc3EAfgAHAAAAAXcEAAAACnNxAH4ACXEAfgAMdAAIQ1N0b3JhZ2VxAH4ADnh4eA==
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:cpp#Class#CFileIO:oiref>=980,40,83,101,1:oigroup>
+<oigroup:<oiref:cpp#Class#CWaypoint:oiref>=280,270,180,126,1:oigroup>
+<oigroup:<oiref:cpp#Class#CAdressDatabase:oiref>=400,20,133,126,1:oigroup>
+<oigroup:<oiref:design#Class#iddqbibjarzxancjarzxc2h.nodeid38pq8jarzxancjas0ij43:oiref>=-150,110,240,110,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CAdressDatabase#lnkCStorage:oiref>=400,60,160,60,160,143:oigroup>
+<oigroup:<oiref:design#Class#iddqbibjarzxancjarzxc2h.nodeid38pq8jarzxancjas0ij12:oiref>=148,409,222,41,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CAdressDatabase#m_storage:oiref>=400,60,140,60,140,143:oigroup>
+<oigroup:<oiref:cpp#Class#CStorage:oiref>=116,143,164,85,1:oigroup>
+<oigroup:<oiref:cpp#Class#CExport:oiref>=630,10,138,91,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CExport#m_pFormat:oiref>=699,101,838,150:oigroup>
+<oigroup:<oiref:design#Class#iddqbibjarzxancjarzxc2h.nodeidc44wajas4w80ljas7wap4:oiref>=590,-140,204,142,0:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CExport#lnkCStorage:oiref>=284,150,28,16,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CAdressDatabase#lnkCFormat:oiref>=515,60,800,60,800,150:oigroup>
+<oigroup:<oiref:cpp#Extends#CJSON#CFormat:oiref>=846,280,846,251:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CExport#lnkCStorage:oiref>=670,101,670,170,280,170:oigroup>
+<oigroup:<oiref:cpp#Class#CPhoneEntry:oiref>=72,267,180,110,1:oigroup>
+<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CAdressDatabase#m_storage:oiref>=381,40,15,16,0:oigroup>
+<oigroup:<oiref:cpp#Extends#CCSV#CFormat:oiref>=713,275,757,216:oigroup>
+<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CExport#m_pFormat:oiref>=680,101,15,16,0:oigroup>
+<oigroup:<oiref:design#Class#iddqbibjarzxancjarzxc2h.nodeid2iavljas4w80ljas7xv9s:oiref>=1001,183,179,97,0:oigroup>
+<oigroup:<oiref:cpp#Class#CCSV:oiref>=630,259,83,82,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CExport#lnkCFileIO:oiref>=768,70,980,70:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CAdressDatabase#lnkCExport:oiref>=533,60,630,60:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CExport#m_pFormat:oiref>=763,130,15,16,0:oigroup>
+<oigroup:<oiref:cpp#Class#CFormat:oiref>=757,150,162,101,1:oigroup>
+<oigroup:<oiref:cpp#Class#CJSON:oiref>=805,280,83,82,1:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CAdressDatabase#m_storage:oiref>=121,123,15,16,0:oigroup>
+*/
+class __positions {
+}
+/**
+@shapeType Note
+@__modelType node
+@name Note1
+@text In a first step we can provide a reference to the container storing the data. Lateron, we can provide a more intuative interface.
+*/
+class nodeid38pq8jarzxancjas0ij43 {
+}
+/**
+@shapeType Note
+@__modelType node
+@name Note2
+@text 2 Options: We can have the Adress-DA class do the work, which means that this class will become pretty complex or we can delegate sub-jobs to other classes, e.g. the Import/Export story 
+*/
+class nodeidc44wajas4w80ljas7wap4 {
+}
+/**
+@shapeType Note
+@__modelType node
+@name Note3
+@text Format and basic file IO can be seperated in 2 classes 
+*/
+class nodeid2iavljas4w80ljas7xv9s {
+}
+/**
+@shapeType Note
+@__modelType node
+@name Note1
+@text Example data classes
+*/
+class nodeid38pq8jarzxancjas0ij12 {
+}
