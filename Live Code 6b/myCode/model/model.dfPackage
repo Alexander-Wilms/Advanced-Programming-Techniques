@@ -52,12 +52,13 @@ class reference2 {
 @__tags
 @shapeType ClassDiagram
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
-YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV+yrPQAc3IAE2phdmEudXRp
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAWC0KuwAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
-YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAFbW9kZWx0
-AAVGcm9tbXh4
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQAJlNhbXN1bmctU2VyaWVzLTct
+V2luZG93cy1GQVcuZnJpdHouYm94dAAFbW9kZWx0AAZhd2lsbXN4c3EAfgACAAABX7Ks9ABzcQB+
+AAUAAAABdwQAAAAKc3EAfgAHdAAIRnJvbW0tTkJ0AAVtb2RlbHQABUZyb21teHg=
 @elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
 aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAAkPG9pcmVmOmNwcCNDbGFzcyNDUGF5bWVudFNsb3Q6
 b2lyZWY+c3EAfgAAP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98C
@@ -73,7 +74,20 @@ class __tags {
 */
 class __options {
 }/**
-@__positions 
+@__positions <oigroup:<oiref:cpp#Class#CSnack:oiref>=10,419,106,106,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSnackArray#m_snack:oiref>=226,472,116,472:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CSnackArray#m_snack:oiref>=120,453,32,15,0:oigroup>
+<oigroup:<oiref:cpp#Class#CPaymentSlot:oiref>=95,10,130,113,1:oigroup>
+<oigroup:<oiref:cpp#Class#CTray:oiref>=245,10,135,83,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_paymentSlot:oiref>=259,183,160,123:oigroup>
+<oigroup:<oiref:cpp#Class#CKeyboard:oiref>=400,10,117,98,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_display:oiref>=405,224,485,224:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_snackArray:oiref>=310,349,310,419:oigroup>
+<oigroup:<oiref:cpp#Class#CSnackMachine:oiref>=216,183,189,166,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_keyboard:oiref>=353,183,458,108:oigroup>
+<oigroup:<oiref:cpp#Class#CDisplay:oiref>=485,183,125,83,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_tray:oiref>=302,183,302,93:oigroup>
+<oigroup:<oiref:cpp#Class#CSnackArray:oiref>=226,419,169,136,1:oigroup>
 */
 class __positions {
 }

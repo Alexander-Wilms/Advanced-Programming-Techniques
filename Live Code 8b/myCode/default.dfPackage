@@ -1,4 +1,4 @@
-package id3b260jai0qjufjai0qksh;
+package idei9igjbxtp731jbxw7ufr;
 
 /**
 @version 2.0
@@ -16,29 +16,11 @@ class reference {
 @__ref <oiref:cpp#Class#CMatrix:oiref><oihard>
 @__modelType reference 
 */
-class reference35 {
+class reference1 {
 }
 }/**
 @__tags
-@shapeType ClassDiagram
-@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
-YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAWCkt9gAc3IAE2phdmEudXRp
-bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
-b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
-YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQAJlNhbXN1bmctU2VyaWVzLTct
-V2luZG93cy1GQVcuZnJpdHouYm94dAAJPGRlZmF1bHQ+dAAGYXdpbG1zeHNxAH4AAgAAAV/6xfwA
-c3EAfgAFAAAAAXcEAAAACnNxAH4AB3QACEZyb21tLU5CdAAJPGRlZmF1bHQ+dAAFRnJvbW14eA==
-@elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACdAAiPG9pcmVmOmNwcCNDbGFzcyNDb29yZGluYXRlOm9p
-cmVmPnNxAH4AAD9AAAAAAAAMdwgAAAAQAAAAAXNyAA5qYXZhLmxhbmcuTG9uZzuL5JDMjyPfAgAB
-SgAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAFf+sX8AHNyABNqYXZh
-LnV0aWwuQXJyYXlMaXN0eIHSHZnHYZ0DAAFJAARzaXpleHAAAAABdwQAAAAKc3IAJWRlLm1ubC5k
-b2Nib29rNFRBLmltcGwuQ2hhbmdlTG9nRW50cnkHjY61+aoknwIAA0wACGhvc3RuYW1ldAASTGph
-dmEvbGFuZy9TdHJpbmc7TAAEbmFtZXEAfgAKTAAEdXNlcnEAfgAKeHB0AAhGcm9tbS1OQnQACkNv
-b3JkaW5hdGV0AAVGcm9tbXh4dAAePG9pcmVmOmNwcCNDbGFzcyNDbGFzczE6b2lyZWY+c3EAfgAA
-P0AAAAAAAAx3CAAAABAAAAABc3EAfgAEAAABX/rF/ABzcQB+AAcAAAABdwQAAAAKc3EAfgAJcQB+
-AAx0AAZDbGFzczFxAH4ADnh4eA== 
+@shapeType ClassDiagram 
 */
 class __tags {
 }/**
@@ -46,9 +28,8 @@ class __tags {
 */
 class __options {
 }/**
-@__positions <oigroup:<oiref:cpp#Class#CCoordinate:oiref>=509,165,101,143,1:oigroup>
-<oigroup:<oiref:cpp#Class#CMatrix:oiref>=180,21,200,122,1:oigroup>
-<oigroup:<oiref:cpp#Class#Coordinate:oiref>=10,10,123,152,1:oigroup>
+@__positions <oigroup:<oiref:cpp#Class#CMatrix:oiref>=153,10,200,122,1:oigroup>
+<oigroup:<oiref:cpp#Class#Coordinate:oiref>=10,10,123,152,1:oigroup> 
 */
 class __positions {
 }

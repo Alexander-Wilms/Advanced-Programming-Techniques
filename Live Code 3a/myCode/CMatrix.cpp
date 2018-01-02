@@ -136,7 +136,7 @@ bool CMatrix::set(unsigned short row, unsigned short column, matrixdata_t value)
 
 CMatrix::CMatrix(const CMatrix& origin)
 {
-	cout << "Copying object " << ++m_count << " from adress " << &origin << " to " << this << endl;
+	cout << "Copying object " << ++m_count << " from address " << &origin << " to " << this << endl;
 
 	//Copy normal attributes
 	//This pointer is optional, only used for readability

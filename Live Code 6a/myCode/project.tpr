@@ -15,24 +15,24 @@ Version=3.0
 projectfile.encoding=Cp1252
 [editor]
 recent.file.0=Z:\\home\\awilms\\Dokumente\\Ausbildung\\Hochschule Darmstadt\\Master Electrical Engineering\\2. Semester\\System Design\\Advanced Programming Techniques and Engineering Processes\\Advanced-Programming-Techniques\\Live Code 6a\\myCode\\model\\CCaptain.h
-recent.file.1=Z:\\home\\awilms\\Dokumente\\Ausbildung\\Hochschule Darmstadt\\Master Electrical Engineering\\2. Semester\\System Design\\Advanced Programming Techniques and Engineering Processes\\Advanced-Programming-Techniques\\Live Code 6a\\myCode\\model\\CSailor.h
-recent.file.2=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CBoat.h
-recent.file.3=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CSailingSimulation.h
-recent.file.4=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CSailor.h
-recent.file.5=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CCaptain.h
-recent.file.6=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CPerson.h
-recent.file.7=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CCruiser.h
-recent.file.8=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CLongboat.h
-recent.file.9=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CDinghy.h
+recent.file.1=Z:\\home\\awilms\\Dokumente\\Ausbildung\\Hochschule Darmstadt\\Master Electrical Engineering\\2. Semester\\System Design\\Advanced Programming Techniques and Engineering Processes\\Advanced-Programming-Techniques\\Live Code 6a\\myCode\\model\\CDinghy.h
+recent.file.2=Z:\\home\\awilms\\Dokumente\\Ausbildung\\Hochschule Darmstadt\\Master Electrical Engineering\\2. Semester\\System Design\\Advanced Programming Techniques and Engineering Processes\\Advanced-Programming-Techniques\\Live Code 6a\\myCode\\model\\CSailor.h
+recent.file.3=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CBoat.h
+recent.file.4=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CSailingSimulation.h
+recent.file.5=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CSailor.h
+recent.file.6=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CCaptain.h
+recent.file.7=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CPerson.h
+recent.file.8=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CCruiser.h
+recent.file.9=D:\\50_HDA\\60_Lehre\\40_Vorlesungen\\20_APT\\_workspace\\_2017\\week6a\\myCode\\model\\CLongboat.h
 [workspace]
 Developer.CodingWorkspace={{0,2,-1,0,0,0,0,0,0,1,0,50,75,25,-1,-1,-1,-1}${0,1,-1,0,0,0,0,1,0,1,0,50,75,25,-1,-1,-1,-1}${0,3,-1,0,0,0,0,1,0,1,0,66,50,25,-1,-1,-1,-1}${0,3,-1,0,0,0,0,1,0,1,0,66,50,25,-1,-1,-1,-1}${0,-1,-1,0,0,0,0,0,0,1,0,5,5,5,-1,-1,-1,-1}${0,5,-1,0,0,0,0,0,0,1,0,50,50,25,-1,-1,-1,-1}${0,4,-1,0,0,0,0,1,0,1,1,66,50,25,-1,-1,-1,-1}${0,7,-1,0,0,0,0,0,0,1,0,50,50,75,-1,-1,-1,-1}}
 Developer.DebugWorkspace={{0,2,-1,0,0,0,0,0,0,1,0,50,75,25,-1,-1,-1,-1}${0,1,-1,0,0,0,0,1,0,1,1,50,75,25,-1,-1,-1,-1}${0,3,-1,0,0,0,0,0,0,1,0,50,50,25,-1,-1,-1,-1}${0,3,-1,0,0,0,0,0,0,1,0,50,50,25,-1,-1,-1,-1}${0,-1,-1,0,0,0,0,0,0,1,0,5,5,5,-1,-1,-1,-1}${0,4,-1,0,0,0,0,0,0,1,0,50,50,25,-1,-1,-1,-1}${0,0,-1,0,0,0,0,1,0,1,0,75,5,5,-1,-1,-1,-1}${0,7,-1,0,0,0,0,0,0,1,0,50,50,75,-1,-1,-1,-1}}
-Developer.DesignWorkspace={{0,-1,-1,0,0,0,0,1,0,1,1,50,75,22,-1,-1,-1,-1}${0,1,-1,0,0,0,0,0,0,1,0,50,75,22,-1,-1,-1,-1}${0,3,-1,0,0,0,0,1,0,1,0,50,50,22,-1,-1,-1,-1}${0,3,-1,0,0,0,0,1,0,1,0,50,50,22,-1,-1,-1,-1}${0,-1,-1,0,0,0,0,0,0,1,0,5,5,5,-1,-1,-1,-1}${0,4,-1,0,0,0,0,1,0,1,0,50,50,22,-1,-1,-1,-1}${0,0,-1,0,0,0,0,0,0,1,0,75,5,5,-1,-1,-1,-1}${0,7,-1,0,0,0,0,0,0,1,0,50,50,75,-1,-1,-1,-1}}
-Developer.GraficClass={{0,2,-1,0,0,0,0,1,0,1,1,97,75,25,-1,-1,-1,-1}${0,1,-1,0,0,0,0,0,0,1,0,97,75,25,-1,-1,-1,-1}${0,3,-1,0,0,0,0,0,0,1,0,50,50,25,-1,-1,-1,-1}${0,3,-1,0,0,0,0,0,0,1,0,50,50,25,-1,-1,-1,-1}${0,-1,-1,0,0,0,0,0,0,1,0,5,5,5,-1,-1,-1,-1}${0,4,-1,0,0,0,0,0,0,1,0,50,50,25,-1,-1,-1,-1}${0,0,-1,0,0,0,0,0,0,1,0,75,5,5,-1,-1,-1,-1}${0,7,-1,0,0,0,0,0,0,1,0,50,50,75,-1,-1,-1,-1}}
+Developer.DesignWorkspace={{0,-1,-1,0,0,0,0,1,0,1,0,5,5,5,-1,-1,-1,-1}${0,1,-1,0,0,0,0,1,0,1,0,50,75,22,-1,-1,-1,-1}${0,3,-1,0,0,0,0,1,0,1,1,50,50,22,-1,-1,-1,-1}${0,3,-1,0,0,0,0,1,0,1,1,50,50,22,-1,-1,-1,-1}${0,-1,-1,0,0,0,0,0,0,1,0,5,5,5,-1,-1,-1,-1}${0,4,-1,0,0,0,0,1,0,1,0,50,50,22,-1,-1,-1,-1}${0,0,-1,0,0,0,0,0,0,1,0,75,5,5,-1,-1,-1,-1}${0,7,-1,0,0,0,0,0,0,1,0,50,50,75,-1,-1,-1,-1}}
+Developer.GraficClass={{0,-1,-1,0,0,0,0,1,0,1,1,97,75,25,-1,-1,-1,-1}${0,1,-1,0,0,0,0,0,0,1,0,97,75,25,-1,-1,-1,-1}${0,3,-1,0,0,0,0,0,0,1,0,50,50,25,-1,-1,-1,-1}${0,3,-1,0,0,0,0,0,0,1,0,50,50,25,-1,-1,-1,-1}${0,-1,-1,0,0,0,0,0,0,1,0,5,5,5,-1,-1,-1,-1}${0,4,-1,0,0,0,0,0,0,1,0,50,50,25,-1,-1,-1,-1}${0,0,-1,0,0,0,0,0,0,1,0,75,5,5,-1,-1,-1,-1}${0,7,-1,0,0,0,0,0,0,1,0,50,50,75,-1,-1,-1,-1}}
 names.Developer={GraficClass,DesignWorkspace,CodingWorkspace,DebugWorkspace}
 [vcs]
 provider.class=CVS LAN
 [lastOpenProjectName]
-Developer=DesignWorkspace
+Developer=GraficClass
 [newDiagramExpert]
 includeInCurrentDiagram=false

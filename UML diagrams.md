@@ -559,6 +559,8 @@ CSetOfMeasurementValues *-->"-m_unit" t_unit
 
 ## CComplex
 
+* operator overloading
+
 ```plantuml
 @startuml
 class CComplex {
@@ -581,6 +583,9 @@ class CComplex {
 ```
 
 ## CFraction
+
+* operator overloading
+
 ```plantuml
 @startuml
 class CFraction {
@@ -852,17 +857,22 @@ class CSort {
 
 ## Live Code 1
 
+C-equivalent of classes: structs, but they can't have methods
 ```plantuml
 @startuml
 class CTriangle {
- 	- CCoordinate[3]m_coordinate : 
+ 	- m_coordinate : CCoordinate[3]
 
+	+ CTriangle()
+	+ ~CTriangle()
  	+ print() : void
 }
 class CCoordinate {
  	- m_x : int
  	- m_y : int
 
+	+ CCoordinate()
+	+ ~CCoordinate()
  	+ print() : void
  	+ set() : void
 }
@@ -887,14 +897,18 @@ CCoordinate <--o CTriangle
 ```plantuml
 @startuml
 class CTriangle {
- 	- CCoordinate[3]m_coordinate : 
+ 	- m_coordinate : CCoordinate[3]
 
+	+ CTriangle()
+	+ ~CTriangle()
  	+ print() : void
 }
 class CCoordinate {
  	- m_x : int
  	- m_y : int
 
+	+ CCoordinate()
+	+ ~CCoordinate()
  	+ print() : void
  	+ set() : void
 }
@@ -908,6 +922,8 @@ CTriangle o-- CCoordinate
 
 ## Live Code 2b
 
+* getIndex(row, column) returns the array index of a matrix element
+* the enum matrixInit_t  is used to specify how the matrix should be initialized
 ```plantuml
 @startuml
 class CMatrix {
@@ -920,7 +936,7 @@ class CMatrix {
  	+ print() : void
  	- getIndex() : unsigned int
 }
-class matrixdata_t << enum >> {
+class matrixInit_t << enum >> {
  	+ int ZERO
  	+ int ONE
  	+ int UNIT
@@ -933,7 +949,6 @@ CMatrix ..> matrixdata_t
 ```
 
 <!--![bla](Live%20Code%202b/myCode/model/default.png)-->
-
 
 ```plantuml
 @startuml
@@ -952,6 +967,8 @@ Programmer -- (delete matrix)
 <!--![bla](Live%20Code%202b/myCode/model/uc_OverviewMatrix.png)-->
 
 ## Live Code 3a
+* added a copy constructor
+* added a static variable to count the number of instances
 
 ```plantuml
 @startuml
@@ -965,9 +982,10 @@ class CMatrix {
 	+ CMatrix()
  	+ ~CMatrix()
  	+ print() : void
+	+ set() : bool
  	- getIndex() : unsigned int
 }
-class matrixdata_t << enum >> {
+class matrixInit_t << enum >> {
  	+ int ZERO
  	+ int ONE
  	+ int UNIT
@@ -999,6 +1017,9 @@ Programmer -- (delete matrix)
 
 ## Live Code 3b
 
+* Lidar::m_pScan: aggregation by value
+* Lidar::m_Cuart: association
+
 ```plantuml
 @startuml
 class CUart {
@@ -1006,7 +1027,7 @@ class CUart {
 }
 interface Lidar {
 	- m_pScan : CMeasurementValue*
-	- M_CUart : CUart
+	- m_CUart : CUart
 }
 class CMeasurementValue {
 	- m_distance : float
@@ -1060,6 +1081,8 @@ note left of Lidar_IF: An interface class is a class which serves as an external
 
 ## Live Code 3c
 
+* typedef matrixdata_t CCoordinate
+* each element is a CCoordinate: e.g. m_pData[i] = CCoordinate(0,0);
 
 ```plantuml
 @startuml
@@ -1067,11 +1090,11 @@ class CCoordinate {
 	- m_x : int
 	- m_y : int
 
-	+ CCoordinate(x:int, y:int)
+	+ CCoordinate(x:int, y:int) <<constructor>>
 	+ print() : void
 	+ set(x:int, y:int) : bool
 }
-class matrixinit_t << enum >> {
+class matrixInit_t << enum >> {
  	+ int ZERO
  	+ int ONE
  	+ int UNIT
@@ -1081,17 +1104,17 @@ class CMatrix {
  	- m_pData : matrixdata_t* 
  	- m_noColumns : unsigned short
  	- m_noRows : unsigned short
-	- {static} m_count : int = 0
+	- {static} m_count : int
 
- 	+ CMatrix()
-	+ CMatrix()
+ 	+ CMatrix() <<constructor>>
+	+ CMatrix() <<copy constructor>>
  	+ ~CMatrix()
  	+ print() : void
  	- getIndex() : unsigned int
 }
 
 CMatrix "1"*-->"1..*" CCoordinate
-CMatrix ..> matrixinit_t
+CMatrix ..> matrixInit_t
 
 @enduml
 ```
@@ -1120,13 +1143,15 @@ rectangle GraphicalSystem {
 @enduml
 ```
 
+* CGraphicObject::print() calls CCoordinate::print() for all its coordinates
+
 ```plantuml
 @startuml
 class CGraphicalSystem {
  	- m_database : CDatabase
  	- m_screen : CScreen
 
- 	+ CGraphicalSystem()
+ 	+ CGraphicalSystem() <<constructor>>
  	+ print() : void
 }
 class CDatabase {
@@ -1136,7 +1161,7 @@ class CDatabase {
 	- m_triangle : CTriangle*
 	- m_rectangle : CRectangle*
 
- 	+ CDatabase()
+ 	+ CDatabase() <<constructor>>
  	+ print() : void
  	+ addElement() : bool
  	+ getAddressOfTriangle() : CTriangle* 
@@ -1147,7 +1172,7 @@ class CScreen {
  	- m_pTriangle : CTriangle** 
  	- m_pDatabase : CDatabase*
 
- 	+ CScreen()
+ 	+ CScreen() <<constructor>>
  	+ connect() : void
  	+ addElement() : bool
  	+ print() : void
@@ -1157,7 +1182,7 @@ class CGraphicObject {
  	- m_noCoordinates : unsigned int
  	# m_pCoordinate : CCoordinate* 
 
- 	+ CGraphicObject()
+ 	+ CGraphicObject() <<constructor>>
  	+ set() : bool
  	+ print() : void
  	+ move() : bool
@@ -1166,20 +1191,20 @@ class CGraphicObject {
 }
 class CCircle {
  	- m_radius : unsigned int
- 	+ CCircle()
+ 	+ CCircle() <<constructor>>
  	+ print() : void
 }
 class CRectangle {
- 	+ CRectangle()
+ 	+ CRectangle() <<constructor>>
 }
 class CTriangle {
- 	+ CTriangle()
+ 	+ CTriangle() <<constructor>>
 }
 class CCoordinate {
  	- m_x : int
  	- m_y : int
 
- 	+ CCoordinate()
+ 	+ CCoordinate() <<constructor>>
  	+ print() : void
  	+ set() : bool
 }
@@ -1207,13 +1232,26 @@ CGraphicObject "1"*-->"0..1" CCoordinate
 
 ## Live Code 5
 
+* the code is the same as in 'Live Code 4', except for
+	* now we can store and display more than just CTriangles
+	* we delete the dynamically allocated memory in m_pObject
+	* we check full null pointers prior to dereferencing
+	* CDatabase::addElement() creates an instance of the desired type
+	* ~CGraphicObject() deletes the created Coordinate
+	* Polymorphism: make CGraphicObject's methods virtual
+	* constructor of derived object first call the superclass' constructor via the intializer list
+	* added error messages to CScreen::addElement() in case the object wasn't found in the database or the static array is full
+* similar to Lab 1: CGraphicObjects are stored in (i.e. memory is provided by) CDatabase
+* CScreen stores a pointer to the CDatabase instance
+* CScreen::addElement() calls CDatabase::getAddressOfObject() and stores the CGraphicObject's address in m_pObject
+
 ```plantuml
 @startuml
 class CGraphicalSystem {
  	- m_database : CDatabase
  	- m_screen : CScreen
 
- 	+ CGraphicalSystem()
+ 	+ CGraphicalSystem() <<constructor>>
  	+ print() : void
 }
 class CDatabase {
@@ -1221,8 +1259,8 @@ class CDatabase {
  	- unsigned m_nextFreeObject : int
  	- m_pObject : CGraphicObject** 
 
- 	+ CDatabase()
- 	+ ~CDatabase()
+ 	+ CDatabase() <<constructor>>
+ 	+ ~CDatabase() <<destructor>>
  	+ print() : void
  	+ addElement() : bool
  	+ CGraphicObject* getAddressOfObject()
@@ -1233,8 +1271,8 @@ class CScreen {
  	- m_pObject : CGraphicObject** 
  	- m_pDatabase : CDatabase
 
- 	+ CScreen()
- 	+ ~CScreen()
+ 	+ CScreen() <<constructor>>
+ 	+ ~CScreen() <<destructor>>
  	+ connect() : void
  	+ addElement() : bool
  	+ print() : void
@@ -1244,8 +1282,8 @@ class CGraphicObject {
  	- unsigned m_noCoordinates : int
  	# m_pCoordinate : CCoordinate* 
 
- 	+ CGraphicObject()
- 	+ ~CGraphicObject()
+ 	+ CGraphicObject() <<constructor>>
+ 	+ ~CGraphicObject() <<destructor>>
  	+ set() : bool
  	+ void print
  	+ bool move
@@ -1253,21 +1291,22 @@ class CGraphicObject {
  	+ getName() : std::string
 }
 class CCircle {
- 	- unsigned m_radius : int
- 	+ CCircle()
+ 	- m_radius : unsigned int
+
+ 	+ CCircle() <<constructor>>
  	+ print() : void
 }
 class CRectangle {
- 	+ CRectangle()
+ 	+ CRectangle() <<constructor>>
 }
 class CTriangle {
- 	+ CTriangle()
+ 	+ CTriangle() <<constructor>>
 }
 class CCoordinate {
  	- m_x : int
  	- m_y : int
 
- 	+ CCoordinate()
+ 	+ CCoordinate() <<constructor>>
  	+ print() : void
  	+ set() : bool
 }
@@ -1318,22 +1357,23 @@ rectangle GraphicalSystem {
 ```plantuml
 @startuml
 class CCircle {
- 	- unsigned m_radius : int
- 	+ CCircle()
+ 	-m_radius : unsigned int
+
+ 	+ CCircle() <<constructor>>
  	+ print() : void
 }
 class CRectangle {
- 	+ CRectangle()
+ 	+ CRectangle() <<constructor>>
 }
 class CTriangle {
- 	+ CTriangle()
+ 	+ CTriangle() <<constructor>>
 }
 class CGraphicObject {
  	- m_name : std::string
  	- unsigned m_noCoordinates : int
  	# m_pCoordinate : CCoordinate* 
 
- 	+ CGraphicObject()
+ 	+ CGraphicObject() <<constructor>>
  	+ ~CGraphicObject()
  	+ set() : bool
  	+ void print
@@ -1345,7 +1385,7 @@ class CCoordinate {
  	- m_x : int
  	- m_y : int
 
- 	+ CCoordinate()
+ 	+ CCoordinate() <<constructor>>
  	+ print() : void
  	+ set() : bool 	
 }
@@ -1370,10 +1410,34 @@ note left of CCircle: Inheritance\nA circle "is" a graphical object
 
 ```plantuml
 @startuml
+left to right direction
+Captain -- (Navigate the boat)
+Captain -- (Enter and leave the boat)
+Sailor -- (Enter and leave the boat)
+Sailor -- (Raise sails)
+Boat -- (Sail the vast sea)
+
+(Create Boat, Captain, Sailor objects) -- :Simulation user:
+(Choose boat and have crew enter the boat) -- :Simulation user:
+(Have captain navigate) -- :Simulation user:
+(Have crew set the sails) -- :Simulation user:
+
+@enduml
+```
+
+* Polymophism: CSailingSimulator could store an array of pointers of type CBoat pointing to instances of CLongboat, CDinghy and CCruiser, but for that, these methods would need to be virtual in CBoat
+
+```plantuml
+@startuml
 class CBoat {
 	- m_speed : int
 	- m_course : int
 	- m_maxSpeed : int
+
+	+ command() : void
+	+ sail() : void
+	+ leaveBoat() : void
+	+ enterBoat() : void
 }
 class CLongboat
 class CDinghy
@@ -1404,82 +1468,9 @@ CSailingSimulator *-- CSailor
 CSailingSimulator *--"1..*" CCaptain
 @enduml
 ```
-
-```plantuml
-@startuml
-left to right direction
-Captain -- (Navigate the boat)
-Captain -- (Enter and leave the boat)
-Sailor -- (Enter and leave the boat)
-Sailor -- (Raise sails)
-Boat -- (Sail the vast sea)
-
-(Create Boat, Captain, Sailor objects) -- :Simulation user:
-(Choose boat and have crew enter the boat) -- :Simulation user:
-(Have captain navigate) -- :Simulation user:
-(Have crew set the sails) -- :Simulation user:
-
-@enduml
-```
-
 <!--![bla](Live%20Code%206a/myCode/model.png)-->
 
 ## Live Code 6b
-
-```plantuml
-@startuml
-left to right direction
-Captain -- (Navigate the boat)
-Captain -- (Enter and leave the boat)
-Sailor -- (Enter and leave the boat)
-Sailor -- (Raise sails)
-Boat -- (Sail the vast sea)
-
-(Create Boat, Captain, Sailor objects) -- :Simulation user:
-(Choose boat and have crew enter the boat) -- :Simulation user:
-(Have captain navigate) -- :Simulation user:
-(Have crew set the sails) -- :Simulation user:
-
-@enduml
-```
-
-<!--![bla](Live%20Code%206b/myCode/ucOverview.png)-->
-
-## Live Code 7
-
-```plantuml
-@startuml
-class CComplex {
-	- m_r : float
-	- m_i : float
-
-	+ CComplex()
-	+ CComplex()
-	+ operator+() : CComplex
-	+ operator=() : CComplex&
-	+ operator+=() : CComplex&
-
-	complex_t
-}
-class CComplexSet {
-	- m_data : std::vector<CComplex>
-
-	+ CComplexSet()
-	+ addElement() : void
-	+ print() : void
-	+ saveToFile() : void
-}
-
-CComplexSet o-->"1..*" CComplex
-
-@enduml
-```
-
-<!--![bla](Live%20Code%207/myCode/default.png)-->
-
-## Live Code 8a
-
-## Live Code 8b
 
 ```plantuml
 @startuml
@@ -1504,7 +1495,10 @@ endif
 @enduml
 ```
 
-<!--```plantuml
+<!--
+new syntax doesn't support aliases yet, which are necessary to reference existing states
+
+```plantuml
 @startuml
 start
 :Select Snack;
@@ -1517,7 +1511,7 @@ stop
 @enduml
 ```-->
 
-<!--![bla](Live%20Code%208b/myCode/acBuySnack.png)-->
+<!--![bla](Live%20Code%206b/myCode/acBuySnack.png)-->
 
 ```plantuml
 @startuml
@@ -1572,7 +1566,7 @@ CSnackArray -->"0..1" CSnack
 @enduml
 ```
 
-<!--![bla](Live%20Code%208b/myCode/clSnackMachine.png)-->
+<!--![bla](Live%20Code%206b/myCode/clSnackMachine.png)-->
 
 ```plantuml
 @startuml
@@ -1604,7 +1598,7 @@ main -> "<b><u>m_snackmachine\n<b>CSnackMachine</b>" : 1: run():void
 @enduml
 ```
 
-<!--![bla](Live%20Code%208b/myCode/seBuySnack.png)-->
+<!--![bla](Live%20Code%206b/myCode/seBuySnack.png)-->
 
 ```plantuml
 @startuml
@@ -1636,7 +1630,7 @@ note "Events:\nev_EnterMoney\nev_PressButton\nev_Cancel\nev_OpenTray(?)" as N1
 @enduml
 ```
 
-<!--![bla](Live%20Code%208b/myCode/stSnackMachine.png)-->
+<!--![bla](Live%20Code%206b/myCode/stSnackMachine.png)-->
 
 ```plantuml
 @startuml
@@ -1664,11 +1658,103 @@ ShopOwner -- (Get snack status)
 @enduml
 ```
 
-<!--![bla](Live%20Code%208b/myCode/ucSnackmachine.png)-->
+<!--![bla](Live%20Code%206b/myCode/ucSnackmachine.png)-->
+
+## Live Code 7
+
+* what's new:
+	* operator overloading
+	* std::vector container
+	* outpush file streams
+* operator<<() is alway declared as a global friend method, which is not part of CComplexSet
+
+```plantuml
+@startuml
+class CComplex {
+	- m_r : float
+	- m_i : float
+
+	+ CComplex()
+	+ CComplex()
+	+ operator+() : CComplex
+	+ operator=() : CComplex&
+	+ operator+=() : CComplex&
+
+	complex_t
+}
+class CComplexSet {
+	- m_data : std::vector<CComplex>
+
+	+ CComplexSet()
+	+ addElement() : void
+	+ print() : void
+	+ saveToFile() : void
+}
+
+CComplexSet o-->"1..*" CComplex
+
+@enduml
+```
+
+<!--![bla](Live%20Code%207/myCode/default.png)-->
+
+## Live Code 8a
+
+* we're not creating new classes this time
+* we demo std::vector's methods
+* we get to know std::list
+* we get to know std::map
+* we use exceptions thrown by std::vector
+
+## Live Code 8b
+
+* class templates
+* type of class member can be specified at runtime
+* nested templates!
+* default values for template type
+
+```
+template <template <class TCONTENT> class TDATA, class TCONTENT = int>
+class CMatrix
+{
+private:
+	TDATA<TCONTENT>* m_buffer;
+public:
+	CMatrix(unsigned int rows, unsigned int columns);
+};
+```
+
+```plantuml
+@startuml
+class Coordinate<T:class> {
+	- m_x : T
+	- m_y : T
+
+	+ Coordinate() <<constructor>>
+	+ operator>() : bool
+	+ print() : void
+}
+class CMatrix<TDATA<TCONTENT:class>:class,TCONTENT = int:class> {
+	- m_buffer : TDATA<TCONTENT>
+
+	+ CMatrix() <<constructor>>
+}
+@enduml
+```
+
+<!--![bla](Live%20Code%208b/myCode/default.png)-->
 
 ## Live Code 8c
 
+* no self-created classes
+* std::list
+* iterator
+* reverse_iterator
+
 ## Live Code 9
+
+* similar to Lab 3
+* CCSV and CJSON are both derived from CFormat
 
 ```plantuml
 @startuml
@@ -1723,6 +1809,47 @@ note left of CStorage: In a first step we can provide a\nreference to the contai
 <!--![bla](Live%20Code%209/myCode/UML.png)-->
 
 ## Live Code 10
+
+* unit testing with cppcheck
+* create separate build and launch configurations for unit tests
+* unit test main.cpp:
+	* TextUi::TestRunner runner;
+	* runner.addTest(CLoadTests::suite());
+	* runner.run();
+* test suite:
+	* create 1 test class for each method that should be tested
+	* create a number of tests in each class
+	* add all tests to testsuite
+
+```
+class CLoadTests: public CppUnit::TestFixture {
+public:
+
+	void testLoadExisting() {
+		CAddressDB* adb = new CAddressDB("AddressDB.txt");
+		CPPUNIT_ASSERT(adb->loadFromFile());
+		delete adb;
+	}
+
+	void testLoadMissing() {
+		CAddressDB* adb = new CAddressDB("NonExistantDB.txt");
+		CPPUNIT_ASSERT(!adb->loadFromFile());
+		delete adb;
+	}
+
+	static CppUnit::TestSuite* suite() {
+		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Load Tests");
+
+		suite->addTest(new CppUnit::TestCaller<CLoadTests>
+				 ("Load Existing", &CLoadTests::testLoadExisting));
+
+		suite->addTest(new CppUnit::TestCaller<CLoadTests>
+				 ("Load Missing", &CLoadTests::testLoadMissing));
+
+		return suite;
+	}
+};
+```
 
 ```plantuml
 @startuml
