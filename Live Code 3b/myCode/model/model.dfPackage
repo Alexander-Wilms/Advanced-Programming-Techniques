@@ -28,12 +28,13 @@ class reference14 {
 @__tags
 @shapeType ClassDiagram
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
 YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9Gh2gAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
 YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAFbW9kZWx0
-AAVGcm9tbXh4
+AAVGcm9tbXhzcQB+AAIAAAFgrwSQAHNxAH4ABQAAAAF3BAAAAApzcQB+AAd0ACZTYW1zdW5nLVNl
+cmllcy03LVdpbmRvd3MtRkFXLmZyaXR6LmJveHQABW1vZGVsdAAGYXdpbG1zeHg=
 @elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
 aG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAApPG9pcmVmOmNwcCNDbGFzcyNDTWVhc3VyZW1lbnRW
 YWx1ZTpvaXJlZj5zcQB+AAA/QAAAAAAADHcIAAAAEAAAAAFzcgAOamF2YS5sYW5nLkxvbmc7i+SQ
@@ -53,7 +54,13 @@ class __tags {
 */
 class __options {
 }/**
-@__positions 
+@__positions <oigroup:<oiref:cpp#Class#CUart:oiref>=68,199,83,81,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#Lidar#m_pScan:oiref>=210,62,332,62:oigroup>
+<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#Lidar#m_pScan:oiref>=214,43,16,15,0:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#Lidar#m_pScan:oiref>=298,43,30,15,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#Lidar#m_CUart:oiref>=109,129,109,199:oigroup>
+<oigroup:<oiref:cpp#Class#Lidar:oiref>=10,10,200,119,1:oigroup>
+<oigroup:<oiref:cpp#Class#CMeasurementValue:oiref>=332,10,142,104,1:oigroup> 
 */
 class __positions {
 }

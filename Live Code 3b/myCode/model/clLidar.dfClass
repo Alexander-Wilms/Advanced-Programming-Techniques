@@ -31,12 +31,13 @@ class reference13 {
 @__tags
 @shapeType ClassDiagram
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
 YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9Gh2gAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
 YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAHY2xMaWRh
-cnQABUZyb21teHg= 
+cnQABUZyb21teHNxAH4AAgAAAWCvBJAAc3EAfgAFAAAAAXcEAAAACnNxAH4AB3QAJlNhbXN1bmct
+U2VyaWVzLTctV2luZG93cy1GQVcuZnJpdHouYm94dAAHY2xMaWRhcnQABmF3aWxtc3h4
 */
 class __tags {
 }/**
@@ -44,14 +45,14 @@ class __tags {
 */
 class __options {
 }/**
-@__positions <oigroup:<oiref:cpp#Class#CUart:oiref>=10,110,83,82,1:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#Lidar#m_pScan:oiref>=385,143,510,143:oigroup>
+@__positions <oigroup:<oiref:cpp#Class#CUart:oiref>=10,110,83,81,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#Lidar#m_pScan:oiref>=390,142,510,142:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#Lidar#lnkCUart:oiref>=190,151,93,151:oigroup>
-<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#Lidar#m_pScan:oiref>=389,123,15,16,0:oigroup>
-<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#Lidar#m_pScan:oiref>=480,123,26,16,0:oigroup>
+<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#Lidar#m_pScan:oiref>=394,123,16,15,0:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#Lidar#m_pScan:oiref>=476,123,30,15,0:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#Lidar#m_CUart:oiref>=190,151,93,151:oigroup>
-<oigroup:<oiref:cpp#Class#Lidar:oiref>=190,90,195,123,1:oigroup>
-<oigroup:<oiref:cpp#Class#CMeasurementValue:oiref>=510,90,131,107,1:oigroup>
+<oigroup:<oiref:cpp#Class#Lidar:oiref>=190,90,200,119,1:oigroup>
+<oigroup:<oiref:cpp#Class#CMeasurementValue:oiref>=510,90,142,104,1:oigroup>
  
 */
 class __positions {

@@ -17,12 +17,13 @@ class reference {
 @__tags
 @shapeType ClassDiagram
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
 YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9Gh2gAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
 YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAJPGRlZmF1
-bHQ+dAAFRnJvbW14eA==
+bHQ+dAAFRnJvbW14c3EAfgACAAABYK8EkABzcQB+AAUAAAABdwQAAAAKc3EAfgAHdAAmU2Ftc3Vu
+Zy1TZXJpZXMtNy1XaW5kb3dzLUZBVy5mcml0ei5ib3h0AAk8ZGVmYXVsdD50AAZhd2lsbXN4eA==
 @elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
 aG9sZHhwP0AAAAAAAAx3CAAAABAAAAAEdAAfPG9pcmVmOmNwcCNDbGFzcyNDTWF0cml4Om9pcmVm
 PnNxAH4AAD9AAAAAAAAMdwgAAAAQAAAAAXNyAA5qYXZhLmxhbmcuTG9uZzuL5JDMjyPfAgABSgAF
@@ -44,7 +45,7 @@ class __tags {
 */
 class __options {
 }/**
-@__positions <oigroup:<oiref:design#Class#idg3kgoj93yvl86j93yvxkc.diagram:oiref>=40,30,133,136,1:oigroup>
+@__positions <oigroup:<oiref:design#Class#idg3kgoj93yvl86j93yvxkc.diagram:oiref>=40,30,136,132,1:oigroup>
 <oigroup:Autodependency<oiref:cpp#Class#CMatrix:oiref><Autodependency><oiref:cpp#Class#matrixInit_t:oiref>=738,300,738,243:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CMatrix#m_pData:oiref>=630,333,561,333:oigroup>
 <oigroup:Autodependency<oiref:cpp#Class#matrixdata_t:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=480,333,441,333:oigroup>

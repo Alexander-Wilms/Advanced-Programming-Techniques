@@ -34,12 +34,13 @@ class reference3 {
 @__tags
 @shapeType ClassDiagram
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
 YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV7+bmAAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
 YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAJPGRlZmF1
-bHQ+dAAFRnJvbW14eA==
+bHQ+dAAFRnJvbW14c3EAfgACAAABYKS32ABzcQB+AAUAAAABdwQAAAAKc3EAfgAHdAAmU2Ftc3Vu
+Zy1TZXJpZXMtNy1XaW5kb3dzLUZBVy5mcml0ei5ib3h0AAk8ZGVmYXVsdD50AAZhd2lsbXN4eA==
 @elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
 aG9sZHhwP0AAAAAAAAx3CAAAABAAAAAEdAAhPG9pcmVmOmNwcCNDbGFzcyNDVHJpYW5nbGU6b2ly
 ZWY+c3EAfgAAP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFK
@@ -61,13 +62,13 @@ class __tags {
 */
 class __options {
 }/**
-@__positions <oigroup:MemberLink#<oiref:cpp#Member#triangle_t#corner:oiref>=173,63,93,63:oigroup>
-<oigroup:<oiref:cpp#Class#coordinate_t:oiref>=10,10,83,123,1:oigroup>
-<oigroup:<oiref:cpp#Class#CCoordinate:oiref>=490,140,83,126,1:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CTriangle#m_coordinate:oiref>=400,181,490,181:oigroup>
-<oigroup:<oiref:cpp#Class#triangle_t:oiref>=173,10,140,107,1:oigroup>
+@__positions <oigroup:MemberLink#<oiref:cpp#Member#triangle_t#corner:oiref>=173,62,100,62:oigroup>
+<oigroup:<oiref:cpp#Class#coordinate_t:oiref>=10,10,90,119,1:oigroup>
+<oigroup:<oiref:cpp#Class#CCoordinate:oiref>=490,140,92,121,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CTriangle#m_coordinate:oiref>=410,182,490,182:oigroup>
+<oigroup:<oiref:cpp#Class#triangle_t:oiref>=173,10,152,104,1:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CTriangle#lnkCCoordinate:oiref>=303,172,433,172:oigroup>
-<oigroup:<oiref:cpp#Class#CTriangle:oiref>=220,133,180,94,1:oigroup>
+<oigroup:<oiref:cpp#Class#CTriangle:oiref>=220,133,190,91,1:oigroup>
 */
 class __positions {
 }

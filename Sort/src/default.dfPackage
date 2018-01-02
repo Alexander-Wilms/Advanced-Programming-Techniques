@@ -1,0 +1,49 @@
+package idji1b8jbtqxaq5jbwra7m1;
+
+/**
+@version 2.0
+@physicalPackage
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:cpp#Class#CSort_t:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:cpp#Class#CSort:oiref><oihard>
+@__modelType reference 
+*/
+class reference46 {
+}
+/**
+@__ref <oiref:cpp#Class#CCoordinate:oiref><oihard>
+@__modelType reference 
+*/
+class reference47 {
+}
+}/**
+@__tags
+@shapeType ClassDiagram
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAWCvBJAAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQAJlNhbXN1bmctU2VyaWVzLTct
+V2luZG93cy1GQVcuZnJpdHouYm94dAAJPGRlZmF1bHQ+dAAGYXdpbG1zeHg= 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:<oiref:cpp#Class#CCoordinate:oiref>=10,290,95,106,1:oigroup>
+<oigroup:<oiref:cpp#Class#CSort:oiref>=193,10,153,226,1:oigroup>
+<oigroup:<oiref:cpp#Class#CSort_t:oiref>=10,10,163,242,1:oigroup> 
+*/
+class __positions {
+}

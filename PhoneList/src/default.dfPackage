@@ -1,0 +1,61 @@
+package id2m0l2jbtqxaq5jbwlkj7u;
+
+/**
+@version 2.0
+@physicalPackage
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:cpp#Class#CSimpleList:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:cpp#Class#CPhoneListElement:oiref><oihard>
+@__modelType reference 
+*/
+class reference36 {
+}
+/**
+@__ref <oiref:cpp#Class#CSimpleListElement:oiref><oihard>
+@__modelType reference 
+*/
+class reference37 {
+}
+/**
+@__ref <oiref:cpp#Class#CPhoneList:oiref><oihard>
+@__modelType reference 
+*/
+class reference38 {
+}
+}/**
+@__tags
+@shapeType ClassDiagram
+@changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAWCvBJAAc3IAE2phdmEudXRp
+bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
+b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQAJlNhbXN1bmctU2VyaWVzLTct
+V2luZG93cy1GQVcuZnJpdHouYm94dAAJPGRlZmF1bHQ+dAAGYXdpbG1zeHg= 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:MemberLink#<oiref:cpp#Member#CSimpleList#m_list:oiref>=518,319,626,319:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CPhoneList#m_list:oiref>=318,93,210,93:oigroup>
+<oigroup:<oiref:cpp#Class#CSimpleListElement:oiref>=626,251,145,136,1:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CSimpleList#m_list:oiref>=592,300,30,15,0:oigroup>
+<oigroup:<oiref:cpp#Class#CSimpleList:oiref>=318,251,200,211,1:oigroup>
+<oigroup:<oiref:cpp#Class#CPhoneList:oiref>=318,10,200,166,1:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CPhoneList:oiref><Autodependency><oiref:cpp#Class#CSimpleList:oiref>=418,176,418,251:oigroup>
+<oigroup:<oiref:cpp#Class#CPhoneListElement:oiref>=10,10,200,181,1:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CPhoneList#m_list:oiref>=214,74,30,15,0:oigroup> 
+*/
+class __positions {
+}

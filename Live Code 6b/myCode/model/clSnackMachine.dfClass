@@ -59,12 +59,14 @@ class reference1 {
 @__tags
 @shapeType ClassDiagram
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
-YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV+yrPQAc3IAE2phdmEudXRp
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAWCvBJAAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
-YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAOY2xTbmFj
-a01hY2hpbmV0AAVGcm9tbXh4 
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQAJlNhbXN1bmctU2VyaWVzLTct
+V2luZG93cy1GQVcuZnJpdHouYm94dAAOY2xTbmFja01hY2hpbmV0AAZhd2lsbXN4c3EAfgACAAAB
+X7Ks9ABzcQB+AAUAAAABdwQAAAAKc3EAfgAHdAAIRnJvbW0tTkJ0AA5jbFNuYWNrTWFjaGluZXQA
+BUZyb21teHg=
 */
 class __tags {
 }/**
@@ -75,23 +77,23 @@ class __options {
 @__positions <oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#lnkCSnackArray:oiref>=455,125,513,125:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#lnkCKeyboard:oiref>=393,187,579,303:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#lnkCPaymentSlot:oiref>=305,146,182,146:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_keyboard:oiref>=399,214,579,303:oigroup>
-<oigroup:<oiref:cpp#Class#CTray:oiref>=113,285,128,85,1:oigroup>
-<oigroup:<oiref:cpp#Class#CDisplay:oiref>=281,383,117,85,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_keyboard:oiref>=402,206,583,303:oigroup>
+<oigroup:<oiref:cpp#Class#CTray:oiref>=113,285,135,83,1:oigroup>
+<oigroup:<oiref:cpp#Class#CDisplay:oiref>=281,383,125,83,1:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CSnackArray#lnkCSnack:oiref>=608,108,730,108:oigroup>
-<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CSnackArray#m_snack:oiref>=698,90,28,16,0:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_paymentSlot:oiref>=270,138,182,138:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CSnackArray#m_snack:oiref>=694,90,32,15,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_paymentSlot:oiref>=270,136,190,136:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#lnkCDisplay:oiref>=377,187,377,383:oigroup>
-<oigroup:<oiref:cpp#Class#CSnackMachine:oiref>=270,40,185,174,1:oigroup>
-<oigroup:<oiref:cpp#Class#CPaymentSlot:oiref>=60,80,122,117,1:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CSnackArray#m_snack:oiref>=674,110,730,110:oigroup>
-<oigroup:<oiref:cpp#Class#CSnack:oiref>=730,50,102,110,1:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_display:oiref>=343,214,343,383:oigroup>
-<oigroup:<oiref:cpp#Class#CSnackArray:oiref>=513,63,161,142,1:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_snackArray:oiref>=455,126,513,126:oigroup>
+<oigroup:<oiref:cpp#Class#CSnackMachine:oiref>=270,40,189,166,1:oigroup>
+<oigroup:<oiref:cpp#Class#CPaymentSlot:oiref>=60,80,130,113,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSnackArray#m_snack:oiref>=682,109,730,109:oigroup>
+<oigroup:<oiref:cpp#Class#CSnack:oiref>=730,50,106,106,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_display:oiref>=346,206,346,383:oigroup>
+<oigroup:<oiref:cpp#Class#CSnackArray:oiref>=513,63,169,136,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_snackArray:oiref>=459,131,513,131:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#lnkCTray:oiref>=357,178,154,285:oigroup>
-<oigroup:<oiref:cpp#Class#CKeyboard:oiref>=525,303,108,101,1:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_tray:oiref>=306,214,177,285:oigroup>
+<oigroup:<oiref:cpp#Class#CKeyboard:oiref>=525,303,117,98,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSnackMachine#m_tray:oiref>=308,206,180,285:oigroup>
 */
 class __positions {
 }

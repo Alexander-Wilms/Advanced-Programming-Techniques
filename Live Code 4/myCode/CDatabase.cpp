@@ -16,6 +16,7 @@ using namespace std;
 
 //Own Include Files
 #include "CDatabase.h"
+#include "CCircle.h"
 
 //Method Implementations
 

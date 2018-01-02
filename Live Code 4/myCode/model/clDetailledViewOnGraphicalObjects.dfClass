@@ -64,22 +64,22 @@ class __tags {
 */
 class __options {
 }/**
-@__positions <oigroup:<oiref:design#Class#idalb6ej9dv3xabj9dwsvwg.nodeidhniqtj9dv3xabj9dx1g4f:oiref>=10,311,190,40,1:oigroup>
-<oigroup:<oiref:cpp#Class#CCoordinate:oiref>=560,260,91,142,1:oigroup>
-<oigroup:<oiref:cpp#Class#CRectangle:oiref>=165,50,86,85,1:oigroup>
-<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=530,316,26,16,0:oigroup>
+@__positions <oigroup:<oiref:design#Class#idalb6ej9dv3xabj9dwsvwg.nodeidhniqtj9dv3xabj9dx1g4f:oiref>=10,311,201,40,1:oigroup>
+<oigroup:<oiref:cpp#Class#CCoordinate:oiref>=560,260,95,136,1:oigroup>
+<oigroup:<oiref:cpp#Class#CRectangle:oiref>=240,50,88,83,1:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=526,314,30,15,0:oigroup>
 <oigroup:<oiref:cpp#Member#CGraphicObject#m_coordinate:oiref>=358,474,0,0,1:oigroup>
-<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=465,316,15,16,0:oigroup>
-<oigroup:<oiref:cpp#Class#CCircle:oiref>=37,50,142,110,1:oigroup>
-<oigroup:<oiref:cpp#Extends#CRectangle#CGraphicObject:oiref>=208,135,310,271:oigroup>
-<oigroup:Autodependency<oiref:cpp#Class#CTriangle:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=349,135,605,260:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=461,336,560,336:oigroup>
-<oigroup:<oiref:cpp#Class#CGraphicObject:oiref>=272,271,189,222,1:oigroup>
-<oigroup:<oiref:cpp#Class#CTriangle:oiref>=287,50,83,85,1:oigroup>
+<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=471,314,16,15,0:oigroup>
+<oigroup:<oiref:cpp#Class#CCircle:oiref>=37,50,148,106,1:oigroup>
+<oigroup:<oiref:cpp#Extends#CRectangle#CGraphicObject:oiref>=300,133,300,271:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CTriangle:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=425,133,623,260:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=467,333,560,333:oigroup>
+<oigroup:<oiref:cpp#Class#CGraphicObject:oiref>=272,271,195,211,1:oigroup>
+<oigroup:<oiref:cpp#Class#CTriangle:oiref>=370,50,83,83,1:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CGraphicObject#m_coordinate:oiref>=444,334,560,334:oigroup>
-<oigroup:<oiref:cpp#Extends#CCircle#CGraphicObject:oiref>=87,160,87,300,272,300:oigroup>
-<oigroup:<oiref:cpp#Extends#CTriangle#CGraphicObject:oiref>=328,135,328,271:oigroup>
-<oigroup:Autodependency<oiref:cpp#Class#CCircle:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=133,160,582,260:oigroup>
+<oigroup:<oiref:cpp#Extends#CCircle#CGraphicObject:oiref>=87,156,87,300,272,300:oigroup>
+<oigroup:<oiref:cpp#Extends#CTriangle#CGraphicObject:oiref>=397,133,397,271:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CCircle:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=136,156,591,260:oigroup>
 */
 class __positions {
 }

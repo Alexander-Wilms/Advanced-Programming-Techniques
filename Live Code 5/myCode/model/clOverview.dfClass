@@ -65,13 +65,15 @@ class reference29 {
 @__tags
 @shapeType ClassDiagram 
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAADc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
 YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9qk+wAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
 YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAKY2xPdmVy
-dmlld3QABUZyb21teHNxAH4AAgAAAV+OoHAAc3EAfgAFAAAAAXcEAAAACnNxAH4AB3QACEZyb21t
-LU5CdAAKY2xPdmVydmlld3QABUZyb21teHg=
+dmlld3QABUZyb21teHNxAH4AAgAAAWCkt9gAc3EAfgAFAAAAAXcEAAAACnNxAH4AB3QAJlNhbXN1
+bmctU2VyaWVzLTctV2luZG93cy1GQVcuZnJpdHouYm94dAAKY2xPdmVydmlld3QABmF3aWxtc3hz
+cQB+AAIAAAFfjqBwAHNxAH4ABQAAAAF3BAAAAApzcQB+AAd0AAhGcm9tbS1OQnQACmNsT3ZlcnZp
+ZXd0AAVGcm9tbXh4
 */
 class __tags {
 }/**
@@ -79,52 +81,52 @@ class __tags {
 */
 class __options {
 }/**
-@__positions <oigroup:Autodependency<oiref:cpp#Class#CDatabase:oiref><Autodependency><oiref:cpp#Class#CCircle:oiref>=230,260,451,440:oigroup>
-<oigroup:<oiref:cpp#Class#CRectangle:oiref>=210,440,86,85,1:oigroup>
+@__positions <oigroup:Autodependency<oiref:cpp#Class#CDatabase:oiref><Autodependency><oiref:cpp#Class#CCircle:oiref>=230,251,454,440:oigroup>
+<oigroup:<oiref:cpp#Class#CRectangle:oiref>=210,440,88,83,1:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CGraphicalSystem#lnkCCircle:oiref>=207,122,391,300:oigroup>
-<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CDatabase#m_pObject:oiref>=60,670,26,16,0:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CDatabase#m_pObject:oiref>=60,670,30,15,0:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CTriangle#lnkCCoordinate:oiref>=81,322,235,390:oigroup>
-<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=320,676,26,16,0:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=316,674,30,15,0:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CGraphicalSystem#m_circle:oiref>=310,93,581,230:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CGraphicalSystem#lnkCScreen:oiref>=344,20,570,20,570,60:oigroup>
-<oigroup:Autodependency<oiref:cpp#Class#CTriangle:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=70,535,70,860,400,860,400,762:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CGraphicalSystem#m_screen:oiref>=290,56,290,120,400,120:oigroup>
-<oigroup:<oiref:cpp#Class#CGraphicObject:oiref>=90,630,189,238,1:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CTriangle:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=70,533,70,860,400,860,400,756:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CGraphicalSystem#m_screen:oiref>=290,51,290,120,400,120:oigroup>
+<oigroup:<oiref:cpp#Class#CGraphicObject:oiref>=90,630,195,226,1:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CGraphicObject#m_coordinate:oiref>=161,523,320,523:oigroup>
-<oigroup:<oiref:cpp#Extends#CRectangle#CGraphicObject:oiref>=251,525,134,630:oigroup>
+<oigroup:<oiref:cpp#Extends#CRectangle#CGraphicObject:oiref>=235,523,235,630:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CGraphicalSystem#lnkCTriangle:oiref>=149,122,71,310:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CGraphicalSystem#lnkCDatabase:oiref>=190,10,100,10,100,70:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CDatabase#m_triangle:oiref>=90,244,90,460,850,460,850,45:oigroup>
-<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CScreen#m_pObject:oiref>=283,810,26,16,0:oigroup>
-<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CDatabase#m_pObject:oiref>=21,180,15,16,0:oigroup>
-<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CScreen#m_pObject:oiref>=593,250,15,16,0:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CScreen#m_pObject:oiref>=289,811,30,15,0:oigroup>
+<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CDatabase#m_pObject:oiref>=21,180,16,15,0:oigroup>
+<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CScreen#m_pObject:oiref>=604,247,16,15,0:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CGraphicalSystem#lnkCRectangle:oiref>=178,122,263,300:oigroup>
-<oigroup:<oiref:cpp#Class#CCircle:oiref>=380,440,142,110,1:oigroup>
+<oigroup:<oiref:cpp#Class#CCircle:oiref>=380,440,148,106,1:oigroup>
 <oigroup:Autodependency<oiref:cpp#Class#CGraphicalSystem:oiref><Autodependency><oiref:cpp#Class#CTriangle:oiref>=384,-6,840,-6:oigroup>
-<oigroup:Autodependency<oiref:cpp#Class#CDatabase:oiref><Autodependency><oiref:cpp#Class#CTriangle:oiref>=91,260,91,450:oigroup>
-<oigroup:<oiref:cpp#Class#CScreen:oiref>=400,80,189,206,1:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CDatabase:oiref><Autodependency><oiref:cpp#Class#CTriangle:oiref>=70,251,70,450:oigroup>
+<oigroup:<oiref:cpp#Class#CScreen:oiref>=400,80,200,196,1:oigroup>
 <oigroup:<oiref:cpp#Extends#CText#CGraphicObject:oiref>=721,430,974,378:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CGraphicalSystem#m_triangle:oiref>=230,93,130,240:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CGraphicalSystem#m_database:oiref>=230,-20,90,-20,90,70:oigroup>
-<oigroup:<oiref:cpp#Class#CGraphicalSystem:oiref>=230,-70,154,126,1:oigroup>
-<oigroup:<oiref:cpp#Extends#CCircle#CGraphicObject:oiref>=400,550,169,630:oigroup>
-<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=283,676,15,16,0:oigroup>
-<oigroup:Autodependency<oiref:cpp#Class#CDatabase:oiref><Autodependency><oiref:cpp#Class#CRectangle:oiref>=220,260,220,440:oigroup>
+<oigroup:<oiref:cpp#Class#CGraphicalSystem:oiref>=230,-70,159,121,1:oigroup>
+<oigroup:<oiref:cpp#Extends#CCircle#CGraphicObject:oiref>=396,546,260,630:oigroup>
+<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=289,674,16,15,0:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CDatabase:oiref><Autodependency><oiref:cpp#Class#CRectangle:oiref>=220,251,220,440:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CScreen#lnkCTriangle:oiref>=610,60,610,-150,10,-150,10,320,20,320:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CGraphicalSystem#m_rectangle:oiref>=270,93,353,240:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CScreen#m_pTriangle:oiref>=181,400,850,45:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CScreen#lnkCDatabase:oiref>=540,106,200,106:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CScreen#m_pDatabase:oiref>=400,190,240,190:oigroup>
 <oigroup:Autodependency<oiref:cpp#Class#CScreen:oiref><Autodependency><oiref:cpp#Class#CTriangle:oiref>=586,170,87,280:oigroup>
-<oigroup:<oiref:cpp#Class#CTriangle:oiref>=50,450,83,85,1:oigroup>
-<oigroup:Autodependency<oiref:cpp#Class#CCircle:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=420,550,420,620:oigroup>
-<oigroup:<oiref:cpp#Class#CDatabase:oiref>=40,70,200,190,1:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=279,696,350,696:oigroup>
-<oigroup:<oiref:cpp#Class#CCoordinate:oiref>=350,620,91,142,1:oigroup>
+<oigroup:<oiref:cpp#Class#CTriangle:oiref>=50,450,83,83,1:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CCircle:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=412,546,412,620:oigroup>
+<oigroup:<oiref:cpp#Class#CDatabase:oiref>=40,70,200,181,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=285,693,350,693:oigroup>
+<oigroup:<oiref:cpp#Class#CCoordinate:oiref>=350,620,95,136,1:oigroup>
 <oigroup:MemberLink#<oiref:cpp#Member#CDatabase#m_pObject:oiref>=40,200,10,200,10,690,90,690:oigroup>
-<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CScreen#m_pDatabase:oiref>=244,170,28,16,0:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CScreen#m_pObject:oiref>=589,270,660,270,660,830,279,830:oigroup>
-<oigroup:<oiref:cpp#Extends#CTriangle#CGraphicObject:oiref>=111,535,111,630:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CScreen#m_pDatabase:oiref>=244,170,32,15,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CScreen#m_pObject:oiref>=600,266,660,270,660,830,285,830:oigroup>
+<oigroup:<oiref:cpp#Extends#CTriangle#CGraphicObject:oiref>=100,533,100,630:oigroup>
 */
 class __positions {
 }

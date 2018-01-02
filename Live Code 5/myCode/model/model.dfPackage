@@ -16,13 +16,14 @@ class reference {
 @__tags
 @shapeType ClassDiagram 
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAADc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
 YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9qk+wAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
 YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAFbW9kZWx0
-AAVGcm9tbXhzcQB+AAIAAAFfjqBwAHNxAH4ABQAAAAF3BAAAAApzcQB+AAd0AAhGcm9tbS1OQnQA
-BW1vZGVsdAAFRnJvbW14eA==
+AAVGcm9tbXhzcQB+AAIAAAFgpLfYAHNxAH4ABQAAAAF3BAAAAApzcQB+AAd0ACZTYW1zdW5nLVNl
+cmllcy03LVdpbmRvd3MtRkFXLmZyaXR6LmJveHQABW1vZGVsdAAGYXdpbG1zeHNxAH4AAgAAAV+O
+oHAAc3EAfgAFAAAAAXcEAAAACnNxAH4AB3QACEZyb21tLU5CdAAFbW9kZWx0AAVGcm9tbXh4
 @elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
 aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAAdPG9pcmVmOmNwcCNDbGFzcyNDVGV4dDpvaXJlZj5z
 cQB+AAA/QAAAAAAADHcIAAAAEAAAAAFzcgAOamF2YS5sYW5nLkxvbmc7i+SQzI8j3wIAAUoABXZh
@@ -40,7 +41,7 @@ class __options {
 }/**
 @__positions <oigroup:<oiref:cpp#Class#CDatabase:oiref>=148,25,160,126,1:oigroup>
 <oigroup:<oiref:cpp#Class#CRectangle:oiref>=10,10,86,85,1:oigroup>
-<oigroup:<oiref:cpp#Class#CText:oiref>=728,296,99,98,1:oigroup>
+<oigroup:<oiref:cpp#Class#CText:oiref>=728,296,103,96,1:oigroup>
 <oigroup:<oiref:cpp#Class#CGraphicObject:oiref>=48,125,172,126,1:oigroup>
 */
 class __positions {

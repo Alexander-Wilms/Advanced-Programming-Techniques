@@ -13,21 +13,22 @@ class diagram {
 class reference {
 }
 /**
-@__ref <oiref:cpp#Class#Class1:oiref><oihard>
+@__ref <oiref:cpp#Class#CMatrix:oiref><oihard>
 @__modelType reference 
 */
-class reference2 {
+class reference35 {
 }
 }/**
 @__tags
 @shapeType ClassDiagram
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
-YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV/6xfwAc3IAE2phdmEudXRp
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAWCkt9gAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
-YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAJPGRlZmF1
-bHQ+dAAFRnJvbW14eA==
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQAJlNhbXN1bmctU2VyaWVzLTct
+V2luZG93cy1GQVcuZnJpdHouYm94dAAJPGRlZmF1bHQ+dAAGYXdpbG1zeHNxAH4AAgAAAV/6xfwA
+c3EAfgAFAAAAAXcEAAAACnNxAH4AB3QACEZyb21tLU5CdAAJPGRlZmF1bHQ+dAAFRnJvbW14eA==
 @elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
 aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACdAAiPG9pcmVmOmNwcCNDbGFzcyNDb29yZGluYXRlOm9p
 cmVmPnNxAH4AAD9AAAAAAAAMdwgAAAAQAAAAAXNyAA5qYXZhLmxhbmcuTG9uZzuL5JDMjyPfAgAB
@@ -46,8 +47,8 @@ class __tags {
 class __options {
 }/**
 @__positions <oigroup:<oiref:cpp#Class#CCoordinate:oiref>=509,165,101,143,1:oigroup>
-<oigroup:<oiref:cpp#Class#Class1:oiref>=342,117,83,82,1:oigroup>
-<oigroup:<oiref:cpp#Class#Coordinate:oiref>=10,10,111,159,1:oigroup>
+<oigroup:<oiref:cpp#Class#CMatrix:oiref>=180,21,200,122,1:oigroup>
+<oigroup:<oiref:cpp#Class#Coordinate:oiref>=10,10,123,152,1:oigroup>
 */
 class __positions {
 }

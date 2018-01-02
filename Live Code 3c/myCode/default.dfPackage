@@ -34,12 +34,13 @@ class reference18 {
 @__tags
 @shapeType ClassDiagram
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
 YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9Gh2gAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
 YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAJPGRlZmF1
-bHQ+dAAFRnJvbW14eA==
+bHQ+dAAFRnJvbW14c3EAfgACAAABYLQq7ABzcQB+AAUAAAABdwQAAAAKc3EAfgAHdAAPbGludXgu
+ZnJpdHouYm94dAAJPGRlZmF1bHQ+dAAGYXdpbG1zeHg=
 @elementChangelogs rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
 aG9sZHhwP0AAAAAAAAx3CAAAABAAAAAEdAAfPG9pcmVmOmNwcCNDbGFzcyNDTWF0cml4Om9pcmVm
 PnNxAH4AAD9AAAAAAAAMdwgAAAAQAAAAAXNyAA5qYXZhLmxhbmcuTG9uZzuL5JDMjyPfAgABSgAF
@@ -64,12 +65,12 @@ class __options {
 @__positions <oigroup:Autodependency<oiref:cpp#Class#matrixdata_t:oiref><Autodependency><oiref:cpp#Class#CCoordinate:oiref>=480,333,384,333:oigroup>
 <oigroup:<oiref:cpp#Class#CCoordinate:oiref>=180,300,204,142,0:oigroup>
 <oigroup:<oiref:cpp#Class#matrixdata_t:oiref>=480,310,81,46,1:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CMatrix#m_pData:oiref>=630,333,561,333:oigroup>
-<oigroup:<oiref:cpp#Class#matrixInit_t:oiref>=697,88,83,155,1:oigroup>
-<oigroup:Autodependency<oiref:cpp#Class#CMatrix:oiref><Autodependency><oiref:cpp#Class#matrixInit_t:oiref>=738,300,738,243:oigroup>
-<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CMatrix#m_pData:oiref>=611,313,15,16,0:oigroup>
-<oigroup:<oiref:cpp#Class#CMatrix:oiref>=630,300,200,222,1:oigroup>
-<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CMatrix#m_pData:oiref>=565,313,26,16,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CMatrix#m_pData:oiref>=630,371,384,371:oigroup>
+<oigroup:<oiref:cpp#Class#matrixInit_t:oiref>=697,88,85,149,1:oigroup>
+<oigroup:Autodependency<oiref:cpp#Class#CMatrix:oiref><Autodependency><oiref:cpp#Class#matrixInit_t:oiref>=739,300,739,237:oigroup>
+<oigroup:Composite#clientCardinality#MemberLink#<oiref:cpp#Member#CMatrix#m_pData:oiref>=610,352,16,15,0:oigroup>
+<oigroup:<oiref:cpp#Class#CMatrix:oiref>=630,300,200,211,1:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CMatrix#m_pData:oiref>=388,352,30,15,0:oigroup>
 */
 class __positions {
 }

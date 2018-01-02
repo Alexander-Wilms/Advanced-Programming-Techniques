@@ -20,6 +20,10 @@ class CDatabase {
     private:
 	unsigned int m_size;
 	unsigned int m_nextFreeTriangle;
+    /**@link aggregationByValue
+     * @clientCardinality 1
+     * @supplierCardinality 0..**/
+    CCircle* m_circle;
      /**@link aggregationByValue
      * @clientCardinality 1
      * @supplierCardinality 0..**/
@@ -33,10 +37,6 @@ class CDatabase {
 
 
     CRectangle* m_rectangle;
-    /**@link aggregationByValue
-     * @clientCardinality 1
-     * @supplierCardinality 0..**/
-    CCircle* m_circle;
 public:
 
     CDatabase(unsigned int size = 10);

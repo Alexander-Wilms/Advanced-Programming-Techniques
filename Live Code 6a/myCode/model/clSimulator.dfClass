@@ -66,12 +66,14 @@ class reference24 {
 @__tags
 @shapeType ClassDiagram
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
-YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV+yrPQAc3IAE2phdmEudXRp
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAWCvBJAAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
-YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAALY2xTaW11
-bGF0b3J0AAVGcm9tbXh4 
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQAJlNhbXN1bmctU2VyaWVzLTct
+V2luZG93cy1GQVcuZnJpdHouYm94dAALY2xTaW11bGF0b3J0AAZhd2lsbXN4c3EAfgACAAABX7Ks
+9ABzcQB+AAUAAAABdwQAAAAKc3EAfgAHdAAIRnJvbW0tTkJ0AAtjbFNpbXVsYXRvcnQABUZyb21t
+eHg=
 */
 class __tags {
 }/**
@@ -79,27 +81,27 @@ class __tags {
 */
 class __options {
 }/**
-@__positions <oigroup:<oiref:cpp#Class#CSailor:oiref>=400,210,102,101,1:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CSailingSimulation#lnkCLongboat:oiref>=478,70,810,136:oigroup>
-<oigroup:<oiref:cpp#Class#CBoat:oiref>=810,250,111,174,1:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CSailingSimulation#lnkCCaptain:oiref>=419,102,266,220:oigroup>
-<oigroup:<oiref:cpp#Class#CDinghy:oiref>=670,120,83,82,1:oigroup>
-<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CBoat#lnkCPerson:oiref>=416,376,26,16,0:oigroup>
-<oigroup:<oiref:cpp#Extends#CLongboat#CBoat:oiref>=879,202,879,250:oigroup>
-<oigroup:<oiref:cpp#Extends#CSailor#CPerson:oiref>=451,311,386,380:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CSailingSimulation#lnkCSailor:oiref>=448,102,448,210:oigroup>
-<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CSailingSimulation#lnkCCaptain:oiref>=236,200,26,16,0:oigroup>
-<oigroup:<oiref:cpp#Extends#CCruiser#CBoat:oiref>=981,202,900,250:oigroup>
-<oigroup:<oiref:cpp#Class#CSailingSimulation:oiref>=360,20,118,82,1:oigroup>
-<oigroup:<oiref:cpp#Class#CCruiser:oiref>=940,120,83,82,1:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CSailingSimulation#lnkCDinghy:oiref>=478,86,670,136:oigroup>
-<oigroup:<oiref:cpp#Class#CPerson:oiref>=310,380,102,107,1:oigroup>
-<oigroup:<oiref:cpp#Extends#CCaptain#CPerson:oiref>=266,305,361,380:oigroup>
-<oigroup:<oiref:cpp#Class#CLongboat:oiref>=810,120,83,82,1:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CBoat#lnkCPerson:oiref>=810,351,412,400:oigroup>
-<oigroup:<oiref:cpp#Class#CCaptain:oiref>=220,220,92,85,1:oigroup>
-<oigroup:<oiref:cpp#Extends#CDinghy#CBoat:oiref>=711,202,865,250:oigroup>
-<oigroup:MemberLink#<oiref:cpp#Member#CSailingSimulation#lnkCCruiser:oiref>=478,54,940,136:oigroup>
+@__positions <oigroup:<oiref:cpp#Class#CSailor:oiref>=400,210,110,98,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSailingSimulation#lnkCLongboat:oiref>=492,69,810,136:oigroup>
+<oigroup:<oiref:cpp#Class#CBoat:oiref>=810,250,117,166,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSailingSimulation#lnkCCaptain:oiref>=404,101,270,220:oigroup>
+<oigroup:<oiref:cpp#Class#CDinghy:oiref>=670,120,83,81,1:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CBoat#lnkCPerson:oiref>=420,380,30,15,0:oigroup>
+<oigroup:<oiref:cpp#Extends#CLongboat#CBoat:oiref>=857,201,857,250:oigroup>
+<oigroup:<oiref:cpp#Extends#CSailor#CPerson:oiref>=455,308,380,380:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSailingSimulation#lnkCSailor:oiref>=448,101,448,210:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CSailingSimulation#lnkCCaptain:oiref>=236,201,30,15,0:oigroup>
+<oigroup:<oiref:cpp#Extends#CCruiser#CBoat:oiref>=981,201,892,250:oigroup>
+<oigroup:<oiref:cpp#Class#CSailingSimulation:oiref>=360,20,132,81,1:oigroup>
+<oigroup:<oiref:cpp#Class#CCruiser:oiref>=940,120,83,81,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSailingSimulation#lnkCDinghy:oiref>=492,85,670,136:oigroup>
+<oigroup:<oiref:cpp#Class#CPerson:oiref>=310,380,106,104,1:oigroup>
+<oigroup:<oiref:cpp#Extends#CCaptain#CPerson:oiref>=270,303,345,380:oigroup>
+<oigroup:<oiref:cpp#Class#CLongboat:oiref>=810,120,83,81,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CBoat#lnkCPerson:oiref>=810,399,416,399:oigroup>
+<oigroup:<oiref:cpp#Class#CCaptain:oiref>=220,220,100,83,1:oigroup>
+<oigroup:<oiref:cpp#Extends#CDinghy#CBoat:oiref>=711,201,833,250:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSailingSimulation#lnkCCruiser:oiref>=492,53,940,136:oigroup>
 */
 class __positions {
 }

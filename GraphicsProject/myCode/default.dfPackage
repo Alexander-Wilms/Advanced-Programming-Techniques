@@ -1,0 +1,98 @@
+package idh3bbh8zudpk5h8zudrxi;
+
+/**
+@version 2.0
+@physicalPackage
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:design#Class#idbuzih8zudpk5h8zudtw7.diagram:oiref><oihard>
+@__modelType reference
+@__fqn <oiref:#Package#model:oiref> 
+*/
+class reference1 {
+}
+/**
+@__ref <oiref:cpp#Class#CCoordinate:oiref><oihard>
+@__modelType reference 
+*/
+class reference4 {
+}
+/**
+@__ref <oiref:cpp#Class#CCircle:oiref><oihard>
+@__modelType reference 
+*/
+class reference11 {
+}
+/**
+@__ref <oiref:cpp#Class#CTriangle:oiref><oihard>
+@__modelType reference 
+*/
+class reference6 {
+}
+/**
+@__ref <oiref:cpp#Class#CScreen:oiref><oihard>
+@__modelType reference 
+*/
+class reference8 {
+}
+/**
+@__ref <oiref:cpp#Class#CRectangle:oiref><oihard>
+@__modelType reference 
+*/
+class reference12 {
+}
+/**
+@__ref <oiref:cpp#Class#CGraphicElement:oiref><oihard>
+@__modelType reference 
+*/
+class reference13 {
+}
+}/**
+@__tags
+@shapeType ClassDiagram 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions 
+<oigroup:MemberLink#<oiref:cpp#Member#CDatabaseTriangle#m_triangle:oiref>=615,231,555,231:oigroup>
+<oigroup:<oiref:cpp#Class#tFormat:oiref>=410,300,104,119,1:oigroup>
+<oigroup:<oiref:cpp#Extends#CCircle#CGraphicElement:oiref>=507,131,635,131:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CCircle#lnkCCoordinate:oiref>=389,102,332,102:oigroup>
+<oigroup:<oiref:cpp#Extends#CCircle#CGraphicObject:oiref>=489,227,311,324:oigroup>
+<oigroup:<oiref:cpp#Class#CGraphicObject:oiref>=168,324,191,166,1:oigroup>
+<oigroup:<oiref:cpp#Class#CCircle:oiref>=389,61,118,106,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CScreen#m_shapes:oiref>=676,317,676,286:oigroup>
+<oigroup:<oiref:cpp#Extends#CTriangle#CGraphicObject:oiref>=468,293,359,357:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CGraphicElement#m_coordinates:oiref>=304,157,32,15,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CGraphicObject#m_pCoordinate:oiref>=215,324,215,282:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CGraphicElement#m_coordinates:oiref>=635,176,300,176:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CDrawingProgram#lnkCMouse:oiref>=138,69,607,69:oigroup>
+<oigroup:<oiref:cpp#Extends#CRectangle#CGraphicElement:oiref>=798,389,798,286:oigroup>
+<oigroup:<oiref:cpp#Class#CMouse:oiref>=607,46,83,81,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CSquare#lnkCCoordinate:oiref>=367,233,332,237:oigroup>
+<oigroup:<oiref:cpp#Extends#CSquare#CGraphicObject:oiref>=408,259,263,324:oigroup>
+<oigroup:<oiref:cpp#Class#CCoordinate:oiref>=160,10,140,258,1:oigroup>
+<oigroup:<oiref:cpp#Class#CRectangle:oiref>=774,389,88,83,1:oigroup>
+<oigroup:<oiref:cpp#Class#CTriangle:oiref>=468,182,129,114,1:oigroup>
+<oigroup:<oiref:cpp#Class#CGraphicElement:oiref>=635,120,187,166,1:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#CScreen#m_shapes:oiref>=640,286,32,15,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CGraphicObject#m_coordinate:oiref>=250,324,250,280:oigroup>
+<oigroup:<oiref:cpp#Class#CDatabaseTriangle:oiref>=615,144,146,136,1:oigroup>
+<oigroup:<oiref:design#Class#idbuzih8zudpk5h8zudtw7.diagram:oiref>=10,130,83,102,1:oigroup>
+<oigroup:<oiref:cpp#Class#tQuarter:oiref>=63,387,83,149,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CScreen#m_databaseTriangleLink:oiref>=697,317,697,280:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CDrawingProgram#lnkCScreen:oiref>=52,93,632,317:oigroup>
+<oigroup:<oiref:cpp#Class#CSquare:oiref>=367,161,83,98,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#CDrawingProgram#lnkCDatabaseTriangle:oiref>=95,93,688,144:oigroup>
+<oigroup:<oiref:cpp#Class#CScreen:oiref>=568,317,188,91,1:oigroup>
+<oigroup:<oiref:cpp#Extends#CTriangle#CGraphicElement:oiref>=597,234,635,234:oigroup>
+<oigroup:<oiref:cpp#Class#CDrawingProgram:oiref>=10,10,128,83,1:oigroup>
+*/
+class __positions {
+}

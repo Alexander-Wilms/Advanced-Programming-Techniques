@@ -58,12 +58,13 @@ Good case: Snack is available and enough money has been entered
 @__tags
 @shapeType SequenceDiagram
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
-YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV+yrPQAc3IAE2phdmEudXRp
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAWCvBJAAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
-YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAKc2VCdXlT
-bmFja3QABUZyb21teHg= 
+YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQAJlNhbXN1bmctU2VyaWVzLTct
+V2luZG93cy1GQVcuZnJpdHouYm94dAAKc2VCdXlTbmFja3QABmF3aWxtc3hzcQB+AAIAAAFfsqz0
+AHNxAH4ABQAAAAF3BAAAAApzcQB+AAd0AAhGcm9tbS1OQnQACnNlQnV5U25hY2t0AAVGcm9tbXh4
 */
 class __tags {
 }/**
@@ -71,51 +72,51 @@ class __tags {
 */
 class __options {
 }/**
-@__positions <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ytt9j9y13i1tj9y1p1bg:oiref>=285,315,748,315:oigroup>
+@__positions <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ytt9j9y13i1tj9y1p1bg:oiref>=289,315,748,315:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.nodeid5oh6vj9y13i1tj9y1mq2v:oiref>=748,245,14,40,1:oigroup>
-<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkidr3xrj9y13i1tj9y1oj2l:oiref>=289,270,127,16,0:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkidr3xrj9y13i1tj9y1oj2l:oiref>=293,271,139,15,0:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidbg1bfj9y13i1tj9y1va7h:oiref>=858,30,90,445,1:oigroup>
-<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6inasj9y13i1tj9y1kqlq:oiref>=289,160,126,16,0:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6inasj9y13i1tj9y1kqlq:oiref>=293,161,137,15,0:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid8ps3oj9y13i1tj9y1q3b5:oiref>=:oigroup>
-<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid3ymikj9y13i1tj9y1pban:oiref>=285,340,1009,340:oigroup>
-<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid4y2fkj9y13i1tj9y1mq2i:oiref>=285,245,748,245:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid3ymikj9y13i1tj9y1pban:oiref>=289,340,1009,340:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid4y2fkj9y13i1tj9y1mq2i:oiref>=289,245,748,245:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.linkid2gpjzj9y13i1tj9y1voh2:oiref>=762,255,896,255:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidbg1bfj9y13i1tj9y1va7h.nodeidj3tvxj9y13i1tj9y1vohm:oiref>=896,255,14,20,1:oigroup>
-<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ojpoj9y13i1tj9y1kh3i:oiref>=285,137,615,137:oigroup>
-<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidej3s5j9y13i1tj9y1hso6.linkid86w4lj9y13i1tj9y1i43s:oiref>=132,106,72,16,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ojpoj9y13i1tj9y1kh3i:oiref>=289,137,615,137:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidej3s5j9y13i1tj9y1hso6.linkid86w4lj9y13i1tj9y1i43s:oiref>=132,107,79,15,0:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.linkid58z8xj9y13i1tj9y1vohp:oiref>=:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidej3s5j9y13i1tj9y1hso6.linkid2fiiij9y13i1tj9y1i44e:oiref>=:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkidfta2lj9y13i1tj9y1oj30:oiref>=:oigroup>
-<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b:oiref>=222,30,113,445,1:oigroup>
-<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.nodeidkz6oj9y13i1tj9y1i44b:oiref>=271,126,14,269,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b:oiref>=222,30,120,445,1:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.nodeidkz6oj9y13i1tj9y1i44b:oiref>=275,126,14,269,1:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidabwezj9y13i1tj9y1o83s.nodeid2xs71j9y13i1tj9y1oj2x:oiref>=1009,290,14,20,1:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid18d61j9y13i1tj9y1pox0.nodeidaxxyhj9y13i1tj9y1q3av:oiref>=1122,365,14,20,1:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkidc27q3j9y13i1tj9y1lzd6:oiref>=:oigroup>
-<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid74tdaj9y13i1tj9y1lzcp:oiref>=289,200,179,16,0:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid74tdaj9y13i1tj9y1lzcp:oiref>=293,201,189,15,0:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6tdstj9y13i1tj9y1kqm9:oiref>=:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.nodeidgo9qjj9y13i1tj9y1p1bu:oiref>=748,315,14,20,1:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidabwezj9y13i1tj9y1o83s.nodeidc1yorj9y13i1tj9y1pbb1:oiref>=1009,340,14,20,1:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidetiarj9y13i1tj9y1jc5u:oiref>=577,30,90,445,1:oigroup>
-<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6inasj9y13i1tj9y1kqlq:oiref>=285,180,453,180:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6inasj9y13i1tj9y1kqlq:oiref>=289,180,453,180:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidc13u3j9y13i1tj9y1j3lx.nodeidafd1hj9y13i1tj9y1kqm4:oiref>=453,180,14,20,1:oigroup>
-<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkidr3xrj9y13i1tj9y1oj2l:oiref>=285,290,1009,290:oigroup>
-<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid8ev3gj9y13i1tj9y1q3a8:oiref>=289,345,146,16,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkidr3xrj9y13i1tj9y1oj2l:oiref>=289,290,1009,290:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid8ev3gj9y13i1tj9y1q3a8:oiref>=293,346,155,15,0:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidc13u3j9y13i1tj9y1j3lx:oiref>=415,30,90,445,1:oigroup>
-<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ytt9j9y13i1tj9y1p1bg:oiref>=289,295,134,16,0:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ytt9j9y13i1tj9y1p1bg:oiref>=293,296,144,15,0:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid18d61j9y13i1tj9y1pox0:oiref>=1084,30,90,445,1:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidabwezj9y13i1tj9y1o83s:oiref>=971,30,90,445,1:oigroup>
-<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidej3s5j9y13i1tj9y1hso6.linkid86w4lj9y13i1tj9y1i43s:oiref>=128,126,271,126:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidej3s5j9y13i1tj9y1hso6.linkid86w4lj9y13i1tj9y1i43s:oiref>=128,126,275,126:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.nodeidcehs8j9y13i1tj9y1lzd2:oiref>=748,220,14,20,1:oigroup>
-<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid3ymikj9y13i1tj9y1pban:oiref>=289,320,140,16,0:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid3ymikj9y13i1tj9y1pban:oiref>=293,321,150,15,0:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid8f2d6j9y13i1tj9y1kh3y:oiref>=:oigroup>
-<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid4y2fkj9y13i1tj9y1mq2i:oiref>=289,225,110,16,0:oigroup>
-<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.linkid2gpjzj9y13i1tj9y1voh2:oiref>=766,235,119,16,0:oigroup>
-<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid74tdaj9y13i1tj9y1lzcp:oiref>=285,220,748,220:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid4y2fkj9y13i1tj9y1mq2i:oiref>=293,226,119,15,0:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f.linkid2gpjzj9y13i1tj9y1voh2:oiref>=766,236,130,15,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid74tdaj9y13i1tj9y1lzcp:oiref>=289,220,748,220:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidej3s5j9y13i1tj9y1hso6:oiref>=76,30,90,445,1:oigroup>
 <oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidetiarj9y13i1tj9y1jc5u.nodeidi5sezj9y13i1tj9y1kh3v:oiref>=615,137,14,20,1:oigroup>
-<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ojpoj9y13i1tj9y1kh3i:oiref>=289,117,135,16,0:oigroup>
-<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid8ev3gj9y13i1tj9y1q3a8:oiref>=285,365,1122,365:oigroup>
-<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f:oiref>=710,30,90,445,1:oigroup>
+<oigroup:Composite#$messageInplaceEditing#<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid6ojpoj9y13i1tj9y1kh3i:oiref>=293,118,145,15,0:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeidijsuaj9y13i1tj9y1hb9b.linkid8ev3gj9y13i1tj9y1q3a8:oiref>=289,365,1122,365:oigroup>
+<oigroup:<oiref:design#Class#id8iwu3j9y13i1tj9y1h86z.nodeid2xx30j9y13i1tj9y1lk3f:oiref>=710,30,91,445,1:oigroup>
 */
 class __positions {
 }

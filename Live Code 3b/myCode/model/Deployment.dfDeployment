@@ -89,12 +89,13 @@ class reference13 {
 @__tags
 @shapeType DeploymentDiagram
 @changelog rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVz
-aG9sZHhwP0AAAAAAAAx3CAAAABAAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
+aG9sZHhwP0AAAAAAAAx3CAAAABAAAAACc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2
 YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVyhqyVHQuU4IsCAAB4cAAAAV9Gh2gAc3IAE2phdmEudXRp
 bC5BcnJheUxpc3R4gdIdmcdhnQMAAUkABHNpemV4cAAAAAF3BAAAAApzcgAlZGUubW5sLmRvY2Jv
 b2s0VEEuaW1wbC5DaGFuZ2VMb2dFbnRyeQeNjrX5qiSfAgADTAAIaG9zdG5hbWV0ABJMamF2YS9s
 YW5nL1N0cmluZztMAARuYW1lcQB+AAhMAAR1c2VycQB+AAh4cHQACEZyb21tLU5CdAAKRGVwbG95
-bWVudHQABUZyb21teHg= 
+bWVudHQABUZyb21teHNxAH4AAgAAAWCvBJAAc3EAfgAFAAAAAXcEAAAACnNxAH4AB3QAJlNhbXN1
+bmctU2VyaWVzLTctV2luZG93cy1GQVcuZnJpdHouYm94dAAKRGVwbG95bWVudHQABmF3aWxtc3h4
 */
 class __tags {
 }/**
@@ -109,7 +110,7 @@ class __options {
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidakbkzj93yvl86j93ywuak.linkid8hqcmj93yvl86j93yypgm:oiref>=700,100,1000,100,1000,170:oigroup>
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidakbkzj93yvl86j93ywuak.linkidd61hhj93yvl86j93yyjfy:oiref>=671,120,671,170:oigroup>
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid3dersj94dxkjaj94dzx3w:oiref>=-20,470,417,108,0:oigroup>
-<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid7pyk4j94dxkjaj94dxxq7:oiref>=-10,40,346,40,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid7pyk4j94dxkjaj94dxxq7:oiref>=-10,40,371,40,1:oigroup>
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6toq7j94dxkjaj94dye3k:oiref>=-30,320,410,70,0:oigroup>
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6innej93yvl86j93z11nt.linkidf7ckjj93yvl86j93z4i4i:oiref>=790,360,759,360:oigroup>
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidhymq8j93yvl86j93yxpmj.linkidborafj93yvl86j93z33yd:oiref>=855,270,855,330:oigroup>
@@ -117,16 +118,16 @@ class __options {
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid5tt0cj93yvl86j93yxa1s:oiref>=378,168,100,100,1:oigroup>
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidgc2oqj93yvl86j93z6raw.linkidfwhfzj93yvl86j93z7uzq:oiref>=541,390,541,444:oigroup>
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidgc2oqj93yvl86j93z6raw.linkidh511mj93yvl86j93z9pgv:oiref>=520,390,520,470:oigroup>
-<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid8m8i3j93yvl86j93yxwoh:oiref>=950,170,113,100,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid8m8i3j93yvl86j93yxwoh:oiref>=950,170,118,100,1:oigroup>
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidhymq8j93yvl86j93yxpmj.linkid9bc3ij93yvl86j93z39fj:oiref>=867,270,1002,330:oigroup>
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidakbkzj93yvl86j93ywuak.linkid84no1j93yvl86j93yymff:oiref>=685,120,830,170:oigroup>
-<oigroup:<oiref:cpp#Class#Lidar:oiref>=450,470,195,157,1:oigroup>
-<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6innej93yvl86j93z11nt:oiref>=790,330,115,60,1:oigroup>
+<oigroup:<oiref:cpp#Class#Lidar:oiref>=450,470,200,153,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6innej93yvl86j93z11nt:oiref>=790,330,117,60,1:oigroup>
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidbq3e9j93yvl86j93yxi2u.linkid4n3ydj93yvl86j93z7241:oiref>=641,270,520,330:oigroup>
-<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6innej93yvl86j93z11nt.linkid8u93fj93yvl86j93z4m27:oiref>=905,360,950,360:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6innej93yvl86j93z11nt.linkid8u93fj93yvl86j93z4m27:oiref>=907,360,950,360:oigroup>
 <oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidakbkzj93yvl86j93ywuak.linkid800uqj93yvl86j93yydbd:oiref>=600,90,420,90,420,168:oigroup>
-<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidbq3e9j93yvl86j93yxi2u:oiref>=590,170,103,100,1:oigroup>
-<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6qly0j93yvl86j93z1m4x:oiref>=950,330,105,60,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeidbq3e9j93yvl86j93yxi2u:oiref>=590,170,102,100,1:oigroup>
+<oigroup:<oiref:design#Class#id2yrhqj93yvl86j93yw7ty.nodeid6qly0j93yvl86j93z1m4x:oiref>=950,330,109,60,1:oigroup>
  
 */
 class __positions {
