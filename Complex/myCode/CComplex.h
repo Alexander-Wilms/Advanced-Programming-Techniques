@@ -2,7 +2,7 @@
  * CComplex.h
  *
  *  Created on: 22.10.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #ifndef CCOMPLEX_H_

@@ -9,18 +9,22 @@ CTransaction::CTransaction(CAccount* fromAccount, CAccount* toAccount,
 	m_date = date;
 }
 
-CAccount CTransaction::getFromAccount() {
+CAccount CTransaction::getFromAccount() const {
 	return *m_fromAccount;
 }
 
-CAccount CTransaction::getToAccount() {
+CAccount CTransaction::getToAccount() const {
 	return *m_toAccount;
 }
 
-float CTransaction::getAmount() {
+float CTransaction::getAmount() const {
 	return m_amount;
 }
 
-std::string CTransaction::getDate() {
+std::string CTransaction::getDate() const {
 	return m_date;
+}
+
+bool operator<(CTransaction& l, CTransaction& r) {
+	return l.getFromAccount().getID() < r.getFromAccount().getID();
 }

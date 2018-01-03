@@ -2,7 +2,7 @@
  * main.cpp
  *
  *  Created on: 03.11.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #include "CBank.h"
@@ -19,19 +19,21 @@ int main(void) {
 	bank.addAccount("Paul Panther", 100);
 	bank.addAccount("Paul Panther", 200);
 	bank.addAccount("Paul Panther", 200);
-	bank.addAccount("Whoopie Goldberg", 200);
+	bank.addAccount("Whoopie Goldberg", 100);
 	bank.addAccount("Johnny Depp", 200);
 
 	bank.generateReport();
 
-	bank.performTransaction(111117, 228077, 20, "15.11.08");
+	bank.performTransaction(123456, 123457, 20, "15.11.08");
 
 	bank.generateReport();
 
-	bank.deleteAccount(111117);
+	std::cout <<  "delete Paul Panther's 3rd account" << std::endl;
+	bank.deleteAccount(123458);
 
 	bank.generateReport();
 
+	std::cout <<  "delete customer Paul Panther and all of his accounts" << std::endl;
 	bank.deleteCustomer("Paul Panther");
 
 	bank.generateReport();

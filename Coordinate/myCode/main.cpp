@@ -2,7 +2,7 @@
  * main.cpp
  *
  *  Created on: 22.10.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #include "CCoordinate.h"
@@ -31,8 +31,13 @@ int main(void) {
 	std::cout << "======" << std::endl;
 
 	c1.add(c3);
-	//CCoordinate c4(1,2,3);
-	// constructor has no return value
+
+	/*
+	 * work for add(CCoordinate c);
+	 * doesn't work for work for add(CCoordinate& c);
+	 * cannot bind non-const lvalue reference of type
+	 * ‘CCoordinate&’ to an rvalue of type ‘CCoordinate’
+	 */
 	c2.add(CCoordinate(1,2,3));
 	c1.print(CARTESIAN);
 	c2.print(CARTESIAN);

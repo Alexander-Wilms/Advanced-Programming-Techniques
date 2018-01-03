@@ -1,0 +1,29 @@
+main	main.cpp	/^int main() {$/;"	f
+CFRACTION_H_	CFraction.h	9;"	d
+CFraction	CFraction.h	/^class CFraction {$/;"	c
+CFraction	CFraction.h	/^	CFraction(long numerator = 0, long denominator = 1);$/;"	p	class:CFraction
+set	CFraction.h	/^	void set(long numerator, long denominator);$/;"	p	class:CFraction
+toDouble	CFraction.h	/^	double toDouble();$/;"	p	class:CFraction
+print	CFraction.h	/^	void print();$/;"	p	class:CFraction
+operator ++	CFraction.h	/^	CFraction& operator ++();$/;"	p	class:CFraction
+operator ++	CFraction.h	/^	CFraction operator ++(int input);$/;"	p	class:CFraction
+operator <<	CFraction.h	/^	friend std::ostream& operator<< (std::ostream& out, const CFraction& f);$/;"	p	class:CFraction
+operator +	CFraction.h	/^	CFraction operator+ (const CFraction& f);$/;"	p	class:CFraction
+operator -	CFraction.h	/^	CFraction operator- (const CFraction& f);$/;"	p	class:CFraction
+operator *	CFraction.h	/^	CFraction operator* (const CFraction& f);$/;"	p	class:CFraction
+operator /	CFraction.h	/^	CFraction operator\/ (const CFraction& f);$/;"	p	class:CFraction
+m_numerator	CFraction.h	/^	long m_numerator;$/;"	m	class:CFraction
+m_denominator	CFraction.h	/^	long m_denominator;$/;"	m	class:CFraction
+shorten	CFraction.h	/^	void shorten();$/;"	p	class:CFraction
+CFraction	CFraction.cpp	/^CFraction::CFraction(long numerator, long denominator) {$/;"	f	class:CFraction
+set	CFraction.cpp	/^void CFraction::set(long numerator, long denominator) {$/;"	f	class:CFraction
+toDouble	CFraction.cpp	/^double CFraction::toDouble() {$/;"	f	class:CFraction
+print	CFraction.cpp	/^void CFraction::print() {$/;"	f	class:CFraction
+operator ++	CFraction.cpp	/^CFraction& CFraction::operator ++() {$/;"	f	class:CFraction
+operator ++	CFraction.cpp	/^CFraction CFraction::operator ++(int input) {$/;"	f	class:CFraction
+operator <<	CFraction.cpp	/^std::ostream& operator <<(std::ostream& out, const CFraction& f) {$/;"	f
+operator +	CFraction.cpp	/^CFraction CFraction::operator +(const CFraction& f) {$/;"	f	class:CFraction
+operator -	CFraction.cpp	/^CFraction CFraction::operator -(const CFraction& f) {$/;"	f	class:CFraction
+operator *	CFraction.cpp	/^CFraction CFraction::operator *(const CFraction& f) {$/;"	f	class:CFraction
+operator /	CFraction.cpp	/^CFraction CFraction::operator \/(const CFraction& f) {$/;"	f	class:CFraction
+shorten	CFraction.cpp	/^void CFraction::shorten() {$/;"	f	class:CFraction

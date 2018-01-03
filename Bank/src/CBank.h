@@ -25,6 +25,8 @@ private:
 	std::map<int,CAccount> m_AccountsMap;
 	std::default_random_engine m_generator;
 	std::uniform_int_distribution<int> m_distribution = std::uniform_int_distribution<int>(111111,999999);
+
+	static int m_ID;
 };
 
 #endif // CBANK_H

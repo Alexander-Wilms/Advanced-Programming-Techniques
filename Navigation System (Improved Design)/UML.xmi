@@ -565,7 +565,7 @@
     </UML:Model>
     <UML:Model isRoot="false" xmi.id="Component_View" isAbstract="false" namespace="m1" name="Component View" isLeaf="false" visibility="public" isSpecification="false">
      <UML:Namespace.ownedElement>
-      <UML:Package stereotype="folder" isRoot="false" xmi.id="uO3kxVgrYMdLS" isAbstract="false" namespace="Component_View" name="/home/awilms/Dokumente/Ausbildung/Hochschule Darmstadt/Master Electrical Engineering/2. Semester/System Design/Advanced Programming Techniques and Engineering Processes/Advanced-Programming-Techniques/Navigation System (Improved Design)/myCode" isLeaf="false" visibility="public" isSpecification="false">
+      <UML:Package stereotype="folder" isRoot="false" xmi.id="uO3kxVgrYMdLS" isAbstract="false" namespace="Component_View" name="/home/Fabian Alexander Wilms/Dokumente/Ausbildung/Hochschule Darmstadt/Master Electrical Engineering/2. Semester/System Design/Advanced Programming Techniques and Engineering Processes/Advanced-Programming-Techniques/Navigation System (Improved Design)/myCode" isLeaf="false" visibility="public" isSpecification="false">
        <UML:Namespace.ownedElement>
         <UML:Artifact isRoot="false" drawas="1" xmi.id="ueLvXnfdjBYM3" isAbstract="false" namespace="uO3kxVgrYMdLS" name="CCSVStorage.h" isLeaf="false" visibility="public" comment=" CCSVStorage.h&#xa;&#xa;  Created on: 03.12.2017&#xa;      Author: Fabian Alexander Wilms" isSpecification="false"/>
         <UML:Artifact isRoot="false" drawas="1" xmi.id="uAik47eseliTT" isAbstract="false" namespace="uO3kxVgrYMdLS" name="CGPSSensor.h" isLeaf="false" visibility="public" comment=" CGPSSensor.h&#xa;&#xa;  Created on: 19.10.2017&#xa;      Author: Fabian Alexander Wilms" isSpecification="false"/>

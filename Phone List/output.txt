@@ -1,0 +1,5 @@
+Max Maier; 17312345 60731234567 (Conflict with Berta Klunkerfrau)
+Wilhelm Knauser; 97345678
+Berta Klunkerfrau; 60731234567 (Conflict with Max Maier)
+Willy Wichtig; No number found
+

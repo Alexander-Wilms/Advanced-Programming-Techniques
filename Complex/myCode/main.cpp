@@ -2,7 +2,7 @@
  * main.cpp
  *
  *  Created on: 22.10.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #include <iostream>

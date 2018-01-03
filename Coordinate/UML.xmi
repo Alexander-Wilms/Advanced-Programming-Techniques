@@ -113,9 +113,9 @@
     </UML:Model>
     <UML:Model visibility="public" isSpecification="false" isRoot="false" namespace="m1" isAbstract="false" name="Component View" xmi.id="Component_View" isLeaf="false">
      <UML:Namespace.ownedElement>
-      <UML:Package visibility="public" isSpecification="false" isRoot="false" namespace="Component_View" isAbstract="false" name="home/awilms/Dokumente/Ausbildung/Hochschule Darmstadt/Master Electrical Engineering/2. Semester/System Design/Advanced Programming Techniques and Engineering Processes/Advanced-Programming-Techniques/Coordinate/myCode" stereotype="folder" xmi.id="ulstingJwtxG6" isLeaf="false">
+      <UML:Package visibility="public" isSpecification="false" isRoot="false" namespace="Component_View" isAbstract="false" name="home/Fabian Alexander Wilms/Dokumente/Ausbildung/Hochschule Darmstadt/Master Electrical Engineering/2. Semester/System Design/Advanced Programming Techniques and Engineering Processes/Advanced-Programming-Techniques/Coordinate/myCode" stereotype="folder" xmi.id="ulstingJwtxG6" isLeaf="false">
        <UML:Namespace.ownedElement>
-        <UML:Artifact visibility="public" isSpecification="false" isRoot="false" namespace="ulstingJwtxG6" isAbstract="false" name="CCoordinate.h" xmi.id="u1z8EBf0olBcl" comment=" CCoordinate.h&#xa;&#xa;  Created on: 22.10.2017&#xa;      Author: awilms" drawas="1" isLeaf="false"/>
+        <UML:Artifact visibility="public" isSpecification="false" isRoot="false" namespace="ulstingJwtxG6" isAbstract="false" name="CCoordinate.h" xmi.id="u1z8EBf0olBcl" comment=" CCoordinate.h&#xa;&#xa;  Created on: 22.10.2017&#xa;      Author: Fabian Alexander Wilms" drawas="1" isLeaf="false"/>
        </UML:Namespace.ownedElement>
       </UML:Package>
      </UML:Namespace.ownedElement>

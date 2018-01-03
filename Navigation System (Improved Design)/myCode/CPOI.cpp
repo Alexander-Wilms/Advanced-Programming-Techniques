@@ -41,6 +41,9 @@ void CPOI::print() {
 		break;
 	case UNIVERSITY:
 		std::cout << "University: ";
+		break;
+	case SIGHTSEEING:
+		std::cout << "Sightseeing: ";
 	}
 	std::cout << m_description << std::endl;
 	// call print() method of the superclass

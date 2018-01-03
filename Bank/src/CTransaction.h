@@ -1,4 +1,3 @@
-
 #ifndef CTRANSACTION_H
 #define CTRANSACTION_H
 
@@ -9,10 +8,11 @@ class CTransaction
 {
 public:
 	CTransaction (CAccount* fromAccount, CAccount* toAccount, float amount, std::string date);
-	CAccount getFromAccount();
-	CAccount getToAccount();
-	float getAmount();
-	std::string getDate();
+	CAccount getFromAccount() const;
+	CAccount getToAccount() const;
+	float getAmount() const;
+	std::string getDate() const;
+	friend bool operator<(CTransaction& l, CTransaction& r);
 private:
 	CAccount* m_fromAccount;
 	CAccount* m_toAccount;

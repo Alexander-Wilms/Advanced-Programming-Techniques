@@ -122,9 +122,9 @@
     </UML:Model>
     <UML:Model name="Component View" xmi.id="Component_View" isSpecification="false" visibility="public" isAbstract="false" isRoot="false" isLeaf="false" namespace="m1">
      <UML:Namespace.ownedElement>
-      <UML:Package name="home/awilms/Dokumente/Ausbildung/Hochschule Darmstadt/Master Electrical Engineering/2. Semester/System Design/Advanced Programming Techniques and Engineering Processes/Advanced-Programming-Techniques/Complex/myCode" xmi.id="uCLSEYUSc14Wt" stereotype="folder" isSpecification="false" visibility="public" isAbstract="false" isRoot="false" isLeaf="false" namespace="Component_View">
+      <UML:Package name="home/Fabian Alexander Wilms/Dokumente/Ausbildung/Hochschule Darmstadt/Master Electrical Engineering/2. Semester/System Design/Advanced Programming Techniques and Engineering Processes/Advanced-Programming-Techniques/Complex/myCode" xmi.id="uCLSEYUSc14Wt" stereotype="folder" isSpecification="false" visibility="public" isAbstract="false" isRoot="false" isLeaf="false" namespace="Component_View">
        <UML:Namespace.ownedElement>
-        <UML:Artifact drawas="1" name="CComplex.h" comment=" CComplex.h&#xa;&#xa;  Created on: 22.10.2017&#xa;      Author: awilms" xmi.id="uigUT8K0qu5v7" isSpecification="false" visibility="public" isAbstract="false" isRoot="false" isLeaf="false" namespace="uCLSEYUSc14Wt"/>
+        <UML:Artifact drawas="1" name="CComplex.h" comment=" CComplex.h&#xa;&#xa;  Created on: 22.10.2017&#xa;      Author: Fabian Alexander Wilms" xmi.id="uigUT8K0qu5v7" isSpecification="false" visibility="public" isAbstract="false" isRoot="false" isLeaf="false" namespace="uCLSEYUSc14Wt"/>
        </UML:Namespace.ownedElement>
       </UML:Package>
      </UML:Namespace.ownedElement>

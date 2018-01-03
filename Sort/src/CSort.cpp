@@ -2,7 +2,7 @@
  * CSort.cpp
  *
  *  Created on: 05.11.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #include "CSort.h"

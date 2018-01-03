@@ -258,7 +258,7 @@
     </UML:Model>
     <UML:Model isAbstract="false" visibility="public" isLeaf="false" namespace="m1" xmi.id="Component_View" isSpecification="false" name="Component View" isRoot="false">
      <UML:Namespace.ownedElement>
-      <UML:Package isAbstract="false" visibility="public" isLeaf="false" namespace="Component_View" xmi.id="uxBvw16kMilbN" stereotype="folder" isSpecification="false" name="home/awilms/Dokumente/Ausbildung/Hochschule Darmstadt/Master Electrical Engineering/2. Semester/System Design/Advanced Programming Techniques and Engineering Processes/Advanced-Programming-Techniques/Bank/src" isRoot="false">
+      <UML:Package isAbstract="false" visibility="public" isLeaf="false" namespace="Component_View" xmi.id="uxBvw16kMilbN" stereotype="folder" isSpecification="false" name="home/Fabian Alexander Wilms/Dokumente/Ausbildung/Hochschule Darmstadt/Master Electrical Engineering/2. Semester/System Design/Advanced Programming Techniques and Engineering Processes/Advanced-Programming-Techniques/Bank/src" isRoot="false">
        <UML:Namespace.ownedElement>
         <UML:Artifact isAbstract="false" visibility="public" isLeaf="false" namespace="uxBvw16kMilbN" xmi.id="uzBuET3A0Mt1u" drawas="1" isSpecification="false" name="CAccount.h" isRoot="false"/>
         <UML:Artifact isAbstract="false" visibility="public" isLeaf="false" namespace="uxBvw16kMilbN" xmi.id="uJivyFYe5M19d" drawas="1" isSpecification="false" name="CBank.h" isRoot="false"/>

@@ -413,7 +413,7 @@
     </UML:Model>
     <UML:Model isSpecification="false" isRoot="false" namespace="m1" isLeaf="false" name="Component View" xmi.id="Component_View" visibility="public" isAbstract="false">
      <UML:Namespace.ownedElement>
-      <UML:Package isSpecification="false" isRoot="false" namespace="Component_View" isLeaf="false" name="home/awilms/Dokumente/Ausbildung/Hochschule Darmstadt/Master Electrical Engineering/2. Semester/System Design/Advanced Programming Techniques and Engineering Processes/Advanced-Programming-Techniques/NavigationSystem/myCode" xmi.id="uC7qgdKlhGFxy" stereotype="folder" visibility="public" isAbstract="false">
+      <UML:Package isSpecification="false" isRoot="false" namespace="Component_View" isLeaf="false" name="home/Fabian Alexander Wilms/Dokumente/Ausbildung/Hochschule Darmstadt/Master Electrical Engineering/2. Semester/System Design/Advanced Programming Techniques and Engineering Processes/Advanced-Programming-Techniques/NavigationSystem/myCode" xmi.id="uC7qgdKlhGFxy" stereotype="folder" visibility="public" isAbstract="false">
        <UML:Namespace.ownedElement>
         <UML:Artifact isSpecification="false" isRoot="false" namespace="uC7qgdKlhGFxy" isLeaf="false" name="CGPSSensor.h" xmi.id="ubfxzduNQw0p3" drawas="1" comment=" CGPSSensor.h&#xa;&#xa;  Created on: 19.10.2017&#xa;      Author: Fabian Alexander Wilms" visibility="public" isAbstract="false"/>
         <UML:Artifact isSpecification="false" isRoot="false" namespace="uC7qgdKlhGFxy" isLeaf="false" name="CNavigationSystem.h" xmi.id="u6bFmEXrgOXTn" drawas="1" comment=" CNavigationSystem.h&#xa;&#xa;  Created on: 20.10.2017&#xa;      Author: Fabian Alexander Wilms" visibility="public" isAbstract="false"/>

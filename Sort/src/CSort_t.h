@@ -2,7 +2,7 @@
  * CSort.h
  *
  *  Created on: 05.11.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #ifndef CSORT_T_H_
@@ -83,7 +83,7 @@ template<typename T> void CSort_t<T>::quicksort(T* pList, int lo, int hi) {
 }
 
 template<typename T> int CSort_t<T>::partition(T* pList, int lo, int hi) {
-	int pivot = pList[lo];
+	T pivot = pList[lo];
 	int i = lo - 1;
 	int j = hi + 1;
 	while(true) {
@@ -99,7 +99,7 @@ template<typename T> int CSort_t<T>::partition(T* pList, int lo, int hi) {
 			return j;
 		}
 
-		int tmp;
+		T tmp;
 		tmp = pList[i];
 		pList[i] = pList[j];
 		pList[j] = tmp;

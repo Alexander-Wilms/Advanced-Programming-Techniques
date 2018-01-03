@@ -2,7 +2,7 @@
  * CCoordinate.cpp
  *
  *  Created on: 22.10.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #include "CCoordinate.h"
@@ -38,7 +38,7 @@ void CCoordinate::setCartesian(float x, float y, float z) {
 	// using call by reference doesn't change anything
 }
 
-void CCoordinate::add(CCoordinate& c) {
+void CCoordinate::add(CCoordinate c) {
 	m_x += c.m_x;
 	m_y += c.m_y;
 	m_z += c.m_z;

@@ -2,7 +2,7 @@
  * CCoordinate.h
  *
  *  Created on: 22.10.2017
- *      Author: awilms
+ *      Author: Fabian Alexander Wilms
  */
 
 #ifndef CCOORDINATE_H_
@@ -16,7 +16,7 @@ public:
 	~CCoordinate();
 	void getCartesian(float& x, float& y, float& z);
 	void setCartesian(float x, float y, float z);
-	void add(CCoordinate& c);
+	void add(CCoordinate c);
 	void print(t_coordinate style);
 private:
 	float m_x;

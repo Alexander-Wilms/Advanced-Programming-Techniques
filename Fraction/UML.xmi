@@ -118,9 +118,9 @@
     </UML:Model>
     <UML:Model visibility="public" isSpecification="false" isRoot="false" namespace="m1" isAbstract="false" name="Component View" xmi.id="Component_View" isLeaf="false">
      <UML:Namespace.ownedElement>
-      <UML:Package visibility="public" isSpecification="false" isRoot="false" namespace="Component_View" isAbstract="false" name="home/awilms/Dokumente/Ausbildung/Hochschule Darmstadt/Master Electrical Engineering/2. Semester/System Design/Advanced Programming Techniques and Engineering Processes/Advanced-Programming-Techniques/Fraction/src" stereotype="folder" xmi.id="u7DpZhtBfFV3A" isLeaf="false">
+      <UML:Package visibility="public" isSpecification="false" isRoot="false" namespace="Component_View" isAbstract="false" name="home/Fabian Alexander Wilms/Dokumente/Ausbildung/Hochschule Darmstadt/Master Electrical Engineering/2. Semester/System Design/Advanced Programming Techniques and Engineering Processes/Advanced-Programming-Techniques/Fraction/src" stereotype="folder" xmi.id="u7DpZhtBfFV3A" isLeaf="false">
        <UML:Namespace.ownedElement>
-        <UML:Artifact visibility="public" isSpecification="false" isRoot="false" namespace="u7DpZhtBfFV3A" isAbstract="false" name="CFraction.h" xmi.id="uDNzwKNPMIgzn" comment=" CFraction.h&#xa;&#xa;  Created on: 03.11.2017&#xa;      Author: awilms" drawas="1" isLeaf="false"/>
+        <UML:Artifact visibility="public" isSpecification="false" isRoot="false" namespace="u7DpZhtBfFV3A" isAbstract="false" name="CFraction.h" xmi.id="uDNzwKNPMIgzn" comment=" CFraction.h&#xa;&#xa;  Created on: 03.11.2017&#xa;      Author: Fabian Alexander Wilms" drawas="1" isLeaf="false"/>
        </UML:Namespace.ownedElement>
       </UML:Package>
      </UML:Namespace.ownedElement>

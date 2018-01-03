@@ -508,7 +508,24 @@ APT::CJsonValueToken --|> APT::CJsonToken
 
 # Optional Exercises
 
-## CCoordinate
+## 2 Simple Exercises
+
+This section contains simple exercises which are intended to get you familiar with basic C++
+syntax. You get a detailed description of what you have to do and the project scope is limited to a
+single class only.
+
+
+### 2.1 CCoordinate
+
+Develop a class which stores three coordinate values and represents them in either Cartesian,
+cylinder or polar format.
+
+* input validation
+* private member variables
+* public getter and setter methods
+* operator overloading
+* methods which take a CCoordinate& (reference!) as argument, can't be called with CCoordinate(1,2,3):
+`cannot bind non-const lvalue reference of type ‘CCoordinate&’ to an rvalue of type ‘CCoordinate’`
 
 ```plantuml
 @startuml
@@ -526,10 +543,29 @@ class CCoordinate {
  	- getPolar(r : float&, phi : float&, theta : float&)
  	- getCylinder(r : float&, phi : float&, h: float&)
 }
+class t_coordinate <<enum>> {
+	+ CARTESIAN : int
+	+ CYLINDER : int
+	+ POLAR : int	
+}
+CCoordinate ..> t_coordinate
 @enduml
 ```
 
-## Set of Measurement Values
+### 2.2 Set of Measurement Values
+
+Develop a class which stores a set of measurement values. Do not forget to comment your code.
+
+* static array as member variable: `double m_value[10]`
+* initializing static array in constructor:
+```c++
+for(int i = 0; i < 10; i++) {
+	m_value[i] = NOVALUE;
+}
+```
+* input validation
+* random
+* `typedef enum {A, V, S, W, NONE} t_unit;`
 
 ```plantuml
 @startuml
@@ -557,9 +593,68 @@ CSetOfMeasurementValues *-->"-m_unit" t_unit
 
 <!--![bla](SetOfMeasurementValues/myCode/default.png)-->
 
-## CComplex
+## 3 Medium Exercises
+
+These exercises are slightly more challenging. You will have to deal with more than one class and
+use more advanced language feature like operator overloading, dynamic memory and similar.
+
+
+### 3.1 CComplex: Operator Overloading
+
+Develop a class which stores complex numbers of the format c = a+bi and supports the unary
+operations +,-,*,/ as well as the unary operations c++ and ++c.
 
 * operator overloading
+	* also operator<<(): `friend std::ostream& operator <<(std::ostream& out, CComplex& c);`
+	```c++
+	std::ostream& operator <<(std::ostream& out, CComplex& c) {
+		out << c.m_real;
+
+		if(c.m_imaginary > 0) {
+			out << " + i" << c.m_imaginary;
+		} else if(c.m_imaginary < 0) {
+			out << " - i" << abs(c.m_imaginary);
+		} else if(c.m_imaginary == 0) {
+			// print nothing else
+		}
+		return out;
+	}
+	```
+* done as member methods instead of friend methods
+* copy constructor: `CComplex(CComplex const& c);`
+* operator+() etc.
+	```cpp
+	CComplex CComplex::operator+(const CComplex& c) {
+		float real, imaginary;
+		real = m_real + c.m_real;
+		imaginary = m_imaginary + c.m_imaginary;
+		return CComplex(real, imaginary);
+	}
+	```
+	* return a new object
+* pre- and postincrement operators
+	* add the value 1 to both the real and the imaginary part of the complex number
+	* require different methods:
+		* `CComplex operator++();`
+			```c++
+			CComplex CComplex::operator ++() {
+				m_real++;
+				m_imaginary++;
+				return *this;
+			}
+			```
+			* increment members, then return object
+
+		* `CComplex operator++(int real);`
+			```c++
+			CComplex CComplex::operator ++(int real) {
+				CComplex oldValue(*this);
+				m_real++;
+				m_imaginary++;
+				return oldValue;
+			}
+			```
+			* store the old object, increment members, return old object
 
 ```plantuml
 @startuml
@@ -574,17 +669,19 @@ class CComplex {
  	+ print()
  	+ operator++() : CComplex
  	+ operator ++(real : int) : CComplex
- 	+ operator+(c : const CComplex&) : CComplex
- 	+ operator-(c : const CComplex&) : CComplex
- 	+ operator*(c : const CComplex&) : CComplex
- 	+ operator/(c : const CComplex&) : CComplex
 }
 @enduml
 ```
 
-## CFraction
+### 3.2 Calculator for Fractions
+
+Develop a class which stores fractions using the format f=n/d and supports the binary operations
++, -, *, / as well as the unary operations c++ and ++c.
+
 
 * operator overloading
+* input validation
+
 
 ```plantuml
 @startuml
@@ -607,7 +704,186 @@ class CFraction {
 @enduml
 ```
 
-## CBank
+#### 3.2.1 Extension - An RPN Calculator
+
+Now you will implement a calculator for evaluating expressions of fractions noted in _reverse
+polish notation_.
+
+* dynamically allocated statc array
+* but array is not being resized anywhere
+* array boundary checks
+* delete[]ing dynamic memory
+* operations look like this:
+	```c++
+	void CRpnCalculator::multiply() {
+		CFraction operand1, operand2;
+		stack.pop(operand1);
+		stack.pop(operand2);
+		stack.push(operand1 * operand2);
+	}
+	```
+
+```plantuml
+@startuml
+class CFraction {
+ 	-m_numerator : long
+ 	-m_denominator : long
+
+ 	+ CFraction() <<constructor>>
+ 	+ set()
+ 	+ toDouble() : double
+ 	+ print()
+ 	+ operator++() : CFraction&
+ 	+ operator ++(real : int) : CFraction
+ 	+ operator+() : CFraction
+ 	+ operator-() : CFraction
+ 	+ operator*() : CFraction
+ 	+ operator/() : CFraction
+ 	- shorten()
+}
+class CLifoBuffer {
+	- m_size : int
+	- m_tos : int
+	- m_pBuffer : CFraction*
+
+	+ CLifoBuffer() <<constructor>>
+	+ ~CLifoBuffer() <<destructor>>
+	+ print() : void
+	+ push() : void
+	+ pop() : void
+}
+class CRpnCalculator {
+	- m_stack : CLifoBuffer
+
+	+ CRpnCalculator()
+	+ ~CRpnCalculator()
+	+ pushValue() : bool
+}
+
+CLifoBuffer -->"0..1" CFraction
+CRpnCalculator o--> CLifoBuffer
+CRpnCalculator ..> CFraction
+
+@enduml
+```
+
+<!--![bla](RpnCalculator/src/default.png)-->
+
+### 3.3 CBank: Class design
+
+Your task is to develop a bank simulation program which implements the following Use Cases.
+
+* std::map
+* to add a key-value pair to a std::map, a std::pair has to be created first:
+	```c++
+	m_CustomersMap.insert(std::pair<std::string,CCustomer>(name, customer));
+	```
+
+```
+std::map::at
+ 
+T& at( const Key& key );
+const T& at( const Key& key ) const;		
+
+Returns a reference to the mapped value of the element with key equivalent to key. If no such element exists, an exception of type std::out_of_range is thrown.
+
+```
+
+* Example of catching exceptions thrown by std::map::at():
+	```c++
+	try {
+		m_AccountsMap.at(fromAccountID).withdraw(amount);
+	} catch (std::exception& e) {
+		std::cerr << "Exception thrown by " << e.what() << std::endl;
+		return;
+	}
+	```
+
+```
+std::map::operator[]
+
+	apped_type& operator[] (const key_type& k);
+	mapped_type& operator[] (key_type&& k);
+
+Access element
+If k matches the key of an element in the container, the function returns a reference to its mapped value.
+
+If k does not match the key of any element in the container, the function inserts a new element with that key and returns a reference to its mapped value. Notice that this always increases the container size by one, even if no mapped value is assigned to the element (the element is constructed using its default constructor).
+
+A similar member function, map::at, has the same behavior when an element with the key exists, but throws an exception when it does not.
+```
+
+```
+std::map::find
+
+	iterator find (const key_type& k);
+	const_iterator find (const key_type& k) const;
+
+Get iterator to element
+Searches the container for an element with a key equivalent to k and returns an iterator to it if found, otherwise it returns an iterator to map::end.
+```
+* std::map iterator:
+	```c++
+	std::map<std::string,CCustomer>::iterator it;
+	for(it = m_CustomersMap.begin(); it != m_CustomersMap.end(); it++) {
+		std::cout << "...for customer: " << it->second.getName() << std::endl;
+	}	
+	```
+	* it->first
+	* it->second.getName()
+* base() converts a reverse iterator into the corresponding forward iterator. It's not necessary if you already have a forward iterator, but it doesn't hurt
+* std::set
+	```
+	std::set
+
+	Set
+	Sets are containers that store unique elements following a specific order.
+
+	In a set, the value of an element also identifies it (the value is itself the key, of type T), and each value must be unique. The value of the elements in a set cannot be modified once in the container (the elements are always const), but they can be inserted or removed from the container.
+	```
+* std::vector<>::iterator it:
+	*  it->getDate()
+* private static member variables:
+	* .h: `static int m_ID;`
+	* .cpp: `int CBank::m_ID = 123456;` (outside of any method)
+* `std::sort(myvector.begin(), myvector.end());` requires that `operator<()` is implemented for class T:
+	* declaration:
+	```c++
+	friend bool operator<(CTransaction& l, CTransaction& r);
+	```
+	* implementation:
+	```c++
+	bool operator<(CTransaction& l, CTransaction& r) {
+		return l.getFromAccount().getID() < r.getFromAccount().getID();
+	}
+	```
+* iterating over a returned container requires storing he container first!
+	```c++
+	// iterate over all the customer's accounts
+	std::vector<int> associatedAccountIDs = it->second.getAssociatedAccountIDs();
+	for(std::vector<int>::iterator itAssociatedAccountID = associatedAccountIDs.begin(); itAssociatedAccountID != associatedAccountIDs.end(); itAssociatedAccountID++) {
+		
+	```
+* NOT like this: (we can't access the container since we don't have it stored anywhere outside the class)
+	```c++
+	for(std::vector<int>::iterator itAssociatedAccountID = it->second.getAssociatedAccountIDs().begin(); itAssociatedAccountID != it->second.getAssociatedAccountIDs().end(); itAssociatedAccountID++) {
+	```
+* printing std::map content:
+	* e.g. when using a std::map<std::string, CCustomer>:
+		* print `it->second.getName()` instead of `it->first`, since one might change the key later on
+
+```plantuml
+@startuml
+left to right direction
+Bank -- (open new account)
+Bank -- (add new customer)
+Bank -- (delete user)
+Bank -- (delete account)
+(delete user) ..> (delete account) : <<include>>
+Bank -- (perform transaction)
+Bank -- (generate report)
+@enduml
+```
 
 ```plantuml
 @startuml
@@ -664,7 +940,54 @@ CBank ..> CCustomer
 ```
 <!--![bla](Bank/src/default.png)-->
 
-## CPhoneList
+```plantuml
+@startuml
+actor main
+main -> "<b><u>bank\n<b>CBank</b>" : performTransaction():void
+
+"<b><u>bank\n<b>CBank</b>" -> "<b><u>m_AccountsMap[fromAccountID]\n<b>CAccount</b>" : withdraw(amount):void
+
+"<b><u>bank\n<b>CBank</b>" -> "<b><u>m_AccountsMap[toAccountID]\n<b>CAccount</b>" : deposit(amount):void
+
+"<b><u>bank\n<b>CBank</b>" -> "<b><u>transaction\n<b>CTransaction</b>" : CTransaction(&m_AccountsMap[fromAccountID], &m_AccountsMap[toAccountID], amount, date)
+
+@enduml
+```
+
+### 3.4 CPhoneList: Libraries
+
+Your task is to implement a set of classes which reads a set of names and phone numbers from a
+file and transforms them into a “relational” format. In addition, the data representation is cleaned up
+and the data is checked for consistency, i.e. detection of double occupied numbers and empty
+records
+
+* Used libraries:
+	* fstream: file operations
+	```c++
+	std::ofstream file;
+	file.open(filename);
+	if(file.is_open()) {
+		file << "bla" << std::endl;
+		file.close();
+	}
+	```
+
+	```c++
+	std::ifstream file;
+	std::string name;
+	file.open(filename);
+	if(file.is_open()) {
+		while(!file.eof()){
+			name = "";
+			std::getline(file,name,';');
+			storeName(name);
+		}
+		file.close();
+	}
+	```
+* we first create CSimpleList instance and read a file
+* then we create a CPhoneList and call readAndTransformSimpleList() with the CSimpleList object as argument
+* finally, we save the CPhoneList to a file
 
 ```plantuml
 @startuml
@@ -711,7 +1034,7 @@ class CSimpleListElement {
 	+ getNumber() : long long
 }
 
-CPhoneList o-->"1..*" CPhoneListElement
+CPhoneList *-->"1..*" CPhoneListElement
 CPhoneList ..> CSimpleList
 
 CSimpleList o-->"1..*" CSimpleListElement
@@ -720,55 +1043,142 @@ CSimpleList o-->"1..*" CSimpleListElement
 
 <!--![bla](PhoneList/src/default.png)-->
 
-## CRPNCalculator
+## 3.5 Tests for LIFO Buffer and RPN Calculator
+
+In this exercise you will provide test cases for the LIFO buffer and RPN calculator developed in
+exercise 5, using the CppUnit library and the Coverage Tool presented in the lecture.
+
+### Deriving test cases from use cases
+Use case diagram for CLifoBuffer:
 
 ```plantuml
 @startuml
-class CFraction {
- 	-m_numerator : long
- 	-m_denominator : long
+left to right direction
+User -- (push a fraction)
+User -- (pop a fraction)
+User -- (print stack)
+@enduml
+```
+Derived Use Case Template:
 
- 	+ CFraction()
- 	+ set()
- 	+ toDouble() : double
- 	+ print()
- 	+ operator++() : CFraction&
- 	+ operator ++(real : int) : CFraction
- 	+ operator+() : CFraction
- 	+ operator-() : CFraction
- 	+ operator*() : CFraction
- 	+ operator/() : CFraction
- 	- shorten()
-}
-class CLifoBuffer {
-	- m_size : int
-	- m_tos : int
-	- m_pBuffer : CFraction*
+Name | UC-1: push a fraction 
+--- | ---
+Goal in context | ...
+Scope & Level | ...
+Preconditions | ...
+Success End Condition | ...
+Failure End Condition | ...
+Trigger | ...
+Step-by-step description | ...
+Open issues | ...
+Other information | ...
 
-	+ CLifoBuffer()
-	+ ~CLifoBuffer()
-	+ print() : void
-	+ push() : void
-	+ pop() : void
-}
-class CRpnCalculator {
-	- m_stack : CLifoBuffer
+> UCs push a fraction & pop a fraction
 
-	+ CRpnCalculator()
-	+ ~CRpnCalculator()
-	+ pushValue() : bool
-}
+> push 3 fractions & print stack
 
-CLifoBuffer -->"0..1" CFraction
-CRpnCalculator o--> CLifoBuffer
-CRpnCalculator ..> CFraction
+### Deriving test cases from boundary values
+
+Boundaries: Buffer sizes 2 and 10
+
+> Test cases: Buffer sizes 1,2,3 and 9,10,11
+
+### Deriving test cases from state diagram
+* m_tos is the index of the _top of the stack_, and is used access the element via `m_stack[m_tos]`
+	* when there's no elements in the stack: m_tos == -1
+	* when there's 1 element in the stack: m_tos == 0
+	* when the stack is full (n elements): m_tos == n-1
+```plantuml
+@startuml
+[*] --> Empty
+
+state "Partially Filled" as partially
+
+Empty --> partially : evPush
+Empty : m_tos == -1
+
+partially --> Empty : evPop [m_tos == 0]
+
+partially --> partially : evPop [m_tos > 0]
+
+partially --> partially : evPush [m_tos < m_size-2]
+
+partially --> Full : evPush [m_tos == m_size-2]
+
+Full --> partially : ev_pop
+Full : m_tos == m_size-1
 
 @enduml
 ```
+> create 1 test case for each transition
 
-<!--![bla](RpnCalculator/src/default.png)-->
+> create 1 test case for each transition (state & event combination not listed -> including guards)
 
-## CXMLParser
+### Setting up CppUnit in Eclipse
+
+* C/C++ General > Paths and Symbols: create new build configuration UnitTest derived from Debug
+* create new top-level folder _test_
+* C/C++ General > Paths and Symbols > Source Location: exclude main.cpp from _myCode_ or _src_ (don't use the very top-level path, but the src or myCode folders!) & add _test_ folder
+* C/C++ Build > Settings > GCC C** Linker: add cppunit as library and /usr/lib64 as library search path
+* add a launch configuration & select the binary
+
+* IMPORTANT: all member variables in test cases which are object must be pointers, otherwise these errors may occurr:
+	* `error: expected identifier before numeric constant`
+	* `error: expected ‘,’ or ‘...’ before numeric constant`
+
+```c++
+#include <cppunit/TestRunner.h>
+#include <cppunit/TestResult.h>
+// https://stackoverflow.com/questions/13210248/cppunit-creating-a-simple-test
+#include <cppunit/ui/text/TestRunner.h>
+#include <cppunit/TestResultCollector.h>
+#include <cppunit/TextOutputter.h>
+
+#include "CUseCaseTests.h"
+
+/**
+ * To view the generated *.gcda coverage data file,
+ * the gcov Eclipse plugin needs to be installed
+ */
+int main (int argc, char* argv[]) {
+	// Eclipse in-built indexer is worse than useless:
+	// https://stackoverflow.com/a/10081040/2278742
+
+	// https://schneide.wordpress.com/2009/04/14/structuring-cppunit-tests/
+
+	CppUnit::TestResult controller;
+	CppUnit::TestResultCollector result;
+	controller.addListener ( &result );
+	CppUnit::TextUi::TestRunner runner;
+
+	runner.addTest( CUseCaseTests::suite() );
+
+	runner.setOutputter(new CppUnit::TextOutputter(&runner.result(), std::cout));
+
+	return runner.run ("", false, true, false) ? 0 : 1;
+}
+```
+
+### Settings for gcov coverage reports in Eclipse
+* install gcov Eclipse plugin
+* C/C++ Build > Settings > GCC C++ Compiler: [x] Generate gcov information (-ftest-coverage -fprofile-arcs)
+* C/C++ Build > Settings > GCC C++ Linker > Miscellaneous: Linker flags: -fprofile-arcs -ftest-coverage
+
+* then run UnitTest code
+* double-click on UnitTest/test/main.gcda
+* Show coverage for the whole selected binary
+
+## 4 Challenging Exercises
+
+In this exercise you will provide test cases for the LIFO buffer and RPN calculator developed in
+exercise 5, using the CppUnit library and the Coverage Tool presented in the lecture.
+
+
+### 4.1 XML Parser
+
+In this exercise you will implement a simple XML Parser, which translates textual XML format into
+an internal representation.
+
 
 ```plantuml
 @startuml
@@ -811,7 +1221,101 @@ CElement --|> CNode
 
 <!--![bla](XMLParser/src/default.png)-->
 
-## CSort
+### 4.2 CSort: Template Class
+
+Your task is to implement a class, which is able to store any number of any object and to sort the
+list of these objects.
+
+* CSort & CSort_t each use a dynamically allocated array
+* if addElement() is called and the array is full:
+	* a new array is allocated, which is `m_addElements` elements bigger
+	* the values are copied from the old array to the new array
+	* the old array is delete[]d
+	* the pointer to the new array replaces the pointer to the old one
+
+	```c++
+	void CSort::addElement(int a) {
+		// if m_pList is full
+		if(m_numberElements >= m_maxElements) {
+			// allocate a new, bigger array
+			int* m_pListCopy = new int[m_maxElements+m_addElements];
+			// copy the values from the old into the new array
+			for(int i = 0; i < m_numberElements; i++) {
+				m_pListCopy[i] = m_pList[i];
+			}
+			// free the memory
+			delete[] m_pList;
+			// allocate new memory
+			m_pList = m_pListCopy;
+			m_maxElements += m_addElements;
+		}
+		m_pList[m_numberElements] = a;
+		m_numberElements++;
+	}
+	```
+
+	* the template implementation is basically the same:
+	```c++
+	template<typename T> void CSort_t<T>::addElement(T a) {
+		// if m_pList is full
+		if(m_numberElements >= m_maxElements) {
+			// allocate a new, bigger array
+			T* m_pListCopy = new T[m_maxElements+m_addElements];
+			// copy the values from the old into the new array
+			for(int i = 0; i < m_numberElements; i++) {
+				m_pListCopy[i] = m_pList[i];
+			}
+			// free the memory
+			delete[] m_pList;
+			// allocate new memory
+			m_pList = m_pListCopy;
+			m_maxElements += m_addElements;
+		}
+		m_pList[m_numberElements] = a;
+		m_numberElements++;
+	}
+	```
+
+	* Quicksort has been implemented according to the [Hoare partition scheme](https://en.wikipedia.org/wiki/Quicksort#Hoare_partition_scheme):
+
+	```c++
+	template<typename T> void CSort_t<T>::quicksort(T* pList, int lo, int hi) {
+		if(lo < hi) {
+			int p = partition(pList, lo, hi);
+			quicksort(pList, lo, p);
+			quicksort(pList, p + 1, hi);
+		}
+	}
+
+	template<typename T> int CSort_t<T>::partition(T* pList, int lo, int hi) {
+		T pivot = pList[lo];
+		int i = lo - 1;
+		int j = hi + 1;
+		while(true) {
+			do {
+				i++;
+			} while(pList[i] < pivot);
+
+			do {
+				j--;
+			} while(pList[j] > pivot);
+
+			if(i >= j) {
+				return j;
+			}
+
+			T tmp;
+			tmp = pList[i];
+			pList[i] = pList[j];
+			pList[j] = tmp;
+		}
+	}
+	```
+
+	* templated methods of template classes must be implemented in the .h header file, since
+		* a class template is not a class, it's a recipe for creating a new class for each T we encounter. A template cannot be compiled into code, only the result of instantiating the template can be compiled.
+		* .cpp files are all compiled separately! The compiler doesn't care for any other .cpp files other than the one it's compiling right now. Thus the compiler uses the .h file of a class template (e.g. CSort_t\<T\>) to create the concrete classes required by the .cpp file. E.g. if the .cpp file uses CSort_t<int>, then a class CSort_tINT is created in the background. For thi new class, the compiler has to have access to the implementation. Therefor, the implementation neds to be in the .h file.
+	* for std::list::sort() to work, the stored type has to provide an operator<() method
 
 ```plantuml
 @startuml
@@ -821,13 +1325,12 @@ class CSort_t<T : typename> {
 	- m_addElements : int
 	- m_pList : T*
 
-	+ CSort_t()
-	+ ~CSort_t()
-	+ addElement() : void
+	+ CSort_t(int initialMaxElements = 10, int addElements = 5) <<constructor>>
+	+ addElement(T a) : void
 	+ printList() : void
 	+ sortList() : void
-	- quicksort() : void
-	- partition() : int
+	- quicksort(T* pList, int lo, int hi) : void
+	- partition(T* pList, int lo, int hi) : int
 }
 class CCoordinate {
 	- m_x : int
@@ -840,18 +1343,20 @@ class CSort {
 	- m_addElements : int
 	- m_pList : int*
 
-	+ CSort_t()
-	+ ~CSort_t()
-	+ addElement() : void
+	+ CSort_t(int initialMaxElements = 10, int addElements = 5) <<constructor>>
+	+ ~CSort_t() <<destructor>>
+	+ addElement(int a) : void
 	+ printList() : void
 	+ sortList() : void
-	- quicksort() : void
-	- partition() : int
+	- quicksort(int* pList, int lo, int hi) : void
+	- partition(int* pList, int lo, int hi) : int
 }
 @enduml
 ```
 
 <!--![bla](Sort/src/default.png)-->
+
+### 4.3 Combining Techniques
 
 # Live Code
 
@@ -1425,7 +1930,7 @@ Boat -- (Sail the vast sea)
 @enduml
 ```
 
-* Polymophism: CSailingSimulator could store an array of pointers of type CBoat pointing to instances of CLongboat, CDinghy and CCruiser, but for that, these methods would need to be virtual in CBoat
+* Polymorphism: CSailingSimulator could store an array of pointers of type CBoat pointing to instances of CLongboat, CDinghy and CCruiser, but for that, these methods would need to be virtual in CBoat
 
 ```plantuml
 @startuml
@@ -1713,7 +2218,7 @@ CComplexSet o-->"1..*" CComplex
 * nested templates!
 * default values for template type
 
-```
+```c++
 template <template <class TCONTENT> class TDATA, class TCONTENT = int>
 class CMatrix
 {
@@ -1802,9 +2307,9 @@ note right of CFormat: Format and basic file IO\ncan be separated into 2\nclasse
 note bottom of CPhoneEntry: Example data class
 
 note bottom of CWaypoint: Example data class
-@enduml
 
 note left of CStorage: In a first step we can provide a\nreference to the container storing\nthe data. Later on, we can provide a\nmore intuitive interface.
+@enduml
 ```
 <!--![bla](Live%20Code%209/myCode/UML.png)-->
 
@@ -1821,7 +2326,7 @@ note left of CStorage: In a first step we can provide a\nreference to the contai
 	* create a number of tests in each class
 	* add all tests to testsuite
 
-```
+```c++
 class CLoadTests: public CppUnit::TestFixture {
 public:
 
