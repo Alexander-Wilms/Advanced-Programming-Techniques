@@ -1168,6 +1168,16 @@ int main (int argc, char* argv[]) {
 * double-click on UnitTest/test/main.gcda
 * Show coverage for the whole selected binary
 
+### Discovered errors:
+
+* indirectly: SEGFAULT (can't be detected by CppUnit), but was triggered by a test case
+	* after installing debug info packages, the error could be narrowed down:
+		* input-validation in CLifoBuffer was done after actually allocating the dynamic array, in this case with size 1
+		* after that, m_size was set to 5
+		* the test case tried up to 11 times to push a value onto the stack
+		* push() uses m_size to check for _out of bounds_ errors, but the array actually had the size 1
+			* this resulted in a segmentation fault
+
 ## 4 Challenging Exercises
 
 In this exercise you will provide test cases for the LIFO buffer and RPN calculator developed in

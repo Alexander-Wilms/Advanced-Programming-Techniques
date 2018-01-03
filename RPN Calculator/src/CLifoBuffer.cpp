@@ -24,7 +24,7 @@ CLifoBuffer::CLifoBuffer(int size) {
 	 * o run sudo dnf debuginfo-install glibc-2.26-20.fc27.x86_64
 	 * o debug
 	 */
-	m_pBuffer = new CFraction[size];
+	m_pBuffer = new CFraction[m_size];
 
 	m_tos = -1;
 
