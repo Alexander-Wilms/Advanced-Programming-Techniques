@@ -19,6 +19,7 @@ public:
 	CFraction& operator ++();
 	CFraction operator ++(int input);
 	friend std::ostream& operator<< (std::ostream& out, const CFraction& f);
+	friend bool operator== (const CFraction& l, const CFraction& r);
 	CFraction operator+ (const CFraction& f);
 	CFraction operator- (const CFraction& f);
 	CFraction operator* (const CFraction& f);

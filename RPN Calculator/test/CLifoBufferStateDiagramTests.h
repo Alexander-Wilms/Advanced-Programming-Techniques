@@ -5,8 +5,8 @@
  *      Author: Fabian Alexander Wilms
  */
 
-#ifndef CSTATEDIAGRAMTESTS_H_
-#define CSTATEDIAGRAMTESTS_H_
+#ifndef CLIFOBUFFERSTATEDIAGRAMTESTS_H_
+#define CLIFOBUFFERSTATEDIAGRAMTESTS_H_
 
 #include "cppunit/TestFixture.h"
 #include "cppunit/TestSuite.h"
@@ -14,7 +14,7 @@
 
 #include "../src/CLifoBuffer.h"
 
-class CStateDiagramTests : public CppUnit::TestFixture {
+class CLifoBufferStateDiagramTests : public CppUnit::TestFixture {
 private:
 	CLifoBuffer* buffer;
 public:
@@ -141,19 +141,19 @@ public:
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("State Diagram Tests");
 
-		suite->addTest(new CppUnit::TestCaller<CStateDiagramTests>("Empty evPush PartiallyFilled", &CStateDiagramTests::testEmpty_evPush_PartiallyFilled));
-		suite->addTest(new CppUnit::TestCaller<CStateDiagramTests>("Empty evPop Empty", &CStateDiagramTests::testEmpty_evPop_Empty));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferStateDiagramTests>("Empty evPush PartiallyFilled", &CLifoBufferStateDiagramTests::testEmpty_evPush_PartiallyFilled));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferStateDiagramTests>("Empty evPop Empty", &CLifoBufferStateDiagramTests::testEmpty_evPop_Empty));
 
-		suite->addTest(new CppUnit::TestCaller<CStateDiagramTests>("PartiallyFilled evPush PartiallyFilled", &CStateDiagramTests::testPartiallyFilled_evPush_PartiallyFilled));
-		suite->addTest(new CppUnit::TestCaller<CStateDiagramTests>("PartiallyFilled evPush Full", &CStateDiagramTests::testPartiallyFilled_evPush_Full));
-		suite->addTest(new CppUnit::TestCaller<CStateDiagramTests>("PartiallyFilled evPop Empty", &CStateDiagramTests::testPartiallyFilled_evPop_Empty));
-		suite->addTest(new CppUnit::TestCaller<CStateDiagramTests>("PartiallyFilled evPop PartiallyFilled", &CStateDiagramTests::testPartiallyFilled_evPop_PartiallyFilled));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferStateDiagramTests>("PartiallyFilled evPush PartiallyFilled", &CLifoBufferStateDiagramTests::testPartiallyFilled_evPush_PartiallyFilled));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferStateDiagramTests>("PartiallyFilled evPush Full", &CLifoBufferStateDiagramTests::testPartiallyFilled_evPush_Full));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferStateDiagramTests>("PartiallyFilled evPop Empty", &CLifoBufferStateDiagramTests::testPartiallyFilled_evPop_Empty));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferStateDiagramTests>("PartiallyFilled evPop PartiallyFilled", &CLifoBufferStateDiagramTests::testPartiallyFilled_evPop_PartiallyFilled));
 
-		suite->addTest(new CppUnit::TestCaller<CStateDiagramTests>("Full evPush Full", &CStateDiagramTests::testFull_evPush_Full));
-		suite->addTest(new CppUnit::TestCaller<CStateDiagramTests>("Full evPop PartiallyFilled", &CStateDiagramTests::testFull_evPop_PartiallyFilled));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferStateDiagramTests>("Full evPush Full", &CLifoBufferStateDiagramTests::testFull_evPush_Full));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferStateDiagramTests>("Full evPop PartiallyFilled", &CLifoBufferStateDiagramTests::testFull_evPop_PartiallyFilled));
 
 		return suite;
 	}
 };
 
-#endif /* CSTATEDIAGRAMTESTS_H_ */
+#endif /* CLIFOBUFFERSTATEDIAGRAMTESTS_H_ */

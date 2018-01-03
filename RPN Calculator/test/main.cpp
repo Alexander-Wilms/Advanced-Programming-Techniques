@@ -5,9 +5,12 @@
 #include <cppunit/TestResultCollector.h>
 #include <cppunit/TextOutputter.h>
 
-#include "CBoundaryValuesTests.h"
-#include "CStateDiagramTests.h"
-#include "CUseCaseTests.h"
+#include "CLifoBufferBoundaryValuesTests.h"
+#include "CLifoBufferStateDiagramTests.h"
+#include "CLifoBufferUseCaseTests.h"
+
+#include "CRpnCalculatorBoundaryValueTests.h"
+#include "CRpnCalculatorOperationTests.h"
 
 /**
  * To view the generated *.gcda coverage data file,
@@ -24,9 +27,12 @@ int main (int argc, char* argv[]) {
 	controller.addListener ( &result );
 	CppUnit::TextUi::TestRunner runner;
 
-	runner.addTest( CBoundaryValueTests::suite() );
-	runner.addTest( CStateDiagramTests::suite() );
-	runner.addTest( CUseCaseTests::suite() );
+	runner.addTest( CLifoBufferBoundaryValueTests::suite() );
+	runner.addTest( CLifoBufferStateDiagramTests::suite() );
+	runner.addTest( CLifoBufferUseCaseTests::suite() );
+
+	runner.addTest( CRpnCalculatorBoundaryValueTests::suite() );
+	runner.addTest( CRpnCalculatorOperationTests::suite() );
 
 	runner.setOutputter(new CppUnit::TextOutputter(&runner.result(), std::cout));
 

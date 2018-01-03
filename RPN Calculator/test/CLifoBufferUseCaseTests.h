@@ -14,7 +14,7 @@
 
 #include "../src/CLifoBuffer.h"
 
-class CUseCaseTests : public CppUnit::TestFixture {
+class CLifoBufferUseCaseTests : public CppUnit::TestFixture {
 private:
 	CLifoBuffer* buffer;
 public:
@@ -57,8 +57,8 @@ public:
 
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Use Case Tests");
 
-		suite->addTest(new CppUnit::TestCaller<CUseCaseTests>("Pushing and popping fractions", &CUseCaseTests::testPushingAndPoppingFractions));
-		suite->addTest(new CppUnit::TestCaller<CUseCaseTests>("Printing", &CUseCaseTests::testPrinting));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferUseCaseTests>("Pushing and popping fractions", &CLifoBufferUseCaseTests::testPushingAndPoppingFractions));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferUseCaseTests>("Printing", &CLifoBufferUseCaseTests::testPrinting));
 
 		return suite;
 	}

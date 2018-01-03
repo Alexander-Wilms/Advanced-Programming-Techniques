@@ -118,3 +118,7 @@ void CFraction::shorten() {
 	m_numerator /= greatestCommonDivisor;
 	m_denominator /= greatestCommonDivisor;
 }
+
+bool operator== (const CFraction& l, const CFraction& r) {
+	return l.m_numerator == r.m_numerator && l.m_denominator == r.m_denominator;
+}

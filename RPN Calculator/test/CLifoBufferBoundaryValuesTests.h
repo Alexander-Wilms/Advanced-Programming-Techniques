@@ -5,8 +5,8 @@
  *      Author: Fabian Alexander Wilms
  */
 
-#ifndef CBOUNDARYVALUESTESTS_H_
-#define CBOUNDARYVALUESTESTS_H_
+#ifndef CLIFOBUFFERBOUNDARYVALUESTESTS_H_
+#define CLIFOBUFFERBOUNDARYVALUESTESTS_H_
 
 #include "cppunit/TestFixture.h"
 #include "cppunit/TestSuite.h"
@@ -14,7 +14,7 @@
 
 #include "../src/CLifoBuffer.h"
 
-class CBoundaryValueTests : public CppUnit::TestFixture {
+class CLifoBufferBoundaryValueTests : public CppUnit::TestFixture {
 private:
 	CLifoBuffer* buffer;
 public:
@@ -86,15 +86,15 @@ public:
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Boundary Values Tests");
 
-		suite->addTest(new CppUnit::TestCaller<CBoundaryValueTests>("Boundary value 1", &CBoundaryValueTests::testBoundaryValueOne));
-		suite->addTest(new CppUnit::TestCaller<CBoundaryValueTests>("Boundary value 2", &CBoundaryValueTests::testBoundaryValueTwo));
-		suite->addTest(new CppUnit::TestCaller<CBoundaryValueTests>("Boundary value 3", &CBoundaryValueTests::testBoundaryValueThree));
-		suite->addTest(new CppUnit::TestCaller<CBoundaryValueTests>("Boundary value 9", &CBoundaryValueTests::testBoundaryValueNine));
-		suite->addTest(new CppUnit::TestCaller<CBoundaryValueTests>("Boundary value 10", &CBoundaryValueTests::testBoundaryValueTen));
-		suite->addTest(new CppUnit::TestCaller<CBoundaryValueTests>("Boundary value 11", &CBoundaryValueTests::testBoundaryValueEleven));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferBoundaryValueTests>("Boundary value 1", &CLifoBufferBoundaryValueTests::testBoundaryValueOne));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferBoundaryValueTests>("Boundary value 2", &CLifoBufferBoundaryValueTests::testBoundaryValueTwo));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferBoundaryValueTests>("Boundary value 3", &CLifoBufferBoundaryValueTests::testBoundaryValueThree));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferBoundaryValueTests>("Boundary value 9", &CLifoBufferBoundaryValueTests::testBoundaryValueNine));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferBoundaryValueTests>("Boundary value 10", &CLifoBufferBoundaryValueTests::testBoundaryValueTen));
+		suite->addTest(new CppUnit::TestCaller<CLifoBufferBoundaryValueTests>("Boundary value 11", &CLifoBufferBoundaryValueTests::testBoundaryValueEleven));
 
 		return suite;
 	}
 };
 
-#endif /* CBOUNDARYVALUESTESTS_H_ */
+#endif /* CLIFOBUFFERBOUNDARYVALUESTESTS_H_ */

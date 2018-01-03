@@ -1168,6 +1168,8 @@ int main (int argc, char* argv[]) {
 * double-click on UnitTest/test/main.gcda
 * Show coverage for the whole selected binary
 
+I achieved a coverage of 100% for both CLifoBuffer and CRpnCalculator
+
 ### Discovered errors:
 
 * indirectly: SEGFAULT (can't be detected by CppUnit), but was triggered by a test case
@@ -1177,6 +1179,13 @@ int main (int argc, char* argv[]) {
 		* the test case tried up to 11 times to push a value onto the stack
 		* push() uses m_size to check for _out of bounds_ errors, but the array actually had the size 1
 			* this resulted in a segmentation fault
+
+* CPPUNIT_ASSERT_DOUBLES_EQUAL(expected, actual, delta):
+```
+The assertion passes if both expected and actual are finite and
+ * \c fabs( \c expected - \c actual ) <= \c delta.
+```
+* That means that delta _must_ be > 0, otherwise the assertion will always fail!
 
 ## 4 Challenging Exercises
 
