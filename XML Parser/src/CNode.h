@@ -8,7 +8,7 @@
 #ifndef SRC_CNODE_H_
 #define SRC_CNODE_H_
 
-typedef enum node_t {ELEMENT, TEXT};
+enum node_t {ELEMENT, TEXT};
 
 class CNode {
 public:

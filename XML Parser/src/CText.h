@@ -19,7 +19,7 @@ public:
 	bool parseInput(const std::string& input, unsigned int& parsePosition);
 	void print(int indent);
 	node_t getNodeType();
-private:
+//private:
 	std::string m_text;
 };
 

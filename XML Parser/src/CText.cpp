@@ -22,16 +22,17 @@ void CText::setText(std::string text) {
 bool CText::parseInput(const std::string& input, unsigned int& parsePosition) {
 
 	bool done = false;
-	while(!done) {
+	while(!done && parsePosition < input.size()) {
 		if(input.substr(parsePosition, 1) != "<") {
 			m_text.append(input.substr(parsePosition, 1));
 			parsePosition++;
 		} else {
 			done = true;
+			std::cout << "\"" << m_text << "\"" << std::endl;
 			return true;
 		}
 	}
-	std::cout << "Parsed text: " << m_text << std::endl;
+
 	return false;
 }
 

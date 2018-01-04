@@ -19,28 +19,32 @@ CElement::~CElement() {
 
 bool CElement::parseInput(const std::string& input,
 		unsigned int& parsePosition) {
-	bool done = false;
+	std::cout << "parseInput()" << std::endl;
 	bool startTag;
 
-	// Parse start tag and save tag name
-	//std::cout << "Now comes a start tag" << std::endl;
-	//parseStartOrEndTag(input, parsePosition, startTag, m_tag);
+
+	std::cout << "Parse start tag and save tag name" << std::endl;
+	parseStartOrEndTag(input, parsePosition, startTag, m_tag);
+
 	while (parsePosition < input.size()) {
-		if (input.substr(parsePosition, 2) == "</") { // Looking at "</"?
-			std::cout << "Now comes an end tag" << std::endl;
+		m_tag = "";
+
+		if (input.substr(parsePosition, 2) == "</") { // [looking at "</"]
+			std::cout << "Parse end tag" << std::endl;
 			parseStartOrEndTag(input, parsePosition, startTag, m_tag);
-		} else if (input.substr(parsePosition, 1) == "<") { // Looking at "<"?
-			std::cout << "Now comes a CElement child" << std::endl;
-			CElement childElement;
-			addToContentChildren((CNode*) &childElement);
-			childElement.parseInput(input, parsePosition);
-//		parseInput(input, parsePosition);
-		} else { // Create new CText and invoke parseInput for newly created object
-			std::cout << "Now comes a CText child" << std::endl;
-			CText childText;
-			addToContentChildren((CNode*) &childText);
-			childText.parseInput(input, parsePosition);
-			//	parseInput(input, parsePosition);
+			std::cout << "parsing complete" << std::endl;
+			return true;
+		} else if (input.substr(parsePosition, 1) == "<") { // [looking at "<"]
+			std::cout << "Create new CElement and save as child" << std::endl;
+			CElement* childElement = new CElement();
+			addToContentChildren((CNode*) childElement);
+			std::cout << "Invoke parseInput() for newly created object" << std::endl;
+			childElement->parseInput(input, parsePosition);
+		} else {
+			std::cout << "Create new CText and invoke parseInput for newly created object" << std::endl;
+			CText* childText = new CText();
+			addToContentChildren((CNode*) childText);
+			childText->parseInput(input, parsePosition);
 		}
 	}
 
@@ -49,9 +53,6 @@ bool CElement::parseInput(const std::string& input,
 
 // print all nodes recursively
 void CElement::print(int indent) {
-
-	std::cout << "m_contentNodes: " << m_contentNodes << std::endl;
-	std::cout << "  ";
 	if (m_contentNodes != 0) {
 		for (int i = 0; i < m_contentNodes + 1; i++) {
 			std::cout << m_content[i]->getNodeType() << std::endl;
@@ -86,10 +87,12 @@ bool CElement::parseStartOrEndTag(const std::string& input,
 		unsigned int& parsePosition, bool& isStartTag, std::string& tag) {
 	if (input.substr(parsePosition, 1) == "<"
 			&& input.substr(parsePosition + 1, 1) != "/") {
+		// this is a start tag
 		isStartTag = true;
 		parsePosition++;
 	} else if (input.substr(parsePosition, 1) == "<"
 			&& input.substr(parsePosition + 1, 1) == "/") {
+		// this is an end tag
 		isStartTag = false;
 		parsePosition += 2;
 	}
@@ -97,6 +100,7 @@ bool CElement::parseStartOrEndTag(const std::string& input,
 	bool done = false;
 
 	while (!done) {
+		// check for closing bracket of tag
 		if (input.substr(parsePosition, 1) != ">") {
 			tag.append(input.substr(parsePosition, 1));
 			parsePosition++;
@@ -104,6 +108,13 @@ bool CElement::parseStartOrEndTag(const std::string& input,
 			done = true;
 		}
 	}
+
+	if(isStartTag) {
+		std::cout << "<";
+	} else {
+		std::cout << "</";
+	}
+	std::cout << tag << ">" << std::endl;
 
 	parsePosition++;
 

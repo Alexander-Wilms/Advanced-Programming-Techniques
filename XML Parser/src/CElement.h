@@ -18,7 +18,8 @@ public:
 	bool parseInput(const std::string& input, unsigned int& parsePosition);
 	void print(int indent);
 	node_t getNodeType();
-private:
+// make everything public for unit testing
+// private:
 	bool addToContentChildren(CNode* child);
 	bool parseStartOrEndTag(const std::string& input, unsigned int& parsePosition, bool& isStartTag, std::string& tag);
 	CNode* m_content[10];
