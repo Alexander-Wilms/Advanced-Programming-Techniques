@@ -11,6 +11,5 @@ CNode::CNode(node_t nodeType) {
 	m_node = nodeType;
 }
 
-node_t CNode::getNodeType() {
-	return ELEMENT;
+CNode::~CNode() {
 }

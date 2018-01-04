@@ -28,7 +28,6 @@ bool CText::parseInput(const std::string& input, unsigned int& parsePosition) {
 			parsePosition++;
 		} else {
 			done = true;
-			std::cout << "\"" << m_text << "\"" << std::endl;
 			return true;
 		}
 	}
@@ -37,9 +36,26 @@ bool CText::parseInput(const std::string& input, unsigned int& parsePosition) {
 }
 
 void CText::print(int indent) {
-	std::cout << "CText[m_text=\"" << m_text << "\"]" << std::endl;
+	std::string output = m_text;
+	std::string indentiationString = "\n";
+	std::string replacementString = "";
+
+	for(int i = 0; i < indent; i++) {
+		std::cout << "\t";
+		indentiationString += "\t";
+	}
+
+	// if m_text contains newlines, indent them as well
+	if(m_text.find("\n") != std::string::npos) {
+		output.replace(output.find("\n"), 1, indentiationString);
+	}
+
+	std::cout << "CText[m_text=\"" << output << "\"]" << std::endl;
 }
 
 node_t CText::getNodeType() {
 	return TEXT;
+}
+
+CText::~CText() {
 }

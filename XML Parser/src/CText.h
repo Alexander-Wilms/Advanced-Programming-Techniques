@@ -14,11 +14,12 @@
 class CText : public CNode {
 public:
 	CText();
+	virtual ~CText();
 	std::string getText();
 	void setText(std::string text);
 	bool parseInput(const std::string& input, unsigned int& parsePosition);
 	void print(int indent);
-	node_t getNodeType();
+	virtual node_t getNodeType();
 //private:
 	std::string m_text;
 };

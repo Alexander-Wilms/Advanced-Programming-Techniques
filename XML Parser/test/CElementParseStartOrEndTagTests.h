@@ -47,11 +47,17 @@ public:
 		CPPUNIT_ASSERT_EQUAL(8, (int) parsePosition);
 	}
 
+	void testPrintingElementWithoutChildren() {
+		element->m_tag = "test";
+		element->print(0);
+	}
+
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Boundary Values Tests");
 
 		suite->addTest(new CppUnit::TestCaller<CElementParseStartOrEndTagTests>("Boundary value 1", &CElementParseStartOrEndTagTests::testOpeningTag));
 		suite->addTest(new CppUnit::TestCaller<CElementParseStartOrEndTagTests>("Boundary value 1", &CElementParseStartOrEndTagTests::testClosingTag));
+		suite->addTest(new CppUnit::TestCaller<CElementParseStartOrEndTagTests>("Boundary value 1", &CElementParseStartOrEndTagTests::testPrintingElementWithoutChildren));
 
 		return suite;
 	}
