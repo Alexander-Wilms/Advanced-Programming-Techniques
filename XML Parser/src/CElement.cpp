@@ -8,6 +8,10 @@
 #include "CElement.h"
 #include "CText.h"
 #include <iostream>
+#include <regex>
+
+
+//#define DEBUG
 
 CElement::CElement() :
 CNode(ELEMENT),
@@ -25,7 +29,26 @@ CElement::~CElement() {
 }
 
 bool CElement::parseInput(const std::string& input, unsigned int& parsePosition) {
+	// first check that the input contains ASCII characters only
+	if(!m_checkedForNonASCII) {
+		try {
+			/*
+			 * tool for easily creating regular expression: https://regexr.com/
+			 * Attention: backslash had to be escaped: \\
+			 */
+			// std::regex_match only returns true when the entire input sequence (any ASCII character) has been matched
+			if(!std::regex_match(input, std::regex("[\\0-\\x7f]*"))) {
+				std::cout << "ERROR in CElement::parseInput(): input contains non-ASCII characters" << std::endl;
+				return false;
+			}
+		} catch (std::regex_error& e) {
+			std::cout << "ERROR in CElement::parseInput(): std::regex_match() threw an exception: " << e.what() << std::endl;
+		}
+		m_checkedForNonASCII = true;
+	}
+
 	bool startTag;
+	std::string closingTag;
 
 #ifdef DEBUG
 	std::cout << "Parse start tag and save tag name" << std::endl;
@@ -36,14 +59,20 @@ bool CElement::parseInput(const std::string& input, unsigned int& parsePosition)
 	}
 
 	while (parsePosition < input.size()) {
-		m_tag = "";
+#ifdef DEBUG
+		std::cout << "parsing: " << input.substr(parsePosition) << std::endl;
+#endif
 
 		if (input.substr(parsePosition, 2) == "</") { // [looking at "</"]
 #ifdef DEBUG
 			std::cout << "Parse end tag" << std::endl;
 #endif
-			if(!parseStartOrEndTag(input, parsePosition, startTag, m_tag)) {
+			if(!parseStartOrEndTag(input, parsePosition, startTag, closingTag)) {
 				// parsing start or end tag failed
+				return false;
+			}
+			if(closingTag != m_tag) {
+				std::cout << "ERROR in CElement::parseInput(): closing tag doesn't match opening tag: <" << m_tag << "></" << closingTag << ">" << std::endl;
 				return false;
 			}
 			return true;
@@ -72,11 +101,15 @@ bool CElement::parseInput(const std::string& input, unsigned int& parsePosition)
 				// adding to content children failed
 				return false;
 			}
-			childText->parseInput(input, parsePosition);
+			if(!childText->parseInput(input, parsePosition)) {
+				// parse input failed
+				return false;
+			}
 		}
 	}
 
-	return true;
+	// method only succeeds if tag is also closed
+	return false;
 }
 
 // print all nodes recursively
@@ -98,7 +131,7 @@ void CElement::print(int indent) {
 				((CText*) m_content[i])->print(indent+1);
 				break;
 			default:
-				std::cout << "error: unknown node type " << m_content[i]->getNodeType() << std::endl;
+				std::cout << "ERROR in CElement::print(): unknown node type " << m_content[i]->getNodeType() << std::endl;
 			}
 		}
 	}
@@ -114,14 +147,20 @@ bool CElement::addToContentChildren(CNode* child) {
 		m_contentNodes++;
 		return true;
 	} else {
-		std::cout << "node " << m_tag << " has too many children" << std::endl;
+		std::cout << "ERROR in CElement::addToContentChildren(): node " << m_tag << " has too many children" << std::endl;
 		return false;
 	}
 }
 
 bool CElement::parseStartOrEndTag(const std::string& input,
 		unsigned int& parsePosition, bool& isStartTag, std::string& tag) {
-	if (input.substr(parsePosition, 2) == "<"
+	tag = "";
+
+#ifdef DEBUG
+	std::cout << "parsing: " << input.substr(parsePosition) << std::endl;
+#endif
+	// peek ahead, but don't change parse position
+	if (input.substr(parsePosition, 1) == "<"
 			&& input.substr(parsePosition + 1, 1) != "/") {
 		// this is a start tag
 		isStartTag = true;
@@ -131,7 +170,8 @@ bool CElement::parseStartOrEndTag(const std::string& input,
 		isStartTag = false;
 		parsePosition += 2;
 	} else {
-		std::cout << "expected start or end tag" << std::endl;
+		std::cout << "ERROR in CElement::parseStartOrEndTag(): expected start or end tag" << std::endl;
+		return false;
 	}
 
 	bool done = false;
@@ -139,6 +179,7 @@ bool CElement::parseStartOrEndTag(const std::string& input,
 	while (!done) {
 		// check for closing bracket of tag
 		if (input.substr(parsePosition, 1) != ">") {
+			// bracket not yet closed
 			tag.append(input.substr(parsePosition, 1));
 			parsePosition++;
 		} else {
@@ -147,6 +188,16 @@ bool CElement::parseStartOrEndTag(const std::string& input,
 	}
 
 	parsePosition++;
+
+	/*
+	 * tool for easily creating regular expression: https://regexr.com/
+ 	 * Attention: backslash had to be escaped: \\
+	 */
+	if(!std::regex_match(tag, std::regex("[A-Za-z_][A-Za-z_\\-0-9.]*"))) {
+		// this an illegal tag
+		std::cout << "ERROR in CElement::parseStartOrEndTag(): illegal character encountered: " << tag << std::endl;
+		return false;
+	}
 
 	return true;
 }

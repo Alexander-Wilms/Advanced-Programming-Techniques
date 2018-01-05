@@ -13,7 +13,8 @@
 int main(void) {
 	unsigned pos = 0;
 	CElement doc;
-	if (!doc.parseInput("<top>\n<nested>some data</nested>\n more data\n</top>", pos)) {
+	if (!doc.parseInput("<top>\n <nested>some "
+			"data</nested>\n more data\n</top>", pos)) {
 		std::cout << "Parsing failed at position " << pos << std::endl;
 	} else {
 		doc.print(0);

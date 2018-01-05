@@ -7,6 +7,9 @@
 
 #include "CText.h"
 #include <iostream>
+#include <regex>
+
+//#define DEBUG
 
 CText::CText() : CNode(TEXT) {
 }
@@ -20,8 +23,11 @@ void CText::setText(std::string text) {
 }
 
 bool CText::parseInput(const std::string& input, unsigned int& parsePosition) {
-
+#ifdef DEBUG
+	std::cout << "parsing: " << input.substr(parsePosition)<< std::endl;
+#endif
 	bool done = false;
+
 	while(!done && parsePosition < input.size()) {
 		if(input.substr(parsePosition, 1) != "<") {
 			m_text.append(input.substr(parsePosition, 1));

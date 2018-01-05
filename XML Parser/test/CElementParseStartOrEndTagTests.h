@@ -31,7 +31,7 @@ public:
 		bool isStartTag;
 		std::string tag;
 		unsigned int parsePosition = 3;
-		element->parseStartOrEndTag("...<Hi>...", parsePosition, isStartTag, tag);
+		CPPUNIT_ASSERT_EQUAL(true, element->parseStartOrEndTag("...<Hi>...", parsePosition, isStartTag, tag));
 		CPPUNIT_ASSERT_EQUAL(true, isStartTag);
 		CPPUNIT_ASSERT_EQUAL(std::string("Hi"), tag);
 		CPPUNIT_ASSERT_EQUAL(7, (int) parsePosition);
@@ -41,15 +41,32 @@ public:
 		bool isStartTag;
 		std::string tag;
 		unsigned int parsePosition = 3;
-		element->parseStartOrEndTag("...</Hi>...", parsePosition, isStartTag, tag);
+		CPPUNIT_ASSERT_EQUAL(true, element->parseStartOrEndTag("...</Hi>...", parsePosition, isStartTag, tag));
 		CPPUNIT_ASSERT_EQUAL(false, isStartTag);
 		CPPUNIT_ASSERT_EQUAL(std::string("Hi"), tag);
 		CPPUNIT_ASSERT_EQUAL(8, (int) parsePosition);
 	}
 
+	void testNoTag() {
+		bool isStartTag;
+		std::string tag;
+		unsigned int parsePosition = 3;
+		CPPUNIT_ASSERT_EQUAL(false, element->parseStartOrEndTag("...>Hi>...", parsePosition, isStartTag, tag));
+		CPPUNIT_ASSERT_EQUAL(false, isStartTag);
+		CPPUNIT_ASSERT_EQUAL(std::string("Hi"), tag);
+		CPPUNIT_ASSERT_EQUAL(8, (int) parsePosition);
+	}
+
+
 	void testPrintingElementWithoutChildren() {
 		element->m_tag = "test";
 		element->print(0);
+	}
+
+	void testMissingClosingTag() {
+		unsigned int parsePosition = 3;
+		CPPUNIT_ASSERT_EQUAL(false, element->parseInput("...<Hi>...", parsePosition));
+		CPPUNIT_ASSERT_EQUAL(10, (int) parsePosition);
 	}
 
 	static CppUnit::TestSuite* suite() {
@@ -58,6 +75,7 @@ public:
 		suite->addTest(new CppUnit::TestCaller<CElementParseStartOrEndTagTests>("Boundary value 1", &CElementParseStartOrEndTagTests::testOpeningTag));
 		suite->addTest(new CppUnit::TestCaller<CElementParseStartOrEndTagTests>("Boundary value 1", &CElementParseStartOrEndTagTests::testClosingTag));
 		suite->addTest(new CppUnit::TestCaller<CElementParseStartOrEndTagTests>("Boundary value 1", &CElementParseStartOrEndTagTests::testPrintingElementWithoutChildren));
+		suite->addTest(new CppUnit::TestCaller<CElementParseStartOrEndTagTests>("Boundary value 1", &CElementParseStartOrEndTagTests::testMissingClosingTag));
 
 		return suite;
 	}

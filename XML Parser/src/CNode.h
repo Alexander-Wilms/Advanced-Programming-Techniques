@@ -13,8 +13,8 @@ enum node_t {ELEMENT, TEXT};
 class CNode {
 public:
 	CNode(node_t nodeType);
-	virtual ~CNode(); // pure virtual
-	virtual node_t getNodeType() = 0;
+	virtual ~CNode();
+	virtual node_t getNodeType() = 0;  // pure virtual
 private:
 	node_t m_node;
 };

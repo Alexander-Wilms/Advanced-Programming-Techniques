@@ -25,7 +25,7 @@ public:
 	std::string m_tag;
 	CNode** m_content; // static array of pointers to CNode objects -> double pointer!
 	int m_contentNodes;
-
+	bool m_checkedForNonASCII = false;
 };
 
 #endif /* SRC_CELEMENT_H_ */

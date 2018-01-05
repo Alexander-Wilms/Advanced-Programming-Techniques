@@ -27,7 +27,7 @@ public:
 		delete text;
 	}
 
-	void testParsingInput() {
+	void testParsingVerySimpleInput() {
 		std::string tag;
 		unsigned int parsePosition = 0;
 		CPPUNIT_ASSERT_EQUAL(true, text->parseInput("some data</nested>", parsePosition));
@@ -38,7 +38,7 @@ public:
 	static CppUnit::TestSuite* suite() {
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Boundary Values Tests");
 
-		suite->addTest(new CppUnit::TestCaller<CTextParseInputTests>("Boundary value 1", &CTextParseInputTests::testParsingInput));
+		suite->addTest(new CppUnit::TestCaller<CTextParseInputTests>("Parsing very simple input", &CTextParseInputTests::testParsingVerySimpleInput));
 
 		return suite;
 	}

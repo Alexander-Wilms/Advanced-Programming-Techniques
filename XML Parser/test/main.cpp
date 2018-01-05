@@ -5,6 +5,7 @@
 #include <cppunit/TestResultCollector.h>
 #include <cppunit/TextOutputter.h>
 
+#include "CElementParseInputTests.h"
 #include "CElementParseStartOrEndTagTests.h"
 #include "CTextParseInputTests.h"
 
@@ -23,6 +24,7 @@ int main (int argc, char* argv[]) {
 	controller.addListener ( &result );
 	CppUnit::TextUi::TestRunner runner;
 
+	runner.addTest( CElementParseInputTests::suite() );
 	runner.addTest( CElementParseStartOrEndTagTests::suite() );
 	runner.addTest( CTextParseInputTests::suite() );
 
