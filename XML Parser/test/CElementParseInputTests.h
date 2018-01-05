@@ -38,7 +38,7 @@ public:
 		CPPUNIT_ASSERT_EQUAL((unsigned int) input.length(), parsePosition);
 	}
 
-	void testParsingComplexInput() {
+	void testPrintingWithText() {
 		std::string input = "<top>\n <nested>some "
 				"data</nested>\n more data\n</top>";
 		std::string tag;
@@ -130,7 +130,7 @@ public:
 		CppUnit::TestSuite* suite = new CppUnit::TestSuite("Boundary Values Tests");
 
 		suite->addTest(new CppUnit::TestCaller<CElementParseInputTests>("Parsing very simple input", &CElementParseInputTests::testParsingVerySimpleInput));
-		suite->addTest(new CppUnit::TestCaller<CElementParseInputTests>("Parsing complex input", &CElementParseInputTests::testParsingComplexInput));
+		suite->addTest(new CppUnit::TestCaller<CElementParseInputTests>("Parsing complex input", &CElementParseInputTests::testPrintingWithText));
 		suite->addTest(new CppUnit::TestCaller<CElementParseInputTests>("Parsing very complex input", &CElementParseInputTests::testParsingVeryComplexInput));
 		suite->addTest(new CppUnit::TestCaller<CElementParseInputTests>("Parsing legal tags", &CElementParseInputTests::testParsingLegalTags));
 		suite->addTest(new CppUnit::TestCaller<CElementParseInputTests>("Parsing illegal tags", &CElementParseInputTests::testParsingIllegalTags));

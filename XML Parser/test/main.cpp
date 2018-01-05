@@ -7,7 +7,9 @@
 
 #include "CElementParseInputTests.h"
 #include "CElementParseStartOrEndTagTests.h"
+#include "CElementPrintTests.h"
 #include "CTextParseInputTests.h"
+#include "CTextPrintTests.h"
 
 /**
  * To view the generated *.gcda coverage data file,
@@ -26,7 +28,9 @@ int main (int argc, char* argv[]) {
 
 	runner.addTest( CElementParseInputTests::suite() );
 	runner.addTest( CElementParseStartOrEndTagTests::suite() );
+	runner.addTest( CElementPrintTests::suite() );
 	runner.addTest( CTextParseInputTests::suite() );
+	runner.addTest( CTextPrintTests::suite() );
 
 	runner.setOutputter(new CppUnit::TextOutputter(&runner.result(), std::cout));
 
