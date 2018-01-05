@@ -1198,6 +1198,12 @@ exercise 5, using the CppUnit library and the Coverage Tool presented in the lec
 In this exercise you will implement a simple XML Parser, which translates textual XML format into
 an internal representation.
 
+* enum:
+	* `enum node_t {ELEMENT, TEXT};`
+* typedef enum:
+	* `typedef enum {ELEMENT, TEXT} node_t;` or
+	* `typedef enum node_types {ELEMENT, TEXT} node_t;`
+
 
 ```plantuml
 @startuml
@@ -1239,6 +1245,16 @@ CElement --|> CNode
 ```
 
 <!--![bla](XMLParser/src/default.png)-->
+
+* CppUnit error messages
+	* `multiple definition of 'main'`: src/main.cpp needs to be excluded from UnitTest build configuration
+	* `undefined reference to 'CppUnit::TestResult:...`: add cppunit as library and /usr/lib64 as library path
+
+* destructors of elements stored in array need to be called recursively, otherwise we get memory leaks
+* base class destructor must be virtual, but not pure virtual
+* other base class methods, which should be replaced by the more specified methods need to be virtual
+* when indenting a std::string containing newlines, "\n" must be replaced by "\n\t\t" with as many \t as necessary
+* to peek ahead: `input.substr(parsePosition, 1)`
 
 ### 4.2 CSort: Template Class
 
