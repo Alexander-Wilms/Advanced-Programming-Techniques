@@ -8,25 +8,69 @@
 #include "CGraphicElement.h"
 
 namespace GraSys {
-class CCircle : public CGraphicElement {
+template<typename T>
+class CCircle : public CGraphicElement<T> {
 private:
-    double m_radius;
+	T m_radius;
 
 public:
-    /**
-     * Constructor
-     *
-     * @param color 	the color
-     */
-    CCircle(std::string color = "black", const CCoordinate& center = GraSys::CCoordinate(0,0), double radius = 0);
-    // required for polymorphism
-    ~CCircle();
-    double getRadius();
-    void setRadius(double radius);
-    void setCenter(const CCoordinate& center);
-    void print();
-    bool operator== (const CCircle& c) const;
+	/**
+	 * Constructor
+	 *
+	 * @param color 	the color
+	 */
+	CCircle(std::string color = "black", const CCoordinate<T>& center = GraSys::CCoordinate<T>(0,0), double radius = 0)  :
+		CGraphicElement<T>("CCircle", 1, color), m_radius(radius) {
+		GraSys::CGraphicElement<T>::m_coordinates.push_back(center);
+	}
+
+	// required for polymorphism
+	~CCircle() {
+
+	}
+
+	T getRadius() {
+		return m_radius;
+	}
+
+	void setRadius(T radius) {
+		m_radius = radius;
+	}
+
+	void setCenter(const CCoordinate<T>& center) {
+		GraSys::CGraphicElement<T>::m_coordinates.at(0) = center;
+	}
+
+	void print() {
+		cout << "Circle with center: [" << GraSys::CGraphicElement<T>::m_coordinates[0].getX()
+    					<< ", " << GraSys::CGraphicElement<T>::m_coordinates[0].getY() << "] and radius = " << m_radius << endl;
+
+	}
+
+	bool operator== (const CCircle<T>& c) const {
+		// call operator of base class and compare additional member
+		return m_radius == c.m_radius && (CGraphicElement<T>) *this == (CGraphicElement<T>) c;
+	}
+
+	// https://stackoverflow.com/questions/4039817/friend-declaration-declares-a-non-template-function
+	template<typename Y>
+	friend std::ostream& operator<< (std::ostream& out, const GraSys::CCircle<Y>& c);
 };
+
+template<typename T>
+std::ostream& operator<<(std::ostream& out, const GraSys::CCircle<T>& c) {
+	out << "[type: " << c.m_type << ", color: " << c.m_color << ", radius: " << c.m_radius << ", coordinates:";
+
+	typename std::vector<GraSys::CCoordinate<T>>::const_iterator itc = c.m_coordinates.begin();
+	for (typename std::vector<GraSys::CCoordinate<T>>::const_iterator it = c.m_coordinates.begin(); it != c.m_coordinates.end(); it++) {
+		out << " " << *it;
+	}
+
+	out << "]";
+
+	return out;
+}
+
 }
 
 #endif //CCIRCLE_H

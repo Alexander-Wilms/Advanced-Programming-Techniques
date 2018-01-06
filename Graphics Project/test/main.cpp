@@ -27,12 +27,12 @@ int main (int argc, char* argv[]) {
 	controller.addListener ( &result );
 	CppUnit::TextUi::TestRunner runner;
 
-//	runner.addTest( CCircleMoveTests::suite() );
-//	runner.addTest( CCircleConstructorTests::suite() );
-//	runner.addTest( CCoordinateMoveTests::suite() );
+	runner.addTest( CCircleMoveTests::suite() );
+	runner.addTest( CCircleConstructorTests::suite() );
+	runner.addTest( CCoordinateMoveTests::suite() );
 	runner.addTest( CPlaneBoundingBoxTests::suite() );
-//	runner.addTest( CRectangleMoveTests::suite() );
-//	runner.addTest( CTriangleMoveTests::suite() );
+	runner.addTest( CRectangleMoveTests::suite() );
+	runner.addTest( CTriangleMoveTests::suite() );
 
 	runner.setOutputter(new CppUnit::TextOutputter(&runner.result(), std::cout));
 

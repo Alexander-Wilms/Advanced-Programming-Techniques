@@ -26,12 +26,12 @@ public:
 	}
 
 	void testMoving() {
-		GraSys::CCoordinate corner1(0, 0);
-		GraSys::CCoordinate corner2(37, 42);
-		GraSys::CRectangle rectangle("black", corner1, corner2);
+		GraSys::CCoordinate<float> corner1(0, 0);
+		GraSys::CCoordinate<float> corner2(37, 42);
+		GraSys::CRectangle<float> rectangle("black", corner1, corner2);
 		rectangle.move(1, 2);
 
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(1,2), GraSys::CCoordinate(38,44)), rectangle);
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(1,2), GraSys::CCoordinate<float>(38,44)), rectangle);
 	}
 
 	static CppUnit::TestSuite* suite() {

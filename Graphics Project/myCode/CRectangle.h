@@ -8,12 +8,23 @@
 #include "CGraphicElement.h"
 
 namespace GraSys {
-class CRectangle : public CGraphicElement {
+template<typename T>
+class CRectangle : public CGraphicElement<T> {
 
 public:
-	CRectangle(string color = "black");
-	CRectangle(string color, const CCoordinate& corner1, const CCoordinate& corner2);
-	~CRectangle();
+	CRectangle(string color = "black") : GraSys::CGraphicElement<T>("CRectangle", 2, color) {
+	}
+
+	CRectangle(string color, const CCoordinate<T>& corner1, const CCoordinate<T>& corner2) :
+		GraSys::CGraphicElement<T>("CRectangle", 2, color) {
+		GraSys::CGraphicElement<T>::m_color = color;
+		GraSys::CGraphicElement<T>::m_coordinates.push_back(corner1);
+		GraSys::CGraphicElement<T>::m_coordinates.push_back(corner2);
+	}
+
+	~CRectangle() {
+
+	}
 };
 }
 #endif //CRECTANGLE_H

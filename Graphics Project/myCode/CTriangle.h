@@ -9,12 +9,29 @@ using namespace std;
 #include "CGraphicElement.h"
 
 namespace GraSys {
-class CTriangle : public CGraphicElement {
+template<typename T>
+class CTriangle : public CGraphicElement<T> {
 
 public:
-	CTriangle (string color);
-	CTriangle (string color, const CCoordinate& corner1, const CCoordinate& corner2, const CCoordinate& corner3);
-	~CTriangle();
+	CTriangle (string color)  : GraSys::CGraphicElement<T>("CTriangle", 3, color) {
+		CCoordinate corner1(0,0);
+		CCoordinate corner2(1,0);
+		CCoordinate corner3(0,0.5);
+		GraSys::CGraphicElement<T>::m_coordinates.push_back(corner1);
+		GraSys::CGraphicElement<T>::m_coordinates.push_back(corner2);
+		GraSys::CGraphicElement<T>::m_coordinates.push_back(corner3);
+	}
+
+	CTriangle (string color, const CCoordinate<T>& corner1, const CCoordinate<T>& corner2, const CCoordinate<T>& corner3)  :
+		GraSys::CGraphicElement<T>("CTriangle", 3, color) {
+		GraSys::CGraphicElement<T>::m_coordinates.push_back(corner1);
+		GraSys::CGraphicElement<T>::m_coordinates.push_back(corner2);
+		GraSys::CGraphicElement<T>::m_coordinates.push_back(corner3);
+	}
+
+	~CTriangle() {
+
+	}
 
 };
 }

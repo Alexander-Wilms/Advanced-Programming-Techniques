@@ -26,11 +26,11 @@ public:
 	}
 
 	void testMoving() {
-		GraSys::CCoordinate center(3, 7);
-		GraSys::CCircle circle("blue", center, 3);
+		GraSys::CCoordinate<float> center(3, 7);
+		GraSys::CCircle<float> circle("blue", center, 3);
 		circle.move(1, 2);
 
-		CPPUNIT_ASSERT_EQUAL(GraSys::CCoordinate(4, 9), circle.getCoordinate(0));
+		CPPUNIT_ASSERT_EQUAL(GraSys::CCoordinate<float>(4, 9), circle.getCoordinate(0));
 	}
 
 	static CppUnit::TestSuite* suite() {

@@ -29,75 +29,75 @@ public:
 	}
 
 	void testRectangle() {
-		GraSys::CRectangle rectangle("green", GraSys::CCoordinate(-1,-2), GraSys::CCoordinate(3,4));
-		GraSys::CPlane plane;
+		GraSys::CRectangle<float> rectangle("green", GraSys::CCoordinate<float>(-1,-2), GraSys::CCoordinate<float>(3,4));
+		GraSys::CPlane<float> plane;
 		plane.addElement(rectangle);
-		GraSys::CRectangle boundingBox = plane.boundingBox("", "");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(-1,-2), GraSys::CCoordinate(3,4)), boundingBox);
+		GraSys::CRectangle<float> boundingBox = plane.boundingBox("", "");
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(-1,-2), GraSys::CCoordinate<float>(3,4)), boundingBox);
 	}
 
 	void testCircle() {
-		GraSys::CCircle circle("blue", GraSys::CCoordinate(37,42), 7);
-		GraSys::CPlane plane;
+		GraSys::CCircle<float> circle("blue", GraSys::CCoordinate<float>(37,42), 7);
+		GraSys::CPlane<float> plane;
 		plane.addElement(circle);
-		GraSys::CRectangle boundingBox = plane.boundingBox("CCircle", "blue");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(30,35), GraSys::CCoordinate(44,49)), boundingBox);
+		GraSys::CRectangle<float> boundingBox = plane.boundingBox("CCircle", "blue");
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(30,35), GraSys::CCoordinate<float>(44,49)), boundingBox);
 	}
 
 	void testTriangle() {
-		GraSys::CTriangle triangle("orange", GraSys::CCoordinate(0,0), GraSys::CCoordinate(10,0), GraSys::CCoordinate(5,5));
-		GraSys::CPlane plane;
+		GraSys::CTriangle<float> triangle("orange", GraSys::CCoordinate<float>(0,0), GraSys::CCoordinate<float>(10,0), GraSys::CCoordinate<float>(5,5));
+		GraSys::CPlane<float> plane;
 		plane.addElement(triangle);
-		GraSys::CRectangle boundingBox = plane.boundingBox("", "orange");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(0,0), GraSys::CCoordinate(10,5)), boundingBox);
+		GraSys::CRectangle<float> boundingBox = plane.boundingBox("", "orange");
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(0,0), GraSys::CCoordinate<float>(10,5)), boundingBox);
 	}
 
 	void testAllTypesAllColors() {
-		GraSys::CPlane plane;
-		GraSys::CRectangle boundingBox;
+		GraSys::CPlane<float> plane;
+		GraSys::CRectangle<float> boundingBox;
 
-		GraSys::CRectangle rectangle("red", GraSys::CCoordinate(0,0), GraSys::CCoordinate(2,2));
+		GraSys::CRectangle<float> rectangle("red", GraSys::CCoordinate<float>(0,0), GraSys::CCoordinate<float>(2,2));
 		plane.addElement(rectangle);
 
-		GraSys::CCircle circle("white" , GraSys::CCoordinate(9,1), 1);
+		GraSys::CCircle<float> circle("white" , GraSys::CCoordinate<float>(9,1), 1);
 		plane.addElement(circle);
 
-		GraSys::CTriangle triangle("blue", GraSys::CCoordinate(8,8), GraSys::CCoordinate(10,8), GraSys::CCoordinate(9,10));
+		GraSys::CTriangle<float> triangle("blue", GraSys::CCoordinate<float>(8,8), GraSys::CCoordinate<float>(10,8), GraSys::CCoordinate<float>(9,10));
 		plane.addElement(triangle);
 
 		// all types, all colors
 		boundingBox = plane.boundingBox("", "");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(0,0), GraSys::CCoordinate(10,10)), boundingBox);
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(0,0), GraSys::CCoordinate<float>(10,10)), boundingBox);
 
 		// rectangle, all colors
 		boundingBox = plane.boundingBox("CRectangle", "");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(0,0), GraSys::CCoordinate(2,2)), boundingBox);
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(0,0), GraSys::CCoordinate<float>(2,2)), boundingBox);
 		// rectangles, red
 		boundingBox = plane.boundingBox("CRectangle", "red");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(0,0), GraSys::CCoordinate(2,2)), boundingBox);
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(0,0), GraSys::CCoordinate<float>(2,2)), boundingBox);
 		// rectangles, white
 		boundingBox = plane.boundingBox("CRectangle", "white");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(0,0), GraSys::CCoordinate(0,0)), boundingBox);
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(0,0), GraSys::CCoordinate<float>(0,0)), boundingBox);
 
 		// circles, all colors
 		boundingBox = plane.boundingBox("CCircle", "");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(8,0), GraSys::CCoordinate(10,2)), boundingBox);
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(8,0), GraSys::CCoordinate<float>(10,2)), boundingBox);
 		// circles, white
 		boundingBox = plane.boundingBox("CCircle", "white");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(8,0), GraSys::CCoordinate(10,2)), boundingBox);
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(8,0), GraSys::CCoordinate<float>(10,2)), boundingBox);
 		// circles, blue
 		boundingBox = plane.boundingBox("CCircle", "blue");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(0,0), GraSys::CCoordinate(0,0)), boundingBox);
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(0,0), GraSys::CCoordinate<float>(0,0)), boundingBox);
 
 		// triangles, all colors
 		boundingBox = plane.boundingBox("CTriangle", "");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(8,8), GraSys::CCoordinate(10,10)), boundingBox);
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(8,8), GraSys::CCoordinate<float>(10,10)), boundingBox);
 		// triangles, blue
 		boundingBox = plane.boundingBox("CTriangle", "blue");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(8,8), GraSys::CCoordinate(10,10)), boundingBox);
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(8,8), GraSys::CCoordinate<float>(10,10)), boundingBox);
 		// triangles, red
 		boundingBox = plane.boundingBox("CTriangle", "red");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle("black", GraSys::CCoordinate(0,0), GraSys::CCoordinate(0,0)), boundingBox);
+		CPPUNIT_ASSERT_EQUAL(GraSys::CRectangle<float>("black", GraSys::CCoordinate<float>(0,0), GraSys::CCoordinate<float>(0,0)), boundingBox);
 	}
 
 	static CppUnit::TestSuite* suite() {

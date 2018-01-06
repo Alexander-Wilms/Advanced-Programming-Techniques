@@ -16,11 +16,11 @@
 
 class CCoordinateMoveTests: public CppUnit::TestFixture {
 private:
-	GraSys::CCoordinate* coord;
+	GraSys::CCoordinate<float>* coord;
 public:
 
 	void setUp() {
-		coord = new GraSys::CCoordinate(37, 42);
+		coord = new GraSys::CCoordinate<float>(37, 42);
 	}
 
 	void tearDown() {

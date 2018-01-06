@@ -26,23 +26,23 @@ public:
 	}
 
 	void testNoArgument() {
-		GraSys::CCircle circle;
-		CPPUNIT_ASSERT_EQUAL(GraSys::CCircle("black", GraSys::CCoordinate(0,0), 0), circle);
+		GraSys::CCircle<float> circle;
+		CPPUNIT_ASSERT_EQUAL(GraSys::CCircle<float>("black", GraSys::CCoordinate<float>(0,0), 0), circle);
 	}
 
 	void testOneArgument() {
-		GraSys::CCircle circle("red");
-		CPPUNIT_ASSERT_EQUAL(GraSys::CCircle("red", GraSys::CCoordinate(0,0), 0), circle);
+		GraSys::CCircle<float> circle("red");
+		CPPUNIT_ASSERT_EQUAL(GraSys::CCircle<float>("red", GraSys::CCoordinate<float>(0,0), 0), circle);
 	}
 
 	void testTwoArguments() {
-		GraSys::CCircle circle("red", GraSys::CCoordinate(1,2));
-		CPPUNIT_ASSERT_EQUAL(GraSys::CCircle("red", GraSys::CCoordinate(1,2), 0), circle);
+		GraSys::CCircle<float> circle("red", GraSys::CCoordinate<float>(1,2));
+		CPPUNIT_ASSERT_EQUAL(GraSys::CCircle<float>("red", GraSys::CCoordinate<float>(1,2), 0), circle);
 	}
 
 	void testThreeArguments() {
-		GraSys::CCircle circle("red", GraSys::CCoordinate(1,2), 3);
-		CPPUNIT_ASSERT_EQUAL(GraSys::CCircle("red", GraSys::CCoordinate(1,2), 3), circle);
+		GraSys::CCircle<float> circle("red", GraSys::CCoordinate<float>(1,2), 3);
+		CPPUNIT_ASSERT_EQUAL(GraSys::CCircle<float>("red", GraSys::CCoordinate<float>(1,2), 3), circle);
 	}
 
 	static CppUnit::TestSuite* suite() {

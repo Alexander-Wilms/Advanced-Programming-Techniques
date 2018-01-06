@@ -1425,6 +1425,37 @@ namespace GraSys {
 	* `std::ostream& GraSys::operator <<(std::ostream& out, const GraSys::CGraphicElement& g) { [...] }`
 	* then we can handle GraSys::CCoordinate objects
 
+* `std::vector<CCoordinate<T>>::iterator bla;`
+	* error: expected ‘;’ before ‘bla’
+		* put `typename` in front
+* `for (std::vector<CCoordinate<T>  >::iterator it = m_coordinates.begin(); it != m_coordinates.end(); it++) {`
+	* error: need ‘typename’ before ‘std::vector<GraSys::CCoordinate<T> >::iterator’ because ‘std::vector<GraSys::CCoordinate<T> >’ is a dependent scope
+		* put `typename` in front
+
+-> https://stackoverflow.com/questions/4000029/expected-before-with-template-function-to-print-stdvectorwhatever
+
+* in order to be able to access protected members of a templated base class in a templated derived class, the templated scope has to be used:
+	* `GraSys::CGraphicElement<T>::m_coordinates`
+
+* operator<<() overloading:
+	* must be inside namespace, but outside of class as a friend method
+	* type parameter may not shadow class type parameter
+
+	```c++
+	namespace GraSys {
+		template<typename T>
+		class A {
+			template<typename Y>
+			friend std::ostream& operator<< (std::ostream& out, const GraSys::CGraphicElement<Y>& g);
+		};
+
+		template<typename T>
+		std::ostream& operator<<(std::ostream& out, const GraSys::CGraphicElement<T>& g) {
+			[...]
+		}
+	}
+	```
+
 # Live Code
 
 ## Live Code 1
