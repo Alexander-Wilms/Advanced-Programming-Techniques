@@ -9,16 +9,12 @@
 #include "CRectangle.h"
 #include <string>
 
-GraSys::CRectangle::CRectangle(std::string color) : GraSys::CGraphicElement("Rectangle", 2, color) {
-}
-
-std::string GraSys::CRectangle::getTypeName()
-{
-	return "Rectangle";
+GraSys::CRectangle::CRectangle(std::string color) : GraSys::CGraphicElement("CRectangle", 2, color) {
 }
 
 GraSys::CRectangle::CRectangle(std::string color, const GraSys::CCoordinate& corner1,
 		const GraSys::CCoordinate& corner2) {
+	m_color = color;
 	m_coordinates.push_back(corner1);
 	m_coordinates.push_back(corner2);
 }

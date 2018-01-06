@@ -10,9 +10,6 @@
 namespace GraSys {
 class CRectangle : public CGraphicElement {
 
-protected:
-    string getTypeName();
-
 public:
 	CRectangle(string color = "black");
 	CRectangle(string color, const CCoordinate& corner1, const CCoordinate& corner2);

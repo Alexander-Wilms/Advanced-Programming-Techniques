@@ -12,14 +12,6 @@ class CCircle : public CGraphicElement {
 private:
     double m_radius;
 
-protected:
-    /**
-     * Returns the type name
-     *
-     * @return string type name
-     */
-    string getTypeName();
-
 public:
     /**
      * Constructor
@@ -33,6 +25,7 @@ public:
     void setRadius(double radius);
     void setCenter(const CCoordinate& center);
     void print();
+    bool operator== (const CCircle& c) const;
 };
 }
 

@@ -1393,6 +1393,38 @@ class CSort {
 
 ### 4.3 Combining Techniques
 
+* namespace in .h file:
+```c++
+namespace GraSys {
+	class CCircle : public CGraphicElement {
+	};
+}
+```
+* methods in .cpp file must be fully qualified: `string GraSys::CCircle::getTypeName() {`
+* `CTriangle* ptriangle = dynamic_cast<CTriangle*>(itshape.base());` works
+* `undefined reference to CppUnit::TestResult::` 
+	* solution: add cppunit as library and /usr/lib64 as library path
+* Error caused by calling CPPUNIT_ASSERT_EQUAL() with objects:
+	* `error: no match for ‘operator<<’ (operand types are ‘CppUnit::OStringStream {aka std::__cxx11::basic_ostringstream<char>}’ and ‘const GraSys::CRectangle’)
+	* cf. [CppUnit Documentation](http://cppunit.sourceforge.net/doc/cvs/group___assertions.html#ga3`)
+		*  Requirement for expected and actual parameters:
+    		* They are exactly of the same type
+    		* They are serializable into a std::strstream using operator <<.
+    		* They can be compared using operator ==.
+		* This is necessary for printing the expected vs actual value to the console in case a test fails:
+
+		```
+		1) test: Move triangle (F) line: 36 ../test/CPlaneBoundingBoxTests.h
+		equality assertion failed
+		- Expected: [type: Rectangle, color: black, coordinates: [-1, -2] [3, 4]]
+		- Actual  : [type: Rectangle, color: black, coordinates: [0, 0] [0, 0]]
+		```
+
+* namespace & operator<< overloading:
+	* `friend std::ostream& operator<<(std::ostream& out, const CGraphicElement& g);`
+	* `std::ostream& GraSys::operator <<(std::ostream& out, const GraSys::CGraphicElement& g) { [...] }`
+	* then we can handle GraSys::CCoordinate objects
+
 # Live Code
 
 ## Live Code 1

@@ -16,11 +16,10 @@ namespace GraSys {
 class CGraphicElement
 {
 private:
-	string m_type;
-	string m_color;
 
 protected:
-
+	string m_type;
+	string m_color;
 	int m_numberCoordinates;
 	std::vector<CCoordinate> m_coordinates;
 
@@ -31,7 +30,9 @@ public:
 	void print();
 	std::string getColor();
 	const CCoordinate getCoordinate(unsigned int index);
-	bool operator== (const GraSys::CGraphicElement& c) const;
+	bool operator== (const CGraphicElement& c) const;
+	friend std::ostream& operator<<(std::ostream& out, const CGraphicElement& g);
+	virtual std::string getTypeName();
 };
 }
 

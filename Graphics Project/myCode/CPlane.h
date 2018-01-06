@@ -16,7 +16,7 @@ namespace GraSys {
 class CPlane
 {
 private:
-	std::vector<CGraphicElement> m_shapes;
+	std::vector<CGraphicElement*> m_shapes;
 
 public:
 	bool addElement (CGraphicElement& element);
@@ -27,6 +27,7 @@ public:
 	 *
 	 * @param type take only shapes with the given type into account
 	 * (use all shapes if type == "").
+	 *
 	 * @param color take only shapes with the given color into account
 	 * (use all shapes if color == "").
 	 */

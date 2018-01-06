@@ -9,13 +9,11 @@
 using namespace std;
 #include "CCircle.h"
 
-GraSys::CCircle::CCircle(std::string color, const CCoordinate& center, double radius) : CGraphicElement("Circle", 1, color), m_radius(radius) {
+GraSys::CCircle::CCircle(std::string color, const CCoordinate& center, double radius) :
+		CGraphicElement("CCircle", 1, color), m_radius(radius) {
 	m_coordinates.push_back(center);
 }
 
-string GraSys::CCircle::getTypeName() {
-	return "CCircle";
-}
 
 double GraSys::CCircle::getRadius() {
 	return m_radius;
@@ -36,4 +34,9 @@ void GraSys::CCircle::setRadius(double radius) {
 
 void GraSys::CCircle::setCenter(const CCoordinate& center) {
 	m_coordinates.at(0) = center;
+}
+
+bool GraSys::CCircle::operator== (const CCircle& c) const {
+	// call operator of base class and compare additional member
+	return m_radius == c.m_radius && (CGraphicElement) *this == (CGraphicElement) c;
 }

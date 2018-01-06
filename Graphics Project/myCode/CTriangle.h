@@ -15,8 +15,6 @@ public:
 	CTriangle (string color);
 	CTriangle (string color, const CCoordinate& corner1, const CCoordinate& corner2, const CCoordinate& corner3);
 	~CTriangle();
-protected:
-    string getTypeName();
 
 };
 }

@@ -75,7 +75,6 @@ float GraSys::CCoordinate::getY() const
 }
 
 void GraSys::CCoordinate::getCartesian(float& x, float& y) {
-	cout << "Address of parameter x: " << &x << endl;
 	x = m_x;
 	y = m_y;
 }
@@ -86,7 +85,7 @@ GraSys::CCoordinate GraSys::operator+ (const CCoordinate& c1, const CCoordinate&
 }
 
 ostream& GraSys::operator<< (ostream& out, const CCoordinate& c) {
-	out << c.m_x << " " << c.m_y;
+	out << "[" << c.m_x << ", " << c.m_y << "]";
 	return out;
 }
 

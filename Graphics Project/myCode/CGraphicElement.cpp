@@ -29,15 +29,7 @@ void GraSys::CGraphicElement::move(float xoffset, float yoffset) {
 }
 
 void GraSys::CGraphicElement::print() {
-	cout << m_type << "(color: " << m_color << ") with coordinates: ";
-	for (std::vector<CCoordinate>::iterator it = m_coordinates.begin();
-			it != m_coordinates.end(); it++) {
-		cout << "[" << it.base()->getX() << ", " << it.base()->getY() << "]";
-		if (it - m_coordinates.begin() < m_numberCoordinates - 1) {
-			cout << ", ";
-		}
-	}
-	cout << endl;
+	std::cout << *this << std::endl;
 }
 
 const GraSys::CCoordinate GraSys::CGraphicElement::getCoordinate(
@@ -52,10 +44,11 @@ std::string GraSys::CGraphicElement::getColor() {
 	return m_color;
 }
 
-bool GraSys::CGraphicElement::operator ==(
+bool GraSys::CGraphicElement::operator == (
 		const GraSys::CGraphicElement& c) const {
 	bool equal = true;
 	if (m_type != c.m_type || m_color != c.m_color) {
+		// types and colors are not equal
 		equal = false;
 	} else {
 		// same type, so same m_numberCoordinates
@@ -71,4 +64,22 @@ bool GraSys::CGraphicElement::operator ==(
 	}
 
 	return equal;
+}
+
+std::ostream& GraSys::operator <<(std::ostream& out, const GraSys::CGraphicElement& g) {
+	out << "[type: " << g.m_type << ", color: " << g.m_color << ", coordinates:";
+
+	std::vector<CCoordinate>::const_iterator itc = g.m_coordinates.begin();
+	for (std::vector<CCoordinate>::const_iterator it = g.m_coordinates.begin(); it != g.m_coordinates.end(); it++) {
+		out << " " << *it;
+	}
+
+	out << "]";
+
+	return out;
+
+}
+
+std::string GraSys::CGraphicElement::getTypeName() {
+	return m_type;
 }
